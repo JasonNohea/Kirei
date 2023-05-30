@@ -39,7 +39,6 @@ nav {
 select {
   margin: auto;
   width: 40px;
-  margin-right: 0px;
   grid-column: 7;
   grid-row: 1;
   border: none;
