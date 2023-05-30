@@ -20,7 +20,8 @@ nav {
   border-radius: 18px;
   display: grid;
   grid-template-rows: 100%;
-  grid-template-columns: 100px 120px 100px 100px 600px 35px 35px 100px;
+  grid-template-columns: 8% 10% 8% 8% 50% 3% 3% 8%;
+  /* grid-template-columns: 100px 120px 100px 100px 600px 35px 35px 100px; */
 }
 
 .logo {
@@ -55,4 +56,21 @@ select:hover {
 a {
   margin: auto;
   inset: 0;
+  text-decoration: none;
+  color: black;
+}
+
+.login-button {
+  background-color: #2C5395;
+  width: 70%;
+  height: 40%;
+  margin: auto;
+  inset: 0;
+  color: #ffffff;
+  border-radius: 5px;
+  border: none;
+}
+
+.login-button:hover {
+  background-color: #19386C;
 }
