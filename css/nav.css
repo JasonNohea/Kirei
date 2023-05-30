@@ -60,3 +60,18 @@ a {
   text-decoration: none;
   color: black;
 }
+
+.login-button {
+  background-color: #2C5395;
+  width: 70%;
+  height: 40%;
+  margin: auto;
+  inset: 0;
+  color: #ffffff;
+  border-radius: 5px;
+  border: none;
+}
+
+.login-button:hover {
+  background-color: #19386C;
+}
