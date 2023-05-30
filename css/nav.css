@@ -48,11 +48,9 @@ select {
   background-color: #ffffff;
 }
 
-select:hover {
-  border-style: none;
+select:focus {
+  outline: none;
 }
-
-
 
 a {
   margin: auto;
