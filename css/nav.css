@@ -1,9 +1,9 @@
-@import "font-awesome";
-
+html,
 body {
   background-color: #4c51e9;
   width: 100%;
   height: 100%;
+  margin: 0;
 }
 
 * {
@@ -72,4 +72,63 @@ a {
 
 .login-button:hover {
   background-color: #19386C;
+}
+
+#login-form {
+  display: none;
+}
+
+.login-con {
+  width: 100%;
+  height: 100%;
+  /* background-color: black; */
+  display: none;
+  /* display: block; */
+}
+
+.dark-screen {
+  background-color: black;
+  /* display: none; */
+  width: 100%;
+  height: 100%;
+  opacity: 15%;
+  margin: auto;
+  /* z-index: 100; */
+}
+
+.login-form {
+  margin: auto;
+  inset: 0;
+  background-color: #ffffff;
+  width: 30%;
+  height: 75%;
+  z-index: 100;
+  position: absolute;
+  border-radius: 15px;
+  display: grid;
+  grid-column: 100%;
+  grid-row: 20px 100px 50px 50px 50px 50px 50px 50px 50px;
+}
+
+.form-logo {
+  margin: 10px auto;
+  inset: 0;
+  width: 10%;
+  grid-row: 1;
+}
+
+.login-heading {
+  grid-row: 2;
+  font-size: 2.4vw;
+  font-weight: 800;
+  margin: auto;
+  inset: 0;
+}
+
+.test {
+  grid-row: 3;
+}
+
+.test1 {
+  grid-row: 4;
 }
