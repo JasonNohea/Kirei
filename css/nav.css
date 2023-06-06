@@ -11,7 +11,7 @@ body {
 }
 
 nav {
-  width: 90%;
+  width: 95%;
   height: 11%;
   background-color: white;
   position: fixed;
@@ -103,7 +103,13 @@ a {
   border-radius: 15px;
   display: grid;
   grid-column: 100%;
-  grid-row: 20px 100px 50px 50px 50px 50px 50px 50px 50px;
+  grid-row: 5% 24% 10% 10% 10% 10% 10% 10% 10%;
+}
+
+.mid {
+  margin: auto;
+  inset: 0;
+  width: 70%;
 }
 
 .form-logo {
@@ -121,8 +127,111 @@ a {
   inset: 0;
 }
 
-.test {
-  grid-row: 3;
+.form-logo {
+  opacity: 1;
+  transition: opacity 0.4s;
 }
 
+.form-con {
+  background-color: white;
+  padding: px;
+  border: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  z-index: -1;
+  border-bottom: 1px solid black;
+}
+
+.required {
+  color: red;
+}
+
+.form-text {
+  width: 20%;
+  margin: 10px;
+  transition: 0.8s ease-in-out;
+  color: #949090;
+}
+
+.form-input {
+  width: 80%;
+  margin: 5px;
+  font-size: 18px;
+  height: auto;
+  border: none;
+
+  transition: 0.4s ease-in-out;
+}
+
+.form-input:focus {
+  outline: none;
+}
+
+
+.form-con:hover {
+
+  .form-logo {
+    opacity: 0;
+  }
+
+  .form-text {
+    transition: 0.4s ease-in-out;
+    transform: translate(-20px, -25px) scale(0.8);
+  }
+
+  .form-input {
+    transition: 0.8s ease-in-out;
+    transform: translate(-55px, 0) scale(1.2);
+  }
+}
+
+.forgot-pass {
+  font-size: 12px;
+  color: #4c51e9;
+  display: flex;
+  justify-content: end;
+}
+
+.forgot-pass:hover {
+  text-decoration: underline;
+  margin: 0;
+}
+
+.form-button {
+  font-size: 20px;
+  width: 70%;
+  height: 70%;
+  border-radius: 5px;
+  border: none;
+}
+
+.login-submit {
+  background-color: #2C5395;
+  color: #ffffff;
+}
+
+.login-submit:hover {
+  background-color: #19386C;
+}
+
+.login-cancel {
+  background-color: #ffffff;
+  color: #2C5395;
+}
+
+.login-cancel:hover {
+  color: #19386C;
+  font-weight: bolder;
+}
+
+.test {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+hr {
+  border: 1px solid gray;
+  width: 20%;
 }

@@ -6,3 +6,4 @@ $(".login-button").on("click", function () {
 $(".dark-screen").on("click", function () {
     $(".login-con").fadeToggle("fast", "linear");
 });
+
