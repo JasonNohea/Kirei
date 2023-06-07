@@ -239,13 +239,7 @@ select:focus {
   font-weight: bolder;
 }
 
-.opt-acc {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-.hr-decor {
+hr {
   border: 1px solid gray;
   width: 20%;
 }
