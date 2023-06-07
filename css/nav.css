@@ -160,7 +160,6 @@ a {
   font-size: 18px;
   height: auto;
   border: none;
-
   transition: 0.4s ease-in-out;
 }
 
@@ -230,12 +229,6 @@ a {
 
 .login-cancel:hover {
   color: #000000;
-}
-
-.test {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
 }
 
 hr {
