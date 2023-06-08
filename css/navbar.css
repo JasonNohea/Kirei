@@ -46,21 +46,25 @@ nav {
 }
 
 nav .navleft{
-  float: left;
-  margin-right: 450px;
+    margin: 10px;
+    padding: 10px;
+    display: inline-flex;
+    flex-direction: row;
+    float: left;
 }
 
 nav .navright {
-  float: right;
+    justify-content: flex-end;
+    float: right;
 }
 
 .logo {
-  width: 5%;
+  width: 35%;
 }
 
 .globe {
-  width: 3%;
-  margin: auto 1px;
+  width: 23%;
+  margin: 1px;
   /* grid-column: 6;
   grid-row: 1; */
 }
