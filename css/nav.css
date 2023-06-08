@@ -239,9 +239,16 @@ select:focus {
   font-weight: bolder;
 }
 
-hr {
+.opt-acc {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.hr-decor {
   border: 1px solid gray;
   width: 20%;
+  height: 0px;
 }
 
 .register-text {
