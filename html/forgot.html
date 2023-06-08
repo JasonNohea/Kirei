@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/forgot.css" />
+    <link rel="stylesheet" href="../css/nav.css" />
+    <link rel="icon" href="../assets/logo.png" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cabin&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="reset-con fade-in fade-out">
+      <div class="dark-screen"></div>
+      <form class="reset-form">
+        <img src="../assets/logo.png" class="form-logo" />
+        <p class="reset-heading">Forgot Password?</p>
+        <span class="reset-inst"
+          >no worries, we'll send you reset instructions.</span
+        >
+        <div class="form-con">
+          <svg
+            class="form-logo"
+            width="20"
+            height="16"
+            viewBox="0 0 20 16"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M18 0H2C0.9 0 0.00999999 0.9 0.00999999 2L0 14C0 15.1 0.9 16 2 16H18C19.1 16 20 15.1 20 14V2C20 0.9 19.1 0 18 0ZM18 4L10 9L2 4V2L10 7L18 2V4Z"
+              fill="#716B6B"
+            />
+          </svg>
+          <label class="form-text">Email<span class="required">*</span></label>
+          <input
+            class="form-input"
+            placeholder=" "
+            type="text"
+            name="Email"
+            id="email"
+          />
+        </div>
+        <span class="err-txt hidden" id="em-err"
+          >Please fill required field</span
+        >
+        <div class="info-con">
+          <svg
+            class="reset-info"
+            width="13"
+            height="13"
+            viewBox="0 0 13 13"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M6.05043 10L6.05043 5.1L6.95043 5.1L6.95043 10L6.05043 10ZM6.05043 4L6.05043 3L6.95043 3L6.95043 4L6.05043 4Z"
+              fill="#6D6D6D"
+            />
+            <circle
+              cx="6.5"
+              cy="6.5"
+              r="6"
+              transform="rotate(-180 6.5 6.5)"
+              stroke="#6D6D6D"
+            />
+            <span class="info-detail reset-info">
+              Resend the email that you have registered
+            </span>
+          </svg>
+        </div>
+        <div class="button-con">
+          <button class="form-button login-submit">Send OTP Code</button>
+          <button class="form-button login-cancel">Back to Login</button>
+        </div>
+
+        <div class="opt-acc">
+          <hr class="hr-decor" />
+          <p>or</p>
+          <hr class="hr-decor" />
+        </div>
+        <p class="register-text">
+          Don't have an account?&nbsp;<a href="#" class="regist">Register</a>
+        </p>
+      </form>
+    </div>
+    <script src="../js/main.js"></script>
+  </body>
+</html>

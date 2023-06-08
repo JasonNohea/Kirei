@@ -1,14 +1,19 @@
+$(document).ready(function() {
+    $('.login-con form').submit(function(e) {
+      e.preventDefault(); // Prevent the default form submission behavior
+    });
+  });
 
 $(".login-button").on("click", function () {
-    $(".login-con").fadeToggle("fast", "linear");
+    $(".main-con, .login-con").fadeIn("fast");
 });
 
 $(".dark-screen").on("click", function () {
-    $(".login-con").fadeToggle("fast", "linear");
+    $(".main-con").fadeOut("fast");
 });
 
 $(".login-cancel").on("click", function () {
-    $(".login-con").fadeToggle("fast", "linear");
+    $(".main-con").fadeOut("fast");
 });
 
 $('.login-submit').on('click', function() {
@@ -16,18 +21,29 @@ $('.login-submit').on('click', function() {
     var password = $('#pass').val();
 
     if (username === '') {
-      $('#usernameError').removeClass('hidden').text('Please fill in the username field.');
+      $('#em-err').removeClass('hidden').text('Please fill in the username field.');
     } else {
-      $('#usernameError').addClass('hidden');
+      $('#em-err').addClass('hidden');
     }
 
     if (password === '') {
-      $('#passwordError').removeClass('hidden').text('Please fill in the password field.');
+      $('#pass-err').removeClass('hidden').text('Please fill in the password field.');
     } else {
-      $('#passwordError').addClass('hidden');
+      $('#pass-err').addClass('hidden');
     }
 
     if (username !== '' && password !== '') {
       // Perform login logic here
     }
   });
+
+  $('#forgotPasswordLink').click(function(e) {
+    e.preventDefault(); // Prevent the default link behavior
+
+    $('.login-form')[0].reset(); // Reset the login form fields
+    $('.login-con').hide(); // Hide the login form container
+    $('.reset-con').show(); // Show the register form container
+  });
+
+
+  
