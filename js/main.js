@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $('.login-con form').submit(function(e) {
+    $('.login-con form, .reset-con form').submit(function(e) {
       e.preventDefault(); // Prevent the default form submission behavior
     });
   });
@@ -19,10 +19,10 @@ $(".login-cancel").on("click", function () {
 
 //field checker
 $('.login-submit').on('click', function() {
-    var username = $('#email').val();
+    var email = $('#email').val();
     var password = $('#pass').val();
 
-    if (username === '') {
+    if (email === '') {
       $('#em-err').removeClass('hidden').text('Please fill in the username field.');
     } else {
       $('#em-err').addClass('hidden');
@@ -34,14 +34,32 @@ $('.login-submit').on('click', function() {
       $('#pass-err').addClass('hidden');
     }
 
-    if (username !== '' && password !== '') {
+
+    if (email !== '' && password !== '') {
+      // Perform login logic here
+      console.log(email, password);
+    }
+  });
+  
+  $('#reset-submit').on('click', function() {
+
+    var emailreset = $('#emailreset').val();
+
+    if (emailreset === '') {
+      $('#emr-err').removeClass('hidden').text('Please fill in the username field.');
+
+    } else {
+      $('#emr-err').addClass('hidden');
+    }
+
+    if (emailreset !== '') {
+      console.log(emailreset);
       // Perform login logic here
     }
   });
 
-
 //switch form
-  $('#test').click(function(e) {
+  $('#forgot-pass').click(function(e) {
     e.preventDefault(); // Prevent the default link behavior
 
     $('.login-form')[0].reset(); // Reset the login form fields
