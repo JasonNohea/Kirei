@@ -321,3 +321,9 @@ select:focus {
 .hidden {
   display: none;
 }
+
+#test,
+#back {
+  margin: auto;
+  inset: 0;
+}

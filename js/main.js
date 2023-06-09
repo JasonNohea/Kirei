@@ -5,11 +5,11 @@ $(document).ready(function() {
   });
 
 $(".login-button").on("click", function () {
-    $(".main-con, .login-con, .login-form").fadeIn("fast");
+    $(".dark-screen, .login-con, .login-form").fadeIn("fast");
 });
 
 $(".dark-screen").on("click", function () {
-    $(".dark-screen, .login-form").fadeOut("fast");
+    $(".dark-screen, .login-con, .reset-con").fadeOut("fast");
 });
 
 $(".login-cancel").on("click", function () {
@@ -41,12 +41,24 @@ $('.login-submit').on('click', function() {
 
 
 //switch form
-  $('#forgotPasswordLink').click(function(e) {
+  $('#test').click(function(e) {
     e.preventDefault(); // Prevent the default link behavior
 
     $('.login-form')[0].reset(); // Reset the login form fields
-    $('.login-con').hide(); // Hide the login form container
-    $('.reset-con').show(); // Show the register form container
+    $('.login-con').fadeOut(); // Hide the login form container
+    $('.dark-screen').fadeOut();
+    $('.dark-screen').fadeIn();
+    $('.reset-con').fadeIn(); // Show the register form container
+  });
+
+  $('#back').click(function(e) {
+    e.preventDefault(); // Prevent the default link behavior
+
+    $('.reset-form')[0].reset(); // Reset the login form fields
+    $('.reset-con').fadeOut(); // Hide the login form container
+    $('.dark-screen').fadeOut();
+    $('.dark-screen').fadeIn();
+    $('.login-con').fadeIn(); // Show the register form container
   });
 
 
