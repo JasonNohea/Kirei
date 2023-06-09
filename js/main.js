@@ -5,17 +5,19 @@ $(document).ready(function() {
   });
 
 $(".login-button").on("click", function () {
-    $(".main-con, .login-con").fadeIn("fast");
+    $(".main-con, .login-con, .login-form").fadeIn("fast");
 });
 
 $(".dark-screen").on("click", function () {
-    $(".main-con").fadeOut("fast");
+    $(".dark-screen, .login-form").fadeOut("fast");
 });
 
 $(".login-cancel").on("click", function () {
     $(".main-con").fadeOut("fast");
 });
 
+
+//field checker
 $('.login-submit').on('click', function() {
     var username = $('#email').val();
     var password = $('#pass').val();
@@ -37,6 +39,8 @@ $('.login-submit').on('click', function() {
     }
   });
 
+
+//switch form
   $('#forgotPasswordLink').click(function(e) {
     e.preventDefault(); // Prevent the default link behavior
 
