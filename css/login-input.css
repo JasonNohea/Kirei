@@ -1,0 +1,35 @@
+fieldset {
+  border: none;
+  padding: 0;
+  position: relative;
+}
+
+[type="text"] {
+  font-size: 15px;
+  width: 100%;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #949090;
+  padding: 5px 0;
+  transition: border-color 300ms;
+}
+
+[type="text"]:focus {
+  border-color: #949090;
+}
+
+[type="text"] + label {
+  font-size: 15px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #949090;
+  pointer-events: none;
+  transform-origin: left;
+  transition: transform 300ms;
+}
+
+[type="text"]:focus + label,
+[type="text"]:not(:placeholder-shown) + label {
+  transform: scale(0.8) translateY(-20px);
+}
