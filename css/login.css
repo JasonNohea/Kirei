@@ -17,6 +17,7 @@
   border-radius: 15px;
   display: flex;
   flex-direction: column;
+  gap: 10px;
 }
 
 .form-logo {
@@ -42,7 +43,7 @@
   flex-direction: row;
   align-items: center;
   z-index: -1;
-  border-bottom: 1px solid black;
+  /* border-bottom: 1px solid black; */
 }
 
 .required {
@@ -136,6 +137,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  height: 5%;
 }
 
 .hr-decor {

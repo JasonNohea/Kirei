@@ -1,0 +1,51 @@
+fieldset {
+  border: none;
+  position: relative;
+  padding: 0;
+}
+
+[type="text"] {
+  font-size: 15px;
+  padding-left: 5px;
+  outline: none;
+  /* border-bottom: 1px solid black; */
+  padding: 5px 0;
+  transition: border-color 300ms;
+}
+
+[type="text"]:focus {
+  border-color: #31348d;
+  padding-left: 5px;
+}
+label {
+  margin: 5px 0px 0px 10px;
+  background-color: white;
+}
+
+[type="text"] + label {
+  font-size: 15px;
+  padding-left: 5px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: black;
+  pointer-events: none;
+  transform-origin: left;
+  transition: transform 300ms;
+}
+
+[type="text"]:focus + label,
+[type="text"]:not(:placeholder-shown) + label {
+  transform: scale(0.7) translateY(-20px);
+  padding-left: 5px;
+}
+
+[type="text"]:not(:placeholder-shown):not(:focus):invalid {
+  border: 2px solid red;
+  padding-left: 5px;
+}
+
+[type="text"]:not(:placeholder-shown):not(:focus):valid {
+  border: 2px solid green;
+  padding-left: 5px;
+}
