@@ -4,7 +4,7 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
   backdrop-filter: blur(100px);
-  background: linear-gradient(180deg, #E0EAF6 2.64%, rgba(217, 217, 217, 0.68305) 6.83%, rgba(217, 217, 217, 0) 10%);
+  /* background: linear-gradient(180deg, #E0EAF6 2.64%, rgba(217, 217, 217, 0.68305) 6.83%, rgba(217, 217, 217, 0) 10%); */
   /* opacity: 0.8; */
   /* background-color: white; */
   width: 100%;
@@ -330,19 +330,68 @@ select:focus {
   inset: 0;
 }
 
-.texts {
-    padding-top: 15%;
-    padding-left: 10%;
-}
 
 .texts {
-    font-size: 30px;
-    font-weight: 900;
+  padding-top: 15%;
+  padding-left: 10%;
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.color{
+  color: #15076F;
 }
 
 .cta {
-    color: white;
-    font-size: 30px;
-    text-decoration: none;
-    background-color: #2C5395;
+  margin: auto;
+  display: inline-block;
+  color: white;
+  font-size: 17px;
+  text-decoration: none;
+  background-color: #2C5395;
+  align-items: center;
+  width: 9%;
+  height: 35px;
+  border-radius: 5px;
+  text-align: center;
+  padding-top: 5px;
+}
+
+.layar-dalam {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  justify-content: space-between;
+}
+
+footer {
+  padding-top: 40px;
+  padding-left: 100px;
+  background-color: white;
+  color: black;
+}
+
+footer .layar-dalam div{
+  width: 100%;
+}
+
+.kiri {
+  display: flex;
+  flex-direction: column;
+}
+
+footer .layar-dalam h5{
+  margin-top: 0px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #31358A;
+}
+
+footer .layar-dalam .copyright{
+  width: 100%;
+  margin-top: 30px;
+  padding-top: 30px;
+  border-top: 2px solid #31348D;
+  text-align: center;
 }
