@@ -125,6 +125,12 @@ body {
   border-radius: 12px;
 }
 
+input {
+  border: solid 2px #2c5395;
+  border-radius: 12px;
+  width: 100%;
+}
+
 .text-area {
   width: 98%;
   height: 30%;
