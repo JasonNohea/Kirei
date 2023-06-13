@@ -3,9 +3,229 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="icon" href="../assets/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../css/hometalent.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <title>Job Portal di Indonesia</title>
 </head>
 <body>
+    <header>
+        <!-- navigation bar -->
+        <nav>
+            <img class="logo" src="../assets/logoCompany.png" alt="Logo Regio" />
+            <a class="navi-button" href="#"> Jobs </a>
+            <a class="navi-button" href="#"> My Project </a>
+            <a class="navi-button" href="#"> About </a>
+            <img class="globe" src="../assets/global.png" />
+            <i class="fa-regular fa-globe"></i>
+            <select>
+              <option> EN </option>
+              <option> ID </option>
+            </select>
+            <button class="login-button">Login</button>
+        </nav>
     
+        <!-- login container -->
+        <div class="dark-screen main-con">
+            <div class="login-con">
+              <form class="login-form">
+                <img src="../assets/logo.png" class="form-logo" />
+                <p class="login-heading">Welcome to Regio!</p>
+                <div class="form-con">
+                  <svg
+                    class="form-logo"
+                    width="20"
+                    height="16"
+                    viewBox="0 0 20 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M18 0H2C0.9 0 0.00999999 0.9 0.00999999 2L0 14C0 15.1 0.9 16 2 16H18C19.1 16 20 15.1 20 14V2C20 0.9 19.1 0 18 0ZM18 4L10 9L2 4V2L10 7L18 2V4Z"
+                      fill="#716B6B"
+                    />
+                  </svg>
+                  <label class="form-text"
+                    >Email<span class="required">*</span></label
+                  >
+                  <input
+                    class="form-input"
+                    placeholder=" "
+                    type="text"
+                    name="Email"
+                    id="email"
+                  />
+                </div>
+                <span class="err-txt hidden" id="em-err"
+                  >Please fill required field</span
+                >
+                <div class="form-con">
+                  <svg
+                    class="form-logo"
+                    width="16"
+                    height="21"
+                    viewBox="0 0 16 21"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8 16C8.53043 16 9.03914 15.7893 9.41421 15.4142C9.78929 15.0391 10 14.5304 10 14C10 13.4696 9.78929 12.9609 9.41421 12.5858C9.03914 12.2107 8.53043 12 8 12C7.46957 12 6.96086 12.2107 6.58579 12.5858C6.21071 12.9609 6 13.4696 6 14C6 14.5304 6.21071 15.0391 6.58579 15.4142C6.96086 15.7893 7.46957 16 8 16ZM14 7C14.5304 7 15.0391 7.21071 15.4142 7.58579C15.7893 7.96086 16 8.46957 16 9V19C16 19.5304 15.7893 20.0391 15.4142 20.4142C15.0391 20.7893 14.5304 21 14 21H2C1.46957 21 0.960859 20.7893 0.585786 20.4142C0.210714 20.0391 0 19.5304 0 19V9C0 8.46957 0.210714 7.96086 0.585786 7.58579C0.960859 7.21071 1.46957 7 2 7H3V5C3 3.67392 3.52678 2.40215 4.46447 1.46447C5.40215 0.526784 6.67392 0 8 0C8.65661 0 9.30679 0.129329 9.91342 0.380602C10.52 0.631876 11.0712 1.00017 11.5355 1.46447C11.9998 1.92876 12.3681 2.47995 12.6194 3.08658C12.8707 3.69321 13 4.34339 13 5V7H14ZM8 2C7.20435 2 6.44129 2.31607 5.87868 2.87868C5.31607 3.44129 5 4.20435 5 5V7H11V5C11 4.20435 10.6839 3.44129 10.1213 2.87868C9.55871 2.31607 8.79565 2 8 2Z"
+                      fill="#716B6B"
+                    />
+                  </svg>
+                  <label class="form-text"
+                    >Password<span class="required">*</span></label
+                  >
+                  <input
+                    class="form-input"
+                    placeholder=" "
+                    type="password"
+                    name="Pass"
+                    id="pass"
+                  />
+                </div>
+                <span class="err-txt hidden" id="pass-err"
+                  >Please fill required field</span
+                >
+                <a class="forgot-pass" id="forgotPasswordLink" href="#"
+                  >Forgot Password?</a
+                >
+                <div class="button-con">
+                  <button class="form-button login-submit">Login</button>
+                  <button class="form-button login-cancel">Cancel</button>
+                </div>
+      
+                <div class="opt-acc">
+                  <hr class="hr-decor" />
+                  <p>or</p>
+                  <hr class="hr-decor" />
+                </div>
+                <div class="button-con-acc">
+                  <button class="form-button login-google acc-animation">
+                    <svg
+                      class="logo-text logo-login"
+                      width="33"
+                      height="21"
+                      viewBox="0 0 33 21"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M30.0116 8.98303C30.0005 7.98708 29.9969 6.98376 29.9932 5.98413H27.0158C27.0048 6.98007 26.9974 7.9797 26.99 8.98303C25.9877 8.98671 24.9928 8.99409 23.9979 9.00516V11.9893C24.9928 12.0004 25.9951 12.0077 26.99 12.0188C27.0011 13.0148 27.0011 14.0144 27.0084 15.0103H29.9895C29.9932 14.0144 30.0005 13.0148 30.0079 12.0114C31.0102 12.0004 32.0051 11.9967 33 11.9856V9.00147C32.0088 8.99409 31.0065 8.99409 30.0116 8.98303ZM10.4819 8.99778C10.4782 10.1892 10.4819 11.3844 10.4856 12.5758C12.4828 12.6422 14.4837 12.6127 16.4808 12.6422C15.6002 17.0797 9.57544 18.5183 6.38805 15.619C3.10854 13.0775 3.2633 7.50386 6.67178 5.14311C9.05588 3.23975 12.4422 3.70821 14.8263 5.35705C15.7623 4.49021 16.6393 3.56067 17.4831 2.60161C15.5007 1.01917 13.0687 -0.10957 10.4819 0.00846747C5.07993 -0.172278 0.116442 4.56399 0.0280057 9.97528C-0.31837 14.398 2.58529 18.7322 6.68284 20.2962C10.7656 21.8713 16.0018 20.7979 18.6107 17.1239C20.3315 14.8038 20.7037 11.8159 20.501 9.00885C17.1589 8.98303 13.8204 8.98671 10.4819 8.99778Z"
+                        fill="white"
+                        fill-opacity="0.35"
+                      />
+                    </svg>
+                    <p class="logo-text text-login">Google</p>
+                  </button>
+                  <button class="form-button login-linkedin acc-animation">
+                    <svg
+                      class="logo-text logo-login"
+                      width="21"
+                      height="21"
+                      viewBox="0 0 21 21"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M7.80045 7.31745H11.7001V9.25995C12.2619 8.14275 13.7025 7.13895 15.8665 7.13895C20.0151 7.13895 21 9.36285 21 13.4431V21H16.8V14.3724C16.8 12.0487 16.2383 10.7383 14.8082 10.7383C12.8247 10.7383 12.0004 12.1506 12.0004 14.3713V21H7.80045V7.31745ZM0.5985 20.8215H4.7985V7.13895H0.5985V20.8215ZM5.40015 2.6775C5.40031 3.02954 5.33049 3.3781 5.19476 3.70292C5.05902 4.02774 4.86008 4.32234 4.6095 4.5696C4.10172 5.07426 3.4144 5.35674 2.6985 5.355C1.98386 5.35452 1.29813 5.07276 0.7896 4.57065C0.539922 4.32255 0.341655 4.02762 0.206161 3.70275C0.0706665 3.37789 0.000608088 3.02949 0 2.6775C0 1.96665 0.2835 1.28625 0.79065 0.78435C1.29873 0.281566 1.98475 -0.000314171 2.69955 2.62778e-07C3.41565 2.62778e-07 4.10235 0.28245 4.6095 0.78435C5.1156 1.28625 5.40015 1.96665 5.40015 2.6775Z"
+                        fill="white"
+                        fill-opacity="0.35"
+                      />
+                    </svg>
+                    <p class="logo-text text-login">Linked In</p>
+                  </button>
+                </div>
+                <p class="register-text">
+                  Don't have an account?&nbsp;<a href="#" class="regist">Register</a>
+                </p>
+              </form>
+            </div>
+      
+            <div class="reset-con">
+              <form class="reset-form">
+                <img src="../assets/logo.png" class="form-logo" />
+                <p class="reset-heading">Forgot Password?</p>
+                <span class="reset-inst"
+                  >no worries, we'll send you reset instructions.</span
+                >
+                <div class="form-con">
+                  <svg
+                    class="form-logo"
+                    width="20"
+                    height="16"
+                    viewBox="0 0 20 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M18 0H2C0.9 0 0.00999999 0.9 0.00999999 2L0 14C0 15.1 0.9 16 2 16H18C19.1 16 20 15.1 20 14V2C20 0.9 19.1 0 18 0ZM18 4L10 9L2 4V2L10 7L18 2V4Z"
+                      fill="#716B6B"
+                    />
+                  </svg>
+                  <label class="form-text"
+                    >Email<span class="required">*</span></label
+                  >
+                  <input
+                    class="form-input"
+                    placeholder=" "
+                    type="text"
+                    name="Email"
+                    id="email"
+                  />
+                </div>
+                <span class="err-txt hidden" id="em-err"
+                  >Please fill required field</span
+                >
+                <div class="info-con">
+                  <svg
+                    class="reset-info"
+                    width="13"
+                    height="13"
+                    viewBox="0 0 13 13"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6.05043 10L6.05043 5.1L6.95043 5.1L6.95043 10L6.05043 10ZM6.05043 4L6.05043 3L6.95043 3L6.95043 4L6.05043 4Z"
+                      fill="#6D6D6D"
+                    />
+                    <circle
+                      cx="6.5"
+                      cy="6.5"
+                      r="6"
+                      transform="rotate(-180 6.5 6.5)"
+                      stroke="#6D6D6D"
+                    />
+                    <span class="info-detail reset-info">
+                      Resend the email that you have registered
+                    </span>
+                  </svg>
+                </div>
+                <div class="button-con">
+                  <button class="form-button login-submit">Send OTP Code</button>
+                  <button class="form-button login-cancel">Back to Login</button>
+                </div>
+      
+                <div class="opt-acc">
+                  <hr class="hr-decor" />
+                  <p>or</p>
+                  <hr class="hr-decor" />
+                </div>
+                <p class="register-text">
+                  Don't have an account?&nbsp;<a href="#" class="regist">Register</a>
+                </p>
+              </form>
+            </div>
+          </div>
+    </header>
+    <main>
+        <div class="kotakcari">
+            <input class="carikerja" type="text" placeholder="Cari Kerja"> 
+        </div>
+    </main> 
 </body>
 </html>
