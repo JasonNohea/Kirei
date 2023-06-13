@@ -11,18 +11,19 @@ fieldset {
   /* border: none; */
   outline: none;
   /* border-bottom: 1px solid black; */
-  padding-left: 5px;
-  padding: 5px 0;
+  padding-left: 3px;
+  padding: 8px 0 0 3px;
   transition: border-color 300ms;
 }
 
 [type="text"]:focus {
-  padding-left: 5px;
+  padding-left: 3px;
   width: 98.8%;
 }
 
 label {
-  margin: 5px 0px 0px 10px;
+  margin: 5px 0px 0px 8px;
+  padding: 0;
   background-color: white;
 }
 
@@ -40,15 +41,15 @@ label {
 [type="text"]:focus + label,
 [type="text"]:not(:placeholder-shown) + label {
   transform: scale(0.7) translateY(-20px);
-  padding-left: 5px;
+  padding-left: 3px;
 }
 
 [type="text"]:not(:placeholder-shown):not(:focus):invalid {
   border: 2px solid red;
-  padding-left: 5px;
+  padding-left: 3px;
 }
 
 [type="text"]:not(:placeholder-shown):not(:focus):valid {
   border: 2px solid green;
-  padding-left: 5px;
+  padding-left: 3px;
 }

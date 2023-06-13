@@ -1,0 +1,54 @@
+fieldset {
+  border: none;
+  position: relative;
+  padding: 0;
+}
+
+[type="password"],
+textarea {
+  font-size: 15px;
+  padding-left: 5px;
+  outline: none;
+  padding: 5px 0;
+  transition: border-color 300ms;
+  border: 2px solid #31348d;
+  border-radius: 12px;
+}
+
+[type="password"]:focus,
+textarea:focus {
+  border-color: #31348d;
+  padding-left: 5px;
+}
+
+[type="password"] + label,
+textarea + label {
+  font-size: 15px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: black;
+  pointer-events: none;
+  transform-origin: left;
+  transition: transform 300ms;
+}
+
+[type="password"]:focus + label,
+[type="password"]:not(:placeholder-shown) + label,
+textarea:focus + label,
+textarea:not(:placeholder-shown) + label {
+  transform: scale(0.8) translateY(-20px);
+  padding-left: 5px;
+}
+
+[type="password"]:not(:placeholder-shown):not(:focus):invalid,
+textarea:not(:placeholder-shown):not(:focus):invalid {
+  border: 2px solid red;
+  padding-left: 5px;
+}
+
+[type="password"]:not(:placeholder-shown):not(:focus):valid,
+textarea:not(:placeholder-shown):not(:focus):valid {
+  border: 2px solid green;
+  padding-left: 5px;
+}
