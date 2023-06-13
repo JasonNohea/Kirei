@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../css/forgot.css" />
     <link rel="stylesheet" href="../css/registercompany.css" />
     <link rel="stylesheet" href="../css/register-input.css" />
+    <link rel="stylesheet" href="../css/text-area-input.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Cabin&display=swap"
       rel="stylesheet"
@@ -130,7 +131,7 @@
               placeholder=" "
               id="email-company"
               minlength="5"
-              required
+              onkeyup="success()"
             />
             <label for="email-company"
               >Email Company<span class="required">*</span></label
@@ -142,7 +143,7 @@
               placeholder=" "
               id="company-name"
               minlength="5"
-              required
+              onkeyup="success()"
             />
             <label for="company-name"
               >Company Name<span class="required">*</span></label
@@ -150,13 +151,83 @@
           </fieldset>
           <select class="register-input">
             <option disabled selected>Number of Employee</option>
-            <option>1-10</option>
-            <option>10-20</option>
+            <option value="">1 to 20</option>
+            <option value="">21 to 50</option>
+            <option value="">51 to 100</option>
+            <option value="">101 to 200</option>
+            <option value="">201 to 500</option>
+            <option value="">501 to 1000</option>
+            <option value="">more than 1000</option>
           </select>
-          <textarea class="text-area">ASD</textarea>
+          <fieldset>
+            <textarea
+              class="text-area"
+              placeholder=" "
+              id="company-description"
+              minlength="5"
+            ></textarea>
+            <label for="company-description">Company Description</label>
+          </fieldset>
         </div>
-        <div class="second-regis reg"></div>
+        <div class="second-regis reg">
+          <fieldset>
+            <input
+              type="text"
+              placeholder=" "
+              id="first-name"
+              minlength="5"
+              onkeyup="success()"
+            />
+            <label for="first-name"
+              >First Name<span class="required">*</span></label
+            >
+          </fieldset>
+          <fieldset>
+            <input
+              type="text"
+              placeholder=" "
+              id="last-name"
+              minlength="5"
+              onkeyup="success()"
+            />
+            <label for="last-name"
+              >Last Name<span class="required">*</span></label
+            >
+          </fieldset>
+          <fieldset>
+            <input
+              type="text"
+              placeholder=" "
+              id="posisi-pekerjaan"
+              minlength="5"
+            />
+            <label for="posisi-pekerjaan">Position</label>
+          </fieldset>
+          <fieldset>
+            <input
+              type="text"
+              placeholder=" "
+              id="contact-number"
+              minlength="5"
+            />
+            <label for="contact-number">Contact Number</label>
+          </fieldset>
+          <fieldset>
+            <input
+              type="password"
+              placeholder=" "
+              id="pass-reg"
+              minlength="5"
+              onkeyup="success()"
+            />
+            <label for="pass-reg"
+              >Password<span class="required">*</span></label
+            >
+          </fieldset>
+        </div>
       </form>
+      <button class="register-button" id="reg-b" disabled>Register</button>
+
       <div class="opt-acc">
         <hr class="hr-decor" />
         <p>or</p>
@@ -200,6 +271,8 @@
           <p class="logo-text text-login">Linked In</p>
         </button>
       </div>
+      <p class="login-on-reg">Have an account? <a href="#">Login</a></p>
     </div>
+    <script src="../js/main.js"></script>
   </body>
 </html>
