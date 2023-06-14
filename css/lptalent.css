@@ -1,6 +1,6 @@
 html,
 body {
-  background :url(../assets/bgtalent.png);
+  background :url(../assets/talentbg.png);
   background-repeat: no-repeat;
   background-size: contain;
   backdrop-filter: blur(100px);
@@ -329,7 +329,6 @@ select:focus {
   inset: 0;
 }
 
-
 .texts {
   padding-top: 15%;
   padding-left: 10%;
@@ -359,13 +358,12 @@ select:focus {
 .layar-dalam {
   width: 80%;
   display: flex;
-  flex-direction: row;
   margin: auto;
-  justify-content: space-between;
 }
 
 footer {
-  padding-top: 40px;
+  margin-top: 90px;
+  padding-top: 2%;
   padding-left: 100px;
   background-color: white;
   color: black;
@@ -378,6 +376,11 @@ footer .layar-dalam div{
 .kiri {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+}
+
+.footer .layar-dalam .kiri p {
+  font-size: 20px;
 }
 
 footer .layar-dalam h5{
@@ -393,4 +396,9 @@ footer .layar-dalam .copyright{
   padding-top: 30px;
   border-top: 2px solid #31348D;
   text-align: center;
+  padding-bottom: 8px;
+}
+
+.colorlink {
+  color : #001AFF;
 }
