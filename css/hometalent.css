@@ -1,15 +1,9 @@
 html,
 body {
-  background :url(../assets/bgtalent.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-  backdrop-filter: blur(100px);
-  /* background: linear-gradient(180deg, #E0EAF6 2.64%, rgba(217, 217, 217, 0.68305) 6.83%, rgba(217, 217, 217, 0) 10%); */
-  /* opacity: 0.8; */
-  /* background-color: white; */
   width: 100%;
   height: 100%;
   margin: 0;
+  background-color: #E0EAF7;
 }
 
 * {
@@ -394,3 +388,20 @@ footer .layar-dalam .copyright{
   border-top: 2px solid #31348D;
   text-align: center;
 }
+
+.kotakcari{
+    background-color: white;
+    position:absolute;
+    top: 22%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.carikerja {
+    padding: 10px;
+    border: 0;
+    border-radius: 15px;
+}
+
