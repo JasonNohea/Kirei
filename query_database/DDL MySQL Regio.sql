@@ -59,6 +59,8 @@ CREATE TABLE project (
 );
 
 ALTER TABLE project ADD CONSTRAINT project_pk PRIMARY KEY ( projectid );
+ALTER TABLE project MODIFY projectid INT AUTO_INCREMENT;
+
 
 -- SQLINES LICENSE FOR EVALUATION USE ONLY
 CREATE TABLE project_application (
@@ -113,12 +115,12 @@ CREATE TABLE talent (
     profilephoto          VARCHAR(50)
 );
 
-ALTER TABLE talent ADD CONSTRAINT talent_user_userid_un PRIMARY KEY ( talentid );
+ALTER TABLE talent ADD CONSTRAINT talent_users_userid_un PRIMARY KEY ( talentid );
 
 ALTER TABLE talent ADD CONSTRAINT tln_pk UNIQUE ( talentid );
 
 -- SQLINES LICENSE FOR EVALUATION USE ONLY
-CREATE TABLE `User` (
+CREATE TABLE `Users` (
     userid    INTEGER NOT NULL,
     usertype  VARCHAR(25) NOT NULL,
     firstname VARCHAR(30) NOT NULL,
@@ -128,7 +130,9 @@ CREATE TABLE `User` (
     phonenum  VARCHAR(15)
 );
 
-ALTER TABLE `User` ADD CONSTRAINT user_pk PRIMARY KEY ( userid );
+ALTER TABLE `Users` ADD CONSTRAINT users_pk PRIMARY KEY ( userid );
+ALTER TABLE `Users` MODIFY userid INT AUTO_INCREMENT;
+
 
 -- SQLINES LICENSE FOR EVALUATION USE ONLY
 CREATE TABLE work_experience (
@@ -143,7 +147,7 @@ ALTER TABLE work_experience ADD CONSTRAINT work_experience_pk PRIMARY KEY ( tale
 
 ALTER TABLE company
     ADD CONSTRAINT company_user_fk FOREIGN KEY ( companyid )
-        REFERENCES `User` ( userid );
+        REFERENCES `Users` ( userid );
 
 ALTER TABLE photo_project
     ADD CONSTRAINT pht_prj_fk FOREIGN KEY ( project_projectid )
@@ -175,7 +179,7 @@ ALTER TABLE project_progress
 
 ALTER TABLE talent
     ADD CONSTRAINT talent_user_fk FOREIGN KEY ( talentid )
-        REFERENCES `User` ( userid );
+        REFERENCES `Users` ( userid );
 
 ALTER TABLE work_experience
     ADD CONSTRAINT work_experience_talent_fk FOREIGN KEY ( talent_talentid )
