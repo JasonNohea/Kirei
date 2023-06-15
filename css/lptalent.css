@@ -1,6 +1,6 @@
 html,
 body {
-  background :url(../assets/bgtalent.png);
+  background :url(../assets/talentbg.png);
   background-repeat: no-repeat;
   background-size: contain;
   backdrop-filter: blur(100px);
@@ -329,7 +329,6 @@ select:focus {
   inset: 0;
 }
 
-
 .texts {
   padding-top: 15%;
   padding-left: 10%;
@@ -361,11 +360,11 @@ select:focus {
   display: flex;
   flex-direction: row;
   margin: auto;
-  justify-content: space-between;
 }
 
 footer {
-  padding-top: 40px;
+  margin-top: 90px;
+  padding-top: 2%;
   padding-left: 100px;
   background-color: white;
   color: black;
@@ -373,11 +372,17 @@ footer {
 
 footer .layar-dalam div{
   width: 100%;
+  margin: auto;
 }
 
 .kiri {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+}
+
+.footer .layar-dalam .kiri p {
+  font-size: 20px;
 }
 
 footer .layar-dalam h5{
@@ -387,10 +392,31 @@ footer .layar-dalam h5{
   color: #31358A;
 }
 
+.kanan .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+}
+
+.kanan .social-links a:hover{
+	color: white;
+	background-color:#001AFF;
+}
+
 footer .layar-dalam .copyright{
   width: 100%;
   margin-top: 30px;
   padding-top: 30px;
   border-top: 2px solid #31348D;
   text-align: center;
+  padding-bottom: 8px;
+}
+
+.colorlink {
+  color : #001AFF;
 }
