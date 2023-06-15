@@ -1,0 +1,65 @@
+<?php
+/*
+* Following code will list all the products
+*/
+// array for JSON response
+$response = array();
+// include db connect class
+require_once __DIR__ . '/connection.php';
+// connecting to db
+$db = new DB_CONNECT();
+$con = $db->connect();
+if (isset($_POST['x1']) && isset($_POST['x2']) && isset($_POST['x3']) && isset($_POST['x4'])) {
+$fname = $_POST['x1'];
+$lname= $_POST['x2'];
+$email = $_POST['x3'];
+$pass = $_POST['x4'];
+//if (true){
+// $emailaddressofmember = 'a';
+// $password = 'a';
+// id increment
+$query = "INSERT INTO user (1,'Talent',$fname,$lname,$email,$pass,'0819124124')";
+$result = mysqli_query($con, $query) or die(mysqli_error($con));
+while ($row = mysqli_fetch_array($result)) {
+$lastid = array();
+$lastid["user_id"] = $row["user_id"];
+}
+$last = explode(0, $lastid["user_id"]);
+$new = $last[2]+1;
+$newid = $last[0]."00".$new;
+mysqli_close($con);
+mysqli_next_result($con);
+// register
+$query = "INSERT INTO user (1,'Talent',$fname,$lname,$email,$pass,'0819124124')";
+$result = mysqli_query($con, $query) or die(mysqli_error($con));
+// data check
+$query = "INSERT INTO user (1,'Talent',$fname,$lname,$email,$pass,'0819124124')";
+$result = mysqli_query($con, $query) or die(mysqli_error($con));
+// Tampilkan data dengan pengulangan while
+$response["islogged"] = array();
+while ($row = mysqli_fetch_array($result)) {
+// temp user array
+$order = array();
+$order["nama"] = $row["nama"];
+$order["email"] = $row["email"];
+//$order["nomorinduk"] = $row["nomorinduk"];
+//$order["emailaddressofmember"] = $row["emailaddressofmember"];
+//$order["issuperadmin"] = $row["issuperadmin"];
+//$order["avatar"] = $row["avatar"];
+//$order["hp1"] = $row["hp1"];
+//$order["hp2"] = $row["hp2"];
+//$order["isasrunner"] = $row["isasrunner"];
+//$order["isassponsor"] = $row["isassponsor"];
+// push single product into final response array
+array_push($response["islogged"], $order);
+$success = true;
+}
+if ($success) {
+$response["success"] = 1;
+$response["message"] = "login success";
+} else {
+$response["success"] = 0;
+$response["message"] = "login failed";
+}
+echo json_encode($response, JSON_UNESCAPED_SLASHES);
+}
