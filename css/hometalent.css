@@ -323,7 +323,6 @@ select:focus {
   inset: 0;
 }
 
-
 .texts {
   padding-top: 15%;
   padding-left: 10%;
@@ -401,7 +400,8 @@ footer .layar-dalam .copyright{
 
 .carikerja {
     padding: 10px;
-    border: 0;
+    border: 10px;
     border-radius: 15px;
+    color: #31348D;
 }
 
