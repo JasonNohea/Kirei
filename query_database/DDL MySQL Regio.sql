@@ -10,17 +10,17 @@ CREATE TABLE company (
 );
 
 -- SQLINES LICENSE FOR EVALUATION USE ONLY
-CREATE UNIQUE INDEX company__idx ON
+/*CREATE UNIQUE INDEX company_idx ON
     company (
         companyid
     ASC );
 
 -- SQLINES LICENSE FOR EVALUATION USE ONLY
-CREATE UNIQUE INDEX company__idxv1 ON
+CREATE UNIQUE INDEX company_idxv1 ON
     company (
         companyid
     ASC );
-
+*/
 ALTER TABLE company ADD CONSTRAINT company_pk PRIMARY KEY ( companyid );
 
 ALTER TABLE company ADD CONSTRAINT company_companyid_un UNIQUE ( companyid );
@@ -66,6 +66,7 @@ CREATE TABLE project_application (
     talent_talentid   INTEGER NOT NULL
 );
 
+/*
 -- SQLINES LICENSE FOR EVALUATION USE ONLY
 CREATE INDEX project_application__idx_prj ON
     project_application (
@@ -77,7 +78,7 @@ CREATE INDEX project_application__idx_tln ON
     project_application (
         talent_talentid
     ASC );
-
+*/
 ALTER TABLE project_application ADD CONSTRAINT project_application_pk PRIMARY KEY ( project_projectid,
                                                                                     talent_talentid );
 
