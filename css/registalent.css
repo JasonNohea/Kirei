@@ -123,7 +123,7 @@ img {
 }
 
 .mid {
-  margin-left: 70px;
+  margin-left: 45px;
   inset: 0;
   width: 70%;
 }
@@ -143,4 +143,7 @@ button:hover{
     color: white;
     font-style: bold;
 }
-  
+
+.login {
+  text-decoration: underline;
+}
