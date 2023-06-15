@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $error = "fname or email already exists.";
         } else {
             // Insert the new user into the database
-            $query = "INSERT INTO user VALUES (3,'Talent','$fname','$lname', '$email', '$password','08191023234')";
+            $query = "INSERT INTO users VALUES (3,'Talent','$fname','$lname', '$email', '$password','08191023234')";
             if ($conn->query($query) === TRUE) {
                 $success = "Registration successful!";
             } else {

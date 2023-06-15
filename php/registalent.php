@@ -5,19 +5,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $fname = $_POST['fname'];
     $lname = $_POST['lname'];
     $email = $_POST['email'];
-    $password = $_POST['password'];
-    $phone = $_POST['phonenum'];
+    $password = $_POST['pass'];
+    $phone = $_POST['phone'];
 
-/*
-    //Sequence for UserID
-    $id = $db->nextId('mySequence');
-if (PEAR::isError($id)) {
-    die($id->getMessage());
-}
-
-// Use the ID in your INSERT query
-$res =& $db->query("INSERT INTO myTable (id, text) VALUES ($id, 'foo')");
-*/
     // Validate form data (you can add more validation as per your requirements)
     if (empty($fname) || empty($lname) || empty($email) || empty($password)) {
         $error = "All fields are required.";
@@ -37,47 +27,16 @@ $res =& $db->query("INSERT INTO myTable (id, text) VALUES ($id, 'foo')");
         if ($result->num_rows > 0) {
             $error = "fname or email already exists.";
         } else {
-            /*
-             // Begin the transaction
-            $conn->begin_transaction();
-
-            // Insert the new user into the 'user' table
-            $query1 = "INSERT INTO user VALUES (1, 'Talent',$fname, $lname, $email, $password, $phone)";
-            $stmt1 = $conn->prepare($query1);
-            $stmt1->bind_param("sssss", $fname, $lname, $email, $password, $phone);
-            $stmt1->execute();
-
-            // Retrieve the auto-generated user ID
-            $userId = $conn->insert_id;
-
-            // Insert the data into the 'talent' table
-            $query2 = "INSERT INTO talent VALUES (1)";
-            $stmt2 = $conn->prepare($query2);
-            $stmt2->bind_param("is", $userId);
-            $stmt2->execute();
-
-            // Commit the transaction
-            $conn->commit();
-
-            $success = "Registration successful!";
-        } */
-
-            
             // Insert the new user into the database
-            $query = "INSERT INTO user VALUES (1,'Talent','$fname','$lname', '$email', '$password','08191023234')";
-            $query2= "INSERT INTO talent VALUES (1,'$tgl')";
+            $query = "INSERT INTO users VALUES (4,'Talent','$fname','$lname', '$email', '$password',$phone)";
             if ($conn->query($query) === TRUE) {
-                $query2;
                 $success = "Registration successful!";
             } else {
                 $error = "Error: " . $conn->error;
-            } 
-            
+            }
         }
 
         // Close the database connection
         $conn->close();
     }
 }
-
-?>
