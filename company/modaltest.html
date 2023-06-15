@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="../assets/logo.png" type="image/x-icon" />
-    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../bootstrap-css/main.css" />
     <link rel="stylesheet" href="../css/newnav.css" />
     <!-- <link rel="stylesheet" href="../css/login.css" /> -->
 
@@ -23,6 +23,7 @@
       integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
       crossorigin="anonymous"
     ></script>
+    <script src="../js/mainpage.js" defer></script>
     <title>Regio</title>
   </head>
   <body>
@@ -44,23 +45,29 @@
           type="button"
           class="login-button"
           data-bs-toggle="modal"
-          data-bs-target="#exampleModal"
+          data-bs-target="#login"
         >
           Login
         </button>
       </div>
     </nav>
 
-    <!-- Modal -->
+    <!-- Modal Login -->
     <div
       class="modal fade"
-      id="exampleModal"
+      id="login"
       tabindex="-1"
       aria-labelledby="exampleModalLabel"
       aria-hidden="true"
     >
       <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
+        <form
+          class="modal-content needs-validation"
+          action="../php/loginjson.php"
+          method="post"
+          name="login"
+          novalidate
+        >
           <div class="modal-header">
             <button
               type="button"
@@ -69,9 +76,7 @@
               aria-label="Close"
             ></button>
             <img src="../assets/logo.png" alt="Regio Logo" />
-            <h1 class="modal-title fs-5" id="exampleModalLabel">
-              Welcome to Regio
-            </h1>
+            <h1 class="login-heading">Welcome to Regio!</h1>
           </div>
           <div class="modal-body">
             <div>
@@ -79,25 +84,46 @@
                 <input
                   type="email"
                   class="form-control"
-                  id="floatingInput"
+                  id="email"
+                  name="email"
                   placeholder="name@example.com"
+                  required
                 />
-                <label for="floatingInput">Email address</label>
+                <label for="email">Email<span class="required">*</span></label>
               </div>
               <div class="form-floating">
                 <input
                   type="password"
                   class="form-control"
-                  id="floatingPassword"
+                  id="password"
+                  name="password"
                   placeholder="Password"
+                  required
                 />
-                <label for="floatingPassword">Password</label>
+                <label for="password"
+                  >Password<span class="required">*</span></label
+                >
               </div>
             </div>
-            <a class="forgot-pass-anchor" href="#">Forgot Password?</a>
+            <a
+              class="forgot-pass-anchor"
+              href="#"
+              data-bs-target="#register"
+              data-bs-toggle="modal"
+              >Forgot Password?</a
+            >
             <div class="button-con">
-              <button class="form-button login-submit">Login</button>
-              <button class="form-button login-cancel">Cancel</button>
+              <button class="form-button login-submit" type="submit">
+                Login
+              </button>
+              <button
+                type="button"
+                class="form-button login-cancel"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              >
+                Cancel
+              </button>
             </div>
             <div class="opt-acc">
               <hr class="hr-decor" />
@@ -148,7 +174,72 @@
               >
             </p>
           </div>
-        </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Modal register -->
+    <div
+      class="modal fade"
+      id="register"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <form class="modal-content">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+            <img src="../assets/logo.png" alt="Regio Logo" />
+            <h1 class="login-heading">Forgot Password?</h1>
+            <span class="reset-inst"
+              >no worries, we'll send you reset instructions.</span
+            >
+          </div>
+          <div class="modal-body">
+            <div>
+              <div class="form-floating mb-3">
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email-reset"
+                  placeholder="name@example.com"
+                />
+                <label for="email-reset"
+                  >Email<span class="required">*</span></label
+                >
+              </div>
+            </div>
+            <div class="button-con">
+              <button class="form-button login-submit" type="submit">
+                Send OTP Code
+              </button>
+              <button
+                type="button"
+                class="form-button login-cancel"
+                data-bs-target="#login"
+                data-bs-toggle="modal"
+              >
+                Back to Login
+              </button>
+            </div>
+            <div class="opt-acc">
+              <hr class="hr-decor" />
+              <p>or</p>
+              <hr class="hr-decor" />
+            </div>
+            <p class="register-text">
+              Don't have an account?&nbsp;<a href="#" class="regist"
+                >Register</a
+              >
+            </p>
+          </div>
+        </form>
       </div>
     </div>
   </body>

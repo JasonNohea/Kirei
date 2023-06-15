@@ -44,7 +44,17 @@ nav {
   border-radius: 18px;
   display: flex;
   flex-direction: row;
-  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 2px 20px #00000033;
+  animation: nav-load 400ms ease-in-out;
+}
+
+@keyframes nav-load {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translatY(0);
+  }
 }
 
 .nav1 {
@@ -85,7 +95,7 @@ select:focus {
 .navi-button {
   font-size: 17px;
   text-decoration: none;
-  color: black;
+  color: #3a3737;
 }
 
 .login-button {
@@ -99,4 +109,31 @@ select:focus {
 
 .login-button:hover {
   background-color: #19386c;
+}
+
+.navline {
+  width: 1px;
+  background-color: #555;
+  border: none;
+  height: 20px;
+  margin: 0;
+}
+
+.logged-in {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+}
+
+.user-nav {
+  color: #3a3737;
+}
+
+.company-nav {
+  color: black !important;
+}
+
+.nav-acc {
+  margin: 0;
 }

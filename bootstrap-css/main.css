@@ -1,8 +1,9 @@
 html,
 body {
-  background-color: darkgray;
+  background-color: darkgray !important;
 }
 
+/* modal */
 .modal-header {
   border-bottom: none !important;
   display: flex;
@@ -25,10 +26,21 @@ body {
 .modal-body {
   display: flex;
   flex-direction: column;
-  width: 70%;
+  width: 80% !important;
   margin: auto;
   inset: 0;
   gap: 10px;
+}
+/* modal close */
+
+/* login */
+.login-heading {
+  font-size: 2.4vw;
+  font-weight: 800;
+}
+
+.required {
+  color: red;
 }
 
 .log-button {
@@ -39,8 +51,9 @@ body {
 
 .forgot-pass-anchor {
   display: flex;
-  font-size: 10px;
+  font-size: 12px;
   justify-content: end;
+  text-decoration: none;
 }
 
 .button-con {
@@ -80,6 +93,8 @@ body {
   font-weight: bolder;
 }
 
+/* decoration */
+
 .opt-acc {
   display: flex;
   flex-direction: row;
@@ -99,10 +114,12 @@ body {
   height: 1px;
 }
 
+/* decoration close */
+
 .register-text {
   margin: auto;
-  inset: 2;
-  font-size: 12px;
+  inset: 0;
+  font-size: 10px;
 }
 
 .regist {
@@ -113,8 +130,7 @@ body {
 .button-con-acc {
   display: flex;
   flex-direction: row;
-  margin: auto;
-  inset: 0;
+  justify-content: center;
   width: 100%;
   height: 5%;
 }
@@ -154,4 +170,13 @@ body {
 
 .logo-text {
   margin: 10px;
+}
+
+/* login close */
+
+/* reset password */
+.reset-inst {
+  justify-content: center;
+  font-size: 13px;
+  color: gray;
 }

@@ -1,0 +1,12 @@
+nav {
+  animation: none !important;
+}
+
+.modal-content {
+  height: 500px;
+}
+
+.spinner {
+  margin: 80px auto;
+  inset: 0;
+}
