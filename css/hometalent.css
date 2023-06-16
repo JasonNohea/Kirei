@@ -396,6 +396,7 @@ footer .layar-dalam .copyright{
     transform: translate(-50%, -50%);
     padding: 10px;
     border-radius: 15px;
+    z-index: 1;
 }
 
 .carikerja {
@@ -405,3 +406,69 @@ footer .layar-dalam .copyright{
     color: #31348D;
 }
 
+.wrapper{
+  position:absolute;
+  top: 30%;
+  left: 16%;
+  width: 80%;
+  max-width: 1300px;
+}
+
+footer {
+  margin-top: 60%;
+  padding-top: 2%;
+  padding-left: 100px;
+  background-color: white;
+  color: black;
+}
+
+footer .layar-dalam div{
+  width: 100%;
+  margin: auto;
+}
+
+.kiri {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.footer .layar-dalam .kiri p {
+  font-size: 20px;
+}
+
+footer .layar-dalam h5{
+  margin-top: 0px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #31358A;
+}
+
+.kanan .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+}
+
+.kanan .social-links a:hover{
+	color: white;
+	background-color:#001AFF;
+}
+
+footer .layar-dalam .copyright{
+  width: 100%;
+  margin-top: 30px;
+  padding-top: 30px;
+  border-top: 2px solid #31348D;
+  text-align: center;
+  padding-bottom: 8px;
+}
+
+.colorlink {
+  color : #001AFF;
+}
