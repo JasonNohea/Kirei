@@ -405,3 +405,9 @@ footer .layar-dalam .copyright{
     color: #31348D;
 }
 
+.wrapper{
+  position:absolute;
+  top:30%;
+  left:15%;
+  width: 100%;
+}
