@@ -10,3 +10,26 @@ nav {
   margin: 80px auto;
   inset: 0;
 }
+
+.welcome-img {
+  margin: auto;
+  inset: 0;
+  width: 70%;
+  height: auto;
+}
+
+.greeting-text {
+  font-size: 13px;
+  color: gray;
+  text-align: center;
+}
+
+.b-homepage {
+  margin: auto;
+  inset: 0;
+  border: none;
+  background-color: #2c5395;
+  color: white;
+  border-radius: 5px;
+  width: 50%;
+}

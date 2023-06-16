@@ -20,7 +20,7 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
 if ($success == TRUE) {
     echo "Selamat Datang " . $_POST['email'];
     //membuat metode redirect dengan kode 301
-    header("location: ../company/loggedin nav.html", true, 301);
+    header("location: ../company/hp-loggedin.html", true, 301);
     //membuat kode di bawah header tidak diproses oleh website sehingga lebih aman
     exit();
 } else {

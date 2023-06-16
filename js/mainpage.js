@@ -22,3 +22,78 @@
     );
   });
 })();
+
+// OTP field
+$(".digit-group")
+  .find("input")
+  .each(function () {
+    $(this).attr("maxlength", 1);
+    $(this).on("keyup", function (e) {
+      var parent = $($(this).parent());
+
+      if (e.keyCode === 8 || e.keyCode === 37) {
+        var prev = parent.find("input#" + $(this).data("previous"));
+
+        if (prev.length) {
+          $(prev).select();
+        }
+      } else if (
+        (e.keyCode >= 48 && e.keyCode <= 57) ||
+        (e.keyCode >= 65 && e.keyCode <= 90) ||
+        (e.keyCode >= 96 && e.keyCode <= 105) ||
+        e.keyCode === 39
+      ) {
+        var next = parent.find("input#" + $(this).data("next"));
+
+        if (next.length) {
+          $(next).select();
+        } else {
+          if (parent.data("autosubmit")) {
+            parent.submit();
+          }
+        }
+      }
+    });
+  });
+
+// OTP timer
+var downloadTimer;
+
+function startCountdown() {
+  var timeleft = 20;
+  var cd = document.getElementById("countdown");
+  cd.classList.remove("timeout");
+  cd.innerHTML = "00:20";
+
+  downloadTimer = setInterval(function () {
+    if (timeleft <= 0) {
+      clearInterval(downloadTimer);
+      cd.innerHTML = "Now";
+      cd.classList.add("timeout");
+    } else {
+      if (timeleft > 9) {
+        cd.innerHTML = "00:" + timeleft;
+      } else {
+        cd.innerHTML = "00:0" + timeleft;
+      }
+    }
+    timeleft -= 1;
+  }, 1000);
+}
+
+$("#send-otp").on("click", function () {
+  clearInterval(downloadTimer);
+  startCountdown();
+});
+
+$("#countdown").on("click", function (e) {
+  e.preventDefault();
+  if ($(this).hasClass("timeout")) {
+    clearInterval(downloadTimer);
+    startCountdown();
+  }
+});
+
+$("#reset-otp").on("click", function () {
+  clearInterval(downloadTimer);
+});

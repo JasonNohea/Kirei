@@ -32,6 +32,7 @@
         setTimeout(function () {
           // Close the modal
           $("#loading").modal("hide");
+          $("#welcome").modal("show");
         }, duration);
       });
       // $(window).on("load", function () {
@@ -116,6 +117,43 @@
             >
               <span class="visually-hidden">Loading...</span>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal logged-in -->
+    <div
+      class="modal fade"
+      id="welcome"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+            <img src="../assets/logo.png" alt="Regio Logo" />
+            <h1 class="login-heading">Welcome Back!</h1>
+          </div>
+          <div class="modal-body">
+            <img
+              class="welcome-img"
+              src="../assets/greeting.png"
+              alt="Welcome"
+            />
+            <span class="greeting-text"
+              >Hi, Jeremy Wugouw. Glad to see u again!!</span
+            >
+            <button type="button" class="b-homepage" data-bs-dismiss="modal">
+              Back to Homepage
+            </button>
           </div>
         </div>
       </div>
