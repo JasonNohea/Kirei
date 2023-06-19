@@ -445,17 +445,33 @@ input[type="submit"]:hover{
 
 .wrapper{
   float: right;
-  margin-right: 10%;
-  width: 60%;
+  margin-right: 5%;
+  width: 70%;
+  height: 100px;
 }
 
 .cards-wrapper{
   border: 10px solid red;
-  height: 400px;
+  height: 300px;
+  display: flex;
+  flex-direction: row;
+}
+
+.jobs{
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  height: 100%;
+  max-height: fit-content;
+  box-sizing: border-box;
+  border-radius: 15px;
+  background-color: white;
 }
 
 footer {
-  margin-top: 60%;
+  margin-top: 13%;
   padding-top: 2%;
   padding-left: 100px;
   background-color: white;
