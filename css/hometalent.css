@@ -387,35 +387,91 @@ footer .layar-dalam .copyright{
   border-top: 2px solid #31348D;
   text-align: center;
 }
+.wrap-box{
+  margin-left: 2.5%;
+  margin-top: 15%;
+  width: 19%;
+  height: 300px;
+  background-color: white;
+  padding-left: 2%;
+  padding-right: 2%;
+  border-radius: 20px;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.25);
+}
 
 .kotakcari{
-    background-color:#0038ff;
-    position:absolute;
-    top: 22%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 10px;
-    border-radius: 15px;
-    z-index: 1;
+  margin-top: 150px;
+  padding-top: 15px;
+  border-radius: 15px;
 }
 
 .carikerja {
-    padding: 10px;
-    border: 10px;
-    border-radius: 15px;
-    color: #31348D;
+  border-width: 100%;
+  max-width:fit-content;
+  border: 2px solid #31348D;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.lokasi {
+  width: 100%;
+  max-width:fit-content;
+}
+
+hr .crkerja{
+  width: 40px;
+  max-width: fit-content;
+}
+
+.button-submit {
+  margin-top: 60%;
+  margin-left: 30%;
+}
+
+input[type="submit"]{
+  font-size: 16px;
+  width: 100%;
+  max-width: 100px;
+  padding: 10px;
+  border: none;
+  background-color: #2C5395;
+  color: white;
+  border-radius: 10px;
+}
+
+input[type="submit"]:hover{
+  background-color: #12336A;
 }
 
 .wrapper{
-  position:absolute;
-  top: 30%;
-  left: 16%;
-  width: 80%;
-  max-width: 1300px;
+  float: right;
+  margin-right: 5%;
+  width: 70%;
+  height: 100px;
+}
+
+.cards-wrapper{
+  border: 10px solid red;
+  height: 300px;
+  display: flex;
+  flex-direction: row;
+}
+
+.jobs{
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  height: 100%;
+  max-height: fit-content;
+  box-sizing: border-box;
+  border-radius: 15px;
+  background-color: white;
 }
 
 footer {
-  margin-top: 60%;
+  margin-top: 13%;
   padding-top: 2%;
   padding-left: 100px;
   background-color: white;
@@ -424,6 +480,7 @@ footer {
 
 footer .layar-dalam div{
   width: 100%;
+  height: 20%;
   margin: auto;
 }
 

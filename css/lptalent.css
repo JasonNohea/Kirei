@@ -328,7 +328,11 @@ select:focus {
   margin: auto;
   inset: 0;
 }
-
+.building {
+  float: right;
+  padding-top: 10%;
+  padding-right: 14%;
+}
 .texts {
   padding-top: 15%;
   padding-left: 10%;
@@ -413,6 +417,7 @@ footer .layar-dalam .copyright{
   margin-top: 30px;
   padding-top: 30px;
   border-top: 2px solid #31348D;
+  border-width: 90%;
   text-align: center;
   padding-bottom: 8px;
 }
