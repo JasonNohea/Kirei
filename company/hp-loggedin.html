@@ -6,7 +6,7 @@
     <link rel="icon" href="../assets/logo.png" type="image/x-icon" />
     <link rel="stylesheet" href="../bootstrap-css/main.css" />
     <link rel="stylesheet" href="../css/newnav.css" />
-    <link rel="stylesheet" href="../css/navlogin.css" />
+    <link rel="stylesheet" href="../bootstrap-css/navlogin.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Cabin&display=swap"
       rel="stylesheet"
@@ -39,7 +39,7 @@
       //   $("#loading").modal("hide").delay(100);
       // });
     </script>
-    <title>Document</title>
+    <title>Homepage</title>
   </head>
   <body>
     <nav>
@@ -50,18 +50,39 @@
         <a class="navi-button" href="#">About</a>
       </div>
       <div class="nav2">
-        <svg
-          width="18"
-          height="21"
-          viewBox="0 0 18 21"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M18 17V18H0V17L2 15V9C2 5.9 4.03 3.17 7 2.29V2C7 1.46957 7.21071 0.960859 7.58579 0.585786C7.96086 0.210714 8.46957 0 9 0C9.53043 0 10.0391 0.210714 10.4142 0.585786C10.7893 0.960859 11 1.46957 11 2V2.29C13.97 3.17 16 5.9 16 9V15L18 17ZM11 19C11 19.5304 10.7893 20.0391 10.4142 20.4142C10.0391 20.7893 9.53043 21 9 21C8.46957 21 7.96086 20.7893 7.58579 20.4142C7.21071 20.0391 7 19.5304 7 19"
-            fill="#2C5395"
-          />
-        </svg>
+        <button type="button" class="position-relative notif-button">
+          <svg
+            width="18"
+            height="21"
+            viewBox="0 0 18 21"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M18 17V18H0V17L2 15V9C2 5.9 4.03 3.17 7 2.29V2C7 1.46957 7.21071 0.960859 7.58579 0.585786C7.96086 0.210714 8.46957 0 9 0C9.53043 0 10.0391 0.210714 10.4142 0.585786C10.7893 0.960859 11 1.46957 11 2V2.29C13.97 3.17 16 5.9 16 9V15L18 17ZM11 19C11 19.5304 10.7893 20.0391 10.4142 20.4142C10.0391 20.7893 9.53043 21 9 21C8.46957 21 7.96086 20.7893 7.58579 20.4142C7.21071 20.0391 7 19.5304 7 19"
+              fill="#2C5395"
+            />
+          </svg>
+          <span
+            class="position-absolute translate-middle p-1 bg-danger border border-light rounded-circle notif"
+          >
+            <span class="visually-hidden">New alerts</span>
+          </span>
+        </button>
+        <!-- <button type="button" class="position-relative notif-button">
+          <svg
+            width="18"
+            height="21"
+            viewBox="0 0 18 21"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M18 17V18H0V17L2 15V9C2 5.9 4.03 3.17 7 2.29V2C7 1.46957 7.21071 0.960859 7.58579 0.585786C7.96086 0.210714 8.46957 0 9 0C9.53043 0 10.0391 0.210714 10.4142 0.585786C10.7893 0.960859 11 1.46957 11 2V2.29C13.97 3.17 16 5.9 16 9V15L18 17ZM11 19C11 19.5304 10.7893 20.0391 10.4142 20.4142C10.0391 20.7893 9.53043 21 9 21C8.46957 21 7.96086 20.7893 7.58579 20.4142C7.21071 20.0391 7 19.5304 7 19"
+              fill="#2C5395"
+            />
+          </svg>
+        </button> -->
 
         <img class="globe" src="../assets/global.png" />
         <select>
@@ -99,12 +120,6 @@
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
             <img src="../assets/logo.png" alt="Regio Logo" />
             <h1 class="login-heading">Loading</h1>
             <span class="reset-inst">We'll be right with you.</span>
@@ -140,7 +155,7 @@
               aria-label="Close"
             ></button>
             <img src="../assets/logo.png" alt="Regio Logo" />
-            <h1 class="login-heading">Welcome Back!</h1>
+            <h1 class="login-heading">Reset Password Success!</h1>
           </div>
           <div class="modal-body">
             <img

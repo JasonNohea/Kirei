@@ -195,7 +195,7 @@ body {
   border: 1px solid rgb(161, 161, 255) !important;
   background-color: rgb(235, 235, 235) !important;
   border-radius: 10px;
-  font-size: 44px;
+  font-size: 44px !important;
   text-align: center;
 }
 
@@ -230,4 +230,36 @@ input[type="number"] {
 
 .otp-resend {
   font-size: 14px;
+}
+
+.reset-modal-content {
+  display: flex;
+  gap: 50px;
+  margin-bottom: 10px;
+}
+
+.reset-load {
+  height: 500px;
+}
+
+.spinner {
+  margin: 80px auto;
+  inset: 0;
+}
+
+.reset-img {
+  margin: auto;
+  inset: 0;
+  width: 60%;
+  height: auto;
+}
+
+.b-login {
+  margin: auto;
+  inset: 0;
+  border: none;
+  background-color: #2c5395;
+  color: white;
+  border-radius: 5px;
+  width: 50%;
 }
