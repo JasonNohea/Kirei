@@ -33,3 +33,15 @@ nav {
   border-radius: 5px;
   width: 50%;
 }
+
+.notif-button {
+  border: none;
+  background-color: white;
+}
+
+.notif {
+  width: 0.8em;
+  height: 0.8rem;
+  left: 22px;
+  top: 2px;
+}

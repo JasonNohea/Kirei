@@ -97,3 +97,12 @@ $("#countdown").on("click", function (e) {
 $("#reset-otp").on("click", function () {
   clearInterval(downloadTimer);
 });
+
+function resetpass() {
+  var duration = 2000; // 2 seconds
+  setTimeout(function () {
+    // Close the modal
+    $("#loading").modal("hide");
+    $("#reset-success").modal("show");
+  }, duration);
+}
