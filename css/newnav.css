@@ -46,6 +46,7 @@ nav {
   flex-direction: row;
   box-shadow: 2px 2px 20px #00000033;
   animation: nav-load 400ms ease-in-out;
+  z-index: 2;
 }
 
 @keyframes nav-load {

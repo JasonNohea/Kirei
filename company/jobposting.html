@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../assets/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../bootstrap-css/main.css" />
+    <link rel="stylesheet" href="../css/newnav.css" />
+    <link rel="stylesheet" href="../bootstrap-css/footer.css" />
+    <link rel="stylesheet" href="../bootstrap-css/jobposting.css" />
+    <link rel="stylesheet" href="../bootstrap-css/navlogin.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cabin&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/5109247c85.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="../js/mainpage.js" defer></script>
+    <title>Regio</title>
+  </head>
+  <body>
+    <!-- navigation -->
+    <nav>
+      <div class="nav1">
+        <img class="logo" src="../assets/logoCompany.png" alt="Logo Regio" />
+        <a class="navi-button" href="#">Talent</a>
+        <a class="navi-button" href="#">My Project</a>
+        <a class="navi-button" href="#">About</a>
+      </div>
+      <div class="nav2">
+        <!-- <button type="button" class="position-relative notif-button">
+            <svg
+              width="18"
+              height="21"
+              viewBox="0 0 18 21"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M18 17V18H0V17L2 15V9C2 5.9 4.03 3.17 7 2.29V2C7 1.46957 7.21071 0.960859 7.58579 0.585786C7.96086 0.210714 8.46957 0 9 0C9.53043 0 10.0391 0.210714 10.4142 0.585786C10.7893 0.960859 11 1.46957 11 2V2.29C13.97 3.17 16 5.9 16 9V15L18 17ZM11 19C11 19.5304 10.7893 20.0391 10.4142 20.4142C10.0391 20.7893 9.53043 21 9 21C8.46957 21 7.96086 20.7893 7.58579 20.4142C7.21071 20.0391 7 19.5304 7 19"
+                fill="#2C5395"
+              />
+            </svg>
+            <span
+              class="position-absolute translate-middle p-1 bg-danger border border-light rounded-circle notif"
+            >
+              <span class="visually-hidden">New alerts</span>
+            </span>
+          </button> -->
+        <button type="button" class="position-relative notif-button">
+          <svg
+            width="18"
+            height="21"
+            viewBox="0 0 18 21"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M18 17V18H0V17L2 15V9C2 5.9 4.03 3.17 7 2.29V2C7 1.46957 7.21071 0.960859 7.58579 0.585786C7.96086 0.210714 8.46957 0 9 0C9.53043 0 10.0391 0.210714 10.4142 0.585786C10.7893 0.960859 11 1.46957 11 2V2.29C13.97 3.17 16 5.9 16 9V15L18 17ZM11 19C11 19.5304 10.7893 20.0391 10.4142 20.4142C10.0391 20.7893 9.53043 21 9 21C8.46957 21 7.96086 20.7893 7.58579 20.4142C7.21071 20.0391 7 19.5304 7 19"
+              fill="#2C5395"
+            />
+          </svg>
+        </button>
+
+        <img class="globe" src="../assets/global.png" />
+        <select>
+          <option>EN</option>
+          <option>ID</option>
+        </select>
+        <svg
+          width="21"
+          height="25"
+          viewBox="0 0 21 25"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M10.3784 12.5C11.9512 12.5 13.4597 11.8679 14.5719 10.7426C15.6841 9.61742 16.3089 8.0913 16.3089 6.5C16.3089 4.9087 15.6841 3.38258 14.5719 2.25736C13.4597 1.13214 11.9512 0.5 10.3784 0.5C8.80551 0.5 7.29706 1.13214 6.18488 2.25736C5.07269 3.38258 4.44788 4.9087 4.44788 6.5C4.44788 8.0913 5.07269 9.61742 6.18488 10.7426C7.29706 11.8679 8.80551 12.5 10.3784 12.5ZM8.261 14.75C3.6973 14.75 0 18.4906 0 23.1078C0 23.8766 0.616216 24.5 1.37606 24.5H19.3807C20.1405 24.5 20.7568 23.8766 20.7568 23.1078C20.7568 18.4906 17.0595 14.75 12.4958 14.75H8.261Z"
+            fill="#2C5395"
+          />
+        </svg>
+        <div class="logged-in">
+          <p class="user-nav nav-acc">Jeremy</p>
+          <hr class="navline" />
+          <p class="company-nav nav-acc">Company</p>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <div class="posting-job">
+        <p class="title">Posting Job</p>
+        <p class="gray-text posting-instruction">
+          Fill in the required fields to post the project
+        </p>
+        <form class="posting-form" action="">
+          <div class="first-form">
+            <div class="form-floating mb-3 posting-input">
+              <input
+                type="text"
+                class="form-control"
+                id="floatingInput"
+                placeholder="ProjectName"
+              />
+              <label for="floatingInput"
+                >Project Name <span class="required">*</span></label
+              >
+            </div>
+            <div class="form-floating mb-3 posting-input">
+              <input
+                type="date"
+                class="form-control"
+                id="floatingInput"
+                placeholder="dd/mm/yyyy"
+              />
+              <label for="floatingInput"
+                >Start Date<span class="required">*</span></label
+              >
+            </div>
+            <div class="form-floating mb-3 posting-input">
+              <input
+                type="date"
+                class="form-control"
+                id="floatingInput"
+                placeholder="dd/mm/yyyy"
+              />
+              <label for="floatingInput"
+                >End Date<span class="required">*</span></label
+              >
+            </div>
+            <div class="form-floating mb-3 posting-input">
+              <input
+                type="text"
+                class="form-control"
+                id="floatingInput"
+                placeholder="dd/mm/yyyy"
+              />
+              <label for="floatingInput"
+                >Required Position<span class="required">*</span></label
+              >
+            </div>
+            <div class="form-floating mb-3 posting-input">
+              <textarea
+                type="text"
+                class="form-control"
+                id="floatingInput"
+                placeholder="Description"
+              ></textarea>
+              <label for="floatingInput"
+                >Project Description<span class="required">*</span></label
+              >
+            </div>
+            <div class="form-floating mb-3 posting-input">
+              <textarea
+                type="text"
+                class="form-control"
+                id="floatingInput"
+                placeholder="Location"
+              ></textarea>
+              <label for="floatingInput"
+                >Project Location<span class="required">*</span></label
+              >
+            </div>
+            <div class="form-floating mb-3 posting-input">
+              <textarea
+                type="text"
+                class="form-control"
+                id="floatingInput"
+                placeholder="Requirement"
+              ></textarea>
+              <label for="floatingInput"
+                >Talent Requirement<span class="required">*</span></label
+              >
+            </div>
+          </div>
+          <div class="second-form">
+            <p class="title-section">Project Picture</p>
+            <input type="file" size="60" />
+          </div>
+        </form>
+      </div>
+      <div class="project-company">
+        <p class="title">My Project</p>
+      </div>
+    </main>
+
+    <!-- <div style="width: auto; height: 2000px"></div> -->
+
+    <footer>
+      <div class="footer-regio">
+        <div class="main-footer">
+          <img
+            class="footer-img"
+            src="../assets/footer-logo.png"
+            alt="footer-regio"
+          />
+          <p class="footer-text">
+            <b>Regio</b> is a website that allows users to find workers in
+            specific areas for projects they have posted on the platform. The
+            website functions as a platform that connects individuals or
+            businesses in need of specific services with skilled professionals
+            who can meet those needs. Users can create project postings on
+            Regio, outlining the details and specifications of the job they
+            require.
+          </p>
+        </div>
+        <div class="footer-contact">
+          <div>
+            <p>Follow Us</p>
+            <div class="contact-icon">
+              <i class="fa-brands fa-facebook-f fa-lg"></i>
+              <i class="fa-solid fa-envelope fa-lg"></i>
+              <i class="fa-brands fa-twitter fa-lg"></i>
+              <i class="fa-brands fa-instagram fa-lg"></i>
+              <i class="fa-brands fa-linkedin-in fa-lg"></i>
+            </div>
+          </div>
+          <div class="contact-regio">
+            <p>Contact Us</p>
+            <div class="contact-text">
+              <p>E-mail Address: <a href="#">hi@Regio.co.id</a></p>
+              <p>WhatsApp Contact: 0823-2131-329</p>
+              <p>QnA: <a href="#">Feedback</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">Copyright © 2023 Regio.</div>
+    </footer>
+  </body>
+</html>

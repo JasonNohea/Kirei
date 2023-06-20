@@ -1,0 +1,74 @@
+main {
+  width: 100%;
+  height: 150%;
+  display: flex;
+  flex-direction: row;
+  margin-top: 9% !important;
+}
+
+main > * {
+  background-color: white;
+  border-radius: 12px;
+}
+
+.posting-job {
+  width: 60.5%;
+  height: 90%;
+  margin: 0 20px 0 35px;
+  display: flex;
+  flex-direction: column;
+}
+.project-company {
+  width: 33%;
+  height: 45%;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 32px;
+  text-align: center;
+  margin: 10px;
+}
+
+.posting-instruction {
+  font-size: 13px;
+  text-align: center;
+  margin: 0 0 0 10px;
+}
+
+.posting-form {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  margin-top: 50px;
+}
+
+.posting-form > * {
+  margin: auto;
+  inset: 0;
+  width: 45%;
+  height: 100%;
+  /* border: 1px solid rgba(83, 180, 164, 0.7); */
+}
+
+.posting-input {
+  border: 1px solid #31348d;
+  border-radius: 7px;
+  z-index: 0;
+}
+
+.first-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+
+textarea {
+  max-height: 120px;
+}
+
+.title-section {
+  font-weight: 700;
+  font-size: 24px;
+  margin: 0 10px 10px 0px;
+}
