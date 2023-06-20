@@ -358,7 +358,8 @@ select:focus {
 }
 
 footer {
-  padding-top: 40px;
+  margin-top: 13%;
+  padding-top: 2%;
   padding-left: 100px;
   background-color: white;
   color: black;
@@ -387,9 +388,10 @@ footer .layar-dalam .copyright{
   border-top: 2px solid #31348D;
   text-align: center;
 }
+
 .wrap-box{
   margin-left: 2.5%;
-  margin-top: 15%;
+  margin-top: 10%;
   width: 19%;
   height: 300px;
   background-color: white;
@@ -400,7 +402,6 @@ footer .layar-dalam .copyright{
 }
 
 .kotakcari{
-  margin-top: 150px;
   padding-top: 15px;
   border-radius: 15px;
 }
@@ -447,17 +448,18 @@ input[type="submit"]:hover{
   float: right;
   margin-right: 5%;
   width: 70%;
-  height: 100px;
+  height: 100%;
+  max-height: fit-content;
 }
 
 .cards-wrapper{
-  border: 10px solid red;
-  height: 300px;
+  border-left: 1px solid gray;
+  height: 500px;
   display: flex;
   flex-direction: row;
 }
 
-.jobs{
+/* .jobs{
   margin: 10px;
   padding: 10px;
   display: flex;
@@ -468,9 +470,111 @@ input[type="submit"]:hover{
   box-sizing: border-box;
   border-radius: 15px;
   background-color: white;
+} */
+
+.main {
+  width: 100%;
+  height: 100%;
+  background-color: #e0eaf6;
+  opacity: 1;
 }
 
-footer {
+.first-con {
+  width: 100%;
+  height: 100%;
+  margin: auto 35px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  row-gap: 40px;
+  overflow: scroll;
+}
+
+.first-con::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* make scrollbar transparent */
+  display: none;
+}
+
+/* 
+.second-con {
+  width: 22%;
+  height: 100%;
+  background-color: blue;
+  opacity: 0.6;
+  margin: auto;
+} */
+
+.talent-con {
+  background-color: white;
+  max-width: fit-content;
+  width: 46%;
+  height: 55%;
+  max-height: fit-content;
+  border-radius: 10px;
+  margin: auto;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+.talent-info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.talent-info > * {
+  margin: 0 10px;
+}
+
+.talent-header {
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.photo-profile {
+  background-color: gray;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+.talent-header-info {
+  margin: 0 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.talent-name {
+  color: black;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.talent-skill {
+  color: #0074ff;
+}
+
+.talent-header-info > * {
+  margin: 0;
+}
+
+.talent-status-con {
+  margin-left: auto;
+  font-size: 1.5vw;
+}
+
+.talent-desc {
+  color: gray;
+}
+
+.talent-button {
+  margin: 0px 10px;
+}
+
+/* footer {
   margin-top: 13%;
   padding-top: 2%;
   padding-left: 100px;
@@ -499,7 +603,7 @@ footer .layar-dalam h5{
   font-size: 20px;
   font-weight: bold;
   color: #31358A;
-}
+} */
 
 .kanan .social-links a{
 	display: inline-block;
