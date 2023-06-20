@@ -349,46 +349,6 @@ select:focus {
   padding-top: 5px;
 }
 
-.layar-dalam {
-  width: 80%;
-  display: flex;
-  flex-direction: row;
-  margin: auto;
-  justify-content: space-between;
-}
-
-footer {
-  margin-top: 13%;
-  padding-top: 2%;
-  padding-left: 100px;
-  background-color: white;
-  color: black;
-}
-
-footer .layar-dalam div{
-  width: 100%;
-}
-
-.kiri {
-  display: flex;
-  flex-direction: column;
-}
-
-footer .layar-dalam h5{
-  margin-top: 0px;
-  font-size: 20px;
-  font-weight: bold;
-  color: #31358A;
-}
-
-footer .layar-dalam .copyright{
-  width: 100%;
-  margin-top: 30px;
-  padding-top: 30px;
-  border-top: 2px solid #31348D;
-  text-align: center;
-}
-
 .wrap-box{
   margin-left: 2.5%;
   margin-top: 10%;
@@ -509,7 +469,7 @@ input[type="submit"]:hover{
   background-color: white;
   max-width: fit-content;
   width: 46%;
-  height: 55%;
+  height: 59%;
   max-height: fit-content;
   border-radius: 10px;
   margin: auto;
@@ -574,7 +534,23 @@ input[type="submit"]:hover{
   margin: 0px 10px;
 }
 
-/* footer {
+.bookmarks{
+  margin-left: 50%;
+}
+
+.bi-bookmark-fill:hover {
+  color: blue;
+}
+
+.layar-dalam {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  justify-content: space-between;
+}
+
+footer {
   margin-top: 13%;
   padding-top: 2%;
   padding-left: 100px;
@@ -584,18 +560,11 @@ input[type="submit"]:hover{
 
 footer .layar-dalam div{
   width: 100%;
-  height: 20%;
-  margin: auto;
 }
 
 .kiri {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-}
-
-.footer .layar-dalam .kiri p {
-  font-size: 20px;
 }
 
 footer .layar-dalam h5{
@@ -603,7 +572,15 @@ footer .layar-dalam h5{
   font-size: 20px;
   font-weight: bold;
   color: #31358A;
-} */
+}
+
+footer .layar-dalam .copyright{
+  width: 100%;
+  margin-top: 30px;
+  padding-top: 30px;
+  border-top: 2px solid #31348D;
+  text-align: center;
+}
 
 .kanan .social-links a{
 	display: inline-block;
