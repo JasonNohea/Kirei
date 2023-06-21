@@ -72,3 +72,92 @@ textarea {
   font-size: 24px;
   margin: 0 10px 10px 0px;
 }
+
+.b-upload {
+  width: 30%;
+  height: auto;
+}
+
+#fileInput {
+  display: none;
+}
+
+.image-preview {
+  width: 100%;
+  /* border: 1px solid rgb(255, 0, 0, 0.5); */
+  height: 121px;
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  overflow: scroll;
+  cursor: grab;
+}
+
+.image-preview::-webkit-scrollbar {
+  width: 0px;
+  height: 1px;
+  background: transparent; /* make scrollbar transparent */
+}
+
+.image-preview img {
+  max-width: 200px;
+  max-height: 119px;
+}
+
+.project-img {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
+.grab-scroll {
+  overflow: auto;
+  cursor: grab;
+  cursor: -webkit-grab;
+}
+
+.grab-scroll > * {
+  pointer-events: none;
+  user-select: none;
+}
+
+.grab-scroll:active {
+  cursor: grabbing;
+  cursor: -webkit-grabbing;
+}
+
+.second-form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.second-title {
+  font-weight: 300;
+  font-size: 18px;
+  text-align: left;
+  margin: 0px;
+  color: darkblue;
+}
+
+.btn-group {
+  width: 30%;
+}
+
+.middle-color {
+  text-align: center;
+  border-radius: 0px !important;
+  border: none !important;
+  border-top: 1px solid #31348d !important;
+  border-bottom: 1px solid #31348d !important;
+}
+
+.border-color {
+  border: 1px solid #31348d !important;
+  color: #31348d !important;
+}
+
+.b-hover:hover {
+  background-color: #31348d !important;
+  color: white !important;
+}

@@ -36,6 +36,10 @@
     ></script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="../js/postingjob.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+
     <script src="../js/mainpage.js" defer></script>
     <title>Regio</title>
   </head>
@@ -196,7 +200,81 @@
           </div>
           <div class="second-form">
             <p class="title-section">Project Picture</p>
-            <input type="file" size="60" />
+            <div class="project-img">
+              <input
+                type="file"
+                size="60"
+                id="fileInput"
+                accept="image/png, image/gif, image/jpeg"
+                multiple="multiple"
+              />
+              <img
+                class="b-upload custom-button"
+                src="../assets/b-upload.jpeg"
+                alt="button upload"
+              />
+              <div class="image-preview grab-scroll"></div>
+              <!-- <span class="file-name">No file chosen</span> -->
+            </div>
+            <p class="title-section">Additional Request</p>
+            <p class="second-title">Talent Quantity</p>
+            <div
+              class="btn-group"
+              role="group"
+              aria-label="Basic outlined example"
+            >
+              <button
+                type="button"
+                class="btn btn-outline-primary border-color b-hover"
+                data-quantity="minus"
+                data-field="quantity"
+              >
+                -
+              </button>
+              <input
+                type="number"
+                class="form-control middle-color"
+                name="quantity"
+                value="0"
+              />
+              <button
+                type="button"
+                class="btn btn-outline-primary border-color b-hover"
+                data-quantity="plus"
+                data-field="quantity"
+              >
+                +
+              </button>
+            </div>
+
+            <p class="second-title">Matching Deadline</p>
+            <div class="form-floating mb-3 posting-input">
+              <input
+                type="date"
+                class="form-control"
+                id="floatingInput"
+                placeholder="dd/mm/yyyy"
+              />
+              <label for="floatingInput"
+                >Matching Deadline<span class="required">*</span></label
+              >
+            </div>
+            <p class="second-title">Salary Range</p>
+            <div class="input-group mb-3">
+              <input
+                type="number"
+                class="form-control border-color"
+                placeholder="Rp1.000.000,00"
+                aria-label="lower-limit"
+              />
+              <span class="input-group-text middle-color">-</span>
+              <input
+                type="number"
+                class="form-control border-color"
+                placeholder="Rp5.000.000,00"
+                aria-label="upper-limit"
+              />
+            </div>
           </div>
         </form>
       </div>
