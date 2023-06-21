@@ -4,8 +4,6 @@ body {
   height: 100%;
   margin: 0;
   background-color: #E0EAF7;
-  background-image: contain;
-  background-image: no-repeat;
 }
 
 * {
@@ -568,7 +566,7 @@ input[type="submit"]:hover{
 
 .flex-container {
   display: flex;
-  width: 100%;
+  width: 90%;
   max-width:fit-content;
 }
 
@@ -585,17 +583,17 @@ input[type="submit"]:hover{
 } 
 
 .circle{
-  margin-left: 50%;
+  margin-left: 45%;
   padding: 10px;
   text-align: center;
+  color: #31358A;
   background-color: white;
-  width: 10%;
+  width: 12%;
   font-size: 40px;
   border-radius: 50%;
 }
 
 .konten{
-  /* margin-top: 10%; */
   padding-left: 10%;
   padding-right: 10%;
 }
