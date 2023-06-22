@@ -598,6 +598,35 @@ input[type="submit"]:hover{
   padding-right: 10%;
 }
 
+aside {
+  margin-top: 10%;
+  float: right;
+  width: 90%;
+  margin-left: 50%;
+  position: relative;
+}
+
+.jobs{
+  /* background-color: white; */
+  width: 65%;
+  margin-left: 50%;
+}
+
+.jobs .teks{
+  padding-left: 27%;
+}
+
+.main-jobs{
+  float: left;
+  margin-top: 20%;
+  margin-left: 5%;
+  width: 60%;
+  padding: auto 40px;
+  background-color: red;
+}
+
+/* CSS Footer untuk Talent */
+
 .layar-dalam {
   width: 80%;
   display: flex;
