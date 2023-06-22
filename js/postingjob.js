@@ -107,3 +107,89 @@ jQuery(document).ready(function () {
     }
   });
 });
+
+//add skill search only using javascript
+document.addEventListener("DOMContentLoaded", function () {
+  const recommendations = [
+    "JavaScript",
+    "HTML",
+    "CSS",
+    "Python",
+    "Java",
+    "Ruby",
+    "C++",
+    "React",
+    "Angular",
+    "Vue.js",
+  ];
+
+  const searchInput = document.getElementById("searchInput");
+  const recommendationsContainer = document.getElementById(
+    "recommendationsContainer"
+  );
+  const selectedSkillsContainer = document.getElementById("selectedSkills");
+
+  function showRecommendations(query) {
+    const matchedSkills = recommendations.filter((skill) =>
+      skill.toLowerCase().includes(query.toLowerCase())
+    );
+
+    recommendationsContainer.innerHTML = "";
+
+    if (matchedSkills.length > 0) {
+      matchedSkills.forEach((skill) => {
+        const recommendationItem = document.createElement("div");
+        recommendationItem.classList.add("recommendation-item");
+        recommendationItem.textContent = skill;
+        recommendationItem.addEventListener("click", () => {
+          addSkill(skill);
+          searchInput.value = "";
+          clearRecommendations();
+        });
+        recommendationsContainer.appendChild(recommendationItem);
+      });
+      recommendationsContainer.style.display = "block";
+    } else {
+      clearRecommendations();
+    }
+  }
+
+  function addSkill(skill) {
+    const skillElement = document.createElement("div");
+    skillElement.classList.add("skill");
+
+    const skillText = document.createElement("span");
+    skillText.textContent = skill;
+
+    const deleteButton = document.createElement("button");
+    deleteButton.classList.add("delete-button");
+    deleteButton.textContent = "x";
+    deleteButton.addEventListener("click", () => {
+      removeSkill(skillElement);
+    });
+
+    skillElement.appendChild(skillText);
+    skillElement.appendChild(deleteButton);
+    selectedSkillsContainer.appendChild(skillElement);
+  }
+
+  function removeSkill(skillElement) {
+    selectedSkillsContainer.removeChild(skillElement);
+  }
+
+  function clearRecommendations() {
+    recommendationsContainer.innerHTML = "";
+    recommendationsContainer.style.display = "none";
+  }
+
+  searchInput.addEventListener("input", (event) => {
+    const query = event.target.value;
+    showRecommendations(query);
+  });
+
+  document.addEventListener("click", (event) => {
+    if (!event.target.matches(".search-input")) {
+      clearRecommendations();
+    }
+  });
+});

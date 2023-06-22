@@ -1,3 +1,8 @@
+html,
+body {
+  background-color: #e0eaf6 !important;
+}
+
 main {
   width: 100%;
   height: 150%;
@@ -11,9 +16,14 @@ main > * {
   border-radius: 12px;
 }
 
+form {
+  display: flex;
+  flex-direction: column;
+}
+
 .posting-job {
   width: 60.5%;
-  height: 90%;
+  height: 92%;
   margin: 0 20px 0 35px;
   display: flex;
   flex-direction: column;
@@ -74,8 +84,14 @@ textarea {
 }
 
 .b-upload {
-  width: 30%;
+  width: 100%;
   height: auto;
+  pointer-events: none;
+}
+
+.custom-button {
+  border: none;
+  background-color: white;
 }
 
 #fileInput {
@@ -160,4 +176,90 @@ textarea {
 .b-hover:hover {
   background-color: #31348d !important;
   color: white !important;
+}
+
+.post-project {
+  border: none;
+  border-radius: 5px;
+  background-color: #31348d;
+  color: white;
+  width: 20%;
+  height: auto;
+  margin: 20px auto;
+  inset: 0;
+}
+
+.post-project:disabled {
+  background-color: #5675aa;
+}
+
+.add-skill {
+  background-color: white;
+  color: #31348d;
+  border: 1px solid #31348d;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-title {
+  color: #0b0e73 !important;
+  font-size: 20px !important;
+  font-family: Inter !important;
+}
+
+.container {
+  margin-top: 20px;
+}
+.search-container {
+  position: relative;
+  display: inline-block;
+  width: 99%;
+}
+.search-input {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 200px;
+}
+.recommendations-container {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 999;
+  display: block;
+}
+.recommendation-item {
+  padding: 5px;
+  cursor: pointer;
+}
+.recommendation-item:hover {
+  background-color: #ddd;
+}
+.selected-skills {
+  margin-top: 10px;
+}
+.skill {
+  display: inline-block;
+  margin-right: 5px;
+  padding: 5px 10px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.delete-button {
+  border: none;
+  background-color: #f2f2f2;
+  cursor: pointer;
 }
