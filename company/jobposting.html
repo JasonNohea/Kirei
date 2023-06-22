@@ -276,7 +276,7 @@
                 />
               </div>
               <p class="second-title">Skills</p>
-              <div>
+              <div class="skill-con">
                 <button
                   class="add-skill"
                   type="button"
@@ -285,6 +285,7 @@
                 >
                   &#43;
                 </button>
+                <div id="saved-skill"></div>
               </div>
               <!-- modal add skill -->
               <div class="modal" id="add-skill" tabindex="-1">
@@ -301,12 +302,6 @@
                     </div>
                     <div class="modal-body">
                       <div class="search-container">
-                        <!-- <input
-                          type="text"
-                          id="searchInput"
-                          class="search-input form-control"
-                          placeholder="Add Skill..."
-                        /> -->
                         <div class="form-floating mb-3">
                           <input
                             type="text"
@@ -331,7 +326,14 @@
                       >
                         Cancel
                       </button>
-                      <button type="button" class="btn btn-primary">Add</button>
+                      <button
+                        type="button"
+                        class="btn btn-primary"
+                        data-bs-dismiss="modal"
+                        onclick="saveSkill();"
+                      >
+                        Add
+                      </button>
                     </div>
                   </div>
                 </div>

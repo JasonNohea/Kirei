@@ -109,6 +109,7 @@ jQuery(document).ready(function () {
 });
 
 //add skill search only using javascript
+var skillList = [];
 document.addEventListener("DOMContentLoaded", function () {
   const recommendations = [
     "JavaScript",
@@ -160,12 +161,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const skillText = document.createElement("span");
     skillText.textContent = skill;
+    skillList.push(skill);
 
     const deleteButton = document.createElement("button");
     deleteButton.classList.add("delete-button");
     deleteButton.textContent = "x";
     deleteButton.addEventListener("click", () => {
       removeSkill(skillElement);
+      let index = skillList.indexOf(skill);
+      if (index != -1) {
+        skillList.splice(index, 1);
+      }
     });
 
     skillElement.appendChild(skillText);
@@ -193,3 +199,26 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+function getelement(skill) {
+  const skillElement = document.createElement("div");
+  skillElement.classList.add("added-skill");
+  const skillText = document.createElement("span");
+  skillText.textContent = skill;
+  skillElement.appendChild(skillText);
+  return skillElement;
+}
+
+function saveSkill() {
+  var addedSkillClass = document.getElementsByClassName("added-skill");
+  var size = addedSkillClass.length;
+  for (var i = 0; i < size; i++) {
+    addedSkillClass[i].parentNode.removeChild(addedSkillClass[i]);
+  }
+  // console.log("Skill List: ", skillList);
+  var savedSkill = document.getElementById("saved-skill");
+  for (var i = 0; i < skillList.length; i++) {
+    var elements = getelement(skillList[i]);
+    savedSkill.append(elements);
+  }
+}
