@@ -155,28 +155,55 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
+  // function addSkill(skill) {
+  //   const skillElement = document.createElement("div");
+  //   skillElement.classList.add("skill");
+
+  //   const skillText = document.createElement("span");
+  //   skillText.textContent = skill;
+  //   skillList.push(skill);
+
+  //   const deleteButton = document.createElement("button");
+  //   deleteButton.classList.add("delete-button");
+  //   deleteButton.textContent = "x";
+  //   deleteButton.addEventListener("click", () => {
+  //     removeSkill(skillElement);
+  //     let index = skillList.indexOf(skill);
+  //     if (index != -1) {
+  //       skillList.splice(index, 1);
+  //     }
+  //   });
+
+  //   skillElement.appendChild(skillText);
+  //   skillElement.appendChild(deleteButton);
+  //   selectedSkillsContainer.appendChild(skillElement);
+  // }
+
   function addSkill(skill) {
-    const skillElement = document.createElement("div");
-    skillElement.classList.add("skill");
+    if (!skillList.includes(skill)) {
+      skillList.push(skill);
+      const skillElement = document.createElement("div");
+      skillElement.classList.add("skill");
 
-    const skillText = document.createElement("span");
-    skillText.textContent = skill;
-    skillList.push(skill);
+      const skillText = document.createElement("span");
+      skillText.textContent = skill;
 
-    const deleteButton = document.createElement("button");
-    deleteButton.classList.add("delete-button");
-    deleteButton.textContent = "x";
-    deleteButton.addEventListener("click", () => {
-      removeSkill(skillElement);
-      let index = skillList.indexOf(skill);
-      if (index != -1) {
-        skillList.splice(index, 1);
-      }
-    });
+      const deleteButton = document.createElement("button");
+      deleteButton.classList.add("delete-button");
+      deleteButton.textContent = "x";
+      deleteButton.addEventListener("click", () => {
+        // removeSkill(skill);
+        removeSkill(skillElement);
+        let index = skillList.indexOf(skill);
+        if (index != -1) {
+          skillList.splice(index, 1);
+        }
+      });
 
-    skillElement.appendChild(skillText);
-    skillElement.appendChild(deleteButton);
-    selectedSkillsContainer.appendChild(skillElement);
+      skillElement.appendChild(skillText);
+      skillElement.appendChild(deleteButton);
+      selectedSkillsContainer.appendChild(skillElement);
+    }
   }
 
   function removeSkill(skillElement) {
@@ -210,11 +237,14 @@ function getelement(skill) {
 }
 
 function saveSkill() {
-  var addedSkillClass = document.getElementsByClassName("added-skill");
-  var size = addedSkillClass.length;
-  for (var i = 0; i < size; i++) {
-    addedSkillClass[i].parentNode.removeChild(addedSkillClass[i]);
-  }
+  var addedSkillClass = document.querySelectorAll(".added-skill");
+  addedSkillClass.forEach((currentSkill) => {
+    currentSkill.remove();
+  });
+  // var size = addedSkillClass.length;
+  // for (var i = 0; i < size; i++) {
+  //   addedSkillClass[i].parentNode.removeChild(addedSkillClass[i]);
+  // }
   // console.log("Skill List: ", skillList);
   var savedSkill = document.getElementById("saved-skill");
   for (var i = 0; i < skillList.length; i++) {

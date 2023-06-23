@@ -1,0 +1,696 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background-color: #E0EAF7;
+}
+
+* {
+  font-family: "Cabin", sans-serif;
+  box-sizing: border-box;
+}
+
+/* Scrolling mechanism */
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+nav {
+  width: 95%;
+  height: 11%;
+  background-color: white;
+  position: fixed;
+  margin: 30px auto;
+  inset: 0;
+  border-radius: 18px;
+  display: grid;
+  grid-template-rows: 100%;
+  grid-template-columns: 8% 12% 8% 8% 50% 3% 3% 8%;
+  box-shadow: 0px 5px 20px rgba(12, 7, 7, 0.3);
+  /* grid-template-columns: 100px 120px 100px 100px 600px 35px 35px 100px; */
+}
+
+.logo {
+  margin: auto;
+  inset: 0;
+}
+
+.globe {
+  width: 50%;
+  margin: auto 1px;
+  inset: 0;
+  grid-column: 6;
+  grid-row: 1;
+}
+
+select {
+  margin: auto;
+  width: 40px;
+  margin-right: 0px;
+  grid-column: 7;
+  grid-row: 1;
+  border: none;
+  border-radius: 5px;
+  background-color: #ffffff;
+}
+
+select:focus {
+  outline: none;
+}
+
+.navi-button {
+  margin: auto;
+  inset: 0;
+  font-size: 17px;
+  text-decoration: none;
+  color: black;
+}
+
+.dark-screen {
+  /* background-color: black; */
+  display: none;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(2px);
+  /* opacity: 15%; */
+  margin: auto;
+}
+
+.login-button {
+  background-color: #2c5395;
+  width: 70%;
+  height: 40%;
+  margin: auto;
+  inset: 0;
+  color: #ffffff;
+  border-radius: 5px;
+  border: none;
+}
+
+.login-button:hover {
+  background-color: #19386c;
+}
+
+.login-con {
+  width: 100%;
+  height: 100%;
+  /* background-color: black; */
+  display: none;
+  /* display: block; */
+}
+
+.login-form {
+  margin: auto;
+  inset: 0;
+  background-color: #ffffff;
+  width: 32%;
+  height: 75%;
+  z-index: 100;
+  position: absolute;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-logo {
+  margin: 10px auto;
+  inset: 0;
+  width: 10%;
+  opacity: 1;
+  transition: opacity 0.4s;
+}
+
+.login-heading {
+  font-size: 2.4vw;
+  font-weight: 800;
+  margin: 10px auto;
+  inset: 0;
+}
+
+.form-con {
+  background-color: white;
+  margin: 5px 50px;
+  border: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  z-index: -1;
+  border-bottom: 1px solid black;
+}
+
+.form-text {
+  width: 20%;
+  margin: 10px;
+  transition: 0.8s ease-in-out;
+  color: #949090;
+}
+
+.form-input {
+  width: 80%;
+  margin: 5px;
+  font-size: 18px;
+  height: auto;
+  border: none;
+  transition: 0.4s ease-in-out;
+}
+
+.form-input:focus {
+  outline: none;
+}
+
+.form-con:hover .form-logo {
+  opacity: 0;
+}
+
+.form-con:hover .form-text {
+  transition: 0.4s ease-in-out;
+  transform: translate(-20px, -25px) scale(0.8);
+}
+
+.form-con:hover .form-input {
+  transition: 0.8s ease-in-out;
+  transform: translate(-55px, 0) scale(1.2);
+}
+
+.forgot-pass {
+  font-size: 12px;
+  color: #4c51e9;
+  display: flex;
+  justify-content: end;
+  margin-right: 12%;
+  text-decoration: none;
+}
+
+.forgot-pass:hover {
+  text-decoration: underline;
+}
+
+.button-con {
+  display: flex;
+  width: 100%;
+  height: 16%;
+  flex-direction: column;
+}
+.form-button {
+  font-size: 20px;
+  width: 70%;
+  height: 45%;
+  margin: auto;
+  margin-top: 2%;
+  inset: 0;
+  border-radius: 5px;
+  border: none;
+}
+
+.login-submit {
+  background-color: #2c5395;
+  color: #ffffff;
+}
+
+.login-submit:hover {
+  background-color: #19386c;
+}
+
+.login-cancel {
+  background-color: #ffffff;
+  color: #2c5395;
+}
+
+.login-cancel:hover {
+  color: #19386c;
+  font-weight: bolder;
+}
+
+.opt-acc {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.hr-decor {
+  border: 1px solid gray;
+  width: 20%;
+  height: 0px;
+}
+
+.register-text {
+  margin: auto;
+  inset: 2;
+  font-size: 12px;
+}
+
+.regist {
+  text-decoration: none;
+  color: #0038ff;
+}
+
+.button-con-acc {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  inset: 0;
+  width: 70%;
+  height: 16%;
+}
+
+.login-google {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #ffffff;
+  width: 50%;
+  margin: 2px;
+  font-size: 15px;
+  background-color: #f20000;
+}
+
+.acc-animation:hover {
+  background-color: #48677d;
+}
+
+.acc-animation:hover .logo-login {
+  transform: scale(1.5) rotate(-20deg);
+  transition: ease-in-out 0.3s;
+}
+
+.login-linkedin {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #ffffff;
+  width: 50%;
+  margin: 2px;
+  font-size: 15px;
+  background-color: #0a66c2;
+}
+
+.logo-text {
+  margin: 10px;
+}
+
+.err-txt {
+  color: red;
+  margin-left: 12.5%;
+  width: 60%;
+  font-size: 12px;
+}
+
+.hidden {
+  display: none;
+}
+
+#test,
+#back {
+  margin: auto;
+  inset: 0;
+}
+
+.texts {
+  padding-top: 15%;
+  padding-left: 10%;
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.color{
+  color: #15076F;
+}
+
+.cta {
+  margin: auto;
+  display: inline-block;
+  color: white;
+  font-size: 17px;
+  text-decoration: none;
+  background-color: #2C5395;
+  align-items: center;
+  width: 9%;
+  height: 35px;
+  border-radius: 5px;
+  text-align: center;
+  padding-top: 5px;
+}
+
+.wrap-box{
+  margin-left: 2.5%;
+  margin-top: 10%;
+  width: 19%;
+  height: 300px;
+  background-color: white;
+  padding-left: 2%;
+  padding-right: 2%;
+  border-radius: 20px;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.25);
+}
+
+.kotakcari{
+  padding-top: 15px;
+  border-radius: 15px;
+}
+
+.carikerja {
+  border-width: 100%;
+  max-width:fit-content;
+  border: 2px solid #31348D;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.lokasi {
+  width: 100%;
+  max-width:fit-content;
+}
+
+hr .crkerja{
+  width: 40px;
+  max-width: fit-content;
+}
+
+.button-submit {
+  margin-top: 60%;
+  margin-left: 30%;
+}
+
+input[type="submit"]{
+  font-size: 16px;
+  width: 100%;
+  max-width: 100px;
+  padding: 10px;
+  border: none;
+  background-color: #2C5395;
+  color: white;
+  border-radius: 10px;
+}
+
+input[type="submit"]:hover{
+  background-color: #12336A;
+}
+
+.wrapper{
+  float: right;
+  margin-right: 5%;
+  width: 70%;
+  height: 100%;
+  max-height: fit-content;
+}
+
+.cards-wrapper{
+  border-left: 1px solid gray;
+  height: 500px;
+  display: flex;
+  flex-direction: row;
+}
+
+/* .jobs{
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  height: 100%;
+  max-height: fit-content;
+  box-sizing: border-box;
+  border-radius: 15px;
+  background-color: white;
+} */
+
+.main {
+  width: 100%;
+  height: 100%;
+  background-color: #e0eaf6;
+  opacity: 1;
+}
+
+.first-con {
+  width: 100%;
+  height: 100%;
+  margin: auto 35px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  row-gap: 40px;
+  overflow: scroll;
+}
+
+.first-con::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* make scrollbar transparent */
+  display: none;
+}
+
+/* 
+.second-con {
+  width: 22%;
+  height: 100%;
+  background-color: blue;
+  opacity: 0.6;
+  margin: auto;
+} */
+
+.talent-con {
+  background-color: white;
+  max-width: fit-content;
+  width: 46%;
+  height: 59%;
+  max-height: fit-content;
+  border-radius: 10px;
+  margin: auto;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+.talent-info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.talent-info > * {
+  margin: 0 10px;
+}
+
+.talent-header {
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.photo-profile {
+  background-color: gray;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+.talent-header-info {
+  margin: 0 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.talent-name {
+  color: black;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.talent-skill {
+  color: #0074ff;
+}
+
+.talent-header-info > * {
+  margin: 0;
+}
+
+.talent-status-con {
+  margin-left: auto;
+  font-size: 1.5vw;
+}
+
+.talent-desc {
+  color: gray;
+}
+
+.talent-button {
+  margin: 0px 10px;
+}
+
+.bookmarks{
+  margin-left: 50%;
+}
+
+.bi-bookmark-fill:hover {
+  color: blue;
+}
+
+.about{
+  width: 80%;
+  margin: auto 10%;
+  /* background-color:white; */
+  padding: 5%;
+}
+
+.about h3{
+  padding-top: 5%;
+  padding-left: 43%;
+  font-size: 30px;
+  top: 5%;
+  color: #31358A;
+}
+
+.about p{
+  padding: 10px;
+  font-size: 18px;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.flex-container {
+  display: flex;
+  width: 90%;
+  max-width:fit-content;
+}
+
+.flex-child {
+  flex: 1;
+  margin-left: 30px;
+  margin-right: 30px;
+}  
+
+.flex-child:first-child {
+  display: flex;
+  flex-direction: column;
+  margin-left: 180px;
+} 
+
+.circle{
+  margin-left: 45%;
+  padding: 10px;
+  text-align: center;
+  color: #31358A;
+  background-color: white;
+  width: 12%;
+  font-size: 40px;
+  border-radius: 50%;
+}
+
+.konten{
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+aside {
+  float: right;
+  width: 90%;
+  margin-left: 50%;
+  /* position: relative; */
+}
+
+.jobs{
+  /* background-color: white; */
+  width: 65%;
+  margin-left: 50%;
+}
+
+.jobs .teks{
+  padding-left: 27%;
+}
+
+.main-jobs{
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 5%;
+  width: 60%;
+  padding: auto 40px;
+  background-color: red;
+}
+
+/* CSS Footer untuk Talent */
+
+.layar-dalam {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  justify-content: space-between;
+}
+
+footer {
+  margin-top: 13%;
+  padding-top: 2%;
+  padding-left: 100px;
+  background-color: white;
+  color: black;
+}
+
+footer .layar-dalam div{
+  width: 100%;
+}
+
+.kiri {
+  display: flex;
+  flex-direction: column;
+}
+
+footer .layar-dalam h5{
+  margin-top: 0px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #31358A;
+}
+
+footer .layar-dalam .copyright{
+  width: 100%;
+  margin-top: 30px;
+  padding-top: 30px;
+  border-top: 2px solid #31348D;
+  text-align: center;
+}
+
+.kanan .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+}
+
+.kanan .social-links a:hover{
+	color: white;
+	background-color:#001AFF;
+}
+
+footer .layar-dalam .copyright{
+  width: 100%;
+  margin-top: 30px;
+  padding-top: 30px;
+  border-top: 2px solid #31348D;
+  text-align: center;
+  padding-bottom: 8px;
+}
+
+.colorlink {
+  color : #001AFF;
+}
