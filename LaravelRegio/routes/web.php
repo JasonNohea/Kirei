@@ -14,5 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view(
+        '/html/lputama', //nama file view yang mau dibuka
+        ["title"=> "Home"] //nama judul untuk di website
+    );
 });
