@@ -23,3 +23,6 @@ Route::get('/lp_talent', [BladeController::class,'lp_talent'])->name('lp_talent'
 //HomePage Talent 
 Route::get('/home_talent', [BladeController::class,'home_talent'])->name('home_talent'); 
 
+//About Page
+Route::get('/about', [BladeController::class,'aboutpg'])->name('aboutpg'); 
+

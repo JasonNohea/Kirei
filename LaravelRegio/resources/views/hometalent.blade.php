@@ -23,7 +23,7 @@
             <img class="logo" src="../assets/logoCompany.png" alt="Logo Regio" />
             <a class="navi-button" href="#"> Jobs </a>
             <a class="navi-button" href="#"> My Project </a>
-            <a class="navi-button" href="#"> About </a>
+            <a class="navi-button" href="about"> About </a>
             <img class="globe" src="../assets/global.png" />
             <i class="fa-regular fa-globe"></i>
             <select>
