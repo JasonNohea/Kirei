@@ -599,11 +599,10 @@ input[type="submit"]:hover{
 }
 
 aside {
-  margin-top: 10%;
   float: right;
   width: 90%;
   margin-left: 50%;
-  position: relative;
+  /* position: relative; */
 }
 
 .jobs{
@@ -617,8 +616,8 @@ aside {
 }
 
 .main-jobs{
-  float: left;
-  margin-top: 20%;
+  display: flex;
+  flex-wrap: wrap;
   margin-left: 5%;
   width: 60%;
   padding: auto 40px;
