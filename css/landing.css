@@ -1,0 +1,28 @@
+img{
+    display: block;
+    margin-top: 150px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tombol {
+    margin-top: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+button{
+    color: white;
+    width: 250px;
+    height: 69px;
+    font-size: 25px;
+    background-color: #31348D;
+    border-radius: 17px;
+}
+
+button:hover{
+    background-color: white;
+    color: #31348D;
+    transition: 0.2s ease;
+}
