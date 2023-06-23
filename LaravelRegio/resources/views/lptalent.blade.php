@@ -237,7 +237,7 @@
         <p> 
             Find Your Opportunity and <br> Make a <span class="color"> Successful Career </span> 
         </p>
-        <a class="cta" href="#"> Search </a>
+        <a class="cta" href="home_talent"> Search </a>
       </div>
     </div>
 <footer>

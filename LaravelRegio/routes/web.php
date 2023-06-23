@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BladeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,9 +14,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view(
-        '/html/lputama', //nama file view yang mau dibuka
-        ["title"=> "Home"] //nama judul untuk di website
-    );
-});
+//Landing Page Utama 
+Route::get('/', [BladeController::class,'landing'])->name('landing'); 
+
+//Landing Page Talent 
+Route::get('/lp_talent', [BladeController::class,'lp_talent'])->name('lp_talent'); 
+
+//HomePage Talent 
+Route::get('/home_talent', [BladeController::class,'home_talent'])->name('home_talent'); 
+
