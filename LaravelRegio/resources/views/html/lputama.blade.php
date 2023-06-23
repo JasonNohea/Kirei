@@ -13,7 +13,7 @@
     <div>
         <img src="../assets/image 3277.png" width="200px">
         <div class="tombol">
-            <button><a href=hometalent.html></a> Talent </button>
+            <button><a href=hometalent.html> Talent </a></button>
             <button> Company </button>
         </div>
     </div>
