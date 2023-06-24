@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\BladeController;
+use App\Http\Controllers\TalentController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,14 +15,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 //Landing Page Utama 
-Route::get('/', [BladeController::class,'landing'])->name('landing'); 
+Route::get('/', [TalentController::class,'landing'])->name('landing'); 
 
 //Landing Page Talent 
-Route::get('/lp_talent', [BladeController::class,'lp_talent'])->name('lp_talent'); 
+Route::get('/lp_talent', [TalentController::class,'lp_talent'])->name('lp_talent'); 
 
 //HomePage Talent 
-Route::get('/home_talent', [BladeController::class,'home_talent'])->name('home_talent'); 
+Route::get('/home_talent', [TalentController::class,'home_talent'])->name('home_talent'); 
 
 //About Page
-Route::get('/about', [BladeController::class,'aboutpg'])->name('aboutpg'); 
+Route::get('/about', [TalentController::class,'aboutpg'])->name('aboutpg'); 
 

@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class BladeController extends Controller
+class TalentController extends Controller
 {
     public function landing(){
         return view('lputama'); //buka file lputama.php di resource/views
