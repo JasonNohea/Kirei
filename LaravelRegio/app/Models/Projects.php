@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class Projects extends Model
 {
@@ -35,5 +36,8 @@ class Projects extends Model
     }
     public function projectApplication(): HasMany {
         return $this->hasMany(ProjectApplication::class);
+    }
+    public function projectProgress(): HasOne {
+        return $this->hasOne(ProjectProgress::class);
     }
 }
