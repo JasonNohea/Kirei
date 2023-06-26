@@ -13,7 +13,7 @@
         if (!form.checkValidity()) {
           event.preventDefault();
           event.stopPropagation();
-          console.log("asd");
+          // console.log("asd");
         }
 
         form.classList.add("was-validated");
