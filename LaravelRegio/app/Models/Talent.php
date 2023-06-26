@@ -44,4 +44,9 @@ class Talent extends Model
     public function projectApplication(): HasMany {
         return $this->HasMany(ProjectApplication::class);
     }
+    //Talent HasMany Progress Photos
+    public function progressPhotos(): HasMany {
+        return $this->HasMany(ProgressPhotos::class);
+    }
+
 }
