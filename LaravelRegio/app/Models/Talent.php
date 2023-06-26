@@ -31,11 +31,18 @@ class Talent extends Model
         'profile_photo',
     ];
     
+    //Relationship
+    //Talent belongsTo User
     public function user(): BelongsTo {
         return $this->belongsTo(User::class);
     }
 
+    //Talent HasMany Work Experience
     public function workExperience(): HasMany {
         return $this->HasMany(WorkExperience::class);
+    }
+    //Talent HasMany Project Application
+    public function projectApplication(): HasMany {
+        return $this->HasMany(ProjectApplication::class);
     }
 }

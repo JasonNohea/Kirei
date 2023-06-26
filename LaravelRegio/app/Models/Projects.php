@@ -33,4 +33,7 @@ class Projects extends Model
     public function photoProject(): HasMany {
         return $this->hasMany(PhotoProject::class);
     }
+    public function projectApplication(): HasMany {
+        return $this->hasMany(ProjectApplication::class);
+    }
 }
