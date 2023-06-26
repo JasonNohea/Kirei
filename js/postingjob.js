@@ -252,3 +252,32 @@ function saveSkill() {
     savedSkill.append(elements);
   }
 }
+
+function post() {
+  // var comem = document.getElementById("email-company").value;
+  // var comname = document.getElementById("company-name").value;
+  // var fname = document.getElementById("first-name").value;
+  // var lname = document.getElementById("last-name").value;
+  // var pass = document.getElementById("pass-reg").value;
+
+  // if (comem.length > 5) {
+  // }
+
+  console.log(document.getElementsByClassName("in-pname").value);
+  console.log(document.getElementById("floatingInput"));
+
+  if (
+    document.getElementById("in-pname").value !== "" &&
+    document.getElementById("in-sdate").value !== "" &&
+    document.getElementById("in-edate").value !== "" &&
+    document.getElementById("in-rposition").value !== "" &&
+    document.getElementById("in-pdesc").value !== "" &&
+    document.getElementById("in-ploc").value !== "" &&
+    document.getElementById("in-treq").value !== "" &&
+    document.getElementById("in-mdate").value !== ""
+  ) {
+    document.getElementById("post-project").disabled = false;
+  } else {
+    document.getElementById("post-project").disabled = true;
+  }
+}
