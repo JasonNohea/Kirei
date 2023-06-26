@@ -15,7 +15,5 @@ class TalentController extends Controller
     public function home_talent(){
         return view('hometalent'); //buka file hometalent.php di resource/views
     }
-    public function aboutpg(){
-        return view('about'); //buka file hometalent.php di resource/views
-    }
+
 }

@@ -24,5 +24,5 @@ Route::get('/lp_talent', [TalentController::class,'lp_talent'])->name('lp_talent
 Route::get('/home_talent', [TalentController::class,'home_talent'])->name('home_talent'); 
 
 //About Page
-Route::get('/about', [TalentController::class,'aboutpg'])->name('aboutpg'); 
+Route::get('/about', [GeneralController::class,'aboutpg'])->name('aboutpg'); 
 
