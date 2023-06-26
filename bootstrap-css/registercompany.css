@@ -111,7 +111,7 @@ body {
 }
 
 .main-container > * {
-  border: 1px solid rgba(43, 206, 192, 0.274);
+  /* border: 1px solid rgba(43, 206, 192, 0.274); */
   width: 46%;
   height: 100%;
   display: flex;
@@ -140,4 +140,16 @@ textarea {
 
 .register-button:disabled {
   background-color: #7ba4eb;
+}
+
+.button-con-acc {
+  width: 80%;
+  height: 8%;
+  margin: auto;
+  inset: 0;
+}
+
+.login-navigation {
+  margin: auto;
+  inset: 0;
 }
