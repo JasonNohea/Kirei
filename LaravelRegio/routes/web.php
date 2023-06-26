@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\TalentController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,9 +14,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view(
-        '/html/lputama', //nama file view yang mau dibuka
-        ["title"=> "Home"] //nama judul untuk di website
-    );
-});
+//Landing Page Utama 
+Route::get('/', [TalentController::class,'landing'])->name('landing'); 
+
+//Landing Page Talent 
+Route::get('/lp_talent', [TalentController::class,'lp_talent'])->name('lp_talent'); 
+
+//HomePage Talent 
+Route::get('/home_talent', [TalentController::class,'home_talent'])->name('home_talent'); 
+
+//About Page
+Route::get('/about', [GeneralController::class,'aboutpg'])->name('aboutpg'); 
+
