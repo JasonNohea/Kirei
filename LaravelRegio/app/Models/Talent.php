@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Talent extends Model
 {
@@ -32,5 +33,9 @@ class Talent extends Model
     
     public function user(): BelongsTo {
         return $this->belongsTo(User::class);
+    }
+
+    public function workExperience(): HasMany {
+        return $this->HasMany(WorkExperience::class);
     }
 }
