@@ -513,7 +513,7 @@ input[type="submit"]:hover{
 }
 
 .bookmarks{
-  margin-left: 10%;
+  margin-left: 50%;
 }
 
 .bi-bookmark-fill:hover {
@@ -577,20 +577,27 @@ input[type="submit"]:hover{
 }
 
 .content-wrapper{
-  width: 70%;
-  background-color: red;
+  width: 75%;
+  max-width: 1000px;
+  /* background-color: red; */
+  margin-left: 10%;
+  gap: 10px;
 }
 
+/* 
+.content-wrapper hr{
+  width: 100%;
+} */
+
 .jobs-detail{
-  margin-left: 10%;
+  /* margin-left: 10%; */
   margin-top: 15%;
-  width: 60%;
+  width: 70%;
 }
 
 .jobs-con {
   background-color: white;
   width: 100%;
-  max-width: fit-content;
   /* width: 46%; */
   /* height: 59%; */
   max-height: fit-content;
@@ -614,26 +621,32 @@ input[type="submit"]:hover{
   display: flex;
   flex-direction: row;
   align-items: center;
+  gap: 10px;
 }
 
 .photo-profiles {
   background-color: white;
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
+  width: 70px;
+  height: 70px;
 }
 
 .jobs-header-info {
   margin: 0 15px;
   display: flex;
   flex-direction: column;
-  gap: 7px;
+  gap: 15px;
 }
 
 .jobs-name {
   color: black;
   font-weight: 700;
   font-size: 20px;
+}
+
+.jobs-desc {
+  width: 100%;
+  max-width: fit-content;
 }
 
 .jobs-skill {
@@ -659,24 +672,37 @@ input[type="submit"]:hover{
 
 aside {
   float: right;
-  width: 70%;
-  padding-left: 45%;
+  width: 25%;
+  padding-right: 3%;
+  /* background-color: white; */
   /* position: absolute; */
 }
 
 /* .icon{
   float: right;
 } */
+
+.divide{
+  margin-top: 2%;
+  width: 63%;
+  margin-left: 10%;
+  color: #2C5395;
+}
 .detail-info{
+  width: 73%;
   padding-left: 10%;
+}
+
+.detail-info p{
+  text-align: justify;
 }
 
 .list-req{
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
-  gap: 40px;
+  justify-content: space-between;
   width: 50%;
+  /* padding-left: 20px; */
 }
 /* CSS Footer untuk Talent */
 
