@@ -13,7 +13,7 @@ class TalentController extends Controller
         return view('lptalent'); //buka file lptalent.php di resource/views
     }
     public function home_talent(){
-        return view('hometalent'); //buka file hometalent.php di resource/views
+        return view('hptalent'); //buka file hptalent.php di resource/views
     }
 
 }

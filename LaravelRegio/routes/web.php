@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\TalentController;
+use App\Http\Controllers\CompController;
+use App\Http\Controllers\GeneralController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,3 +28,5 @@ Route::get('/home_talent', [TalentController::class,'home_talent'])->name('home_
 //About Page
 Route::get('/about', [GeneralController::class,'aboutpg'])->name('aboutpg'); 
 
+//HomePage Company
+Route::get('/hpCompany', [CompController::class,'hpCompany'])->name('hpCompany'); 
