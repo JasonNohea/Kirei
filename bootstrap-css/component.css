@@ -3,7 +3,6 @@ body {
   width: 100%;
   height: 100%;
   margin: 0;
-  background-color: #e0eaf6;
 }
 
 * {
@@ -16,7 +15,6 @@ body {
   gap: 10px;
   width: 100%;
   height: 100%;
-  background-color: #e0eaf6;
   opacity: 1;
 }
 
@@ -30,6 +28,7 @@ body {
   gap: 30px;
   row-gap: 40px;
   overflow: scroll;
+  overflow-x: hidden;
 }
 .first-con::-webkit-scrollbar {
   width: 0px;
@@ -37,21 +36,42 @@ body {
 }
 
 .second-con {
-  width: 22%;
+  width: 26%;
   height: 100%;
   background-color: blue;
   opacity: 0.6;
   margin: auto;
 }
 
+.box-shadow {
+  margin-top: 5px;
+}
+
 .talent-con {
   background-color: white;
   max-width: fit-content;
-  width: 46%;
-  height: 42%;
+  width: 100%;
+  height: 100%;
   border-radius: 20px;
-  margin: auto;
+  transition: transform 0.5s ease-in-out;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+.box-shadow {
+  width: 46%;
+  height: 45%;
+  border-radius: 20px;
+  transition: box-shadow 0.8s, background-color 0.8s;
+}
+
+.box-shadow:hover {
+  background-color: #0f316a;
+  box-shadow: 0px 0px 0px 5px #0f316a;
+  border-radius: 20px;
+}
+
+.talent-con:hover {
+  transform: translate(-5px, -5px);
 }
 
 .foot {
@@ -118,6 +138,10 @@ body {
   border-radius: 0px 20px;
 }
 
+.talent-status-red {
+  background-color: rgb(138, 0, 0) !important;
+}
+
 .talent-status > * {
   margin: 0;
 }
@@ -138,11 +162,14 @@ body {
   margin-left: 15px;
   display: flex;
   flex-direction: row;
+  width: 92%;
+  border-bottom: 1px solid rgb(126, 126, 126);
 }
 
 .talent-request > * {
   display: flex;
   flex-direction: column;
+  margin-bottom: 10px;
 }
 
 .talent-request-logo {
@@ -170,5 +197,27 @@ body {
 }
 
 .talent-button {
-  margin: 0px 10px;
+  margin: 10px 30px;
+  gap: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+}
+
+.talent-button > * {
+  border: none;
+  width: 30%;
+  height: 10%;
+  font-size: 20px;
+}
+
+.b-view-profile {
+  background-color: white;
+  color: #2c5395;
+}
+
+.b-view-cv {
+  background-color: #2c5395;
+  color: white;
+  border-radius: 10px;
 }
