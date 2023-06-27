@@ -13,8 +13,12 @@
     <div>
         <img src="../assets/image 3277.png" width="200px">
         <div class="tombol">
-            <button><a href='/lp_talent'> Talent </a></button>
-            <button> Company </button>
+            <a href='/lp_talent'> 
+                <button> Talent </button> 
+            </a>
+            <a href='/hpCompany'> 
+                <button> Company </button> 
+            </a>
         </div>
     </div>
 </body>

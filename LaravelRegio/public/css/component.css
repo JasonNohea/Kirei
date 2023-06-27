@@ -1,0 +1,174 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background-color: #e0eaf6;
+}
+
+* {
+  font-family: "Cabin", sans-serif;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  width: 100%;
+  height: 100%;
+  background-color: #e0eaf6;
+  opacity: 1;
+}
+
+.first-con {
+  width: 80%;
+  height: 100%;
+  margin: auto 35px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 30px;
+  row-gap: 40px;
+  overflow: scroll;
+}
+.first-con::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* make scrollbar transparent */
+}
+
+.second-con {
+  width: 22%;
+  height: 100%;
+  background-color: blue;
+  opacity: 0.6;
+  margin: auto;
+}
+
+.talent-con {
+  background-color: white;
+  max-width: fit-content;
+  width: 46%;
+  height: 42%;
+  border-radius: 20px;
+  margin: auto;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+.foot {
+  background-color: black;
+  width: 100%;
+}
+
+.talent-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.talent-info > * {
+  margin: 0 10px;
+}
+
+.talent-header {
+  margin: 0px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.photo-profile {
+  background-color: gray;
+  border-radius: 50%;
+  margin-left: 20px;
+  margin-top: 10px;
+  width: 50px;
+  height: 50px;
+}
+
+.talent-header-info {
+  margin: 0 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.talent-name {
+  color: black;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.talent-skill {
+  color: #0074ff;
+}
+
+.talent-header-info > * {
+  margin: 10px 0 0 10px;
+}
+
+.talent-status {
+  margin-left: auto;
+  margin-bottom: auto;
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  background-color: #0f316a;
+  color: white;
+  font-size: 1.4vw;
+  border-radius: 0px 20px;
+}
+
+.talent-status > * {
+  margin: 0;
+}
+
+.talent-main {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.talent-desc {
+  color: gray;
+  margin: 0;
+  margin-left: 20px;
+}
+
+.talent-request {
+  margin-left: 15px;
+  display: flex;
+  flex-direction: row;
+}
+
+.talent-request > * {
+  display: flex;
+  flex-direction: column;
+}
+
+.talent-request-logo {
+  width: fit-content;
+  align-items: center;
+}
+
+.talent-request-text {
+  margin-left: 10px;
+}
+
+.talent-request-text > * {
+  margin: 0;
+}
+
+.talent-sec-info {
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+  align-items: center;
+}
+
+.talent-sec-info > * {
+  margin: 0 0 0 10px;
+}
+
+.talent-button {
+  margin: 0px 10px;
+}
