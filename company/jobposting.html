@@ -122,10 +122,11 @@
                 <input
                   type="text"
                   class="form-control"
-                  id="floatingInput"
+                  onkeyup="post();"
+                  id="in-pname"
                   placeholder="ProjectName"
                 />
-                <label for="floatingInput"
+                <label for="in-pname"
                   >Project Name <span class="required">*</span></label
                 >
               </div>
@@ -133,10 +134,11 @@
                 <input
                   type="date"
                   class="form-control"
-                  id="floatingInput"
+                  onkeyup="post();"
+                  id="in-sdate"
                   placeholder="dd/mm/yyyy"
                 />
-                <label for="floatingInput"
+                <label for="in-sdate"
                   >Start Date<span class="required">*</span></label
                 >
               </div>
@@ -144,10 +146,11 @@
                 <input
                   type="date"
                   class="form-control"
-                  id="floatingInput"
+                  onkeyup="post();"
+                  id="in-edate"
                   placeholder="dd/mm/yyyy"
                 />
-                <label for="floatingInput"
+                <label for="in-edate"
                   >End Date<span class="required">*</span></label
                 >
               </div>
@@ -155,10 +158,11 @@
                 <input
                   type="text"
                   class="form-control"
-                  id="floatingInput"
+                  onkeyup="post();"
+                  id="in-rposition"
                   placeholder="dd/mm/yyyy"
                 />
-                <label for="floatingInput"
+                <label for="in-rposition"
                   >Required Position<span class="required">*</span></label
                 >
               </div>
@@ -166,10 +170,11 @@
                 <textarea
                   type="text"
                   class="form-control"
-                  id="floatingInput"
+                  onkeyup="post();"
+                  id="in-pdesc"
                   placeholder="Description"
                 ></textarea>
-                <label for="floatingInput"
+                <label for="in-pdesc"
                   >Project Description<span class="required">*</span></label
                 >
               </div>
@@ -177,10 +182,11 @@
                 <textarea
                   type="text"
                   class="form-control"
-                  id="floatingInput"
+                  onkeyup="post();"
+                  id="in-ploc"
                   placeholder="Location"
                 ></textarea>
-                <label for="floatingInput"
+                <label for="in-ploc"
                   >Project Location<span class="required">*</span></label
                 >
               </div>
@@ -188,10 +194,11 @@
                 <textarea
                   type="text"
                   class="form-control"
-                  id="floatingInput"
+                  onkeyup="post();"
+                  id="in-treq"
                   placeholder="Requirement"
                 ></textarea>
-                <label for="floatingInput"
+                <label for="in-treq"
                   >Talent Requirement<span class="required">*</span></label
                 >
               </div>
@@ -252,10 +259,11 @@
                 <input
                   type="date"
                   class="form-control"
-                  id="floatingInput"
+                  onkeyup="post();"
+                  id="in-mdate"
                   placeholder="dd/mm/yyyy"
                 />
-                <label for="floatingInput"
+                <label for="in-mdate"
                   >Matching Deadline<span class="required">*</span></label
                 >
               </div>
@@ -341,7 +349,9 @@
               <!-- <div class="selected-skills2" id="selectedSkills2"></div> -->
             </div>
           </div>
-          <button type="button" class="post-project" disabled>Post Job</button>
+          <button type="button" class="post-project" id="post-project" disabled>
+            Post Job
+          </button>
         </form>
       </div>
 

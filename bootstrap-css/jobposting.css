@@ -189,6 +189,14 @@ textarea {
   inset: 0;
 }
 
+.post-project:hover {
+  background-color: #3f4185;
+}
+
+.post-project:disabled:hover {
+  background-color: #5675aa;
+}
+
 .post-project:disabled {
   background-color: #5675aa;
 }
