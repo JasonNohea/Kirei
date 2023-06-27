@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\TalentController;
+use App\Http\Controllers\CompController;
+use App\Http\Controllers\GeneralController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,11 +20,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [TalentController::class,'landing'])->name('landing'); 
 
 //Landing Page Talent 
-Route::get('/lp_talent', [TalentController::class,'lp_talent'])->name('lp_talent'); 
+Route::get('/lp_talent', [TalentController::class,'lpTalent'])->name('lpTalent'); 
 
 //HomePage Talent 
-Route::get('/home_talent', [TalentController::class,'home_talent'])->name('home_talent'); 
+Route::get('/home_talent', [TalentController::class,'homeTalent'])->name('homeTalent'); 
 
 //About Page
 Route::get('/about', [GeneralController::class,'aboutpg'])->name('aboutpg'); 
 
+//HomePage Company
+Route::get('/hpCompany', [CompController::class,'hpCompany'])->name('hpCompany'); 

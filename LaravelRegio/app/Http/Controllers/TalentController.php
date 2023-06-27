@@ -9,11 +9,14 @@ class TalentController extends Controller
     public function landing(){
         return view('lputama'); //buka file lputama.php di resource/views
     }
-    public function lp_talent(){
+    public function lpTalent(){
         return view('lptalent'); //buka file lptalent.php di resource/views
     }
-    public function home_talent(){
-        return view('hometalent'); //buka file hometalent.php di resource/views
+    public function homeTalent(){
+        return view('hptalent'); //buka file hptalent.php di resource/views
+    }
+    public function detailJob(){
+        return view('detailjobtalent'); //buka file hptalent.php di resource/views
     }
 
 }
