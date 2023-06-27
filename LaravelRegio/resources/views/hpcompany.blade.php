@@ -44,7 +44,7 @@
         <img class="logo" src="../assets/logoCompany.png" alt="Logo Regio" />
         <a class="navi-button" href="#">Talent</a>
         <a class="navi-button" href="#">My Project</a>
-        <a class="navi-button" href="#">About</a>
+        <a class="navi-button" href="/about">About</a>
       </div>
       <div class="nav2">
         <img class="globe" src="../assets/global.png" />
