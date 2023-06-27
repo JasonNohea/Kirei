@@ -290,11 +290,11 @@
           <p><i class="bi-building"></i> &nbsp; IT Consultant</p>
           <p><i class="bi-briefcase-fill"></i> &nbsp; Full Time</p>
           <p><i class="bi-hourglass"></i> &nbsp; 1 - 3 Year Experience</p>
-          </div>
         </div>
-      </div> 
+      </div>
+    </div> 
   </div>
-    <hr class="divide">
+  <hr class="divide">
     <div class="detail-info">
       <p><b>Job Description</b></p>
       <p> We are seeking a skilled and motivated Web Developer to join our dynamic team. As a Web Developer, you will play a crucial role in designing, developing, and maintaining our company's websites and web applications. You will collaborate with cross-functional teams to create visually appealing, user-friendly, and intuitive digital experiences.</p>
