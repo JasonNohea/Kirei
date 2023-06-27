@@ -229,68 +229,123 @@
         </div>
       </div>
   </header>
-  <div class="main-jobs">
-    <p> Web Developer </p>
-    <hr>
-  </div>
-  <div class="detail-info">
 
-  </div>
+  <!-- Floating Content -->
+
   <aside>
     <div class="jobs">
       <p class="teks"> Other Jobs </p> 
-      <div class="talent-con">
-        <div class="talent-info">
-          <div class="talent-header">
+      <div class="jobs-con">
+        <div class="jobs-info">
+          <div class="jobs-header">
             <div class="photo-profile"></div>
-            <div class="talent-header-info">
-              <p class="talent-name">James Welton</p>
-              <p class="talent-skill">UI/UX Designer</p>
+            <div class="jobs-header-info">
+              <p class="jobs-name"> Marketing </p>
+              <p class="jobs-skill"> PT. Kreasi Rekayasa Indonesia </p>
             </div>
-            <!-- <div class="bookmarks">
-              <i class="bi-bookmark-fill" style="font-size: 25px;"></i>
-            </div> -->
           </div>
-          <p class="talent-desc">
-            A career in Information System, specifically in the areas of UI/UX
-            Designer, that will optimally utilizeanalytical, time...
-          </p>
           <p><i class="bi-geo-alt-fill"></i> &nbsp; Wirosari, Indonesia</p>
           <p><i class="bi-cash"></i> &nbsp; IDR 7,000,000 - 12,000,000</p>
           <p><i class="bi-briefcase-fill"></i> &nbsp; 8.00 AM - 5.00 PM</p>
         </div>
-        <div class="talent-button">
+        <div class="jobs-button">
           <hr>
           <p> <i class="bi-clock"></i> 7 Jan 2023 </p>
         </div>
       </div>
-      <div class="talent-con">
-        <div class="talent-info">
-          <div class="talent-header">
+
+      <!-- Job Lain -->
+
+      <div class="jobs-con">
+        <div class="jobs-info">
+          <div class="jobs-header">
             <div class="photo-profile"></div>
-            <div class="talent-header-info">
-              <p class="talent-name">James Welton</p>
-              <p class="talent-skill">UI/UX Designer</p>
+            <div class="jobs-header-info">
+              <p class="jobs-name"> Project Manager </p>
+              <p class="jobs-skill"> PT. Kreasi Rekayasa Indonesia </p>
             </div>
-            <!-- <div class="bookmarks">
-              <i class="bi-bookmark-fill" style="font-size: 25px;"></i>
-            </div> -->
           </div>
-          <p class="talent-desc">
-            A career in Information System, specifically in the areas of UI/UX
-            Designer, that will optimally utilizeanalytical, time...
-          </p>
           <p><i class="bi-geo-alt-fill"></i> &nbsp; Wirosari, Indonesia</p>
           <p><i class="bi-cash"></i> &nbsp; IDR 7,000,000 - 12,000,000</p>
           <p><i class="bi-briefcase-fill"></i> &nbsp; 8.00 AM - 5.00 PM</p>
         </div>
-        <div class="talent-button">
+        <div class="jobs-button">
           <hr>
           <p> <i class="bi-clock"></i> 7 Jan 2023 </p>
         </div>
       </div>
     </div>
   </aside>
+
+  <!-- Job Detail -->
+  <section>
+  <div class="content-wrapper">
+    <div class="jobs-detail">
+      <div class="jobs-header">
+        <div class="photo-profiles"></div>
+        <div class="jobs-header-info">
+          <p class="jobs-name"> Web Developer </p>
+          <p class="jobs-skill"> PT. Kreasi Rekayasa Indonesia </p>
+          <p><i class="bi-cash"></i> &nbsp; IDR 7,000,000 - 12,000,000</p>
+          <p><i class="bi-building"></i> &nbsp; IT Consultant</p>
+          <p><i class="bi-briefcase-fill"></i> &nbsp; Full Time</p>
+          <p><i class="bi-hourglass"></i> &nbsp; 1 - 3 Year Experience</p>
+          </div>
+        </div>
+      </div> 
+  </div>
+    <hr class="divide">
+    <div class="detail-info">
+      <p><b>Job Description</b></p>
+      <p> We are seeking a skilled and motivated Web Developer to join our dynamic team. As a Web Developer, you will play a crucial role in designing, developing, and maintaining our company's websites and web applications. You will collaborate with cross-functional teams to create visually appealing, user-friendly, and intuitive digital experiences.</p>
+      <p><b> Skills Requirements </b></p>
+      <p>
+        <ul class="list-req">
+          <li> Teamwork </li>
+          <li> Honesty </li>
+          <li> HTML/CSS </li>
+        </ul>
+      </p>
+      <p><b> About Company </b></p>
+      <p> 
+        Kirei is a company that allows users to find workers in specific areas for projects they have posted on the platform. The website functions as a platform that connects individuals or businesses in need of specific services with skilled professionals who can meet those needs. Users can create project postings on Regio, outlining the details and specifications of the job they require. 
+      </p>
+      <p><b> Office Address </b></p>
+      <p> Jl. Kresna No.4 </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  
+  <footer>
+    <div class="footer">
+      <div class="layar-dalam">
+        <div class="kiri">
+            <h5> Contact Us </h5>
+            <br>
+            <p>Email address : <span class="colorlink"> hi@regio.co.id </span><br>
+            Whatsapp Contact : 0823-2131-329 <br>
+            Qna : <span class="colorlink"> Feedback </span><br>
+          </p>
+          
+        </div>
+        <div class="kanan">
+          <h5>Follow Us</h5>
+          <br> 
+            <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+      </div>
+      <div class="layar-dalam">
+        <div class="copyright">
+            Copyright &copy; 2023 Regio.</div>
+        </div>  
+    </div>
+</footer>
 <script src="../js/main.js"></script>
 </body>
 </html>
