@@ -61,6 +61,7 @@
 .search-label {
   border-radius: 15px !important;
   border: 2px solid #31348d;
+  z-index: 0;
 }
 
 .search-button {

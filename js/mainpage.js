@@ -118,3 +118,39 @@ $("textarea")
     this.style.height = 0;
     this.style.height = this.scrollHeight + "px";
   });
+
+//grab function
+var isGrabbing = false;
+var startScrollLeft;
+var startScrollTop;
+var startX;
+var startY;
+
+function handleMouseDown(event) {
+  isGrabbing = true;
+  startScrollLeft = this.scrollLeft;
+  startScrollTop = this.scrollTop;
+  startX = event.clientX;
+  startY = event.clientY;
+}
+
+function handleMouseUp() {
+  isGrabbing = false;
+}
+
+function handleMouseMove(event) {
+  if (isGrabbing) {
+    var deltaX = event.clientX - startX;
+    var deltaY = event.clientY - startY;
+    this.scrollLeft = startScrollLeft - deltaX;
+    this.scrollTop = startScrollTop - deltaY;
+  }
+}
+
+window.addEventListener("mouseup", handleMouseUp);
+
+window.addEventListener("load", function () {
+  var grabScroll = document.querySelector(".grab-scroll");
+  grabScroll.addEventListener("mousedown", handleMouseDown);
+  grabScroll.addEventListener("mousemove", handleMouseMove);
+});
