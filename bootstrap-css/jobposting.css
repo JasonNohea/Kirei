@@ -28,10 +28,6 @@ form {
   display: flex;
   flex-direction: column;
 }
-.project-company {
-  width: 33%;
-  height: 45%;
-}
 
 .title {
   font-weight: 700;
@@ -290,4 +286,97 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type="number"] {
   -moz-appearance: textfield;
+}
+
+.project-company {
+  width: 33%;
+  height: 45%;
+  gap: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project-company > p {
+  font-size: 25px;
+  color: black !important;
+  font-weight: bolder;
+  margin-top: 10px;
+}
+
+.project-sum {
+  display: flex;
+  flex-direction: row;
+  width: 92%;
+  height: 22%;
+  background-color: white;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+}
+
+.project-img {
+  border-radius: 10px;
+}
+
+.project-img > img {
+  border-radius: 10px 0px 0px 10px;
+  height: 100%;
+}
+
+.project-detail {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.project-detail {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-detail > p {
+  text-wrap: balance;
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0 10px;
+}
+
+.project-status {
+  margin-left: auto;
+  margin-bottom: auto;
+  width: 25%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  background-color: #00c700;
+  color: white;
+  font-size: 1vw;
+  border-radius: 0px 10px;
+}
+
+.project-pending {
+  background-color: gray !important;
+}
+
+.project-wip {
+  background-color: orangered !important;
+}
+
+.project-second > p {
+  margin: 10px;
+  font-size: 0.9vw;
+  text-wrap: balance;
+  color: gray;
+}
+
+.project-company > a {
+  color: #0b0e73;
+  text-decoration: none;
+  font-size: 1.2vw;
+}
+
+.project-company > a:hover {
+  text-decoration: underline;
+  font-weight: 700;
 }
