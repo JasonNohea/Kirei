@@ -40,4 +40,7 @@ class Projects extends Model
     public function projectProgress(): HasOne {
         return $this->hasOne(ProjectProgress::class);
     }
+    public function projectSkills(): HasMany {
+        return $this->hasMany(ProjectSkills::class);
+    }
 }
