@@ -14,4 +14,10 @@ class Skills extends Model
         'skill_name',
     ];
     
+    public function talentSkills(): HasMany {
+        return $this->hasMany(TalentSkill::class);
+    }
+    public function projectSkills(): HasMany {
+        return $this->hasMany(Project_Skills::class);
+    }
 }
