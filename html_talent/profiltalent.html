@@ -9,8 +9,10 @@
 
     <link rel="stylesheet" href="../bootstrap-css/main.css" />
     <link rel="stylesheet" href="../css/newnav.css" />
+    <!-- <link rel="stylesheet" href="../bootstrap-css/navloggedin.css" -->
+    <link rel="stylesheet" href="../css/profiltalent.css" />
 
-    <!-- Font & Link Ajax + Bootstrap -->
+    <!-- Font & Script Ajax & Bootstrap -->
 
     <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet" />
     <link
@@ -23,7 +25,12 @@
       crossorigin="anonymous">
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <!-- <script src="../js/mainpage.js" defer></script> -->
+    <script src="../js/mainpage.js" defer></script>
+    <script src="../js/tabcontent.js"></script>
+    <script>
+      // Get the element with id="defaultOpen" and click on it
+      document.getElementById("defaultOpen").click();
+      </script>
     <title> RegiO - Job Portal di Indonesia </title>
 </head>
 <body>
@@ -45,8 +52,8 @@
         </div>
     </nav>
   
-      <!-- Modal Login -->
-      <div class="modal fade" id="login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <!-- Modal Login -->
+    <div class="modal fade" id="login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
           <form class="modal-content needs-validation" action="../php/loginjson.php" method="post" name="login" novalidate >
             <div class="modal-header">
@@ -138,10 +145,10 @@
             </div>
           </form>
         </div>
-      </div>
+    </div>
   
-      <!-- Modal forgot password -->
-      <div
+    <!-- Modal forgot password -->
+    <div
         class="modal fade"
         id="forgot-pass"
         tabindex="-1"
@@ -217,10 +224,10 @@
             </div>
           </form>
         </div>
-      </div>
+    </div>
   
-      <!-- Modal OTP -->
-      <div
+    <!-- Modal OTP -->
+    <div
         class="modal fade"
         id="otp"
         tabindex="-1"
@@ -333,10 +340,10 @@
             </div>
           </form>
         </div>
-      </div>
+    </div>
   
-      <!-- Modal reset password -->
-      <div
+    <!-- Modal reset password -->
+    <div
         class="modal fade"
         id="reset-pass"
         tabindex="-1"
@@ -427,9 +434,9 @@
             </div>
           </form>
         </div>
-      </div>
+    </div>
   
-      <div
+    <div
         class="modal fade"
         id="loading"
         tabindex="-1"
@@ -454,10 +461,10 @@
             </div>
           </div>
         </div>
-      </div>
+    </div>
   
-      <!-- Modal reset success -->
-      <div
+    <!-- Modal reset success -->
+    <div
         class="modal fade"
         id="reset-success"
         tabindex="-1"
@@ -493,6 +500,96 @@
             </div>
           </div>
         </div>
+    </div>
+  
+  <!-- Profil Info --> <!-- Nanti deh, susah bikinnya -->
+  <div class="profile-con">
+    <div class="profile-info">
+      <div class="name">
+        <p class="user-name">Tony Saja</p>
+        <div class="edit">
+          <p> <i class="bi-pencil-fill"></i> Edit </p>
+        </div>
       </div>
+      <div class="profile-header">
+        <div class="photo-profile">
+          <img src="../assets/fototalent.png">
+        </div>
+        <div class="profile-header-info">
+          <p class="profile-name"> Email </p>
+          <p class="profile-skill"> tonysaja@gmail.com </p>
+        
+          <p class="profile-name"> Location </p>
+          <p class="profile-skill"> Kalimantan Timur, Samarinda</p>
+        </div>
+        <div class="profile-header-info">
+          <p class="profile-name"> Specialty </p>
+          <p class="profile-skill"> Plumbing Installation Expert </p>
+
+          <p class="profile-name"> Phone </p>
+          <p class="profile-skill"> 0837462864382 </p>
+        </div>
+        <div class="profile-header-info">
+          <p class="profile-name"> Status </p>
+          <p class="profile-skill"> Available </p>
+        
+          <p class="profile-name"> Birth Date </p>
+          <p class="profile-skill"> 09 October 1999 </p>
+        </div>
+        <div class="profile-header-info">
+          <p class="profile-name"> Available Working Hours </p>
+          <p class="profile-skill"> 08.00 - 17.00 </p>
+
+          <p class="profile-name"> </p>
+          <p class="profile-skill"> </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tab Content Profile Info, Project & Bookmark -->
+  <main>
+    <div class="navigation-tab">
+      <div class="tab-project">
+        <a
+          class="tab"
+          id="tab1"
+          onclick="showContent('content1', 'tab1', event);"
+          href="#"
+          >Pending</a
+        >
+        <a
+          class="tab"
+          id="tab2"
+          onclick="showContent('content2', 'tab2', event);"
+          href="#"
+          >In Progress</a
+        >
+        <a
+          class="tab"
+          id="tab3"
+          onclick="showContent('content3', 'tab3', event);"
+          href="#"
+          >Done</a
+        >
+      </div>
+      <div class="line-container">
+        <div class="underline"></div>
+      </div>
+    </div>
+
+    <div class="content" id="content1">
+      <!-- Content for Tab 1 / Profile Info -->
+    </div>
+    <div class="content" id="content2">
+      <!-- Content for Tab 2 / Project -->
+    </div>
+    <div class="content" id="content3">
+      <!-- Content for Tab 3 / Bookmark -->
+    </div>
+  </main>
+
+  <!-- Tab content -->
+  
 </body>
 </html>
