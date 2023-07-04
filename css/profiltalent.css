@@ -5,6 +5,16 @@ body {
   margin: 0;
 }
 
+main {
+    margin-top: 5%;
+    width: 100%;
+    height: 100%;
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .profile-con {
     margin-top: 10%;
     margin-left: 10%;
@@ -61,36 +71,55 @@ body {
     margin: 0px 10px;
 }
 
-.tab {
-overflow: hidden;
-border: 1px solid #ccc;
-background-color: #f1f1f1;
+.navigation-tab {
+display: flex;
+flex-direction: column;
+width: 100%;
+align-items: center;
 }
   
-/* Style the buttons that are used to open the tab content */
-.tab .tablinks {
-background-color: inherit;
-border: none;
-cursor: pointer;
-padding: 14px 16px;
-transition: 0.3s;
+.line-container {
+width: 25%;
+/* background-color: red; */
+display: flex;
+}
+
+.tab-project {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    gap: 40px;
 }
   
-/* Change background color of buttons on hover */
-.tab .tablinks:hover {
-background-color: #ddd;
+.tab-project > * {
+    font-size: 25px;
+    color: black;
+    text-decoration: none;
+}
+
+.content {
+    width: 95%;
+    height: 90%;
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 10px;
 }
   
-/* Create an active/current tablink class */
-.tab .tablinks.active {
-  text-decoration: underline 2px #31348D;
-  transition: 0.2s ease-in-out;
-}
-  
-/* Style the tab content */
-.tabcontent {
+#content2,
+#content3 {
 display: none;
-padding: 6px 12px;
-border: 1px solid #ccc;
-border-top: none;
 }
+  
+#content2 {
+background-color: red;
+}
+  
+#content3 {
+background-color: green;
+}
+  
+.active ~ .underline {
+transform: translateX(calc(var(--active-tab-index) * 100%));
+}
+  
