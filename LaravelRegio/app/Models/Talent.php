@@ -48,5 +48,9 @@ class Talent extends Model
     public function progressPhotos(): HasMany {
         return $this->HasMany(ProgressPhotos::class);
     }
+    //Talent HasMany TalentSkills
+    public function TalentSkills(): HasMany {
+        return $this->HasMany(TalentSkill::class);
+    }
 
 }

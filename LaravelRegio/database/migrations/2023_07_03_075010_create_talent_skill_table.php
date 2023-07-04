@@ -13,9 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('progress_photos', function (Blueprint $table) {
+        Schema::create('talent_skill', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('talent_id');
+            $table->unsignedBigInteger('skill_id');
             $table->timestamps();
+    
+            $table->foreign('talent_id')->references('id')->on('talents')->onDelete('cascade');
+            $table->foreign('skill_id')->references('id')->on('skills')->onDelete('cascade');
         });
     }
 
@@ -26,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('progress_photos');
+        Schema::dropIfExists('talent_skills');
     }
 };
