@@ -7,13 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
-
-class City extends Model
+class Province extends Model
 {
     use HasFactory;
     protected $fillable = [
         'id',
-        'city_name',
+        'province_name',
     ];
 
     public function talents(): HasMany {
