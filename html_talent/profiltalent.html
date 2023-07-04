@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="../css/newnav.css" />
     <link rel="stylesheet" href="../css/profiltalent.css" />
 
-    <!-- Font & Link Ajax + Bootstrap -->
+    <!-- Font & Script Ajax & Bootstrap -->
 
     <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet" />
     <link
@@ -24,7 +24,12 @@
       crossorigin="anonymous">
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <!-- <script src="../js/mainpage.js" defer></script> -->
+    <script src="../js/mainpage.js" defer></script>
+    <script src="../js/tabcontent.js"></script>
+    <script>
+      // Get the element with id="defaultOpen" and click on it
+      document.getElementById("defaultOpen").click();
+      </script>
     <title> RegiO - Job Portal di Indonesia </title>
 </head>
 <body>
@@ -496,41 +501,72 @@
         </div>
     </div>
   
-  <!-- Profil Info -->
+  <!-- Profil Info --> <!-- Nanti deh, susah bikinnya -->
   <div class="profile-con">
     <div class="profile-info">
+      <div class="name">
+        <p class="user-name">Tony Saja</p>
+        <div class="edit">
+          <p> <i class="bi-pencil-fill"></i> Edit </p>
+        </div>
+      </div>
       <div class="profile-header">
-        <div class="photo-profile"></div>
+        <div class="photo-profile">
+          <img src="../assets/fototalent.png">
+        </div>
         <div class="profile-header-info">
           <p class="profile-name"> Email </p>
           <p class="profile-skill"> tonysaja@gmail.com </p>
+        
+          <p class="profile-name"> Location </p>
+          <p class="profile-skill"> Kalimantan Timur, Samarinda</p>
         </div>
         <div class="profile-header-info">
           <p class="profile-name"> Specialty </p>
           <p class="profile-skill"> Plumbing Installation Expert </p>
-        </div>
-        <div class="profile-header-info">
-          <p class="profile-name"> Status </p>
-          <p class="profile-skill"> Available </p>
-        </div>
-        <div class="profile-header-info">
-          <p class="profile-name"> Available Working Hours </p>
-          <p class="profile-skill"> 08.00 - 17.00 </p>
-        </div>
-        <div class="profile-header-info">
-          <p class="profile-name"> Location </p>
-          <p class="profile-skill"> Kalimantan Timur, Samarinda </p>
-        </div>
-        <div class="profile-header-info">
+
           <p class="profile-name"> Phone </p>
           <p class="profile-skill"> 0837462864382 </p>
         </div>
         <div class="profile-header-info">
+          <p class="profile-name"> Status </p>
+          <p class="profile-skill"> Available </p>
+        
           <p class="profile-name"> Birth Date </p>
           <p class="profile-skill"> 09 October 1999 </p>
         </div>
+        <div class="profile-header-info">
+          <p class="profile-name"> Available Working Hours </p>
+          <p class="profile-skill"> 08.00 - 17.00 </p>
+
+          <p class="profile-name"> </p>
+          <p class="profile-skill"> </p>
+        </div>
       </div>
     </div>
+  </div>
+
+  <!-- Tab Content Profile Info, Project & Bookmark -->
+  <div class="tab">
+    <button class="tablinks" onclick="openCity(event, 'profile')" id="defaultOpen"> Profile Info</button>
+    <button class="tablinks" onclick="openCity(event, 'projects')"> Projects </button>
+    <button class="tablinks" onclick="openCity(event, 'bookmark')"> Bookmark </button>
+  </div>
+
+  <!-- Tab content -->
+  <div id="profile" class="tabcontent">
+  <h3>London</h3>
+  <p>London is the capital city of England.</p>
+  </div>
+
+  <div id="projects" class="tabcontent">
+  <h3>Paris</h3>
+  <p>Paris is the capital of France.</p>
+  </div>
+
+  <div id="bookmark" class="tabcontent">
+  <h3>Tokyo</h3>
+  <p>Tokyo is the capital of Japan.</p>
   </div>
 </body>
 </html>

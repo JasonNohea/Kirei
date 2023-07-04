@@ -5,29 +5,19 @@ body {
   margin: 0;
 }
 
-.profile-detail {
-    margin-top: 15%;
-    width: 70%;
-}
-
 .profile-con {
     margin-top: 10%;
     margin-left: 10%;
     width: 80%;
-    height: 300px;
+    height: 270px;
     background-color: white;
 }
 
-.profile-info {
+/* .profile-info {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    gap: 10px;
-}
-
-.profile-info > * {
-    margin: 0 10px;
-}
+} */
 
 .profile-header {
     display: flex;
@@ -36,39 +26,30 @@ body {
 }
 
 .photo-profile {
-    background-color:red;
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
+    margin-top: 5%;
+    margin-left: 10px;
+    /* background-color:red; */
+    height: 50px;
 }
 
 .profile-header-info {
-    /* margin: 0 15px; */
+    margin: 0 15px; 
     display: flex;
     flex-wrap: wrap;
-    flex: 2;
-    gap: 15px;
-}
-
-.profile-header-info {
-    margin: 0;
-    flex: 1;
+    flex: 0;
+    width: 100%;
 }
 
 .profile-name {
     color: black;
     font-weight: 700px;
     font-size: 20px;
-}
-
-.profile-desc {
-    width: 100%;
-    max-width: fit-content;
-    color: gray;
+    width: 200px;
 }
 
 .profile-skill {
     color: #0074ff;
+    width: 180px;
 }
 
 .profile-status-con {
@@ -78,4 +59,38 @@ body {
 
 .profile-button {
     margin: 0px 10px;
+}
+
+.tab {
+overflow: hidden;
+border: 1px solid #ccc;
+background-color: #f1f1f1;
+}
+  
+/* Style the buttons that are used to open the tab content */
+.tab .tablinks {
+background-color: inherit;
+border: none;
+cursor: pointer;
+padding: 14px 16px;
+transition: 0.3s;
+}
+  
+/* Change background color of buttons on hover */
+.tab .tablinks:hover {
+background-color: #ddd;
+}
+  
+/* Create an active/current tablink class */
+.tab .tablinks.active {
+  text-decoration: underline 2px #31348D;
+  transition: 0.2s ease-in-out;
+}
+  
+/* Style the tab content */
+.tabcontent {
+display: none;
+padding: 6px 12px;
+border: 1px solid #ccc;
+border-top: none;
 }
