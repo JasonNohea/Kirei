@@ -9,6 +9,7 @@
 
     <link rel="stylesheet" href="../bootstrap-css/main.css" />
     <link rel="stylesheet" href="../css/newnav.css" />
+    <!-- <link rel="stylesheet" href="../bootstrap-css/navloggedin.css" -->
     <link rel="stylesheet" href="../css/profiltalent.css" />
 
     <!-- Font & Script Ajax & Bootstrap -->
@@ -24,8 +25,8 @@
       crossorigin="anonymous">
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="../js/mainpage.js" defer></script>
-    <script src="../js/tabcontent.js"></script>
+    <!-- <script src="../js/mainpage.js"></script> -->
+    <script src="../js/tabcontenttalent.js"></script>
     <script>
       // Get the element with id="defaultOpen" and click on it
       document.getElementById("defaultOpen").click();
@@ -547,26 +548,51 @@
   </div>
 
   <!-- Tab Content Profile Info, Project & Bookmark -->
-  <div class="tab">
-    <button class="tablinks" onclick="openCity(event, 'profile')" id="defaultOpen"> Profile Info</button>
-    <button class="tablinks" onclick="openCity(event, 'projects')"> Projects </button>
-    <button class="tablinks" onclick="openCity(event, 'bookmark')"> Bookmark </button>
-  </div>
+  <main>
+    <div class="navigation-tab">
+      <div class="tab-project">
+        <a
+          class="tab"
+          id="tab1"
+          onclick="showContent('content1', 'tab1', event);"
+          href="#"
+          >Pending</a
+        >
+        <a
+          class="tab"
+          id="tab2"
+          onclick="showContent('content2', 'tab2', event);"
+          href="#"
+          >In Progress</a
+        >
+        <a
+          class="tab"
+          id="tab3"
+          onclick="showContent('content3', 'tab3', event);"
+          href="#"
+          >Done</a
+        >
+      </div>
+      <div class="line-container">
+        <div class="underline"></div>
+      </div>
+    </div>
+
+    <div class="content" id="content1">
+      <!-- Content for Tab 1 / Profile Info -->
+      <p class="">testing content</p>
+    </div>
+    <div class="content" id="content2">
+      <!-- Content for Tab 2 / Project -->
+      <p class="">ini testing juga</p>
+    </div>
+    <div class="content" id="content3">
+      <!-- Content for Tab 3 / Bookmark -->
+      <p class=""> ini cuma coba-coba</p>
+    </div>
+  </main>
 
   <!-- Tab content -->
-  <div id="profile" class="tabcontent">
-  <h3>London</h3>
-  <p>London is the capital city of England.</p>
-  </div>
-
-  <div id="projects" class="tabcontent">
-  <h3>Paris</h3>
-  <p>Paris is the capital of France.</p>
-  </div>
-
-  <div id="bookmark" class="tabcontent">
-  <h3>Tokyo</h3>
-  <p>Tokyo is the capital of Japan.</p>
-  </div>
+  
 </body>
 </html>

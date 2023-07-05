@@ -1,20 +1,29 @@
-function openCity(evt, cityName) {
-    // Declare all variables
-    var i, tabcontent, tablinks;
-    
-    // Get all elements with class="tabcontent" and hide them
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-    }
-    
-    // Get all elements with class="tablinks" and remove the class "active"
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-    
-    // Show the current tab, and add an "active" class to the button that opened the tab
-    document.getElementById(cityName).style.display = "block";
-    evt.currentTarget.className += " active";
-    } 
+function showContent(contentId, tabId) {
+  var contents = document.getElementsByClassName("content");
+  var tabs = document.getElementsByClassName("tab");
+  var underline = document.querySelector(".underline");
+  var linecon = document.querySelector(".line-container");
+
+  for (var i = 0; i < contents.length; i++) {
+    contents[i].style.display = "none";
+  }
+  for (var i = 0; i < tabs.length; i++) {
+    tabs[i].classList.remove("active");
+  }
+
+  var selectedContent = document.getElementById(contentId);
+  var selectedTab = document.getElementById(tabId);
+
+  selectedContent.style.display = "block";
+  selectedTab.classList.add("active");
+
+  var activeTabIndex = Array.from(tabs).indexOf(selectedTab);
+  underline.style.transform = `translateX(${activeTabIndex * 170}%)`;
+
+  // Add the short-underline class when the "Done" tab is active
+  if (selectedTab.id === "tab3") {
+    underline.classList.add("short-line");
+  } else {
+    underline.classList.remove("short-line");
+  }
+}
