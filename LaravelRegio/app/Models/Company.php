@@ -27,4 +27,7 @@ class Company extends Model
     public function project(): HasMany {
         return $this->hasMany(Projects::class);
     }
+    public function cities(): BelongsTo {
+        return $this->belongsTo(City::class);
+    }
 }

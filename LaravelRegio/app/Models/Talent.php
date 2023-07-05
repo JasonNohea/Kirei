@@ -49,8 +49,11 @@ class Talent extends Model
         return $this->HasMany(ProgressPhotos::class);
     }
     //Talent HasMany TalentSkills
-    public function TalentSkills(): HasMany {
+    public function talentSkills(): HasMany {
         return $this->HasMany(TalentSkill::class);
+    }
+    public function cities(): BelongsTo {
+        return $this->belongsTo(City::class);
     }
 
 }

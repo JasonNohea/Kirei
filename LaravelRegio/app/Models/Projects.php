@@ -43,4 +43,7 @@ class Projects extends Model
     public function projectSkills(): HasMany {
         return $this->hasMany(ProjectSkills::class);
     }
+    public function cities(): BelongsTo {
+        return $this->belongsTo(City::class);
+    }
 }
