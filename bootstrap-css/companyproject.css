@@ -75,11 +75,11 @@ main {
 }
 
 #content2 {
-  background-color: plum;
+  background-color: red;
 }
 
 #content3 {
-  background-color: salmon;
+  background-color: green;
 }
 
 .active ~ .underline {
