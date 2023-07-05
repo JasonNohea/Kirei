@@ -1,0 +1,98 @@
+html,
+body {
+  background-color: #e0eaf6 !important;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  width: 94%;
+  height: 100%;
+  margin: auto;
+  gap: 20px;
+}
+
+main > * {
+  display: flex;
+  margin-top: 10%;
+  border-radius: 12px;
+}
+
+.first-con {
+  width: 80%;
+  height: 90%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.second-con {
+  width: 42%;
+  height: 90%;
+}
+
+footer {
+  margin-top: 10%;
+}
+
+.navigation-tab {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+.line-container {
+  width: 24%;
+  display: flex;
+}
+
+.underline {
+  height: 2px;
+  width: 60px;
+  margin-left: 5px;
+  background-color: #000;
+  transition: transform 0.3s ease-out;
+  transform: translateX(0);
+}
+
+.tab-project {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  gap: 40px;
+}
+
+.navigation-tab {
+  margin: 20px auto;
+  width: 100%;
+}
+
+.tab-project > * {
+  font-size: 25px;
+  color: black;
+  text-decoration: none;
+}
+
+.content {
+  width: 95%;
+  height: 90%;
+  background-color: white;
+  border-radius: 10px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+#content2 {
+  display: none;
+}
+
+#content1 {
+  background-color: teal;
+}
+
+#content2 {
+  background-color: aquamarine;
+}
