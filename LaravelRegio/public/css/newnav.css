@@ -138,3 +138,7 @@ select:focus {
 .nav-acc {
   margin: 0;
 }
+
+.required {
+  color: red;
+}
