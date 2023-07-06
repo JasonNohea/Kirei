@@ -39,6 +39,7 @@ body {
   overflow: scroll;
   overflow-x: hidden;
   cursor: grab;
+  padding: 10px;
 }
 .first-con::-webkit-scrollbar {
   width: 0px;
