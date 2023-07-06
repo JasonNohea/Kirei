@@ -42,7 +42,7 @@
     <nav>
       <div class="nav1">
         <img class="logo" src="../assets/logoCompany.png" alt="Logo Regio" />
-        <a class="navi-button" href="#">Talent</a>
+        <a class="navi-button" href="/home_talent">Talent</a>
         <a class="navi-button" href="#">My Project</a>
         <a class="navi-button" href="/about">About</a>
       </div>

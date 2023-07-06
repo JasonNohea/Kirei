@@ -26,7 +26,7 @@ body {
 .modal-body {
   display: flex;
   flex-direction: column;
-  width: 80% !important;
+  width: 90% !important;
   margin: auto;
   inset: 0;
   gap: 10px;

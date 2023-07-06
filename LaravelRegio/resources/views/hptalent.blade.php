@@ -508,14 +508,15 @@
               <div class="talent-con">
                 <div class="talent-info">
                   <div class="talent-header">
-                    <div class="photo-profile"></div>
+                    <div class="photo-profile"></div><a href="/dtltalent">
                     <div class="talent-header-info">
                       <p class="talent-name">James Welton</p>
                       <p class="talent-skill">UI/UX Designer</p>
-                    </div>
+                    </div> </a>
                     <div class="bookmarks">
                       <i class="bi-bookmark-fill" style="font-size: 25px;"></i>
                     </div>
+                  
                   </div>
                   <p class="talent-desc">
                     A career in Information System, specifically in the areas of UI/UX
@@ -531,7 +532,7 @@
                 </div>
               </div>
               <div class="talent-con">
-                <div class="talent-info">
+                <div class="talent-info"> 
                   <div class="talent-header">
                     <div class="photo-profile"></div>
                     <div class="talent-header-info">

@@ -30,3 +30,6 @@ Route::get('/about', [GeneralController::class,'aboutpg'])->name('aboutpg');
 
 //HomePage Company
 Route::get('/hpCompany', [CompController::class,'hpCompany'])->name('hpCompany'); 
+
+//Detail Job Talent
+Route::get('/dtltalent', [TalentController::class,'detailJob'])->name('detailJob'); 
