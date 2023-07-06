@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('company_id');
             $table->unsignedBigInteger('city_id');
+            $table->unsignedBigInteger('province_id');
             $table->string('project_name');
             $table->string('required_job_position');
             $table->string('talent_requirement');
@@ -34,8 +35,6 @@ return new class extends Migration
             $table->timestamps();
 
             $table->foreign('company_id')->references('id')->on('companies')->onDelete('cascade');
-            $table->foreign('city_id')->references('id')->on('cities')->onDelete('cascade');
-
         });
     }
 

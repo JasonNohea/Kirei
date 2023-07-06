@@ -16,7 +16,7 @@ class TalentController extends Controller
         return view('hptalent'); //buka file hptalent.php di resource/views
     }
     public function detailJob(){
-        return view('detailjobtalent'); //buka file hptalent.php di resource/views
+        return view('detailjobtalent'); //buka file detailjob.php di resource/views
     }
 
 }

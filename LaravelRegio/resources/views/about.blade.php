@@ -25,7 +25,7 @@
       crossorigin="anonymous">
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="../js/mainpage.js" defer></script>
+    <script src="{{ url('js/mainpage.js')}}" defer></script>
     <title> Regio - Job Portal di Indonesia </title>
 </head>
 <body style="background-image:url(/assets/bgabout.png); background-image: no-repeat; background-image: cover;">
@@ -33,13 +33,13 @@
 
     <nav>
       <div class="nav1">
-        <img class="logo" src="../assets/logoCompany.png" alt="Logo Regio" />
+        <img class="logo" src="{{ url('assets/logoCompany.png')}}" alt="Logo Regio" />
         <a class="navi-button" href="/home_talent">Jobs</a>
         <a class="navi-button" href="#">My Projects</a>
         <a class="navi-button" href="/about">About</a>
       </div>
       <div class="nav2">
-        <img class="globe" src="../assets/global.png" />
+        <img class="globe" src="{{ url('assets/global.png')}}" />
         <select>
           <option>EN</option>
           <option>ID</option>
@@ -54,7 +54,7 @@
         <form class="modal-content needs-validation" action="../php/loginjson.php" method="post" name="login" novalidate >
           <div class="modal-header">
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" ></button>
-            <img src="../assets/logo.png" alt="Regio Logo" />
+            <img src="{{ url('assets/logo.png')}}" alt="Regio Logo" />
             <h1 class="login-heading">Welcome to Regio!</h1>
           </div>
           <div class="modal-body">
@@ -167,7 +167,7 @@
               aria-label="Close"
               required
             ></button>
-            <img src="../assets/logo.png" alt="Regio Logo" />
+            <img src="{{ url('assets/logo.png')}}" alt="Regio Logo" />
             <h1 class="login-heading">Forgot Password?</h1>
             <span class="reset-inst"
               >no worries, we'll send you reset instructions.</span
