@@ -19,6 +19,17 @@ return new class extends Migration
             $table->unsignedBigInteger('project_progress_id');
             $table->string('photo_url');
             $table->timestamps();
+
+            $table->foreign('talent_id')
+                ->references('id')
+                ->on('talents')
+                ->onDelete('cascade');
+
+            $table->foreign('project_progress_id')
+                ->references('id')
+                ->on('project_progresses')
+                ->onDelete('cascade');
+
         });
     }
 
