@@ -1,16 +1,15 @@
 footer {
   background-color: #dddefb;
-  height: 50%;
+  height: fit-content;
   width: 100%;
   margin-top: 10px;
+  flex-shrink: 0; /* Prevent the footer from shrinking */
 }
 
 .footer-regio {
   display: flex;
   flex-direction: row;
-
   left: 0;
-  bottom: 0;
 }
 
 .main-footer {
@@ -79,10 +78,10 @@ p > a {
 }
 
 .copyright {
-  margin: auto;
+  margin: 10px auto;
   inset: 0;
   text-align: center;
-  width: 90%;
+  width: 92%;
   border-top: 1px solid black;
   font-family: "Inter";
   font-size: 16px;

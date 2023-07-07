@@ -62,7 +62,7 @@ body {
 .wrap-box{
   margin-left: 2.5%;
   margin-top: 10%;
-  width: 19%;
+  width: 20%;
   height: 310px;
   max-height: fit-content;
   background-color: white;
@@ -225,7 +225,7 @@ input[type="submit"]:hover{
 }
 
 .bookmarks{
-  margin-left: 50%;
+  margin-left: auto;
 }
 
 .bi-bookmark-fill:hover {
