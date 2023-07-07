@@ -508,11 +508,12 @@
               <div class="talent-con">
                 <div class="talent-info">
                   <div class="talent-header">
-                    <div class="photo-profile"></div><a href="/dtltalent">
+                    <div class="photo-profile"></div>
+                    <a href="/dtltalent">
                     <div class="talent-header-info">
-                      <p class="talent-name">James Welton</p>
-                      <p class="talent-skill">UI/UX Designer</p>
-                    </div> </a>
+                      <p class="talent-name">Web Developer</p>
+                      <p class="talent-skill">PT. Kreasi Rekayasa Indonesia</p>
+                    </div></a>
                     <div class="bookmarks">
                       <i class="bi-bookmark-fill" style="font-size: 25px;"></i>
                     </div>
@@ -536,8 +537,8 @@
                   <div class="talent-header">
                     <div class="photo-profile"></div>
                     <div class="talent-header-info">
-                      <p class="talent-name">James Welton</p>
-                      <p class="talent-skill">UI/UX Designer</p>
+                      <p class="talent-name">Web Developer</p>
+                      <p class="talent-skill">PT. Kreasi Rekayasa Indonesia</p>
                     </div>
                     <div class="bookmarks">
                       <i class="bi-bookmark" style="font-size: 25px;"></i>
@@ -561,8 +562,8 @@
                   <div class="talent-header">
                     <div class="photo-profile"></div>
                     <div class="talent-header-info">
-                      <p class="talent-name">James Welton</p>
-                      <p class="talent-skill">UI/UX Designer</p>
+                      <p class="talent-name">Web Developer</p>
+                      <p class="talent-skill">PT. Kreasi  Rekayasa Indonesia</p>
                     </div>
                     <div class="bookmarks">
                       <i class="bi-bookmark" style="font-size: 25px;"></i>
@@ -586,8 +587,8 @@
                   <div class="talent-header">
                     <div class="photo-profile"></div>
                     <div class="talent-header-info">
-                      <p class="talent-name">James Welton</p>
-                      <p class="talent-skill">UI/UX Designer</p>
+                      <p class="talent-name">Web Developer</p>
+                      <p class="talent-skill">PT. Kreasi Rekayasa Indonesia</p>
                     </div>
                     <div class="bookmarks">
                       <i class="bi-bookmark" style="font-size: 25px;"></i>
@@ -611,8 +612,8 @@
                   <div class="talent-header">
                     <div class="photo-profile"></div>
                     <div class="talent-header-info">
-                      <p class="talent-name">James Welton</p>
-                      <p class="talent-skill">UI/UX Designer</p>
+                      <p class="talent-name">Web Developer</p>
+                      <p class="talent-skill">PT. Kreasi Rekayasa Indonesia</p>
                     </div>
                     <div class="bookmarks">
                       <i class="bi-bookmark" style="font-size: 25px;"></i>
@@ -636,8 +637,8 @@
                   <div class="talent-header">
                     <div class="photo-profile"></div>
                     <div class="talent-header-info">
-                      <p class="talent-name">James Welton</p>
-                      <p class="talent-skill">UI/UX Designer</p>
+                      <p class="talent-name">Web Developer</p>
+                      <p class="talent-skill">PT. Kreasi Rekayasa Indonesia</p>
                     </div>
                     <div class="bookmarks">
                       <i class="bi-bookmark" style="font-size: 25px;"></i>
