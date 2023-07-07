@@ -133,7 +133,7 @@ background-color: green;
 }
 
 .aside {
-float: left !important;
+float: left;
 }
 
 .jobs-week{

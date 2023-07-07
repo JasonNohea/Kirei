@@ -19,14 +19,19 @@ h1{
 .container{
   background: white;
   position: absolute;
-  padding: 50px;
+  padding-top: 20px;
+  padding-left: 80px;
   width: 70%;
-  height: 706px;
+  height: 100%;
+  max-height: 690px;
   left: 15%;
   top: 5%;
   border-radius: 15px;
 }
 
+input:not(input[type="file"]){
+  border: 1px solid black;
+}
 input[type="text"]{
     width: 300px;
     height: 30px;
@@ -87,6 +92,13 @@ input[type="submit"]:hover {
   color: white;
 }
 
+select {
+  width: 300px;
+  height: 30px;
+  background-color: white;
+  border: 1px solid black;
+}
+
 a {
   margin: auto;
   text-decoration: none;
@@ -144,6 +156,7 @@ button:hover{
     font-style: bold;
 }
 
-.login {
+.login a{
   text-decoration: underline;
+  color: blue;
 }
