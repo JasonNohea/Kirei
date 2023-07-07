@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('company_id');
             $table->unsignedBigInteger('city_id');
+            $table->unsignedBigInteger('province_id');
             $table->string('project_name');
             $table->string('required_job_position');
             $table->string('talent_requirement');

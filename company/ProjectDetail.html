@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/newnav.css" />
     <link rel="stylesheet" href="../bootstrap-css/footer.css" />
     <link rel="stylesheet" href="../bootstrap-css/projectdetail.css" />
+    <link rel="stylesheet" href="../bootstrap-css/component.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Cabin&display=swap"
       rel="stylesheet"
@@ -33,7 +34,8 @@
     ></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <!-- <script src="../js/mainpage.js"></script> -->
-    <script src="../js/mainpage.js"></script>
+    <script src="../js/navigationswitch.js"></script>
+    <script src="../js/EditProject.js"></script>
     <title>Project Detail</title>
   </head>
   <body>
@@ -74,7 +76,7 @@
     </nav>
 
     <main>
-      <div class="first-con">
+      <div class="first-container">
         <div class="navigation-tab">
           <div class="tab-project">
             <a
@@ -97,11 +99,410 @@
           </div>
         </div>
 
-        <div class="content" id="content1"></div>
+        <div class="content" id="content1">
+          <div class="detail-project">
+            <div class="project-information">
+              <p class="">Project Information</p>
+              <div class="project-info-container">
+                <div class="project-info-title">
+                  <p>Project Name</p>
+                  <button
+                    class="editButton"
+                    id="editButton"
+                    onclick="toggleEditMode('editable-paragraph1', 'editButton')"
+                  >
+                    <i
+                      class="fa-regular fa-pen-to-square"
+                      style="color: #2c5395"
+                    ></i>
+                  </button>
+                  <button
+                    class="saveButton"
+                    id="saveButton"
+                    onclick="saveEdit('editable-paragraph1', 'editButton')"
+                    style="display: none"
+                  >
+                    <i
+                      class="fa-solid fa-check fa-2xs"
+                      style="color: #00ff11"
+                    ></i>
+                  </button>
+                  <button
+                    class="cancelButton"
+                    id="cancelButton"
+                    onclick="cancelEdit('editable-paragraph1', 'editButton')"
+                    style="display: none"
+                  >
+                    <i class="fa-solid fa-x fa-2xs" style="color: #ff0000"></i>
+                  </button>
+                </div>
+                <p
+                  class="project-info-text"
+                  id="editable-paragraph1"
+                  contenteditable="false"
+                >
+                  Pemasangan Plumbing
+                </p>
+              </div>
+              <div class="project-info-container">
+                <div class="project-info-title">
+                  <p>Location</p>
+                  <button
+                    class="editButton"
+                    id="editButton2"
+                    onclick="toggleEditMode('editable-paragraph2', 'editButton2')"
+                  >
+                    <i
+                      class="fa-regular fa-pen-to-square"
+                      style="color: #2c5395"
+                    ></i>
+                  </button>
+                  <button
+                    class="saveButton"
+                    id="saveButton2"
+                    onclick="saveEdit('editable-paragraph2', 'editButton2')"
+                    style="display: none"
+                  >
+                    <i
+                      class="fa-solid fa-check fa-2xs"
+                      style="color: #00ff11"
+                    ></i>
+                  </button>
+                  <button
+                    class="cancelButton"
+                    id="cancelButton2"
+                    onclick="cancelEdit('editable-paragraph2', 'editButton2')"
+                    style="display: none"
+                  >
+                    <i class="fa-solid fa-x fa-2xs" style="color: #ff0000"></i>
+                  </button>
+                </div>
+                <p
+                  class="project-info-text"
+                  id="editable-paragraph2"
+                  contenteditable="false"
+                >
+                  Jl. Abdul Muthalib, Samarinda, Kalimantan Timur, Indonesia.
+                </p>
+              </div>
+              <div class="project-info-container">
+                <div class="project-info-title">
+                  <p>Project Date</p>
+                  <button
+                    class="editButton"
+                    id="editButton3"
+                    onclick="toggleEditMode('editable-paragraph3', 'editButton3')"
+                  >
+                    <i
+                      class="fa-regular fa-pen-to-square"
+                      style="color: #2c5395"
+                    ></i>
+                  </button>
+                  <button
+                    class="saveButton"
+                    id="saveButton3"
+                    onclick="saveEdit('editable-paragraph3', 'editButton3')"
+                    style="display: none"
+                  >
+                    <i
+                      class="fa-solid fa-check fa-2xs"
+                      style="color: #00ff11"
+                    ></i>
+                  </button>
+                  <button
+                    class="cancelButton"
+                    id="cancelButton3"
+                    onclick="cancelEdit('editable-paragraph3', 'editButton3')"
+                    style="display: none"
+                  >
+                    <i class="fa-solid fa-x fa-2xs" style="color: #ff0000"></i>
+                  </button>
+                </div>
+                <p
+                  class="project-info-text"
+                  id="editable-paragraph3"
+                  contenteditable="false"
+                >
+                  26 Agustus 2023 - 07 Oktober 2023.
+                </p>
+              </div>
+              <div class="project-info-container">
+                <div class="project-info-title">
+                  <p>Description</p>
+                  <button
+                    class="editButton"
+                    id="editButton4"
+                    onclick="toggleEditMode('editable-paragraph4', 'editButton4')"
+                  >
+                    <i
+                      class="fa-regular fa-pen-to-square"
+                      style="color: #2c5395"
+                    ></i>
+                  </button>
+                  <button
+                    class="saveButton"
+                    id="saveButton4"
+                    onclick="saveEdit('editable-paragraph4', 'editButton4')"
+                    style="display: none"
+                  >
+                    <i
+                      class="fa-solid fa-check fa-2xs"
+                      style="color: #00ff11"
+                    ></i>
+                  </button>
+                  <button
+                    class="cancelButton"
+                    id="cancelButton4"
+                    onclick="cancelEdit('editable-paragraph4', 'editButton4')"
+                    style="display: none"
+                  >
+                    <i class="fa-solid fa-x fa-2xs" style="color: #ff0000"></i>
+                  </button>
+                </div>
+                <p
+                  class="project-info-text"
+                  id="editable-paragraph4"
+                  contenteditable="false"
+                >
+                  Memasang plumbing untuk pembangunan Apartement baru.
+                </p>
+              </div>
+              <div class="project-info-container">
+                <div class="project-info-title">
+                  <p>Requirement</p>
+                  <button
+                    class="editButton"
+                    id="editButton5"
+                    onclick="toggleEditMode('editable-paragraph5', 'editButton5')"
+                  >
+                    <i
+                      class="fa-regular fa-pen-to-square"
+                      style="color: #2c5395"
+                    ></i>
+                  </button>
+                  <button
+                    class="saveButton"
+                    id="saveButton5"
+                    onclick="saveEdit('editable-paragraph5', 'editButton5')"
+                    style="display: none"
+                  >
+                    <i
+                      class="fa-solid fa-check fa-2xs"
+                      style="color: #00ff11"
+                    ></i>
+                  </button>
+                  <button
+                    class="cancelButton"
+                    id="cancelButton5"
+                    onclick="cancelEdit('editable-paragraph5', 'editButton5')"
+                    style="display: none"
+                  >
+                    <i class="fa-solid fa-x fa-2xs" style="color: #ff0000"></i>
+                  </button>
+                </div>
+                <p
+                  class="project-info-text"
+                  id="editable-paragraph5"
+                  contenteditable="false"
+                >
+                  Orang yang sudah ahli pada bidang pembangunan dan
+                  arsitektur:<br />
+                  - Design alur pipa. <br />
+                  -Perencanaan pembangunan. <br />
+                  -Bisa menyesuaikan dengan waktu kerja yang telah ditetapkan.
+                </p>
+              </div>
+              <div class="project-info-container">
+                <div class="project-info-title">
+                  <p>Photo</p>
+                  <i
+                    class="fa-regular fa-pen-to-square"
+                    style="color: #2c5395"
+                  ></i>
+                </div>
+                <div class="project-img">
+                  <input
+                    type="file"
+                    size="60"
+                    id="fileInput"
+                    accept="image/png, image/gif, image/jpeg"
+                    multiple="multiple"
+                  />
+                  <button type="button" class="custom-button">
+                    <img
+                      class="b-upload"
+                      src="../assets/b-upload.jpeg"
+                      alt="button upload"
+                    />
+                  </button>
+                  <div class="image-preview grab-scroll">
+                    <img src="../assets/Foto Project2.png" alt="project-img" />
+                  </div>
+                  <!-- <span class="file-name">No file chosen</span> -->
+                </div>
+              </div>
+            </div>
+            <div class="additional-info">
+              <p>Additional Information</p>
+              <div class="project-info-container">
+                <div class="project-info-title">
+                  <p>Talent Quality</p>
+                  <i
+                    class="fa-regular fa-pen-to-square"
+                    style="color: #2c5395"
+                  ></i>
+                </div>
+                <p
+                  class="project-info-text"
+                  id="editable-paragraph"
+                  contenteditable="false"
+                >
+                  Pemasangan Plumbing
+                </p>
+              </div>
+              <div class="project-info-container">
+                <div class="project-info-title">
+                  <p>Requirement Skill</p>
+                  <i
+                    class="fa-regular fa-pen-to-square"
+                    style="color: #2c5395"
+                  ></i>
+                </div>
+                <p
+                  class="project-info-text"
+                  id="editable-paragraph"
+                  contenteditable="false"
+                >
+                  Pemasangan Plumbing
+                </p>
+              </div>
+              <div class="project-info-container">
+                <div class="project-info-title">
+                  <p>Salary Range</p>
+                  <i
+                    class="fa-regular fa-pen-to-square"
+                    style="color: #2c5395"
+                  ></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="content" id="content2"></div>
       </div>
-      <div class="second-con">
-        <div></div>
+      <div class="second-container">
+        <div class="talent-container">
+          <p>Talent</p>
+          <div class="talent-con unselectable">
+            <div>
+              <div class="talent-info">
+                <div class="talent-header">
+                  <div class="photo-profile"></div>
+                  <div class="talent-header-info">
+                    <p class="talent-name">James Welton</p>
+                    <p class="talent-skill">UI/UX Designer</p>
+                  </div>
+                </div>
+                <div class="talent-main">
+                  <p class="talent-desc">
+                    A career in Information System, specifically in the areas of
+                    UI/UX Designer, that will optimally utilizeanalytical,
+                    time...
+                  </p>
+                  <div class="talent-request">
+                    <div class="talent-request-logo">
+                      <div>
+                        <i
+                          class="fa-solid fa-location-dot"
+                          style="color: rgb(126, 126, 126)"
+                        ></i>
+                      </div>
+                      <div>
+                        <i
+                          class="fa-solid fa-money-bill"
+                          style="color: rgb(126, 126, 126)"
+                        ></i>
+                      </div>
+                      <div>
+                        <i
+                          class="fa-solid fa-business-time"
+                          style="color: rgb(126, 126, 126)"
+                        ></i>
+                      </div>
+                    </div>
+                    <div class="talent-request-text">
+                      <p>Wirosari, Indonesia</p>
+                      <p>IDR 7,000,000 - 12,000,000</p>
+                      <p>8.00 AM - 5.00 PM</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="talent-button">
+              <button class="b-view-profile">View Profile</button>
+              <button class="b-view-cv">View CV</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="my-project">
+          <p>My Project</p>
+          <div class="project-sum">
+            <div class="project-img">
+              <img src="../assets/Foto Project.png" alt="Project Image" />
+            </div>
+            <div class="project-detail">
+              <div class="project-first">
+                <p>Pemasangan Pipa Gas Alam</p>
+                <div>
+                  <p>Done</p>
+                </div>
+              </div>
+              <div class="project-second">
+                <p>Jl. Evakuasi no.14, Cirebon, Indonesia.</p>
+              </div>
+            </div>
+          </div>
+          <div class="project-sum">
+            <div class="project-img">
+              <img src="../assets/Foto Project1.png" alt="Project Image" />
+            </div>
+            <div class="project-detail">
+              <div class="project-first">
+                <p>Pemasangan Listrik</p>
+                <div class="project-wip">
+                  <p>In Progress</p>
+                </div>
+              </div>
+              <div class="project-second">
+                <p>
+                  Jl. Raden Saleh 3, Palangkaraya, Kalimantan Tengah, Indonesia.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="project-sum">
+            <div class="project-img">
+              <img src="../assets/Foto Project2.png" alt="Project Image" />
+            </div>
+            <div class="project-detail">
+              <div class="project-first">
+                <p>Pemasangan Plumbing</p>
+                <div class="project-pending">
+                  <p>Pending</p>
+                </div>
+              </div>
+              <div class="project-second">
+                <p>
+                  Jl. Abdul Muthalib, Samarinda, Kalimantan Timur, Indonesia.
+                </p>
+              </div>
+            </div>
+          </div>
+          <a href="#">See all project</a>
+        </div>
       </div>
     </main>
 

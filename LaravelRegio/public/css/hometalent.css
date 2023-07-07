@@ -140,11 +140,11 @@ input[type="submit"]:hover{
 .first-con {
   width: 100%;
   height: 100%;
-  margin: auto 35px;
+  margin: auto 20px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  row-gap: 40px;
+  row-gap: 30px;
   overflow: scroll;
 }
 
@@ -156,8 +156,8 @@ input[type="submit"]:hover{
 
 .talent-con {
   background-color: white;
-  max-width: fit-content;
-  width: 46%;
+  /* max-width: fit-content; */
+  width: 48%;
   height: 65%;
   max-height: fit-content;
   border-radius: 10px;
@@ -182,6 +182,10 @@ input[type="submit"]:hover{
   align-items: center;
 }
 
+.talent-header a{
+  text-decoration: none;
+}
+
 .photo-profile {
   background-color: gray;
   border-radius: 50%;
@@ -199,11 +203,12 @@ input[type="submit"]:hover{
 .talent-name {
   color: black;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .talent-skill {
   color: #0074ff;
+  width: 100%;
 }
 
 .talent-header-info > * {
@@ -225,7 +230,7 @@ input[type="submit"]:hover{
 }
 
 .bookmarks{
-  margin-left: 50%;
+  margin-left: auto;
 }
 
 .bi-bookmark-fill:hover {

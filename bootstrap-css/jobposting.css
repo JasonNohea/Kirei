@@ -23,7 +23,7 @@ form {
 
 .posting-job {
   width: 60.5%;
-  height: 94%;
+  height: fit-content;
   margin: 0 20px 0 35px;
   display: flex;
   flex-direction: column;
@@ -50,7 +50,7 @@ form {
 }
 
 .posting-form > * {
-  margin: auto;
+  margin: 10px auto;
   inset: 0;
   width: 45%;
   height: 100%;

@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('city_id');
+            $table->unsignedBigInteger('province_id');
             $table->string('company_name');
             $table->string('address');
             $table->string('city');
