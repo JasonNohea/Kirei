@@ -9,9 +9,7 @@ footer {
 .footer-regio {
   display: flex;
   flex-direction: row;
-
   left: 0;
-  bottom: 0;
 }
 
 .main-footer {
