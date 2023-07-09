@@ -27,20 +27,33 @@
         </div>
         <form action="../php/registalent.php" method="POST">
             <h1> Register </h1>
-            <hr><hr>
+            <hr>
             <input type="text" placeholder=" First Name" name="fname" id="fname" required>
-            <hr><hr>
+            <hr>
             <input type="text" placeholder=" Last Name" name="lname" id="lname" required>
-            <hr><hr>
+            <hr>
             <input type="email" placeholder=" Email" name="email" id="email" required>        
-            <hr><hr>
+            <hr>
             <input type="password" placeholder=" Password" name="pass" id="pass" required>
-            <hr><hr>
+            <hr>
             <input type="text" placeholder=" Phone Number" name="phone" id="phone" required>
-            <hr><hr>
+            <hr>
             <input type="date" name="tgl" id="tgl">
+            <hr>
+            <select class="provinsi">
+                <option> Province* </option>
+                <option> Kalimantan Timur </option>
+                <option> Kalimantan Tengah </option>
+                <option> Kalimantan Barat </option>
+                <option> Kalimantan Selatan </option>
+            </select>
             <hr><hr>
-        
+            <select class="kota">
+                <option> City* </option>
+                <option> Kab. Bandung Barat </option>
+                <option> Kab. Bandung Selatan </option>
+            </select>  
+            <hr><hr>
         <!-- Upload Content -->
         <div class="upload">    
             <label class="cv"> Upload CV &nbsp;</label>

@@ -9,9 +9,11 @@ html, body {
   font-family: 'Cabin', sans-serif;
   box-sizing: border-box;
 }
+
 h1{
     margin-left: 100px;
 }
+
 .logo {
   margin: auto;
 }
@@ -32,6 +34,7 @@ h1{
 input:not(input[type="file"]){
   border: 1px solid black;
 }
+
 input[type="text"]{
     width: 300px;
     height: 30px;
@@ -55,11 +58,11 @@ input[type=file]::file-selector-button {
     color: #000;
     cursor: pointer;
     transition: background .2s ease-in-out;
-  }
+}
   
-  input[type=file]::file-selector-button:hover {
+input[type=file]::file-selector-button:hover {
     background: #878787;
-  }
+}
 
 input[type="date"]{
     background-color: white;
@@ -68,6 +71,7 @@ input[type="date"]{
     width: 300px;
     height: 30px;
 }
+
 ::-webkit-calendar-picker-indicator{
     background-color: #ffffff;
     padding: 5px;
@@ -76,7 +80,8 @@ input[type="date"]{
 }
 
 input[type="submit"] {
-  background-color: white;
+  background-color: #2C5395;
+  color: white;
   border: none;
   border-radius: 10px;
   padding: 15px;
@@ -85,11 +90,10 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-  background-color: blue;
+  background-color: #12336A;
   transition: 0.3s ease-in-out;
   font-style: bolder;
   cursor: pointer;
-  color: white;
 }
 
 select {
@@ -104,6 +108,7 @@ a {
   text-decoration: none;
   color: black;
 }
+
 a:hover{
     color: blue;
     transition: 0.3s ease-in-out;
@@ -118,6 +123,7 @@ hr {
 h2{
   color:#31348D;
 }
+
 .kanan {
   display: block;
   margin-left: auto;
@@ -130,6 +136,7 @@ h2{
 .kanan .alter {
   margin-left: 60px;
 }
+
 img {
   margin-left: 10px;
 }
@@ -151,9 +158,9 @@ button{
 }
 
 button:hover{
-    background-color:#084cdf;
-    color: white;
-    font-style: bold;
+  background-color:#084cdf;
+  color: white;
+  font-style: bold;
 }
 
 .login a{

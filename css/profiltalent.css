@@ -115,6 +115,7 @@ text-decoration: none;
 .content {
 width: 100%;
 height: 100%;
+padding-top: 3%;
 background-color: white;
 border-radius: 10px;
 }
@@ -125,7 +126,7 @@ display: none;
 }
   
 #content2 {
-background-color: red;
+background-color: white;
 }
   
 #content3 {
@@ -137,7 +138,8 @@ float: left;
 }
 
 .jobs-week{
-background-color: white;
+float: left;
+color: white;
 padding-top: 5px;
 padding-left: 20px;
 width: 100%;
@@ -146,14 +148,15 @@ max-height: 400px;
 max-width: 300px;
 border-radius: 10px;
 box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.25);   
-margin-top: 10%;
-margin-left: 20px;
+margin-top: 2%;
+margin-left: 6%;
 }
 
 .jobs-progress-info{
-    display: flex;
-    flex-direction: column;
-    margin-left: 100px;
+display: flex;
+flex-direction: column;
+padding-top: 11px;
+margin-left: 100px;
 }
 
 .jobs-title{
@@ -163,19 +166,32 @@ font-style: normal;
 font-weight: 600;
 }
 
+.jobs-info {
+color: black;
+}
+
+.jobs-dateline{
+color: rgba(0, 0, 0, 0.70);
+font-size: 14px; 
+}
+
 .jobs-deadline{
 color: rgba(0, 0, 0, 0.70);
 font-size: 14px; 
 }
 
 .jobs-com {
-    margin-top: 5%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 2%;
     background-color: white;
-    width: 70%;
+    width: 60%;
     height: 100%;
     max-height: 100px;
-    margin-left: 25%;
+    margin-left: 30%;
     border-radius: 20px;
+    font-size: 20px;
+    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.25);
 }
 
 .jobs-photo {
@@ -183,4 +199,22 @@ font-size: 14px;
     border-radius: 50%;
     width: 60px;
     height: 60px;
-  }
+}
+
+.side-border{
+    margin-left: auto;
+    border-left: 10px solid #31348D;
+}
+
+.side-texts {
+    margin: 35px 30px 25px;
+    text-align: center;
+}
+
+.jobs-progress {
+    color: #31348D;
+}
+
+.jobs-done {
+    color: #15992A;
+}
