@@ -37,6 +37,7 @@ body {
 nav {
   width: 95%;
   height: 11%;
+  min-height: 71px;
   background-color: white;
   position: fixed;
   margin: 30px auto;

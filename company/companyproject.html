@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../css/newnav.css" />
     <link rel="stylesheet" href="../bootstrap-css/footer.css" />
     <link rel="stylesheet" href="../bootstrap-css/companyproject.css" />
-    <link rel="stylesheet" href="..//bootstrap-css/component.css" />
+    <link rel="stylesheet" href="../bootstrap-css/component.css" />
     <link rel="stylesheet" href="../bootstrap-css/navloggedin.css" />
 
     <link
@@ -36,14 +36,19 @@
     ></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <!-- <script src="../js/mainpage.js"></script> -->
-    <script src="..//js/navigationswitch.js"></script>
+    <script src="../js/navigationswitch.js"></script>
     <title>Project List</title>
   </head>
   <body>
     <nav>
       <div class="nav1">
-        <img class="logo" src="../assets/logoCompany.png" alt="Logo Regio" />
-        <a class="navi-button" href="#">Talent</a>
+        <a href="homepage.html"
+          ><img class="logo" src="../assets/logoCompany.png" alt="Logo Regio"
+        /></a>
+
+        <a class="navi-button" href="../company/homepage.html#talent  "
+          >Talent</a
+        >
         <a class="navi-button" href="../company/companyproject.html"
           >My Project</a
         >
@@ -113,8 +118,36 @@
         </div>
         <div class="project-list">
           <!-- empty -->
-          <div class="empty-project">
+          <!-- <div class="empty-project">
             <p>No Project Available</p>
+          </div> -->
+          <!-- not empty -->
+          <div
+            class="project-sum"
+            style="cursor: pointer"
+            onclick="window.location.href='ProjectDetail.html'"
+          >
+            <div class="project-img">
+              <img src="../assets/Foto Project1.png" alt="Project Image" />
+            </div>
+            <div class="project-detail">
+              <div class="project-status project-pending">
+                <p>Pending</p>
+              </div>
+              <p class="project-title">Pemasangan Listrik</p>
+              <div class="project-second">
+                <p class="project-address">
+                  Jl. Abdul Muthalib, Samarinda, Kalimantan Timur, Indonesia.
+                </p>
+                <div class="project-date">
+                  <i
+                    class="fa-solid fa-calendar-days"
+                    style="color: #d3d624"
+                  ></i>
+                  <p>23 Maret 2023</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -463,7 +496,7 @@
           </div>
         </div>
       </div>
-      <a class="b-jobposting" href="../company/jobposting.html">
+      <a class="b-jobposting" href="/jobpost">
         <i class="fa-solid fa-plus" style="color: #ffffff"></i>
         <p>Posting Project</p>
       </a>

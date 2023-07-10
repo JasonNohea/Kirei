@@ -1,0 +1,38 @@
+<html>
+  <body>
+    <p id="editable-paragraph" contenteditable="false">123</p>
+    <button onclick="toggleEditMode()">Edit</button>
+
+    <script>
+      function toggleEditMode() {
+        var paragraph = document.getElementById("editable-paragraph");
+
+        if (paragraph.contentEditable === "true") {
+          // Disable edit mode
+          paragraph.contentEditable = "false";
+          paragraph.classList.remove("editable");
+          event.target.textContent = "Edit";
+        } else {
+          // Enable edit mode
+          paragraph.contentEditable = "true";
+          paragraph.classList.add("editable");
+          event.target.textContent = "Save";
+        }
+      }
+
+      // Validate input to allow only numbers
+      document
+        .getElementById("editable-paragraph")
+        .addEventListener("input", function (event) {
+          var paragraph = event.target;
+          var text = paragraph.textContent;
+          var numbersOnly = /^[0-9]+$/;
+
+          if (!numbersOnly.test(text)) {
+            // Remove non-numeric characters
+            paragraph.textContent = text.replace(/[^0-9]/g, "");
+          }
+        });
+    </script>
+  </body>
+</html>

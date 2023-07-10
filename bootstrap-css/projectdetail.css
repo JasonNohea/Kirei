@@ -25,7 +25,7 @@ main > * {
   width: 80%;
   margin-bottom: 20px;
   height: fit-content;
-  max-height: 685px;
+  max-height: 650px;
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -103,6 +103,8 @@ footer {
   flex-direction: row;
   gap: 10px;
   justify-content: center;
+
+  overflow-y: auto;
 }
 
 #content2 {
@@ -136,6 +138,7 @@ footer {
 
 .my-project {
   height: 100% !important;
+  box-shadow: none !important;
 }
 
 .talent-con {
@@ -177,6 +180,7 @@ footer {
   display: flex;
   flex-direction: row;
   width: 90%;
+  max-width: 700px;
   gap: 30px;
   margin: 20px 0;
   justify-content: center;
@@ -191,7 +195,7 @@ footer {
 .additional-info {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 8px;
 }
 
 .project-information > p,
@@ -245,7 +249,7 @@ footer {
 }
 
 .custom-button {
-  width: 60%;
+  /* width: 60%; */
   border: none;
   background-color: white;
 }
@@ -261,7 +265,7 @@ footer {
   display: flex;
   flex-direction: row;
   gap: 5px;
-  overflow: scroll;
+  overflow-x: scroll;
   cursor: grab;
 }
 
@@ -294,4 +298,40 @@ footer {
 
 footer {
   margin-top: 18.5%;
+}
+
+.btn-group {
+  width: 35% !important;
+  display: none !important;
+}
+
+.middle-color {
+  text-align: center;
+  border-radius: 0px !important;
+  border: none !important;
+  border-top: 1px solid #31348d !important;
+  border-bottom: 1px solid #31348d !important;
+}
+
+.border-color {
+  border: 1px solid #31348d !important;
+  color: #31348d !important;
+}
+
+.b-hover:hover {
+  background-color: #31348d !important;
+  color: white !important;
+}
+
+/* arrow on input number */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
 }

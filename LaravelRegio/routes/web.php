@@ -17,25 +17,28 @@ use Illuminate\Support\Facades\Route;
 */
 
 //Landing Page Utama 
-Route::get('/', [TalentController::class,'landing'])->name('landing'); 
+Route::get('/', [TalentController::class, 'landing'])->name('landing');
 
 //Landing Page Talent 
-Route::get('/lp_talent', [TalentController::class,'lpTalent'])->name('lpTalent'); 
+Route::get('/lp_talent', [TalentController::class, 'lpTalent'])->name('lpTalent');
 
 //HomePage Talent 
-Route::get('/home_talent', [TalentController::class,'homeTalent'])->name('homeTalent'); 
+Route::get('/home_talent', [TalentController::class, 'homeTalent'])->name('homeTalent');
 
 //About Page
-Route::get('/about', [GeneralController::class,'aboutpg'])->name('aboutpg'); 
+Route::get('/about', [GeneralController::class, 'aboutpg'])->name('aboutpg');
 
 //HomePage Company
-Route::get('/hpCompany', [CompController::class,'hpCompany'])->name('hpCompany'); 
+Route::get('/hpCompany', [CompController::class, 'hpCompany'])->name('hpCompany');
 
 //Company Project
-Route::get('/compProject', [CompController::class,'compProject'])->name('compProject'); 
+Route::get('/compProject', [CompController::class, 'compProject'])->name('compProject');
 
 //Post Project
-Route::get('/jobpost', [CompController::class,'jobPosting'])->name('jobPosting'); 
+Route::get('/jobpost', [CompController::class, 'jobPosting'])->name('jobPosting');
+
+//Detail Project Company
+Route::get('/cpdetailproject', [CompController::class, 'projectDetail'])->name('projectDetail');
 
 //Detail Job Talent
-Route::get('/dtltalent', [TalentController::class,'detailJob'])->name('detailJob'); 
+Route::get('/dtltalent', [TalentController::class, 'detailJob'])->name('detailJob');
