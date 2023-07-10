@@ -14,17 +14,22 @@
       crossorigin="anonymous"
     /> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <title> Register </title>
+    <title> Register RegiO </title>
 </head>
 
 <body>
+    <a><p class="cta-home">Back to Home</p></a>
     <div class="container">
+
         <!-- Floating Content -->
         <div class="kanan">
             <h2> Let Us Find Your Job </h2>
             <h2 class="alter"> Vacancy </h2>
-            <img src="../assets/logoHD.png" width="200px">
+            <img src="../assets/logov2.png" width="200px">
         </div>
+
+        <!-- Form Register -->
+
         <form action="../php/registalent.php" method="POST">
             <h1> Register </h1>
             <hr>
@@ -54,7 +59,9 @@
                 <option> Kab. Bandung Selatan </option>
             </select>  
             <hr><hr>
+            
         <!-- Upload Content -->
+
         <div class="upload">    
             <label class="cv"> Upload CV &nbsp;</label>
             <input type="file" name="cv" id="cv">
