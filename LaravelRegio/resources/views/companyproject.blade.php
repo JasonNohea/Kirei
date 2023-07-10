@@ -46,12 +46,8 @@
           ><img class="logo" src="../assets/logoCompany.png" alt="Logo Regio"
         /></a>
 
-        <a class="navi-button" href="../company/homepage.html#talent  "
-          >Talent</a
-        >
-        <a class="navi-button" href="../company/companyproject.html"
-          >My Project</a
-        >
+        <a class="navi-button" href="#">Talent</a>
+        <a class="navi-button" href="/compProject">My Project</a>
         <a class="navi-button" href="#">About</a>
       </div>
       <div class="nav2">
