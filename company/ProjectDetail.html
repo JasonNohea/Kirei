@@ -33,7 +33,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <!-- <script src="../js/mainpage.js"></script> -->
+    <script src="../js/mainpage.js"></script>
     <script src="../js/navigationswitch.js"></script>
     <script src="../js/EditProject.js"></script>
     <title>Project Detail</title>
@@ -41,8 +41,10 @@
   <body>
     <nav>
       <div class="nav1">
-        <img class="logo" src="../assets/logoCompany.png" alt="Logo Regio" />
-        <a class="navi-button" href="#">Talent</a>
+        <a href="homepage.html"
+          ><img class="logo" src="../assets/logoCompany.png" alt="Logo Regio"
+        /></a>
+        <a class="navi-button" href="homepage.html#talent">Talent</a>
         <a class="navi-button" href="../company/companyproject.html"
           >My Project</a
         >
@@ -58,7 +60,7 @@
             </span>
           </button> -->
         <button type="button" class="position-relative notif-button">
-          <i class="fa-solid fa-bell"></i>
+          <i class="fa-solid fa-bell" style="color: #2c5395"></i>
         </button>
 
         <i class="fa-solid fa-globe" style="color: #2c5395"></i>
@@ -315,10 +317,27 @@
               <div class="project-info-container">
                 <div class="project-info-title">
                   <p>Photo</p>
-                  <i
-                    class="fa-regular fa-pen-to-square"
-                    style="color: #2c5395"
-                  ></i>
+                  <button
+                    class="editButton edit-button"
+                    onclick="showButtonImg()"
+                  >
+                    <i
+                      class="fa-regular fa-pen-to-square"
+                      style="color: #2c5395"
+                    ></i>
+                  </button>
+                  <button class="saveButton save-button" style="display: none">
+                    <i
+                      class="fa-solid fa-check fa-2xs"
+                      style="color: #00ff11"
+                    ></i>
+                  </button>
+                  <button
+                    class="cancelButton cancel-button"
+                    style="display: none"
+                  >
+                    <i class="fa-solid fa-x fa-2xs" style="color: #ff0000"></i>
+                  </button>
                 </div>
                 <div class="project-img">
                   <input
@@ -328,7 +347,11 @@
                     accept="image/png, image/gif, image/jpeg"
                     multiple="multiple"
                   />
-                  <button type="button" class="custom-button">
+                  <button
+                    type="button"
+                    class="custom-button"
+                    style="display: none"
+                  >
                     <img
                       class="b-upload"
                       src="../assets/b-upload.jpeg"
@@ -346,19 +369,41 @@
               <p>Additional Information</p>
               <div class="project-info-container">
                 <div class="project-info-title">
-                  <p>Talent Quality</p>
+                  <p>Talent Quantity</p>
                   <i
                     class="fa-regular fa-pen-to-square"
                     style="color: #2c5395"
                   ></i>
                 </div>
-                <p
-                  class="project-info-text"
-                  id="editable-paragraph"
-                  contenteditable="false"
+                <p class="project-info-text" id="number">0</p>
+                <div
+                  class="btn-group"
+                  role="group"
+                  aria-label="Basic outlined example"
                 >
-                  Pemasangan Plumbing
-                </p>
+                  <button
+                    type="button"
+                    class="btn btn-outline-primary border-color b-hover"
+                    data-quantity="minus"
+                    data-field="quantity"
+                  >
+                    -
+                  </button>
+                  <input
+                    type="number"
+                    class="form-control middle-color"
+                    name="quantity"
+                    value="0"
+                  />
+                  <button
+                    type="button"
+                    class="btn btn-outline-primary border-color b-hover"
+                    data-quantity="plus"
+                    data-field="quantity"
+                  >
+                    +
+                  </button>
+                </div>
               </div>
               <div class="project-info-container">
                 <div class="project-info-title">
@@ -483,7 +528,11 @@
               </div>
             </div>
           </div>
-          <div class="project-sum">
+          <div
+            class="project-sum"
+            style="cursor: pointer"
+            onclick="window.location.href='ProjectDetail.html'"
+          >
             <div class="project-img">
               <img src="../assets/Foto Project2.png" alt="Project Image" />
             </div>
