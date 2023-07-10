@@ -155,30 +155,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // function addSkill(skill) {
-  //   const skillElement = document.createElement("div");
-  //   skillElement.classList.add("skill");
-
-  //   const skillText = document.createElement("span");
-  //   skillText.textContent = skill;
-  //   skillList.push(skill);
-
-  //   const deleteButton = document.createElement("button");
-  //   deleteButton.classList.add("delete-button");
-  //   deleteButton.textContent = "x";
-  //   deleteButton.addEventListener("click", () => {
-  //     removeSkill(skillElement);
-  //     let index = skillList.indexOf(skill);
-  //     if (index != -1) {
-  //       skillList.splice(index, 1);
-  //     }
-  //   });
-
-  //   skillElement.appendChild(skillText);
-  //   skillElement.appendChild(deleteButton);
-  //   selectedSkillsContainer.appendChild(skillElement);
-  // }
-
   function addSkill(skill) {
     if (!skillList.includes(skill)) {
       skillList.push(skill);

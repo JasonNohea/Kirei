@@ -42,9 +42,16 @@
   <body>
     <nav>
       <div class="nav1">
-        <img class="logo" src="../assets/logoCompany.png" alt="Logo Regio" />
-        <a class="navi-button" href="/hpCompany">Talent</a>
-        <a class="navi-button" href="/compProject">My Project</a>
+        <a href="homepage.html"
+          ><img class="logo" src="../assets/logoCompany.png" alt="Logo Regio"
+        /></a>
+
+        <a class="navi-button" href="../company/homepage.html#talent  "
+          >Talent</a
+        >
+        <a class="navi-button" href="../company/companyproject.html"
+          >My Project</a
+        >
         <a class="navi-button" href="#">About</a>
       </div>
       <div class="nav2">
@@ -111,8 +118,36 @@
         </div>
         <div class="project-list">
           <!-- empty -->
-          <div class="empty-project">
+          <!-- <div class="empty-project">
             <p>No Project Available</p>
+          </div> -->
+          <!-- not empty -->
+          <div
+            class="project-sum"
+            style="cursor: pointer"
+            onclick="window.location.href='ProjectDetail.html'"
+          >
+            <div class="project-img">
+              <img src="../assets/Foto Project1.png" alt="Project Image" />
+            </div>
+            <div class="project-detail">
+              <div class="project-status project-pending">
+                <p>Pending</p>
+              </div>
+              <p class="project-title">Pemasangan Listrik</p>
+              <div class="project-second">
+                <p class="project-address">
+                  Jl. Abdul Muthalib, Samarinda, Kalimantan Timur, Indonesia.
+                </p>
+                <div class="project-date">
+                  <i
+                    class="fa-solid fa-calendar-days"
+                    style="color: #d3d624"
+                  ></i>
+                  <p>23 Maret 2023</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -461,7 +496,7 @@
           </div>
         </div>
       </div>
-      <a class="b-jobposting" href="/jobpost">
+      <a class="b-jobposting" href="../company/jobposting.html">
         <i class="fa-solid fa-plus" style="color: #ffffff"></i>
         <p>Posting Project</p>
       </a>
