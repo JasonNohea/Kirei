@@ -35,7 +35,7 @@
       <div class="nav1">
         <img class="logo" src="{{ url('assets/logoCompany.png')}}" alt="Logo Regio" />
         <a class="navi-button" href="/home_talent">Jobs</a>
-        <a class="navi-button" href="#">My Projects</a>
+        <!-- <a class="navi-button" href="#">My Projects</a> -->
         <a class="navi-button" href="/about">About</a>
       </div>
       <div class="nav2">
