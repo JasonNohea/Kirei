@@ -120,6 +120,11 @@ background-color: white;
 border-radius: 10px;
 }
   
+/* #content1 {
+    height: 100%;
+    max-height: fit-content;
+} */
+
 #content2,
 #content3 {
 display: none;
@@ -133,6 +138,14 @@ background-color: white;
 #content3 {
 background-color: white;
 } */
+
+.jobs-title-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    max-width: 500px;
+}
 
 .aside {
 float: left;
