@@ -13,6 +13,7 @@ main {
     height: 100%;
     margin: auto;
     gap: 20px;
+    flex: 1;
 }
 
 main > * {
@@ -39,7 +40,7 @@ main > * {
 }
 
 footer {
-    margin-top: 10%;
+    margin-top: 22% !important;
 }
 
 .navigation-tab {
@@ -95,6 +96,7 @@ footer {
 
 #content2 {
     display: none;
+    height: fit-content;
 }
 
 #content1 {
@@ -105,10 +107,6 @@ footer {
     justify-content: center;
 
     overflow-y: auto;
-}
-
-#content2 {
-    background-color: aquamarine;
 }
 
 .second-container > * {
@@ -437,8 +435,14 @@ input[type="number"] {
     gap: 10px;
     align-items: center;
 }
-added-skill .delete-button {
+.added-skill .delete-button {
     border: none;
     background-color: #f2f2f2;
     cursor: pointer;
+}
+
+.progress-content {
+    width: 80%;
+    margin: auto;
+    inset: 0;
 }
