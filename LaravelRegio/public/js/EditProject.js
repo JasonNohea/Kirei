@@ -207,37 +207,180 @@ jQuery(document).ready(function () {
 });
 
 var isEditing = false;
+var originalValue = "";
 
-function toggleEdit() {
+function toggleEditQ() {
     var numberSpan = document.getElementById("number");
-    var editBtn = document.getElementById("editBtn");
+    var editBtn = document.getElementById("editBtnQ");
     var inputWrapper = document.getElementById("inputWrapper");
     var numberInput = document.getElementById("numberInput");
+    var saveBtn = document.getElementById("saveBtnQ");
+    var cancelBtn = document.getElementById("cancelBtnQ");
 
     isEditing = !isEditing;
     if (isEditing) {
-        numberSpan.style.display = "none";
+        editBtn.style.display = "none";
         inputWrapper.style.display = "flex";
-        var currentValue = parseInt(numberSpan.textContent);
-        numberInput.value = isNaN(currentValue) ? "" : currentValue;
+        originalValue = numberSpan.textContent;
+        numberInput.value = isNaN(parseInt(originalValue)) ? "" : originalValue;
+        saveBtn.style.display = "inline-block";
+        cancelBtn.style.display = "inline-block";
     } else {
-        numberSpan.style.display = "inline-block";
+        editBtn.style.display = "inline-block";
         inputWrapper.style.display = "none";
-        numberSpan.textContent = numberInput.value;
+        saveBtn.style.display = "none";
+        cancelBtn.style.display = "none";
     }
 }
 
-function saveEdit() {
+function saveEditQ() {
     var numberSpan = document.getElementById("number");
     var numberInput = document.getElementById("numberInput");
 
     numberSpan.textContent = numberInput.value;
-    toggleEdit();
+    toggleEditQ();
 }
 
-function cancelEdit() {
+function cancelEditQ() {
     var numberSpan = document.getElementById("number");
 
     numberSpan.textContent = originalValue;
-    toggleEdit();
+    toggleEditQ();
+}
+
+//add skill search only using javascript
+var skillList = [];
+document.addEventListener("DOMContentLoaded", function () {
+    const recommendations = [
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "Python",
+        "Java",
+        "Ruby",
+        "C++",
+        "React",
+        "Angular",
+        "Vue.js",
+    ];
+
+    const searchInput = document.getElementById("searchInput");
+    const recommendationsContainer = document.getElementById(
+        "recommendationsContainer"
+    );
+    const selectedSkillsContainer = document.getElementById("selectedSkills");
+
+    function showRecommendations(query) {
+        const matchedSkills = recommendations.filter((skill) =>
+            skill.toLowerCase().includes(query.toLowerCase())
+        );
+
+        recommendationsContainer.innerHTML = "";
+
+        if (matchedSkills.length > 0) {
+            matchedSkills.forEach((skill) => {
+                const recommendationItem = document.createElement("div");
+                recommendationItem.classList.add("recommendation-item");
+                recommendationItem.textContent = skill;
+                recommendationItem.addEventListener("click", () => {
+                    addSkill(skill);
+                    searchInput.value = "";
+                    clearRecommendations();
+                });
+                recommendationsContainer.appendChild(recommendationItem);
+            });
+            recommendationsContainer.style.display = "block";
+        } else {
+            clearRecommendations();
+        }
+    }
+
+    function addSkill(skill) {
+        if (!skillList.includes(skill)) {
+            skillList.push(skill);
+            const skillElement = document.createElement("div");
+            skillElement.classList.add("skill");
+
+            const skillText = document.createElement("span");
+            skillText.textContent = skill;
+
+            const deleteButton = document.createElement("button");
+            deleteButton.classList.add("delete-button");
+            deleteButton.textContent = "x";
+            deleteButton.addEventListener("click", () => {
+                // removeSkill(skill);
+                removeSkill(skillElement);
+                let index = skillList.indexOf(skill);
+                if (index != -1) {
+                    skillList.splice(index, 1);
+                }
+            });
+
+            skillElement.appendChild(skillText);
+            skillElement.appendChild(deleteButton);
+            selectedSkillsContainer.appendChild(skillElement);
+        }
+    }
+
+    function removeSkill(skillElement) {
+        selectedSkillsContainer.removeChild(skillElement);
+    }
+
+    function clearRecommendations() {
+        recommendationsContainer.innerHTML = "";
+        recommendationsContainer.style.display = "none";
+    }
+
+    searchInput.addEventListener("input", (event) => {
+        const query = event.target.value;
+        showRecommendations(query);
+    });
+
+    document.addEventListener("click", (event) => {
+        if (!event.target.matches(".search-input")) {
+            clearRecommendations();
+        }
+    });
+});
+
+function getelement(skill) {
+    const skillElement = document.createElement("div");
+    skillElement.classList.add("added-skill");
+    const skillText = document.createElement("span");
+    skillText.textContent = skill;
+    skillElement.appendChild(skillText);
+    return skillElement;
+}
+
+function saveSkill() {
+    var addedSkillClass = document.querySelectorAll(".added-skill");
+    addedSkillClass.forEach((currentSkill) => {
+        currentSkill.remove();
+    });
+    // var size = addedSkillClass.length;
+    // for (var i = 0; i < size; i++) {
+    //   addedSkillClass[i].parentNode.removeChild(addedSkillClass[i]);
+    // }
+    // console.log("Skill List: ", skillList);
+    var savedSkill = document.getElementById("saved-skill");
+    for (var i = 0; i < skillList.length; i++) {
+        var elements = getelement(skillList[i]);
+        savedSkill.append(elements);
+    }
+}
+
+function toggleElement() {
+    var button1 = document.getElementById("B-addskill1");
+    var button2 = document.getElementById("B-addskill2");
+    var content = document.getElementById("addskill");
+
+    if (button1.style.display === "none") {
+        button1.style.display = "block";
+        button2.style.display = "none";
+        content.style.display = "none";
+    } else {
+        button1.style.display = "none";
+        button2.style.display = "block";
+        content.style.display = "block";
+    }
 }

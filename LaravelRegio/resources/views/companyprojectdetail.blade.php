@@ -192,13 +192,13 @@
             <div class="project-info-container">
               <div class="project-info-title">
                 <p>Talent Quantity</p>
-                <button id="editBtn" class="editquantity" onclick="toggleEdit()">
+                <button id="editBtnQ" class="editquantity" onclick="toggleEditQ()">
                   <i class="fa-regular fa-pen-to-square" style="color: #2c5395"></i>
                 </button>
-                <button class="saveButton" id="saveButtonQ" onclick="saveEdit()" style="display: none">
+                <button class="saveButton" id="saveBtnQ" onclick="saveEditQ()" style="display: none">
                   <i class="fa-solid fa-check fa-2xs" style="color: #00ff11"></i>
                 </button>
-                <button class="cancelButton" id="cancelButtonQ" onclick="cancelEdit()" style="display: none">
+                <button class="cancelButton" id="cancelBtnQ" onclick="cancelEditQ()" style="display: none">
                   <i class="fa-solid fa-x fa-2xs" style="color: #ff0000"></i>
                 </button>
               </div>
@@ -220,22 +220,75 @@
             <div class="project-info-container">
               <div class="project-info-title">
                 <p>Requirement Skill</p>
-                <i class="fa-regular fa-pen-to-square" style="color: #2c5395"></i>
+                <button id="B-addskill1" class="editquantity" onclick="toggleElement()">
+                  <i class="fa-regular fa-pen-to-square" style="color: #2c5395"></i>
+                </button>
+                <button class="saveButton" id="B-addskill2" onclick="toggleElement()" style="display: none">
+                  <i class="fa-solid fa-check fa-2xs" style="color: #00ff11"></i>
+                </button>
               </div>
-              <p class="project-info-text" id="editable-paragraph" contenteditable="false">
-                Pemasangan Plumbing
-              </p>
+              <div class="skill-con">
+                <button class="add-skill" id="addskill" type="button" data-bs-toggle="modal" data-bs-target="#add-skill" style="display: none;">
+                  &#43;
+                </button>
+                <div id="saved-skill">
+                  <div class="added-skill">
+                    <span>UI/UX Designer</span>
+                  </div>
+                </div>
+                <!-- modal add skill -->
+                <div class="modal" id="add-skill" tabindex="-1">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title">Add Skill</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="search-container">
+                          <div class="form-floating mb-3">
+                            <input type="text" class="search-input form-control" id="searchInput" placeholder="Add Skill..." />
+                            <label for="searchInput">Add Skill...</label>
+                          </div>
+                          <div id="recommendationsContainer" class="recommendations-container"></div>
+                        </div>
+                        <div class="selected-skills" id="selectedSkills"></div>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                          Cancel
+                        </button>
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="saveSkill();">
+                          Add
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="project-info-container">
               <div class="project-info-title">
                 <p>Salary Range</p>
-                <i class="fa-regular fa-pen-to-square" style="color: #2c5395"></i>
+                <button class="editButton" id="editButton6" onclick="toggleEditMode('editable-paragraph6', 'editButton6')">
+                  <i class="fa-regular fa-pen-to-square" style="color: #2c5395"></i>
+                </button>
+                <button class="saveButton" id="saveButton6" onclick="saveEdit('editable-paragraph6', 'editButton6')" style="display: none">
+                  <i class="fa-solid fa-check fa-2xs" style="color: #00ff11"></i>
+                </button>
+                <button class="cancelButton" id="cancelButton6" onclick="cancelEdit('editable-paragraph6', 'editButton6')" style="display: none">
+                  <i class="fa-solid fa-x fa-2xs" style="color: #ff0000"></i>
+                </button>
               </div>
+              <p class="project-info-text" id="editable-paragraph6" contenteditable="false">
+                -
+              </p>
             </div>
           </div>
         </div>
       </div>
-      <div class="content" id="content2"></div>
+    </div>
+    <div class="content" id="content2"></div>
     </div>
     <div class="second-container">
       <div class="talent-container">
