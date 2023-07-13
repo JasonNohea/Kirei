@@ -42,7 +42,7 @@
           </span>
         </button> -->
       <button type="button" class="position-relative notif-button">
-        <i class="fa-solid fa-bell"></i>
+        <i class="fa-solid fa-bell" style="color: #2c5395"></i>
       </button>
 
       <i class="fa-solid fa-globe" style="color: #2c5395"></i>

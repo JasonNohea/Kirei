@@ -45,3 +45,6 @@ Route::get('/cpdetailproject', [CompController::class, 'projectDetail'])->name('
 
 //Detail Job Talent
 Route::get('/dtltalent', [TalentController::class, 'detailJob'])->name('detailJob');
+
+//Detail Company Profile
+Route::get('/companyprofile', [CompController::class, 'companyProfile'])->name('companyProfile');
