@@ -3,7 +3,9 @@ body {
     background-color: #e0eaf6 !important;
     width: 100%;
     height: fit-content;
-    min-height: 0; /* Ensure the container can shrink */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 main {
@@ -13,7 +15,7 @@ main {
     height: 100%;
     margin: auto;
     gap: 20px;
-    flex: 1;
+    flex-grow: 1;
 }
 
 main > * {

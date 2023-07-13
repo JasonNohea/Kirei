@@ -22,4 +22,8 @@ class CompController extends Controller
     {
         return view('companyprojectdetail'); //buka file jobposting.php di resource/views
     }
+    public function companyProfile()
+    {
+        return view('companyprofile'); //buka file jobposting.php di resource/views
+    }
 }
