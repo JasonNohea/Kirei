@@ -28,7 +28,7 @@
       <a href="homepage.html"><img class="logo" src="../assets/logoCompany.png" alt="Logo Regio" /></a>
       <a class="navi-button" href="homepage.html#talent">Talent</a>
       <a class="navi-button" href="../company/companyproject.html">My Project</a>
-      <a class="navi-button" href="#">About</a>
+      <a class="navi-button" href="/aboutComp">About</a>
     </div>
     <div class="nav2">
       <!-- <button type="button" class="position-relative notif-button">

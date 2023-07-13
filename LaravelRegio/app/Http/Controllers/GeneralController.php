@@ -6,7 +6,10 @@ use Illuminate\Http\Request;
 
 class GeneralController extends Controller
 {
-    public function aboutpg(){
-        return view('about'); //buka file about.php di resource/views
+    public function aboutTalent(){
+        return view('aboutTalent'); //buka file about.php di resource/views
+    }
+    public function aboutComp(){
+        return view('aboutComp'); //buka file about.php di resource/views
     }
 }
