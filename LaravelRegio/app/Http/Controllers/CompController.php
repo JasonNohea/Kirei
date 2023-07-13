@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+//Website URL Controller
 class CompController extends Controller
 {
     public function hpCompany()

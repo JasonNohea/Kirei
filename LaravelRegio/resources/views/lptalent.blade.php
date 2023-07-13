@@ -7,110 +7,89 @@
     <link rel="icon" href="../assets/logo.png" type="image/x-icon" />
     
     <!-- File CSS -->
-    <link rel="stylesheet" href="{{ url('css/main.css')}}"/>
-    <link rel="stylesheet" href="{{ url('css/newnav.css')}}" />
-    <link rel="stylesheet" href="{{ url('css/lptalent.css')}}" />
+    <link rel="stylesheet" href="{{ url('css/main.css') }}" />
+    <link rel="stylesheet" href="{{ url('css/newnav.css') }}" />
+    <link rel="stylesheet" href="{{ url('css/lptalent.css') }}" />
 
-    <!-- Font * Link Ajax + Bootstrap -->
+    <!-- Font & Link Ajax + Bootstrap -->
+
     <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
-      crossorigin="anonymous"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous">
+    </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <!-- <script src="../js/mainpage.js" defer></script> -->
+    <script src="../js/mainpage.js" defer></script>
     <title>Job Portal di Indonesia</title>
 </head>
 <body>
     <header>
-    <!-- navigation bar -->
+    <!-- Navigation Bar -->
     <nav>
-        <img class="logo" src="../assets/logoCompany.png" alt="Logo Regio" />
-        <a class="navi-button" href="/home_talent"> Jobs </a>
-        <!-- <a class="navi-button" href="#"> My Project </a> -->
-        <a class="navi-button" href="/aboutTalent"> About </a>
-        <img class="globe" src="../assets/global.png" />
-        <i class="fa-regular fa-globe"></i>
+      <div class="nav1">
+        <img class="logo" src="{{ url('assets/logoCompany.png')}}" alt="Logo Regio" />
+        <a class="navi-button" href="/home_talent">Jobs</a>
+        <!-- <a class="navi-button" href="#">My Projects</a> -->
+        <a class="navi-button" href="/aboutTalent">About</a>
+      </div>
+      <div class="nav2">
+        <img class="globe" src="{{ url('assets/global.png')}}" />
         <select>
-          <option> EN </option>
-          <option> ID </option>
+          <option>EN</option>
+          <option>ID</option>
         </select>
-        <button class="login-button">Login</button>
+        <button type="button" class="login-button" data-bs-toggle="modal" data-bs-target="#login"> Login </button>
+      </div>
     </nav>
 
-    <!-- login container -->
-    <div class="dark-screen main-con">
-        <div class="login-con">
-          <form class="login-form">
-            <img src="../assets/logo.png" class="form-logo" />
-            <p class="login-heading">Welcome to Regio!</p>
-            <div class="form-con">
-              <svg
-                class="form-logo"
-                width="20"
-                height="16"
-                viewBox="0 0 20 16"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M18 0H2C0.9 0 0.00999999 0.9 0.00999999 2L0 14C0 15.1 0.9 16 2 16H18C19.1 16 20 15.1 20 14V2C20 0.9 19.1 0 18 0ZM18 4L10 9L2 4V2L10 7L18 2V4Z"
-                  fill="#716B6B"
-                />
-              </svg>
-              <label class="form-text"
-                >Email<span class="required">*</span></label
-              >
-              <input
-                class="form-input"
-                placeholder=" "
-                type="text"
-                name="Email"
-                id="email"
-              />
+    <!-- Modal Login -->
+    <div class="modal fade" id="login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <form class="modal-content needs-validation" action="../php/loginjson.php" method="post" name="login" novalidate >
+          <div class="modal-header">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" ></button>
+            <img src="../assets/logo.png" alt="Regio Logo" />
+            <h1 class="login-heading">Welcome to Regio!</h1>
+          </div>
+          <div class="modal-body">
+            <div>
+              <div class="form-floating mb-3">
+                <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" required />
+                <label for="email">Email<span class="required">*</span></label>
+              </div>
+              <div class="form-floating">
+                <input type="password" class="form-control" id="password" name="password" placeholder="Password" required />
+                <label for="password"
+                  >Password<span class="required">*</span></label
+                >
+              </div>
             </div>
-            <span class="err-txt hidden" id="em-err"
-              >Please fill required field</span
-            >
-            <div class="form-con">
-              <svg
-                class="form-logo"
-                width="16"
-                height="21"
-                viewBox="0 0 16 21"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M8 16C8.53043 16 9.03914 15.7893 9.41421 15.4142C9.78929 15.0391 10 14.5304 10 14C10 13.4696 9.78929 12.9609 9.41421 12.5858C9.03914 12.2107 8.53043 12 8 12C7.46957 12 6.96086 12.2107 6.58579 12.5858C6.21071 12.9609 6 13.4696 6 14C6 14.5304 6.21071 15.0391 6.58579 15.4142C6.96086 15.7893 7.46957 16 8 16ZM14 7C14.5304 7 15.0391 7.21071 15.4142 7.58579C15.7893 7.96086 16 8.46957 16 9V19C16 19.5304 15.7893 20.0391 15.4142 20.4142C15.0391 20.7893 14.5304 21 14 21H2C1.46957 21 0.960859 20.7893 0.585786 20.4142C0.210714 20.0391 0 19.5304 0 19V9C0 8.46957 0.210714 7.96086 0.585786 7.58579C0.960859 7.21071 1.46957 7 2 7H3V5C3 3.67392 3.52678 2.40215 4.46447 1.46447C5.40215 0.526784 6.67392 0 8 0C8.65661 0 9.30679 0.129329 9.91342 0.380602C10.52 0.631876 11.0712 1.00017 11.5355 1.46447C11.9998 1.92876 12.3681 2.47995 12.6194 3.08658C12.8707 3.69321 13 4.34339 13 5V7H14ZM8 2C7.20435 2 6.44129 2.31607 5.87868 2.87868C5.31607 3.44129 5 4.20435 5 5V7H11V5C11 4.20435 10.6839 3.44129 10.1213 2.87868C9.55871 2.31607 8.79565 2 8 2Z"
-                  fill="#716B6B"
-                />
-              </svg>
-              <label class="form-text"
-                >Password<span class="required">*</span></label
-              >
-              <input
-                class="form-input"
-                placeholder=" "
-                type="password"
-                name="Pass"
-                id="pass"
-              />
-            </div>
-            <span class="err-txt hidden" id="pass-err"
-              >Please fill required field</span
-            >
-            <a class="forgot-pass" id="forgotPasswordLink" href="#"
+            <a
+              class="forgot-pass-anchor"
+              href="#"
+              data-bs-target="#forgot-pass"
+              data-bs-toggle="modal"
               >Forgot Password?</a
             >
             <div class="button-con">
-              <button class="form-button login-submit">Login</button>
-              <button class="form-button login-cancel">Cancel</button>
+              <button class="form-button login-submit" type="submit">
+                Login
+              </button>
+              <button
+                type="button"
+                class="form-button login-cancel"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              >
+                Cancel
+              </button>
             </div>
-  
             <div class="opt-acc">
               <hr class="hr-decor" />
               <p>or</p>
@@ -154,88 +133,371 @@
                 <p class="logo-text text-login">Linked In</p>
               </button>
             </div>
-            <p class="register-text">
-              Don't have an account?&nbsp;<a href="#" class="regist">Register</a>
+            <p class="gray-text">
+              Don't have an account?&nbsp;<a href="#" class="regist"
+                >Register</a
+              >
             </p>
-          </form>
-        </div>
-  
-        <div class="reset-con">
-          <form class="reset-form">
-            <img src="../assets/logo.png" class="form-logo" />
-            <p class="reset-heading">Forgot Password?</p>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Modal forgot password -->
+    <div
+      class="modal fade"
+      id="forgot-pass"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <form
+          class="modal-content needs-validation"
+          action=""
+          method="post"
+          name="forgot-pass"
+          novalidate
+        >
+          <div class="modal-header">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+              required
+            ></button>
+            <img src="../assets/logo.png" alt="Regio Logo" />
+            <h1 class="login-heading">Forgot Password?</h1>
             <span class="reset-inst"
               >no worries, we'll send you reset instructions.</span
             >
-            <div class="form-con">
-              <svg
-                class="form-logo"
-                width="20"
-                height="16"
-                viewBox="0 0 20 16"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M18 0H2C0.9 0 0.00999999 0.9 0.00999999 2L0 14C0 15.1 0.9 16 2 16H18C19.1 16 20 15.1 20 14V2C20 0.9 19.1 0 18 0ZM18 4L10 9L2 4V2L10 7L18 2V4Z"
-                  fill="#716B6B"
+          </div>
+          <div class="modal-body">
+            <div>
+              <div class="form-floating mb-3">
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email-reset"
+                  placeholder="name@example.com"
+                  required
                 />
-              </svg>
-              <label class="form-text"
-                >Email<span class="required">*</span></label
-              >
-              <input
-                class="form-input"
-                placeholder=" "
-                type="text"
-                name="Email"
-                id="email"
-              />
-            </div>
-            <span class="err-txt hidden" id="em-err"
-              >Please fill required field</span
-            >
-            <div class="info-con">
-              <svg
-                class="reset-info"
-                width="13"
-                height="13"
-                viewBox="0 0 13 13"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M6.05043 10L6.05043 5.1L6.95043 5.1L6.95043 10L6.05043 10ZM6.05043 4L6.05043 3L6.95043 3L6.95043 4L6.05043 4Z"
-                  fill="#6D6D6D"
-                />
-                <circle
-                  cx="6.5"
-                  cy="6.5"
-                  r="6"
-                  transform="rotate(-180 6.5 6.5)"
-                  stroke="#6D6D6D"
-                />
-                <span class="info-detail reset-info">
-                  Resend the email that you have registered
-                </span>
-              </svg>
+                <label for="email-reset"
+                  >Email<span class="required">*</span></label
+                >
+              </div>
             </div>
             <div class="button-con">
-              <button class="form-button login-submit">Send OTP Code</button>
-              <button class="form-button login-cancel">Back to Login</button>
+              <button
+                class="form-button login-submit"
+                id="send-otp"
+                type="button"
+                data-bs-target="#otp"
+                data-bs-toggle="modal"
+              >
+                Send OTP Code
+              </button>
+              <button
+                type="button"
+                class="form-button login-cancel"
+                data-bs-target="#login"
+                data-bs-toggle="modal"
+              >
+                Back to Login
+              </button>
             </div>
-  
             <div class="opt-acc">
               <hr class="hr-decor" />
               <p>or</p>
               <hr class="hr-decor" />
             </div>
-            <p class="register-text">
-              Don't have an account?&nbsp;<a href="#" class="regist">Register</a>
+            <p class="gray-text">
+              Don't have an account?&nbsp;<a href="#" class="regist"
+                >Register</a
+              >
             </p>
-          </form>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Modal OTP -->
+    <div
+      class="modal fade"
+      id="otp"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <form
+          class="modal-content needs-validation digit-group"
+          action=""
+          method="post"
+          data-group-name="digits"
+          name="otp"
+          data-autosubmit="false"
+          autocomplete="off"
+          novalidate
+        >
+          <div class="modal-header">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+            <img src="../assets/logo.png" alt="Regio Logo" />
+            <h1 class="login-heading">Enter Verification Code</h1>
+            <p class="gray-text">
+              Enter 4 digit verification code sent to JerWuu@Gmail.com
+            </p>
+          </div>
+          <div class="modal-body">
+            <div
+              class="digit-group"
+              data-group-name="digits"
+              data-autosubmit="false"
+              autocomplete="off"
+            >
+              <input
+                type="number"
+                class="otp-digit form-control"
+                id="digit-1"
+                name="digit-1"
+                data-next="digit-2"
+                max="1"
+                required
+              />
+              <input
+                type="number"
+                class="otp-digit form-control"
+                id="digit-2"
+                name="digit-2"
+                data-next="digit-3"
+                max="1"
+                required
+                data-previous="digit-1"
+              />
+              <input
+                type="number"
+                class="otp-digit form-control"
+                id="digit-3"
+                name="digit-3"
+                data-next="digit-4"
+                max="1"
+                required
+                data-previous="digit-2"
+              />
+              <input
+                type="number"
+                class="otp-digit form-control"
+                id="digit-4"
+                name="digit-4"
+                data-previous="digit-3"
+                max="1"
+                required
+              />
+            </div>
+            <p class="gray-text otp-resend">
+              Resent code in&nbsp;<a href="#" id="countdown">00:20</a>
+            </p>
+
+            <div class="button-con">
+              <button
+                class="form-button login-submit"
+                type="button"
+                data-bs-target="#reset-pass"
+                data-bs-toggle="modal"
+              >
+                Confirm
+              </button>
+              <button
+                type="reset"
+                class="form-button login-cancel"
+                data-bs-target="#login"
+                data-bs-toggle="modal"
+                id="reset-otp"
+              >
+                Back to Login
+              </button>
+            </div>
+            <div class="opt-acc">
+              <hr class="hr-decor" />
+              <p>or</p>
+              <hr class="hr-decor" />
+            </div>
+            <p class="gray-text">
+              Don't have an account?&nbsp;<a href="#" class="regist"
+                >Register</a
+              >
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Modal reset password -->
+    <div
+      class="modal fade"
+      id="reset-pass"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <form
+          class="modal-content needs-validation"
+          action=""
+          method="post"
+          name="reset-pass"
+          novalidate
+        >
+          <div class="modal-header">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+            <img src="../assets/logo.png" alt="Regio Logo" />
+            <h1 class="login-heading">Reset Password</h1>
+            <p class="gray-text">
+              Your new password must be different from your previous passwords
+            </p>
+          </div>
+          <div class="modal-body">
+            <div>
+              <div class="form-floating mb-3">
+                <input
+                  type="password"
+                  class="form-control"
+                  id="reset-password"
+                  name="reset-password"
+                  placeholder="Password"
+                  required
+                />
+                <label for="email"
+                  >Password<span class="required">*</span></label
+                >
+                <p class="gray-text">Must be at least 8 characters.</p>
+              </div>
+
+              <div class="form-floating">
+                <input
+                  type="password"
+                  class="form-control"
+                  id="confirm-password1"
+                  name="confirm-password1"
+                  placeholder="Password"
+                  required
+                />
+                <label for="password"
+                  >Confirm Password<span class="required">*</span></label
+                >
+              </div>
+            </div>
+            <div class="button-con">
+              <button
+                class="form-button login-submit"
+                type="button"
+                data-bs-target="#loading"
+                data-bs-toggle="modal"
+                onclick="resetpass();"
+              >
+                Reset Password
+              </button>
+              <button
+                type="button"
+                class="form-button login-cancel"
+                data-bs-target="#login"
+                data-bs-toggle="modal"
+              >
+                Back
+              </button>
+            </div>
+            <div class="opt-acc">
+              <hr class="hr-decor" />
+              <p>or</p>
+              <hr class="hr-decor" />
+            </div>
+            <p class="gray-text">
+              Don't have an account?&nbsp;<a href="#" class="regist"
+                >Register</a
+              >
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="loading"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content reset-load">
+          <div class="modal-header">
+            <img src="../assets/logo.png" alt="Regio Logo" />
+            <h1 class="login-heading">Loading</h1>
+            <span class="reset-inst">We'll be right with you.</span>
+          </div>
+          <div class="modal-body">
+            <div
+              class="spinner-border justify-content-center spinner"
+              style="width: 5rem; height: 5rem"
+              role="status"
+            >
+              <span class="visually-hidden">Loading...</span>
+            </div>
+          </div>
         </div>
       </div>
+    </div>
+
+    <!-- Modal reset success -->
+    <div
+      class="modal fade"
+      id="reset-success"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+            <img src="../assets/logo.png" alt="Regio Logo" />
+            <h1 class="login-heading">Welcome Back!</h1>
+          </div>
+          <div class="modal-body reset-modal-content">
+            <img
+              class="reset-img"
+              src="../assets/pass-reset.png"
+              alt="Welcome"
+            />
+            <button
+              type="button"
+              class="b-login"
+              data-bs-target="#login"
+              data-bs-toggle="modal"
+            >
+              Back to Login
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     </header>
     <div class="building">
       <img src="../assets/building.png">

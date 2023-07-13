@@ -19,6 +19,7 @@
   <script src="https://kit.fontawesome.com/5109247c85.js" crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
   <script src="../js/mainpage.js" defer></script>
+  <script src="{{ asset('js/scroll.js') }}"></script>
   <title>Regio</title>
 </head>
 
@@ -27,7 +28,7 @@
   <nav>
     <div class="nav1">
       <img class="logo" src="../assets/logoCompany.png" alt="Logo Regio" />
-      <a class="navi-button" href="/hpCompany">Talent</a>
+      <a class="navi-button" href="{{ route('hpCompany') }}#talentsearch">Talent</a>
       <a class="navi-button" href="/compProject">My Project</a>
       <a class="navi-button" href="/aboutComp">About</a>
     </div>
@@ -275,7 +276,7 @@
           Posting Job
         </button>
         <div class="form-floating search-bar">
-          <input type="text" class="form-control search-input" id="search" placeholder="Search" />
+          <input type="text" class="form-control search-input" id="talentsearch" placeholder="Search" />
 
           <label class="search-label" for="search">Search...</label>
           <button class="search-button" type="button">
@@ -286,8 +287,8 @@
     </div>
   </div>
 
-  <!-- Talent Section -->
-  <div class="main">
+  <!-- Talent Section -->  
+    <div class="main">
     <div class="first-con grab-scroll">
       <div class="box-shadow">
         <div class="talent-con unselectable">
