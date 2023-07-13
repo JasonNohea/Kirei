@@ -38,7 +38,7 @@
       <img class="logo" src="../assets/logoCompany.png" alt="Logo Regio" />
       <a class="navi-button" href="/home_talent">Jobs</a>
       <a class="navi-button" href="#">My Projects</a>
-      <a class="navi-button" href="/about">About</a>
+      <a class="navi-button" href="/aboutTalent">About</a>
     </div>
     <div class="nav2">
       <img class="globe" src="../assets/global.png" />

@@ -30,7 +30,7 @@
 
       <a class="navi-button" href="/hpCompany">Talent</a>
       <a class="navi-button" href="#">My Project</a>
-      <a class="navi-button" href="/about">About</a>
+      <a class="navi-button" href="/aboutComp">About</a>
     </div>
     <div class="nav2">
       <!-- <button type="button" class="position-relative notif-button">

@@ -36,7 +36,7 @@
         <img class="logo" src="{{ url('assets/logoCompany.png')}}" alt="Logo Regio" />
         <a class="navi-button" href="/hpCompany">Talent</a>
         <!-- <a class="navi-button" href="#">My Projects</a> -->
-        <a class="navi-button" href="/about">About</a>
+        <a class="navi-button" href="/aboutComp">About</a>
       </div>
       <div class="nav2">
         <img class="globe" src="{{ url('assets/global.png')}}" />

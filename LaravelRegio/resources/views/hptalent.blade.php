@@ -25,7 +25,7 @@
       crossorigin="anonymous">
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="../js/mainpage.js" defer></script>
+    <script src="{{ url('js/mainpage.js')}}" defer></script>
     <title> Regio - Job Portal di Indonesia </title>
 </head>
 <body>
@@ -36,7 +36,7 @@
         <img class="logo" src="{{ url('assets/logoCompany.png')}}" alt="Logo Regio" />
         <a class="navi-button" href="/home_talent">Jobs</a>
         <!-- <a class="navi-button" href="#">My Projects</a> -->
-        <a class="navi-button" href="/about">About</a>
+        <a class="navi-button" href="/aboutTalent">About</a>
       </div>
       <div class="nav2">
         <img class="globe" src="{{ url('assets/global.png')}}" />

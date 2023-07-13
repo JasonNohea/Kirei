@@ -25,8 +25,11 @@ Route::get('/lp_talent', [TalentController::class, 'lpTalent'])->name('lpTalent'
 //HomePage Talent 
 Route::get('/home_talent', [TalentController::class, 'homeTalent'])->name('homeTalent');
 
-//About Page
-Route::get('/about', [GeneralController::class, 'aboutpg'])->name('aboutpg');
+//About Talent Page
+Route::get('/aboutTalent', [GeneralController::class, 'aboutTalent'])->name('aboutTalent');
+
+//About Company Page
+Route::get('/aboutComp', [GeneralController::class, 'aboutComp'])->name('aboutComp');
 
 //HomePage Company
 Route::get('/hpCompany', [CompController::class, 'hpCompany'])->name('hpCompany');
