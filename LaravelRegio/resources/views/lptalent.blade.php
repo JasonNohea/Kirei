@@ -5,7 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../assets/logo.png" type="image/x-icon" />
-    <link rel="stylesheet" href="../css/lptalent.css" />
+    
+    <!-- File CSS -->
+    <link rel="stylesheet" href="{{ url('css/main.css')}}"/>
+    <link rel="stylesheet" href="{{ url('css/newnav.css')}}" />
+    <link rel="stylesheet" href="{{ url('css/lptalent.css')}}" />
+
+    <!-- Font * Link Ajax + Bootstrap -->
     <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link
@@ -14,6 +20,8 @@
       integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
       crossorigin="anonymous"
     />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <!-- <script src="../js/mainpage.js" defer></script> -->
     <title>Job Portal di Indonesia</title>
 </head>
 <body>
@@ -23,7 +31,7 @@
         <img class="logo" src="../assets/logoCompany.png" alt="Logo Regio" />
         <a class="navi-button" href="/home_talent"> Jobs </a>
         <!-- <a class="navi-button" href="#"> My Project </a> -->
-        <a class="navi-button" href="/about"> About </a>
+        <a class="navi-button" href="/aboutTalent"> About </a>
         <img class="globe" src="../assets/global.png" />
         <i class="fa-regular fa-globe"></i>
         <select>
