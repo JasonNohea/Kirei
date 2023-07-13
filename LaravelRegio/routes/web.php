@@ -3,6 +3,7 @@
 use App\Http\Controllers\TalentController;
 use App\Http\Controllers\CompController;
 use App\Http\Controllers\GeneralController;
+use App\Models\Skills;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -48,3 +49,15 @@ Route::get('/dtltalent', [TalentController::class, 'detailJob'])->name('detailJo
 
 //Detail Company Profile
 Route::get('/companyprofile', [CompController::class, 'companyProfile'])->name('companyProfile');
+
+//Testing Form Input Database
+Route::get('/create', [GeneralController::class, 'contohForm'])->name('contohForm');
+
+//Testing Form Input Database
+Route::post('/create', function () {
+    $skillform = new Skills();
+    $skillform->skill_name = request('skillname');
+    $skillform->save();
+});
+
+

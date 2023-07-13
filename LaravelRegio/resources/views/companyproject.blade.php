@@ -28,7 +28,7 @@
     <div class="nav1">
       <a href="/hpCompany"><img class="logo" src="../assets/logoCompany.png" alt="Logo Regio" /></a>
 
-      <a class="navi-button" href="/hpCompany">Talent</a>
+      <a class="navi-button" href="{{ route('hpCompany') }}#talentsearch">Talent</a>
       <a class="navi-button" href="#">My Project</a>
       <a class="navi-button" href="/aboutComp">About</a>
     </div>
@@ -82,7 +82,7 @@
             <p>No Project Available</p>
           </div> -->
         <!-- not empty -->
-        <div class="project-sum" style="cursor: pointer" onclick="window.location.href='ProjectDetail.html'">
+        <div class="project-sum" style="cursor: pointer" onclick="window.location.href='/cpdetailproject'">
           <div class="project-img">
             <img src="../assets/Foto Project1.png" alt="Project Image" />
           </div>
