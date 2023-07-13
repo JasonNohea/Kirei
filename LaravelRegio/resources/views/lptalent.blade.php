@@ -6,7 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../assets/logo.png" type="image/x-icon" />
     
+    <!-- File CSS -->
+    <link rel="stylesheet" href="../bootstrap-css/main.css" />
+    <link rel="stylesheet" href="../css/newnav.css" />
     <link rel="stylesheet" href="../css/lptalent.css" />
+
+    <!-- Font * Link Ajax + Bootstrap -->
     <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link
@@ -15,6 +20,8 @@
       integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
       crossorigin="anonymous"
     />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <!-- <script src="../js/mainpage.js" defer></script> -->
     <title>Job Portal di Indonesia</title>
 </head>
 <body>
