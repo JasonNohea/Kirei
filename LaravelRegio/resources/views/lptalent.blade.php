@@ -7,9 +7,9 @@
     <link rel="icon" href="../assets/logo.png" type="image/x-icon" />
     
     <!-- File CSS -->
-    <link rel="stylesheet" href="../bootstrap-css/main.css" />
-    <link rel="stylesheet" href="../css/newnav.css" />
-    <link rel="stylesheet" href="../css/lptalent.css" />
+    <link rel="stylesheet" href="{{ url('css/main.css')}}"/>
+    <link rel="stylesheet" href="{{ url('css/newnav.css')}}" />
+    <link rel="stylesheet" href="{{ url('css/lptalent.css')}}" />
 
     <!-- Font * Link Ajax + Bootstrap -->
     <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet" />
