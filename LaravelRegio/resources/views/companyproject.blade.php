@@ -26,11 +26,11 @@
 <body>
   <nav>
     <div class="nav1">
-      <a href="homepage.html"><img class="logo" src="../assets/logoCompany.png" alt="Logo Regio" /></a>
+      <a href="/hpCompany"><img class="logo" src="../assets/logoCompany.png" alt="Logo Regio" /></a>
 
       <a class="navi-button" href="/hpCompany">Talent</a>
       <a class="navi-button" href="#">My Project</a>
-      <a class="navi-button" href="#">About</a>
+      <a class="navi-button" href="/about">About</a>
     </div>
     <div class="nav2">
       <!-- <button type="button" class="position-relative notif-button">
