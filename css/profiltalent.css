@@ -19,21 +19,21 @@ margin: 0;
 }
 
 main {
-margin-top: 5%;
-width: 100%;
-height: 100%;
+    margin-top: 5%;
+    width: 100%;
+    height: 100%;
     /* background-color: aqua; */
-display: flex;
-flex-direction: column;
-align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .profile-con {
-margin-top: 10%;
-margin-left: 10%;
-width: 80%;
-height: 270px;
-background-color: white;
+    margin-top: 10%;
+    margin-left: 10%;
+    width: 80%;
+    height: 270px;
+    background-color: white;
 }
 
 /* .profile-info {
@@ -43,51 +43,49 @@ background-color: white;
 } */
 
 .profile-header {
-display: flex;
-flex-wrap: wrap;
-    /* align-items: center; */
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .photo-profile {
-/* margin-top: 5%; */
-margin-left: 10px;
+    margin-left: 10px;
     /* background-color:red; */
-height: 50px;
+    height: 50px;
 }
 
 .profile-header-info {
-margin: 0 10px; 
-flex-wrap: wrap;
-flex: 0;
-width: 100%;
+    margin: 0 10px; 
+    flex-wrap: wrap;
+    flex: 0;
+    width: 100%;
 }
 
 .profile-name {
-color: black;
-font-size: 19px;
-width: 200px;
+    color: black;
+    font-size: 19px;
+    width: 200px;
 }
 
 .profile-skill {
-color: #0074ff;
-width: 180px;
+    color: #0074ff;
+    width: 180px;
 }
 
 .profile-status-con {
-margin-left: auto;
-font-size: 1.5vw;
+    margin-left: auto;
+    font-size: 1.5vw;
 }
 
 .profile-button {
-margin: 0px 10px;
+    margin: 0px 10px;
 }
 
 .navigation-tab {
-display: flex;
-flex-direction: column;
-width: 100%;
-align-items: center;
-background-color: white;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    background-color: white;
 }
   
 .line-container {
@@ -95,50 +93,53 @@ width: 100%;
 }
 
 .underline {
-width: 100%;
-background-color: #000;
-transition: transform 0.3s ease-out;
-transform: translateX(0);
+    width: 100%;
+    background-color: #000;
+    transition: transform 0.3s ease-out;
+    transform: translateX(0);
 }
 
 .short-line {
-width: 55px; /* Adjust the width as needed */
-margin-left: 97px; /* Adjust the left margin as needed */
+    width: 55px; /* Adjust the width as needed */
+    margin-left: 97px; /* Adjust the left margin as needed */
 }
 
 .tab-project {
-display: flex;
-flex-direction: row;
-justify-content: center;
-width: 100%;
-gap: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    gap: 40px;
 }
   
 .tab-project .tab {
-font-size: 25px;
-color: black;
-text-decoration: none;
+    font-size: 25px;
+    color: black;
+    text-decoration: none;
 }
 
 .tab-project a{
     border-bottom: 3px #31348D;
 }
 .content {
-width: 100%;
-height: 100%;
-padding-top: 3%;
-background-color: white;
-border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    max-height: max-content;
+    padding-top: 3%;
+    background-color: white;
+    border-radius: 10px;
 }
   
 .wrapper{
     margin-left: 5%;
+    height: 100%;
+    max-height: fit-content;
 }
 
 #content2,
 #content3 {
-display: none;
-background-color: white;
+    display: none;
+    background-color: white;
 }
   
 /* #content2 {
@@ -158,29 +159,29 @@ background-color: white;
 }
 
 .aside {
-float: left;
+    float: left;
 }
 
 .jobs-week{
-float: left;
-color: white;
-padding-top: 5px;
-padding-left: 20px;
-width: 100%;
-height: 100%;
-max-height: 400px;
-max-width: 300px;
-border-radius: 10px;
-box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.25);   
-margin-top: 2%;
-margin-left: 6%;
+    float: left;
+    color: white;
+    padding-top: 5px;
+    padding-left: 20px;
+    width: 100%;
+    height: 100%;
+    max-height: 400px;
+    max-width: 300px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.25);   
+    margin-top: 2%;
+    margin-left: 6%;
 }
 
 .jobs-progress-info{
-display: flex;
-flex-direction: column;
-padding-top: 11px;
-margin-left: 100px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 11px;
+    margin-left: 100px;
 }
 
 .jobs-title{
@@ -191,17 +192,17 @@ font-weight: 600;
 }
 
 .jobs-info {
-color: black;
+    color: black;
 }
 
 .jobs-dateline{
-color: rgba(0, 0, 0, 0.70);
-font-size: 14px; 
+    color: rgba(0, 0, 0, 0.70);
+    font-size: 14px; 
 }
 
 .jobs-deadline{
-color: rgba(0, 0, 0, 0.70);
-font-size: 14px; 
+    color: rgba(0, 0, 0, 0.70);
+    font-size: 14px; 
 }
 
 .jobs-com {
@@ -246,6 +247,7 @@ font-size: 14px;
 .first-con {
     width: 100%;
     height: 100%;
+    max-height: fit-content;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -336,4 +338,73 @@ font-size: 14px;
 .bi-bookmark-fill:hover {
     color: blue;
 }
+ 
+/* CSS Footer untuk Talent */
+
+.layar-dalam {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    justify-content: space-between;
+}
   
+footer {
+    padding-top: 2%;
+    padding-left: 100px;
+    /* background-color: white; */
+    color: black;
+}
+  
+footer .layar-dalam div{
+    width: 100%;
+}
+  
+.kiri {
+    display: flex;
+    flex-direction: column;
+}
+  
+footer .layar-dalam h5{
+    margin-top: 0px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #31358A;
+}
+  
+footer .layar-dalam .copyright{
+    width: 100%;
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 2px solid #31348D;
+    text-align: center;
+}
+  
+.kanan .social-links a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255,255,255,0.2);
+    margin:0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+}
+  
+.kanan .social-links a:hover{
+    color: white;
+    background-color:#001AFF;
+}
+  
+footer .layar-dalam .copyright{
+    width: 100%;
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 2px solid #31348D;
+    text-align: center;
+    padding-bottom: 8px;
+}
+  
+.colorlink {
+    color : #001AFF;
+}
