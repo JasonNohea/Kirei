@@ -5,6 +5,19 @@ height: 100%;
 margin: 0;
 }
 
+.name {
+    margin-left: 156px;
+    width: 15%;
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+}
+
+.edit {
+    margin-left: auto;
+    color: #31348D;
+}
+
 main {
 margin-top: 5%;
 width: 100%;
@@ -36,15 +49,14 @@ flex-wrap: wrap;
 }
 
 .photo-profile {
-margin-top: 5%;
+/* margin-top: 5%; */
 margin-left: 10px;
     /* background-color:red; */
 height: 50px;
 }
 
 .profile-header-info {
-margin: 0 15px; 
-display: flex;
+margin: 0 10px; 
 flex-wrap: wrap;
 flex: 0;
 width: 100%;
@@ -52,8 +64,7 @@ width: 100%;
 
 .profile-name {
 color: black;
-font-weight: 700px;
-font-size: 20px;
+font-size: 19px;
 width: 200px;
 }
 
@@ -120,10 +131,9 @@ background-color: white;
 border-radius: 10px;
 }
   
-/* #content1 {
-    height: 100%;
-    max-height: fit-content;
-} */
+.wrapper{
+    margin-left: 5%;
+}
 
 #content2,
 #content3 {
@@ -144,7 +154,7 @@ background-color: white;
     flex-direction: row;
     align-items: center;
     width: 100%;
-    max-width: 500px;
+    max-width: 240px;
 }
 
 .aside {
