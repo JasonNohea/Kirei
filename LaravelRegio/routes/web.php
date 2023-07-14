@@ -60,4 +60,13 @@ Route::post('/create', function ($id) {
     $skill->save();
 });
 
+use App\Http\Controllers\SkillController;
+
+// Display the form
+Route::get('/skills/create', [SkillController::class, 'create'])->name('skills.create');
+
+// Handle the form submission
+Route::post('/skills', [SkillController::class, 'store'])->name('skills.store');
+
+
 
