@@ -51,13 +51,22 @@ Route::get('/dtltalent', [TalentController::class, 'detailJob'])->name('detailJo
 Route::get('/companyprofile', [CompController::class, 'companyProfile'])->name('companyProfile');
 
 //Testing Form Input Database
-Route::get('/create', [GeneralController::class, 'contohForm'])->name('contohForm');
+Route::get('/tryform', [GeneralController::class, 'cthForm'])->name('cthForm');
 
 //Testing Form Input Database
-Route::post('/create', function () {
-    $skillform = new Skills();
-    $skillform->skill_name = request('skillname');
-    $skillform->save();
+Route::post('/create', function ($id) {
+    $skill = new skills();
+    $skill->skill_name = request('skillname');
+    $skill->save();
 });
+
+use App\Http\Controllers\SkillController;
+
+// Display the form
+Route::get('/skills/create', [SkillController::class, 'create'])->name('skills.create');
+
+// Handle the form submission
+Route::post('/skills', [SkillController::class, 'store'])->name('skills.store');
+
 
 
