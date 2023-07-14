@@ -76,5 +76,10 @@ Route::get('/provinces/create', [ProvinceController::class, 'create'])->name('pr
 // Handle the form submission
 Route::post('/provinces', [ProvinceController::class, 'store'])->name('provinces.store');
 
+use App\Http\Controllers\CityController;
+
+Route::get('/cities/create', [CityController::class, 'create'])->name('city.create');
+
+Route::post('/cities', [CityController::class, 'store'])->name('city.store');
 
 
