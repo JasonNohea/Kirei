@@ -31,4 +31,7 @@ class CompController extends Controller
     {
         return view('company-talentprofile'); //buka file companytalentprofile.php di resource/views
     }
+    public function rgtComp(){
+        return view('registercompany'); //buka file about.php di resource/views
+    }
 }
