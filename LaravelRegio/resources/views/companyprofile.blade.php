@@ -16,6 +16,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/5109247c85.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="../js/companyProfile.js"></script>
     <title>Document</title>
 </head>
 
@@ -58,9 +59,62 @@
     <main>
         <div class="profile-menu">
             <p class="title">Profile Menu</p>
-            <div></div>
+            <button class="profile-option pressed" id="button1" onclick="showContent('button1','content1')">
+                <i class="fa-regular fa-user fa-xl" style="color: #0f316a;"></i>
+                <div class="opt-text">
+                    <p>Your Information</p>
+                    <p>Manage your & company information.</p>
+                </div>
+            </button>
+            <button class="profile-option" id="button2" onclick="showContent('button2','content2')">
+                <i class="fa-solid fa-gear fa-xl" style="color: #0f316a;"></i>
+                <div class="opt-text">
+                    <p>Website Setting</p>
+                    <p>Manage language, display, etc.</p>
+                </div>
+            </button>
+            <button class="profile-option" id="button3" onclick="showContent('button3','content3')">
+                <i class="fa-solid fa-lock fa-xl" style="color: #0f316a;"></i>
+                <div class="opt-text">
+                    <p>Account Setting</p>
+                    <p>Change password.</p>
+                </div>
+            </button>
+            <button class="profile-option" id="button4" onclick="showContent('button4','content4')">
+                <i class="fa-regular fa-circle-question fa-xl" style="color: #0f316a;"></i>
+                <div class="opt-text">
+                    <p>Help Centre</p>
+                    <p>Help & support.</p>
+                </div>
+            </button>
+            <button class="log-out">Logout</button>
         </div>
-        <div class="profile-container"></div>
+
+        </div>
+        <div class="profile-container" id="container">
+            <div class="content show" id="content1">
+                <h2>Content 1</h2>
+                <p>This is the content for Tab 1.</p>
+            </div>
+            <div class="content" id="content2">
+                <h2>Content 2</h2>
+                <p>This is the content for Tab 2.</p>
+                <p>It can have multiple paragraphs.</p>
+            </div>
+            <div class="content" id="content3">
+                <h2>Content 3</h2>
+                <p>This is the content for Tab 3.</p>
+                <p>It can have different lengths of content.</p>
+                <p>It can dynamically adjust the container height.</p>
+            </div>
+            <div class="content" id="content4">
+                <h2>Content 4</h2>
+                <p>This is the content for Tab 4.</p>
+                <p>It can have different lengths of content.</p>
+                <p>It can dynamically adjust the container height.</p>
+                <p>Are you satisfied with the way the world is?</p>
+            </div>
+        </div>
     </main>
 
     <footer>
