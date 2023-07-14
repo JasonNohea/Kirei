@@ -96,35 +96,160 @@
             <div class="content show personal-info" id="content1">
                 <div>
                     <p class="info-title">Personal Information</p>
-                    <p class="info-type">First Name</p>
-                    <p class="info-type">Last Name</p>
-                    <p class="info-type">Position</p>
-                    <p class="info-type">Contact Number</p>
+                    <div class="account-info-container">
+                        <div class="account-info">
+                            <p class="info-type">First Name</p>
+                            <button class="editButton" id="editButton" onclick="toggleEditMode('editable-paragraph1', 'editButton')">
+                                <i class="fa-regular fa-pen-to-square" style="color: #2c5395"></i>
+                            </button>
+                            <button class="cancelButton" id="cancelButton" onclick="cancelEdit('editable-paragraph1', 'editButton')" style="display: none">
+                                <i class="fa-solid fa-x fa-2xs" style="color: #ff0000"></i>
+                            </button>
+                            <button class="saveButton" id="saveButton" onclick="saveEdit('editable-paragraph1', 'editButton')" style="display: none">
+                                <i class="fa-solid fa-check fa-2xs" style="color: #00ff11"></i>
+                            </button>
+                        </div>
+                        <p class="account-info-text" id="editable-paragraph1" contenteditable="false">
+                            Jeremy
+                        </p>
+                    </div>
+                    <div class="account-info-container">
+                        <div class="account-info">
+                            <p class="info-type">Last Name</p>
+                            <button class="editButton" id="editButton2" onclick="toggleEditMode('editable-paragraph2', 'editButton2')">
+                                <i class="fa-regular fa-pen-to-square" style="color: #2c5395"></i>
+                            </button>
+                            <button class="cancelButton" id="cancelButton2" onclick="cancelEdit('editable-paragraph2', 'editButton2')" style="display: none">
+                                <i class="fa-solid fa-x fa-2xs" style="color: #ff0000"></i>
+                            </button>
+                            <button class="saveButton" id="saveButton2" onclick="saveEdit('editable-paragraph2', 'editButton2')" style="display: none">
+                                <i class="fa-solid fa-check fa-2xs" style="color: #00ff11"></i>
+                            </button>
+                        </div>
+                        <p class="account-info-text" id="editable-paragraph2" contenteditable="false">
+                            Wugouw
+                        </p>
+                    </div>
+                    <div class="account-info-container">
+                        <div class="account-info">
+                            <p class="info-type">Position</p>
+                            <button class="editButton" id="editButton3" onclick="toggleEditMode('editable-paragraph3', 'editButton3')">
+                                <i class="fa-regular fa-pen-to-square" style="color: #2c5395"></i>
+                            </button>
+                            <button class="cancelButton" id="cancelButton3" onclick="cancelEdit('editable-paragraph3', 'editButton3')" style="display: none">
+                                <i class="fa-solid fa-x fa-2xs" style="color: #ff0000"></i>
+                            </button>
+                            <button class="saveButton" id="saveButton3" onclick="saveEdit('editable-paragraph3', 'editButton3')" style="display: none">
+                                <i class="fa-solid fa-check fa-2xs" style="color: #00ff11"></i>
+                            </button>
+                        </div>
+                        <p class="account-info-text" id="editable-paragraph3" contenteditable="false">
+                            Human Resource
+                        </p>
+                    </div>
+                    <div class="account-info-container">
+                        <div class="account-info">
+                            <p class="info-type">Contact Number</p>
+                            <button class="editButton" id="editButton4" onclick="toggleEditMode('editable-paragraph4', 'editButton4')">
+                                <i class="fa-regular fa-pen-to-square" style="color: #2c5395"></i>
+                            </button>
+                            <button class="cancelButton" id="cancelButton4" onclick="cancelEdit('editable-paragraph4', 'editButton4')" style="display: none">
+                                <i class="fa-solid fa-x fa-2xs" style="color: #ff0000"></i>
+                            </button>
+                            <button class="saveButton" id="saveButton4" onclick="saveEdit('editable-paragraph4', 'editButton4')" style="display: none">
+                                <i class="fa-solid fa-check fa-2xs" style="color: #00ff11"></i>
+                            </button>
+                        </div>
+                        <p class="account-info-text" id="editable-paragraph4" contenteditable="false">
+                            082383929463
+                        </p>
+                    </div>
                 </div>
                 <div>
                     <p class="info-title">Company Information</p>
-                    <p class="info-type">Company Name</p>
-                    <p class="info-type">Number of Employee</p>
-                    <p class="info-type">Company Location</p>
+                    <div class="account-info-container">
+                        <div class="account-info">
+                            <p class="info-type">Company Name</p>
+                            <button class="editButton" id="editButton5" onclick="toggleEditMode('editable-paragraph5', 'editButton5')">
+                                <i class="fa-regular fa-pen-to-square" style="color: #2c5395"></i>
+                            </button>
+                            <button class="cancelButton" id="cancelButton5" onclick="cancelEdit('editable-paragraph5', 'editButton5')" style="display: none">
+                                <i class="fa-solid fa-x fa-2xs" style="color: #ff0000"></i>
+                            </button>
+                            <button class="saveButton" id="saveButton5" onclick="saveEdit('editable-paragraph5', 'editButton5')" style="display: none">
+                                <i class="fa-solid fa-check fa-2xs" style="color: #00ff11"></i>
+                            </button>
+                        </div>
+                        <p class="account-info-text" id="editable-paragraph5" contenteditable="false">
+                            PT. Efrata Mintra Sejahtera
+                        </p>
+                    </div>
+                    <div class="account-info-container">
+                        <div class="account-info">
+                            <p class="info-type">Number of Employee</p>
+                            <button class="editButton" id="editButton6" onclick="toggleEditMode('editable-paragraph6', 'editButton6')">
+                                <i class="fa-regular fa-pen-to-square" style="color: #2c5395"></i>
+                            </button>
+                            <button class="cancelButton" id="cancelButton6" onclick="cancelEdit('editable-paragraph6', 'editButton6')" style="display: none">
+                                <i class="fa-solid fa-x fa-2xs" style="color: #ff0000"></i>
+                            </button>
+                            <button class="saveButton" id="saveButton6" onclick="saveEdit('editable-paragraph6', 'editButton6')" style="display: none">
+                                <i class="fa-solid fa-check fa-2xs" style="color: #00ff11"></i>
+                            </button>
+                        </div>
+                        <p class="account-info-text" id="editable-paragraph6" contenteditable="false">
+                            21 to 50
+                        </p>
+                    </div>
+                    <div class="account-info-container">
+                        <div class="account-info">
+                            <p class="info-type">Company Location Name</p>
+                            <button class="editButton" id="editButton7" onclick="toggleEditMode('editable-paragraph7', 'editButton7')">
+                                <i class="fa-regular fa-pen-to-square" style="color: #2c5395"></i>
+                            </button>
+                            <button class="cancelButton" id="cancelButton7" onclick="cancelEdit('editable-paragraph7', 'editButton7')" style="display: none">
+                                <i class="fa-solid fa-x fa-2xs" style="color: #ff0000"></i>
+                            </button>
+                            <button class="saveButton" id="saveButton7" onclick="saveEdit('editable-paragraph7', 'editButton7')" style="display: none">
+                                <i class="fa-solid fa-check fa-2xs" style="color: #00ff11"></i>
+                            </button>
+                        </div>
+                        <p class="account-info-text" id="editable-paragraph7" contenteditable="false">
+                            Jl. Pilang Sari Endah Blok A No.41, Cirebon, Indonesia.
+                        </p>
+                    </div>
                 </div>
             </div>
             <div class="content website-setting" id="content2">
-                <h2>Content 2</h2>
-                <p>This is the content for Tab 2.</p>
-                <p>It can have multiple paragraphs.</p>
+                <p class="info-title">Website Setting</p>
+                <p class="account-info-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce auctor nec ligula nec sodales. Nulla bibendum massa eget dolor ultrices, ac sagittis enim vehicula. Quisque quis cursus leo. Fusce sit amet malesuada quam. Aenean convallis, metus eget sollicitudin molestie, ex felis egestas libero, sed porta lacus quam eget dolor. Vivamus fermentum semper auctor. Phasellus feugiat scelerisque dui. Ut id dui efficitur, euismod sapien eget, scelerisque dolor. Maecenas nec justo egestas, finibus metus eget, molestie leo. Integer nisl nunc, venenatis quis ligula ac, congue egestas nulla. Sed vestibulum rutrum ipsum, id consectetur nulla viverra sed. Etiam justo metus, egestas eu nibh faucibus, tempor rutrum mauris. Nam ornare tristique velit, a aliquam magna aliquam ut. Nullam vel sem vel urna convallis cursus a vel lorem. Vestibulum pretium ut orci semper sagittis. Morbi eget convallis tortor.</p>
             </div>
             <div class="content account-setting" id="content3">
-                <h2>Content 3</h2>
-                <p>This is the content for Tab 3.</p>
-                <p>It can have different lengths of content.</p>
-                <p>It can dynamically adjust the container height.</p>
+
+                <img class="change-pass-img" src="../assets/logo.png" alt="">
+                <p class="title no-margin">Change Password</p>
+                <p class="change-pass-text">Your new password must be different
+                    from previous used passwords
+                </p>
+                <div class="input-container">
+                    <div class="form-floating">
+                        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                        <label for="floatingPassword">Current Password</label>
+                    </div>
+                    <div class="form-floating">
+                        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                        <label for="floatingPassword">New Password</label>
+                    </div>
+                    <div class="form-floating">
+                        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                        <label for="floatingPassword">Confirm New Password</label>
+                    </div>
+                </div>
+                <button class="change-pass">Change Password</button>
             </div>
             <div class="content help-centre" id="content4">
-                <h2>Content 4</h2>
-                <p>This is the content for Tab 4.</p>
-                <p>It can have different lengths of content.</p>
-                <p>It can dynamically adjust the container height.</p>
-                <p>Are you satisfied with the way the world is?</p>
+                <p class="info-title">Help Centre</p>
+                <p class="account-info-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce auctor nec ligula nec sodales. Nulla bibendum massa eget dolor ultrices, ac sagittis enim vehicula. Quisque quis cursus leo. Fusce sit amet malesuada quam. Aenean convallis, metus eget sollicitudin molestie, ex felis egestas libero, sed porta lacus quam eget dolor. Vivamus fermentum semper auctor. Phasellus feugiat scelerisque dui. Ut id dui efficitur, euismod sapien eget, scelerisque dolor. Maecenas nec justo egestas, finibus metus eget, molestie leo. Integer nisl nunc, venenatis quis ligula ac, congue egestas nulla. Sed vestibulum rutrum ipsum, id consectetur nulla viverra sed. Etiam justo metus, egestas eu nibh faucibus, tempor rutrum mauris. Nam ornare tristique velit, a aliquam magna aliquam ut. Nullam vel sem vel urna convallis cursus a vel lorem. Vestibulum pretium ut orci semper sagittis. Morbi eget convallis tortor.</p>
             </div>
         </div>
     </main>
