@@ -3,6 +3,9 @@
 use App\Http\Controllers\TalentController;
 use App\Http\Controllers\CompController;
 use App\Http\Controllers\GeneralController;
+use App\Http\Controllers\SkillController;
+use App\Http\Controllers\CityController;
+use App\Http\Controllers\ProvinceController;
 use App\Models\Skills;
 use Illuminate\Support\Facades\Route;
 
@@ -50,17 +53,8 @@ Route::get('/dtltalent', [TalentController::class, 'detailJob'])->name('detailJo
 //Detail Company Profile
 Route::get('/companyprofile', [CompController::class, 'companyProfile'])->name('companyProfile');
 
-//Testing Form Input Database
-Route::get('/tryform', [GeneralController::class, 'cthForm'])->name('cthForm');
-
-//Testing Form Input Database
-Route::post('/create', function ($id) {
-    $skill = new skills();
-    $skill->skill_name = request('skillname');
-    $skill->save();
-});
-
-use App\Http\Controllers\SkillController;
+//Register Company
+Route::get('/rgtcompany', [CompController::class, 'rgtComp'])->name('rgtComp');
 
 // Display the form
 Route::get('/skills/create', [SkillController::class, 'create'])->name('skills.create');
@@ -68,18 +62,16 @@ Route::get('/skills/create', [SkillController::class, 'create'])->name('skills.c
 // Handle the form submission
 Route::post('/skills', [SkillController::class, 'store'])->name('skills.store');
 
-use App\Http\Controllers\ProvinceController;
-
 // Display the form
 Route::get('/provinces/create', [ProvinceController::class, 'create'])->name('provinces.create');
 
 // Handle the form submission
 Route::post('/provinces', [ProvinceController::class, 'store'])->name('provinces.store');
 
-use App\Http\Controllers\CityController;
-
+// Display the form
 Route::get('/cities/create', [CityController::class, 'create'])->name('city.create');
 
+// Handle the form submission
 Route::post('/cities', [CityController::class, 'store'])->name('city.store');
 
 

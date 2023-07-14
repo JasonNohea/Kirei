@@ -12,7 +12,4 @@ class GeneralController extends Controller
     public function aboutComp(){
         return view('aboutComp'); //buka file about.php di resource/views
     }
-    public function cthForm(){
-        return view('contohform'); //buka file about.php di resource/views
-    }
 }
