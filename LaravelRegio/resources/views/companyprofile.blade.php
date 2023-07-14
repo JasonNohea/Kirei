@@ -17,7 +17,8 @@
     <script src="https://kit.fontawesome.com/5109247c85.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="../js/companyProfile.js"></script>
-    <title>Document</title>
+    <script src="../js/editfield.js"></script>
+    <title>Setting</title>
 </head>
 
 <body>
@@ -92,22 +93,33 @@
 
         </div>
         <div class="profile-container" id="container">
-            <div class="content show" id="content1">
-                <h2>Content 1</h2>
-                <p>This is the content for Tab 1.</p>
+            <div class="content show personal-info" id="content1">
+                <div>
+                    <p class="info-title">Personal Information</p>
+                    <p class="info-type">First Name</p>
+                    <p class="info-type">Last Name</p>
+                    <p class="info-type">Position</p>
+                    <p class="info-type">Contact Number</p>
+                </div>
+                <div>
+                    <p class="info-title">Company Information</p>
+                    <p class="info-type">Company Name</p>
+                    <p class="info-type">Number of Employee</p>
+                    <p class="info-type">Company Location</p>
+                </div>
             </div>
-            <div class="content" id="content2">
+            <div class="content website-setting" id="content2">
                 <h2>Content 2</h2>
                 <p>This is the content for Tab 2.</p>
                 <p>It can have multiple paragraphs.</p>
             </div>
-            <div class="content" id="content3">
+            <div class="content account-setting" id="content3">
                 <h2>Content 3</h2>
                 <p>This is the content for Tab 3.</p>
                 <p>It can have different lengths of content.</p>
                 <p>It can dynamically adjust the container height.</p>
             </div>
-            <div class="content" id="content4">
+            <div class="content help-centre" id="content4">
                 <h2>Content 4</h2>
                 <p>This is the content for Tab 4.</p>
                 <p>It can have different lengths of content.</p>
