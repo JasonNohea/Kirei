@@ -123,8 +123,9 @@ width: 100%;
 }
 .content {
     width: 100%;
-    height: 100%;
-    max-height: max-content;
+    height: auto;
+    /* min-height: max-content; */
+    padding-bottom: 5%;
     padding-top: 3%;
     background-color: white;
     border-radius: 10px;
@@ -132,24 +133,14 @@ width: 100%;
   
 .wrapper{
     margin-left: 5%;
-    height: 100%;
-    max-height: fit-content;
+    /* max-height: fit-content; */
 }
 
 #content2,
 #content3 {
     display: none;
-    background-color: white;
 }
   
-/* #content2 {
-background-color: white;
-}
-  
-#content3 {
-background-color: white;
-} */
-
 .jobs-title-header {
     display: flex;
     flex-direction: row;
