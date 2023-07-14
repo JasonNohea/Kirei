@@ -19,6 +19,7 @@
   <script src="../js/mainpage.js"></script>
   <script src="../js/navigationswitch.js"></script>
   <script src="../js/EditProject.js"></script>
+  <script src="../js/editfield.js"></script>
   <title>Project Detail</title>
 </head>
 
@@ -79,11 +80,11 @@
                 <button class="editButton" id="editButton" onclick="toggleEditMode('editable-paragraph1', 'editButton')">
                   <i class="fa-regular fa-pen-to-square" style="color: #2c5395"></i>
                 </button>
-                <button class="saveButton" id="saveButton" onclick="saveEdit('editable-paragraph1', 'editButton')" style="display: none">
-                  <i class="fa-solid fa-check fa-2xs" style="color: #00ff11"></i>
-                </button>
                 <button class="cancelButton" id="cancelButton" onclick="cancelEdit('editable-paragraph1', 'editButton')" style="display: none">
                   <i class="fa-solid fa-x fa-2xs" style="color: #ff0000"></i>
+                </button>
+                <button class="saveButton" id="saveButton" onclick="saveEdit('editable-paragraph1', 'editButton')" style="display: none">
+                  <i class="fa-solid fa-check fa-2xs" style="color: #00ff11"></i>
                 </button>
               </div>
               <p class="project-info-text" id="editable-paragraph1" contenteditable="false">
@@ -96,11 +97,11 @@
                 <button class="editButton" id="editButton2" onclick="toggleEditMode('editable-paragraph2', 'editButton2')">
                   <i class="fa-regular fa-pen-to-square" style="color: #2c5395"></i>
                 </button>
-                <button class="saveButton" id="saveButton2" onclick="saveEdit('editable-paragraph2', 'editButton2')" style="display: none">
-                  <i class="fa-solid fa-check fa-2xs" style="color: #00ff11"></i>
-                </button>
                 <button class="cancelButton" id="cancelButton2" onclick="cancelEdit('editable-paragraph2', 'editButton2')" style="display: none">
                   <i class="fa-solid fa-x fa-2xs" style="color: #ff0000"></i>
+                </button>
+                <button class="saveButton" id="saveButton2" onclick="saveEdit('editable-paragraph2', 'editButton2')" style="display: none">
+                  <i class="fa-solid fa-check fa-2xs" style="color: #00ff11"></i>
                 </button>
               </div>
               <p class="project-info-text" id="editable-paragraph2" contenteditable="false">
@@ -113,11 +114,11 @@
                 <button class="editButton" id="editButton3" onclick="toggleEditMode('editable-paragraph3', 'editButton3')">
                   <i class="fa-regular fa-pen-to-square" style="color: #2c5395"></i>
                 </button>
-                <button class="saveButton" id="saveButton3" onclick="saveEdit('editable-paragraph3', 'editButton3')" style="display: none">
-                  <i class="fa-solid fa-check fa-2xs" style="color: #00ff11"></i>
-                </button>
                 <button class="cancelButton" id="cancelButton3" onclick="cancelEdit('editable-paragraph3', 'editButton3')" style="display: none">
                   <i class="fa-solid fa-x fa-2xs" style="color: #ff0000"></i>
+                </button>
+                <button class="saveButton" id="saveButton3" onclick="saveEdit('editable-paragraph3', 'editButton3')" style="display: none">
+                  <i class="fa-solid fa-check fa-2xs" style="color: #00ff11"></i>
                 </button>
               </div>
               <p class="project-info-text" id="editable-paragraph3" contenteditable="false">
@@ -130,11 +131,12 @@
                 <button class="editButton" id="editButton4" onclick="toggleEditMode('editable-paragraph4', 'editButton4')">
                   <i class="fa-regular fa-pen-to-square" style="color: #2c5395"></i>
                 </button>
-                <button class="saveButton" id="saveButton4" onclick="saveEdit('editable-paragraph4', 'editButton4')" style="display: none">
-                  <i class="fa-solid fa-check fa-2xs" style="color: #00ff11"></i>
-                </button>
+
                 <button class="cancelButton" id="cancelButton4" onclick="cancelEdit('editable-paragraph4', 'editButton4')" style="display: none">
                   <i class="fa-solid fa-x fa-2xs" style="color: #ff0000"></i>
+                </button>
+                <button class="saveButton" id="saveButton4" onclick="saveEdit('editable-paragraph4', 'editButton4')" style="display: none">
+                  <i class="fa-solid fa-check fa-2xs" style="color: #00ff11"></i>
                 </button>
               </div>
               <p class="project-info-text" id="editable-paragraph4" contenteditable="false">
@@ -147,11 +149,11 @@
                 <button class="editButton" id="editButton5" onclick="toggleEditMode('editable-paragraph5', 'editButton5')">
                   <i class="fa-regular fa-pen-to-square" style="color: #2c5395"></i>
                 </button>
-                <button class="saveButton" id="saveButton5" onclick="saveEdit('editable-paragraph5', 'editButton5')" style="display: none">
-                  <i class="fa-solid fa-check fa-2xs" style="color: #00ff11"></i>
-                </button>
                 <button class="cancelButton" id="cancelButton5" onclick="cancelEdit('editable-paragraph5', 'editButton5')" style="display: none">
                   <i class="fa-solid fa-x fa-2xs" style="color: #ff0000"></i>
+                </button>
+                <button class="saveButton" id="saveButton5" onclick="saveEdit('editable-paragraph5', 'editButton5')" style="display: none">
+                  <i class="fa-solid fa-check fa-2xs" style="color: #00ff11"></i>
                 </button>
               </div>
               <p class="project-info-text" id="editable-paragraph5" contenteditable="false">
@@ -168,11 +170,11 @@
                 <button class="editButton edit-button" onclick="showButtonImg()">
                   <i class="fa-regular fa-pen-to-square" style="color: #2c5395"></i>
                 </button>
-                <button class="saveButton save-button" style="display: none">
-                  <i class="fa-solid fa-check fa-2xs" style="color: #00ff11"></i>
-                </button>
                 <button class="cancelButton cancel-button" style="display: none">
                   <i class="fa-solid fa-x fa-2xs" style="color: #ff0000"></i>
+                </button>
+                <button class="saveButton save-button" style="display: none">
+                  <i class="fa-solid fa-check fa-2xs" style="color: #00ff11"></i>
                 </button>
               </div>
               <div class="project-img">
@@ -195,11 +197,11 @@
                 <button id="editBtnQ" class="editquantity" onclick="toggleEditQ()">
                   <i class="fa-regular fa-pen-to-square" style="color: #2c5395"></i>
                 </button>
-                <button class="saveButton" id="saveBtnQ" onclick="saveEditQ()" style="display: none">
-                  <i class="fa-solid fa-check fa-2xs" style="color: #00ff11"></i>
-                </button>
                 <button class="cancelButton" id="cancelBtnQ" onclick="cancelEditQ()" style="display: none">
                   <i class="fa-solid fa-x fa-2xs" style="color: #ff0000"></i>
+                </button>
+                <button class="saveButton" id="saveBtnQ" onclick="saveEditQ()" style="display: none">
+                  <i class="fa-solid fa-check fa-2xs" style="color: #00ff11"></i>
                 </button>
               </div>
               <div class="quantity">
@@ -273,11 +275,11 @@
                 <button class="editButton" id="editButton6" onclick="toggleEditMode('editable-paragraph6', 'editButton6')">
                   <i class="fa-regular fa-pen-to-square" style="color: #2c5395"></i>
                 </button>
-                <button class="saveButton" id="saveButton6" onclick="saveEdit('editable-paragraph6', 'editButton6')" style="display: none">
-                  <i class="fa-solid fa-check fa-2xs" style="color: #00ff11"></i>
-                </button>
                 <button class="cancelButton" id="cancelButton6" onclick="cancelEdit('editable-paragraph6', 'editButton6')" style="display: none">
                   <i class="fa-solid fa-x fa-2xs" style="color: #ff0000"></i>
+                </button>
+                <button class="saveButton" id="saveButton6" onclick="saveEdit('editable-paragraph6', 'editButton6')" style="display: none">
+                  <i class="fa-solid fa-check fa-2xs" style="color: #00ff11"></i>
                 </button>
               </div>
               <p class="project-info-text" id="editable-paragraph6" contenteditable="false">

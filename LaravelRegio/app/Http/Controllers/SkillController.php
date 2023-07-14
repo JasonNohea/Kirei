@@ -9,7 +9,7 @@ class SkillController extends Controller
 {
     public function create()
     {
-        return view('contohform');
+        return view('formskill');
     }
 
     public function store(Request $request)

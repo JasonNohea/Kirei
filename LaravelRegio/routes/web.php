@@ -68,5 +68,18 @@ Route::get('/skills/create', [SkillController::class, 'create'])->name('skills.c
 // Handle the form submission
 Route::post('/skills', [SkillController::class, 'store'])->name('skills.store');
 
+use App\Http\Controllers\ProvinceController;
+
+// Display the form
+Route::get('/provinces/create', [ProvinceController::class, 'create'])->name('provinces.create');
+
+// Handle the form submission
+Route::post('/provinces', [ProvinceController::class, 'store'])->name('provinces.store');
+
+use App\Http\Controllers\CityController;
+
+Route::get('/cities/create', [CityController::class, 'create'])->name('city.create');
+
+Route::post('/cities', [CityController::class, 'store'])->name('city.store');
 
 
