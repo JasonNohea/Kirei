@@ -34,8 +34,13 @@
             <h1> Register </h1>
             <hr>
             <input type="text" placeholder=" First Name" name="fname" id="fname" required>
-            <hr>
             <input type="text" placeholder=" Last Name" name="lname" id="lname" required>
+            <hr>
+            <select>
+                <option> Male </option>
+                <option> Female </option>
+                <option> Prefer not to say </option>
+            </select>
             <hr>
             <input type="email" placeholder=" Email" name="email" id="email" required>        
             <hr>
