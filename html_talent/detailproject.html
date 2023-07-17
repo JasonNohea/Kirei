@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../bootstrap-css/main.css" />
     <link rel="stylesheet" href="../css/newnav.css" />
     <!-- <link rel="stylesheet" href="../bootstrap-css/navloggedin.css" -->
-    <link rel="stylesheet" href="../css/profiltalent.css" />
+    <link rel="stylesheet" href="../css/progproject.css" />
 
     <!-- Font & Script & Bootstrap -->
 
@@ -27,12 +27,14 @@
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <!-- <script src="../js/mainpage.js"></script> -->
-    <!-- <script src="../js/tabcontenttalent.js"></script> -->
+    <script src="../js/tabcontenttalent.js"></script>
     <script>
       // Get the element with id="defaultOpen" and click on it
       document.getElementById("defaultOpen").click();
     </script>
-    <script>
+
+    <!-- Script Pindah Tab -->
+    <!-- <script>
         const tabs = document.querySelectorAll(".tab");
         tabs.forEach(tab => {
         tab.addEventListener('click', function() {
@@ -41,7 +43,7 @@
             this.classList.add("active");
         })
         })
-    </script>
+    </script> -->
     <title> RegiO - Job Portal di Indonesia </title>
 </head>
 <body>
@@ -514,41 +516,105 @@
         </div>
     </div>
 
-    <div class="navigation-tab">
-        <div class="tab-project">
-          <a
-            class="tab active"
-            id="tab1"
-            onclick="showContent('content1', 'tab1', event);"
-            href="#"
-            > Phase 1 </a>
-          <a
-            class="tab"
-            id="tab2"
-            onclick="showContent('content2', 'tab2', event);"
-            href="#"
-            > Phase 2 </a
-          >
-          <a
-            class="tab"
-            id="tab3"
-            onclick="showContent('content3', 'tab3', event);"
-            href="#"
-            > Phase 3 </a
-          >
+    <main>
+        <div class="wrapper-content">
+            <div class="navigation-tab">
+                <div class="tab-project">
+                <a
+                    class="tab active"
+                    id="tab1"
+                    onclick="showContent('content1', 'tab1', event);"
+                    href="#"
+                    > Project Info </a
+                >
+                <a
+                    class="tab active"
+                    id="tab2"
+                    onclick="showContent('content2', 'tab1', event);"
+                    href="#"
+                    > Phase 1 </a
+                >
+                <a
+                    class="tab"
+                    id="tab3"
+                    onclick="showContent('content3', 'tab2', event);"
+                    href="#"
+                    > Phase 2 </a
+                >
+                <a
+                    class="tab"
+                    id="tab4"
+                    onclick="showContent('content4', 'tab3', event);"
+                    href="#"
+                    > Phase 3 </a
+                >
+                <a
+                    class="tab"
+                    id="tab5"
+                    onclick="showContent('content5', 'tab4', event);"
+                    href="#"
+                    > Phase 4 </a
+                >
+                </div>
+            </div>
+
+            <div class="content" id="content1">
+                <p class="detail-jobs-title"> Networking Model Implementasion </p>
+                <p class="detail-jobs-head"> Location </p>
+                <p class="detail-jobs-desc"> Wirosari, Jawa Tengah, Indonesia </p>
+                <p class="detail-jobs-head"> Work Date </p>
+                <p class="detail-jobs-desc"> 29 May 2023 - 30 July 2023 </p>
+                <p class="detail-jobs-head"> Company </p>
+                <p class="detail-jobs-desc"> PT. XQC </p>
+                <p class="detail-jobs-head"> Description </p>
+                <p class="detail-jobs-desc"> Memasang plumbing untuk pembangunan Apartement baru. </p>
+                <p class="detail-jobs-head"> Requirement </p>
+                <p class="detail-jobs-desc"> Orang yang sudah ahli pada bidang pembangunan dan arsitektur:
+                    Design alur pipa.
+                    Perencanaan pembangunan.
+                    Bisa menyesuaikan dengan waktu kerja yang telah ditetapkan.
+                </p>
+                <p class="detail-jobs-head"> Photo </p>
+            </div>
+
+            <div class="content" id="content2">
+
+            </div>
+
+            <div class="content" id="content3">
+
+            </div>
         </div>
+    </main>
+
+<!-- Footer -->
+<footer>
+    <div class="footer">
+      <div class="layar-dalam">
+        <div class="kiri">
+            <h5> Contact Us </h5>
+            <br>
+            <p>Email address : <span class="colorlink"> hi@regio.co.id </span><br>
+            Whatsapp Contact : 0823-2131-329 <br>
+            Qna : <span class="colorlink"> Feedback </span><br>
+          </p>
+        </div>
+        <div class="kanan">
+          <h5>Follow Us</h5>
+          <br> 
+            <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+      </div>
+      <div class="layar-dalam">
+        <div class="copyright">
+            Copyright &copy; 2023 Regio.</div>
+        </div>  
     </div>
-
-    <div class="content" id="content1">
-        <p> testing only </p>
-    </div>
-
-    <div class="content" id="content1">
-
-    </div>
-
-    <div class="content" id="content1">
-
-    </div>
+</footer> 
 </body>
 </html>

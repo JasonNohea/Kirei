@@ -1,0 +1,162 @@
+html,
+body {
+width: 100%;
+height: 100%;
+margin: 0;
+}
+
+.name {
+    margin-left: 156px;
+    width: 15%;
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+}
+
+.edit {
+    margin-left: auto;
+    color: #31348D;
+}
+
+main {
+    margin-top: 5%;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navigation-tab {
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    background-color: white;
+    border-radius: 12px 12px 0px 0px;
+}
+  
+/* .line-container {
+    width: 100%;
+} */
+
+/* .underline {
+    background-color: #000;
+    transition: transform 0.3s ease-out;
+    transform: translateX(0);
+} */
+
+.tab-project {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    font-size: 10px;
+}
+  
+.tab-project a{
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+    width: 100%;
+    min-width: fit-content;
+    /* border-left-style: solid; */
+    border-right-style: solid;
+    padding: 20px;
+}
+
+/* .tab-project a:active{
+    border-bottom: 5px solid #31348D;
+} */
+
+.content {
+    width: 100%;
+    /* height: auto; */
+    /* min-height: fit-content; */
+    padding-bottom: 5%;
+    padding-top: 3%;
+    background-color: white;
+    border-radius: 10px;
+}
+  
+.wrapper{
+    margin-left: 5%;
+    /* max-height: fit-content; */
+}
+
+#content2,
+#content3 {
+    display: none;
+}
+
+.detail-jobs-title {
+    color: #31348D;
+    margin-left: auto;
+    text-align: center;
+}
+ 
+.detail-jobs-head {
+    color: #31348D;
+}
+/* CSS Footer untuk Talent */
+
+.layar-dalam {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    justify-content: space-between;
+}
+  
+footer {
+    margin-top: auto;
+    padding-top: 2%;
+    padding-left: 100px;
+    color: black;
+    background-color: white;
+}
+  
+footer .layar-dalam div{
+    width: 100%;
+}
+  
+.kiri {
+    display: flex;
+    flex-direction: column;
+}
+  
+footer .layar-dalam h5{
+    margin-top: 0px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #31358A;
+}
+  
+footer .layar-dalam .copyright{
+    width: 100%;
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 2px solid #31348D;
+    text-align: center;
+}
+  
+.kanan .social-links a{
+    display: inline-block;
+    color: black;
+    height: 40px;
+    width: 40px;
+    margin:0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+}
+  
+.social-links a:hover{
+    color: white;
+    background-color:#001AFF;
+}
+
+.colorlink {
+    color : #001AFF;
+}
