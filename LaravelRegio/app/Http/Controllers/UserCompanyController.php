@@ -24,10 +24,11 @@ class UserCompanyController extends Controller
             'phone_number' => 'required',
             'company_name' => 'required',
             'address' => 'required',
+            'position' => 'required',
             'city' => 'required',
             'province' => 'required',
             'number_of_employee' => 'required|integer',
-            'profile_photo' => 'required',
+            //'profile_photo' => 'required',
         ]);
 
         // Store the user data
@@ -47,12 +48,13 @@ class UserCompanyController extends Controller
             'province_id' => '1', // Replace with the actual province ID
             'company_name' => $validatedData['company_name'],
             'address' => $validatedData['address'],
+            'position' => $validatedData['position'],
             'city' => $validatedData['city'],
             'province' => $validatedData['province'],
             'number_of_employee' => $validatedData['number_of_employee'],
-           // 'profile_photo' => $validatedData['profile_photo']->store('profile_photos', 'public'),
+           //'profile_photo' => $validatedData['profile_photo']->store('profile_photos', 'public'),
         ]);
 
-        return redirect()->route('users.store')->with('success', 'User and Company created successfully.');
+        return redirect()->route('createCompany')->with('success', 'User and Company created successfully.');
     }
 }

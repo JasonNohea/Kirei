@@ -17,6 +17,7 @@ class Company extends Model
         'province_id',
         'company_name',
         'address',
+        'position',
         'city',
         'province',
         'number_of_employee',
