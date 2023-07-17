@@ -66,7 +66,7 @@ Route::post('/create', function ($id) {
     $skill->save();
 });
 
-use App\Http\Controllers\SkillController;
+
 //Register Company
 Route::get('/rgtcompany', [CompController::class, 'rgtComp'])->name('rgtComp');
 
