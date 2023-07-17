@@ -49,9 +49,23 @@ Route::get('/cpdetailproject', [CompController::class, 'projectDetail'])->name('
 //Detail Job Talent
 Route::get('/dtltalent', [TalentController::class, 'detailJob'])->name('detailJob');
 
-//Detail Company Profile
+//Company Profile
 Route::get('/companyprofile', [CompController::class, 'companyProfile'])->name('companyProfile');
 
+//Company -> Talent Profile
+Route::get('/companytalentprofile', [CompController::class, 'companyTalentProfile'])->name('companyTalentProfile');
+
+//Testing Form Input Database
+Route::get('/tryform', [GeneralController::class, 'cthForm'])->name('cthForm');
+
+//Testing Form Input Database
+Route::post('/create', function ($id) {
+    $skill = new skills();
+    $skill->skill_name = request('skillname');
+    $skill->save();
+});
+
+use App\Http\Controllers\SkillController;
 //Register Company
 Route::get('/rgtcompany', [CompController::class, 'rgtComp'])->name('rgtComp');
 
@@ -72,5 +86,3 @@ Route::get('/cities/create', [CityController::class, 'create'])->name('city.crea
 
 // Handle the form submission
 Route::post('/cities', [CityController::class, 'store'])->name('city.store');
-
-
