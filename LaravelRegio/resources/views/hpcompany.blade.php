@@ -93,7 +93,7 @@
             </button>
           </div>
           <p class="gray-text">
-            Don't have an account?&nbsp;<a href="#" class="regist">Register</a>
+            Don't have an account?&nbsp;<a href="/rgtcompany" class="regist">Register</a>
           </p>
         </div>
       </form>

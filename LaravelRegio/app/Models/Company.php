@@ -12,8 +12,12 @@ class Company extends Model
     use HasFactory;
 
     protected $fillable = [
+        'user_id',
+        'city_id',
+        'province_id',
         'company_name',
         'address',
+        'position',
         'city',
         'province',
         'number_of_employee',
