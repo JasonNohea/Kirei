@@ -58,14 +58,6 @@ Route::get('/companytalentprofile', [CompController::class, 'companyTalentProfil
 //Testing Form Input Database
 Route::get('/tryform', [GeneralController::class, 'cthForm'])->name('cthForm');
 
-//Testing Form Input Database
-Route::post('/create', function ($id) {
-    $skill = new skills();
-    $skill->skill_name = request('skillname');
-    $skill->save();
-});
-
-
 //Register Company
 Route::get('/rgtcompany', [CompController::class, 'rgtComp'])->name('rgtComp');
 
