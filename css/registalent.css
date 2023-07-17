@@ -44,6 +44,11 @@ h1{
   border-radius: 15px;
 }
 
+#fname,#lname{
+  width: 148px;
+  display: inline
+}
+
 input:not(input[type="file"]){
   border: 1px solid black;
 }

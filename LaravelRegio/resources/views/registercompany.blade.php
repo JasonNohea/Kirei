@@ -634,7 +634,7 @@
                 id="in-pdesc"
                 placeholder="Description"
               ></textarea>
-              <label for="in-pdesc">Project Description</label>
+              <label for="in-pdesc">Project Location</label>
             </div>
           </div>
           <div class="second-form">

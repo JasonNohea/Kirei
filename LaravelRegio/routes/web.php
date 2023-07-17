@@ -6,7 +6,6 @@ use App\Http\Controllers\GeneralController;
 use App\Http\Controllers\SkillController;
 use App\Http\Controllers\CityController;
 use App\Http\Controllers\ProvinceController;
-use App\Models\Skills;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -70,20 +69,26 @@ Route::post('/create', function ($id) {
 //Register Company
 Route::get('/rgtcompany', [CompController::class, 'rgtComp'])->name('rgtComp');
 
-// Display the form
+// Display the skill form
 Route::get('/skills/create', [SkillController::class, 'create'])->name('skills.create');
 
 // Handle the form submission
 Route::post('/skills', [SkillController::class, 'store'])->name('skills.store');
 
-// Display the form
+// Display the province form
 Route::get('/provinces/create', [ProvinceController::class, 'create'])->name('provinces.create');
 
 // Handle the form submission
 Route::post('/provinces', [ProvinceController::class, 'store'])->name('provinces.store');
 
-// Display the form
+// Display the city form
 Route::get('/cities/create', [CityController::class, 'create'])->name('city.create');
 
 // Handle the form submission
 Route::post('/cities', [CityController::class, 'store'])->name('city.store');
+
+use App\Http\Controllers\UserCompanyController;
+
+Route::get('/users/createComp', [UserCompanyController::class, 'createCompany'])->name('createCompany');
+
+Route::post('/users', [UserCompanyController::class, 'store'])->name('users.store');

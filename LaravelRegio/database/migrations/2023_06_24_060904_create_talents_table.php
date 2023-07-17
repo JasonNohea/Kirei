@@ -30,10 +30,10 @@ return new class extends Migration
             $table->string('skills');
             $table->string('preferences');
             $table->string('link_ig');
-            $table->string('iink_fb');
+            $table->string('link_fb');
             $table->string('link_linkedin');
-            $table->string('iink_twitter');
-            $table->string('profile_photo');
+            $table->string('link_twitter');
+            $table->string('profile_photo')->nullable();
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
