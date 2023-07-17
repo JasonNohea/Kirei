@@ -23,7 +23,7 @@ return new class extends Migration
             $table->string('city');
             $table->string('province');
             $table->integer('number_of_employee');
-            $table->string('profile_photo');
+            $table->string('profile_photo')->nullable();
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');

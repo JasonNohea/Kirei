@@ -69,6 +69,12 @@
     @error('number_of_employee')
         <div class="text-red-500">{{ $message }}</div>
     @enderror
+
+    <label for="profile_photo">Province:</label>
+    <input type="text" name="profile_photo" id="profile_photo" value="{{ old('profile_photo') }}">
+    @error('profile_photo')
+        <div class="text-red-500">{{ $message }}</div>
+    @enderror
 <!--
     <label for="profile_photo">Profile Photo:</label>
     <input type="file" name="profile_photo" id="profile_photo">
