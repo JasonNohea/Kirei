@@ -21,10 +21,17 @@ class CompController extends Controller
     }
     public function projectDetail()
     {
-        return view('companyprojectdetail'); //buka file jobposting.php di resource/views
+        return view('companyprojectdetail'); //buka file projectDetail.php di resource/views
     }
     public function companyProfile()
     {
-        return view('companyprofile'); //buka file jobposting.php di resource/views
+        return view('companyprofile'); //buka file companyProfile.php di resource/views
+    }
+    public function companyTalentProfile()
+    {
+        return view('company-talentprofile'); //buka file companytalentprofile.php di resource/views
+    }
+    public function rgtComp(){
+        return view('registercompany'); //buka file about.php di resource/views
     }
 }
