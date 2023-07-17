@@ -168,8 +168,8 @@
                 <div>
                     <p class="title">Social Media</p>
                     <div class="social-med">
-                        <i class="fa-brands fa-instagram fa-2xl"></i>
-                        <i class="fa-brands fa-facebook fa-2xl"></i>
+                        <i class="fa-brands fa-instagram fa-2xl" style="color: #31348d;"></i>
+                        <i class="fa-brands fa-facebook fa-2xl" style="color: #31348d;"></i>
                     </div>
                 </div>
             </div>
