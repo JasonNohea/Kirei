@@ -78,6 +78,35 @@
 
     <div>
         <label for="city">City:</label>
+        <select name="city" id="city">
+            @foreach ($cities as $city)
+                <option value="{{ $city->id }}" {{ old('city') == $city->id ? 'selected' : '' }}>
+                    {{ $city->city_name }}
+                </option>
+            @endforeach
+        </select>
+        @error('city')
+            <div class="text-red-500">{{ $message }}</div>
+        @enderror
+    </div>
+    
+    <div>
+        <label for="province">Province:</label>
+        <select name="province" id="province">
+            @foreach ($provinces as $province)
+                <option value="{{ $province->id }}" {{ old('province') == $province->id ? 'selected' : '' }}>
+                    {{ $province->province_name }}
+                </option>
+            @endforeach
+        </select>
+        @error('province')
+            <div class="text-red-500">{{ $message }}</div>
+        @enderror
+    </div>
+    
+    <!--
+    <div>
+        <label for="city">City:</label>
         <input type="text" name="city" id="city" value="{{ old('city') }}">
         @error('city')
             <div class="text-red-500">{{ $message }}</div>
@@ -91,7 +120,7 @@
             <div class="text-red-500">{{ $message }}</div>
         @enderror
     </div>
-
+-->
     <div>
         <label for="number_of_employee">Number of Employees:</label>
         <select name="number_of_employee" id="number_of_employee">
