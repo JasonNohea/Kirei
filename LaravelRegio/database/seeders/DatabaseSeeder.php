@@ -4,7 +4,9 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use Database\Seeders\CitiesSeeder;
+use Database\Seeders\CitiesSeeder; //call the seeder
+use Database\Seeders\ProvinceSeeder;
+use Database\Seeders\SkillsSeeder;
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -14,7 +16,9 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        $this->call(ProvinceSeeder::class); 
         $this->call(CitiesSeeder::class); //run CitiesSeeder when using 'php artisan db:seed'
+        $this->call(SkillsSeeder::class); 
         // Add more seeders as needed
     }
 }
