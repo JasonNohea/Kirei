@@ -27,7 +27,7 @@ class UserCompanyController extends Controller
             'position' => 'required',
             'city' => 'required',
             'province' => 'required',
-            'number_of_employee' => 'required|integer',
+            'number_of_employee' => 'required',
             //'profile_photo' => 'required',
         ]);
 

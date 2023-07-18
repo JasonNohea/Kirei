@@ -94,7 +94,15 @@
 
     <div>
         <label for="number_of_employee">Number of Employees:</label>
-        <input type="number" name="number_of_employee" id="number_of_employee" value="{{ old('number_of_employee') }}">
+        <select name="number_of_employee" id="number_of_employee">
+            <option value="1-20">1 to 20</option>
+            <option value="21-50">21 to 50</option>
+            <option value="51-100">51 to 100</option>
+            <option value="101-200">101 to 200</option>
+            <option value="201-500">201 to 500</option>
+            <option value="501-1000">501 to 1000</option>
+            <option value=">1000">More than 1000</option>
+        </select>
         @error('number_of_employee')
             <div class="text-red-500">{{ $message }}</div>
         @enderror
