@@ -1,0 +1,193 @@
+body {
+    min-height: 100vh;
+    background-color: #e0eaf6 !important;
+    overflow: auto;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+}
+
+.main-img {
+    background-image: url("../assets/aboutcomp.png");
+    background-repeat: no-repeat, repeat;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.img-landing {
+    width: 100%;
+    height: auto;
+}
+
+.landing-component {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 70%;
+    top: 25%;
+    left: 0%;
+}
+
+h1 {
+    color: white !important;
+    margin: auto auto 30px !important;
+    inset: 0;
+    font-size: 5.5vw !important;
+    text-align: center;
+    font-weight: 600 !important;
+}
+
+.large {
+    font-size: 10vw !important;
+}
+
+.section {
+    margin: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-title {
+    font-size: 5vw;
+    font-weight: 600;
+    text-align: center;
+    color: #0b0e73;
+}
+
+.about-text {
+    text-align: justify;
+    width: 95%;
+}
+.regio {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
+.regio > div > p:first-of-type {
+    font-size: 2.5vw;
+    font-weight: 700;
+    text-align: center;
+}
+
+.regio > div > p:nth-child(3) {
+    font-size: 1.3vw;
+    text-align: center;
+}
+
+.team-regio {
+    margin: auto;
+    inset: 0;
+    width: 94%;
+    height: 23vw;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    cursor: grab;
+}
+
+.team-regio::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+    background: transparent; /* make scrollbar transparent */
+}
+
+.team-regio img {
+    max-width: 200px;
+    max-height: 119px;
+}
+
+.team-member {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    margin: auto 10px;
+    box-shadow: 0px 2px 5px rgb(10, 10, 10, 0.4);
+    min-width: 18%;
+    width: 16%;
+    height: 70%;
+    border-radius: 20px;
+    align-items: center;
+}
+
+.team-translate {
+    transform: translateY(-30px);
+    margin: 0;
+}
+
+.team-name {
+    text-align: center;
+    color: #4a2dfa;
+    font-size: 1.4vw;
+    font-weight: 600;
+}
+
+.team-position {
+    text-align: center;
+    color: #646464;
+    font-size: 1.3vw;
+    font-weight: 500;
+}
+
+.team-sm {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.grab-scroll {
+    overflow: auto;
+    cursor: grab;
+    cursor: -webkit-grab;
+}
+
+.grab-scroll > * {
+    pointer-events: none;
+    user-select: none;
+}
+
+.grab-scroll:active {
+    cursor: grabbing;
+    cursor: -webkit-grabbing;
+}
+
+.visi-misi {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+}
+
+.visi-misi > div {
+    background-color: white;
+    border-radius: 20px;
+    width: 32%;
+    height: fit-content;
+}
+
+.visi-misi > div > p:first-child {
+    font-size: 2.5vw;
+    font-weight: 700;
+    margin: 20px;
+}
+
+.visi-misi > div > p:nth-child(2),
+.visi-misi > div > ul {
+    font-size: 1.3vw;
+    margin: 0 20px 10px;
+}
