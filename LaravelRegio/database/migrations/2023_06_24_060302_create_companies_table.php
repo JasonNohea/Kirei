@@ -21,9 +21,7 @@ return new class extends Migration
             $table->string('company_name');
             $table->string('address');
             $table->string('position');
-            $table->string('city');
-            $table->string('province');
-            $table->integer('number_of_employee');
+            $table->string('number_of_employee');
             $table->string('profile_photo')->nullable();
             $table->timestamps();
 

@@ -4,13 +4,17 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use App\Models\Company;
+use App\Models\City;
+use App\Models\Province;
 use Illuminate\Http\Request;
 
 class UserCompanyController extends Controller
 {
     public function createCompany()
     {
-        return view('formCreateCompany');
+        $cities = City::select('id', 'city_name')->get();
+        $provinces = Province::select('id', 'province_name')->get();
+        return view('formCreateCompany', compact('cities', 'provinces'));
     }
 
     public function store(Request $request)
@@ -25,9 +29,7 @@ class UserCompanyController extends Controller
             'company_name' => 'required',
             'address' => 'required',
             'position' => 'required',
-            'city' => 'required',
-            'province' => 'required',
-            'number_of_employee' => 'required|integer',
+            'number_of_employee' => 'required',
             //'profile_photo' => 'required',
         ]);
 
@@ -49,8 +51,6 @@ class UserCompanyController extends Controller
             'company_name' => $validatedData['company_name'],
             'address' => $validatedData['address'],
             'position' => $validatedData['position'],
-            'city' => $validatedData['city'],
-            'province' => $validatedData['province'],
             'number_of_employee' => $validatedData['number_of_employee'],
            //'profile_photo' => $validatedData['profile_photo']->store('profile_photos', 'public'),
         ]);

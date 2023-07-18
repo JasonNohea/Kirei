@@ -287,8 +287,8 @@
     </div>
   </div>
 
-  <!-- Talent Section -->  
-    <div class="main">
+  <!-- Talent Section -->
+  <div class="main">
     <div class="first-con grab-scroll">
       <div class="box-shadow">
         <div class="talent-con unselectable">
