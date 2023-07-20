@@ -1,5 +1,5 @@
 <!-- resources/views/users/create.blade.php -->
-<form action="{{ route('users.store') }}" method="POST">
+<form action="{{ route('users.store') }}" method="POST" enctype="multipart/form-data">
     @csrf
 
     <!-- User Information -->
@@ -75,7 +75,36 @@
             <div class="text-red-500">{{ $message }}</div>
         @enderror
     </div>
-
+    
+    <div>
+        <label for="city">City:</label>
+        <select name="city" id="city">
+            @foreach ($cities as $city)
+                <option value="{{ $city->id }}" {{ old('city') == $city->id || $loop->first ? 'selected' : '' }}>
+                    {{ $city->city_name }}
+                </option>
+            @endforeach
+        </select>
+        @error('city')
+            <div class="text-red-500">{{ $message }}</div>
+        @enderror
+    </div>
+    
+    <div>
+        <label for="province">Province:</label>
+        <select name="province" id="province">
+            @foreach ($provinces as $province)
+                <option value="{{ $province->id }}" {{ old('province') == $province->id || $loop->first ? 'selected' : '' }}>
+                    {{ $province->province_name }}
+                </option>
+            @endforeach
+        </select>
+        @error('province')
+            <div class="text-red-500">{{ $message }}</div>
+        @enderror
+    </div>
+    
+    <!--
     <div>
         <label for="city">City:</label>
         <select name="city" id="city">
@@ -103,7 +132,7 @@
             <div class="text-red-500">{{ $message }}</div>
         @enderror
     </div>
-    
+-->
     <!--
     <div>
         <label for="city">City:</label>
@@ -137,9 +166,20 @@
         @enderror
     </div>
 
+    <!--
     <div>
         <label for="profile_photo">Profile Photo:</label>
         <input type="text" name="profile_photo" id="profile_photo" value="{{ old('profile_photo') }}">
+        @error('profile_photo')
+            <div class="text-red-500">{{ $message }}</div>
+        @enderror
+    </div>
+    -->
+    
+    <!-- Add the following code for the profile photo input -->
+    <div>
+        <label for="profile_photo">Profile Photo:</label>
+        <input type="file" name="profile_photo" id="profile_photo">
         @error('profile_photo')
             <div class="text-red-500">{{ $message }}</div>
         @enderror
