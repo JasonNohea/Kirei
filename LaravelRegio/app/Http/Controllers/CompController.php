@@ -7,6 +7,8 @@ use App\Models\User;
 use App\Models\Company;
 use App\Models\City;
 use App\Models\Province;
+use Illuminate\Support\Facades\Storage;
+
 
 //Website URL Controller
 class CompController extends Controller
@@ -61,35 +63,31 @@ class CompController extends Controller
             'address' => 'required',
             'position' => 'required',
             'number_of_employee' => 'required',
-            'profile_photo' => 'required',
+            'profile_photo' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048', // Add the image validation rule
+            'city_id' => 'required|integer', // Add city_id validation
+            'province_id' => 'required|integer', // Add province_id validation
         ]);
 
-        // Store the user data
-        $user = User::create([
-            'user_type' => $validatedData['user_type'],
-            'first_name' => $validatedData['first_name'],
-            'last_name' => $validatedData['last_name'],
-            'email' => $validatedData['email'],
-            'password' => bcrypt($validatedData['password']),
-            'phone_number' => $validatedData['phone_number'],
-        ]);
-        
-        // Get the city and province IDs from the request, or default to 1
-        $cityId = $request->input('city', 1);
-        $provinceId = $request->input('province', 1);
+    // Store the user data
+    $user = User::create([
+        'user_type' => 'Company',
+        'first_name' => $validatedData['first_name'],
+        'last_name' => $validatedData['last_name'],
+        'email' => $validatedData['email'],
+        'password' => bcrypt($validatedData['password']),
+        'phone_number' => $validatedData['phone_number'],
+    ]);
 
-        // Store the company data
-        $company = Company::create([
-            'user_id' =>$user->id,
-            'city_id' => $cityId,
-            'province_id' => $provinceId,
-            'company_name' => $validatedData['company_name'],
-            'address' => $validatedData['address'],
-            'position' => $validatedData['position'],
-            'number_of_employee' => $validatedData['number_of_employee'],
-           'profile_photo' => $validatedData['profile_photo']->store('profile_photos', 'public'),
-        ]);
-        
-        return redirect()->route('createCompany')->with('success', 'User and Company created successfully.');
-    }
+    // Create the company record
+    $company = Company::create([
+        'user_id' => $user->id, // Assuming you have authentication and getting the user ID this way
+        'city_id' => $validatedData['city_id'],
+        'province_id' => $validatedData['province_id'],
+        'company_name' => $validatedData['company_name'],
+        'address' => $validatedData['address'],
+        'position' => $validatedData['position'],
+        'number_of_employee' => $validatedData['number_of_employee'],
+        'profile_photo' => $request->file('profile_photo'), // This will call the mutator in the Company model
+    ]);
+}
 }
