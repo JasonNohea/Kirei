@@ -79,8 +79,8 @@ Route::get('/cities/create', [CityController::class, 'create'])->name('city.crea
 // Handle the form submission
 Route::post('/cities', [CityController::class, 'store'])->name('city.store');
 
-use App\Http\Controllers\UserCompanyController;
+//Handle Register Company Form
 
-Route::get('/users/createComp', [UserCompanyController::class, 'createCompany'])->name('createCompany');
+Route::get('/users/createComp', [CompController::class, 'createCompany'])->name('createCompany');
 
-Route::post('/users', [UserCompanyController::class, 'store'])->name('users.store');
+Route::post('/users', [CompController::class, 'store'])->name('users.store');
