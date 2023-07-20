@@ -270,8 +270,8 @@
 
   <!-- Isi Konten About -->
   <main>
-    <img class="img-landing" src="../assets/aboutcomp.png" alt=" Landing" />
-    <div class="landing-component">
+    <img class="img-about" src="../assets/aboutcomp.png" alt=" about" />
+    <div class="about-title">
       <h1 class="main-text">
         FIND YOUR <br><span class="large">PERFECT TALENT</span>
       </h1>
@@ -434,6 +434,20 @@
       </div>
       <div>
         <p class="section-title">Contact Us</p>
+        <div class="contact-us">
+          <div class="contact-con">
+            <div></div>
+            <div></div>
+          </div>
+          <div class="qna-con">
+            <p>Question N Answer</p>
+            <div class="form-floating mb-3 question-con">
+              <textarea type="text" rows="4" cols="50" class="form-control" onkeyup="post();" id="in-pdesc " placeholder="Description"></textarea>
+              <label for="in-pdesc">Message...</label>
+            </div>
+            <button class="send-button">Send</button>
+          </div>
+        </div>
       </div>
     </div>
   </main>

@@ -47,7 +47,9 @@ class UserCompanyController extends Controller
         $company = Company::create([
             'user_id' =>$user->id,
             'city_id' => '1', // Replace with the actual city ID
-            'province_id' => '1', // Replace with the actual province ID
+            'province_id' => '1', // Replace with the actual pr
+            
+            ovince ID
             'company_name' => $validatedData['company_name'],
             'address' => $validatedData['address'],
             'position' => $validatedData['position'],
