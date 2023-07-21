@@ -21,17 +21,17 @@ main {
     align-items: flex-end;
 }
 
-.img-landing {
+.img-about {
     width: 100%;
     height: auto;
 }
 
-.landing-component {
+.about-title {
     position: absolute;
     display: flex;
     width: 100%;
     height: 70%;
-    top: 25%;
+    top: 14vw;
     left: 0%;
 }
 
@@ -190,4 +190,57 @@ h1 {
 .visi-misi > div > ul {
     font-size: 1.3vw;
     margin: 0 20px 10px;
+}
+
+.contact-us {
+    /* border: solid 1vw rgba(76, 41, 250, 0.3); */
+    margin: 5vw auto;
+    inset: 0;
+    width: 55%;
+    height: 20vw;
+    display: flex;
+    flex-direction: row;
+}
+
+.contact-con {
+    background-color: #0b0e73;
+    width: 18%;
+    height: 100%;
+}
+
+.qna-con {
+    background-color: white;
+    width: 83%;
+    height: 100%;
+}
+
+.qna-con > p {
+    font-size: 2.8vw;
+    font-weight: 700;
+    color: #0b0e73;
+    margin: 1vw;
+}
+
+.question-con {
+    margin-left: 20px;
+    width: 90% !important;
+    height: 40%;
+    resize: vertical;
+}
+
+textarea {
+    max-height: 110px;
+}
+
+.send-button {
+    border: none;
+    background-color: #515163;
+    color: white;
+    margin-left: 20px !important;
+    border-radius: 10px;
+    width: 15%;
+}
+
+.send-button:hover {
+    background-color: #0b0e73;
 }
