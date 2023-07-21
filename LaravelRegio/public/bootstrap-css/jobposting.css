@@ -345,8 +345,8 @@ input[type="number"] {
 .project-status {
     margin-left: auto;
     margin-bottom: auto;
-    width: 25%;
-    height: 20%;
+    width: 32%;
+    height: 24%;
     display: flex;
     justify-content: center;
     background-color: #00c700;

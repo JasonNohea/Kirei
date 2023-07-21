@@ -143,7 +143,7 @@ footer {
 
 .talent-con {
     width: 90% !important;
-    height: 90% !important;
+    height: fit-content !important;
 }
 
 .talent-header-info > * {
@@ -447,4 +447,40 @@ input[type="number"] {
     width: 80%;
     margin: auto;
     inset: 0;
+}
+
+.loading-container {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.loading-text::after {
+    content: "Loading";
+    animation: loadingAnimation 1.5s infinite steps(4);
+    display: inline-block;
+    overflow: hidden;
+}
+
+@keyframes loadingAnimation {
+    0% {
+        content: "Searching";
+    }
+    25% {
+        content: "Searching.";
+    }
+    50% {
+        content: "Searching..";
+    }
+    75% {
+        content: "Searching...";
+    }
+    100% {
+        content: "Searching";
+    }
+}
+
+/* Hide the content div initially */
+.content-talent {
+    display: none;
 }

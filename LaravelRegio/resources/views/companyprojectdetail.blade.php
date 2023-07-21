@@ -20,6 +20,7 @@
   <script src="../js/navigationswitch.js"></script>
   <script src="../js/EditProject.js"></script>
   <script src="../js/editfield.js"></script>
+  <script src="../js/loadingtalent.js"></script>
   <title>Project Detail</title>
 </head>
 
@@ -409,9 +410,19 @@
 
     </div>
     <div class="second-container">
-      <div class="talent-container">
+      <!-- Loading div -->
+      <div id="loading" class="loading">
+        <!-- Loading content here -->
+        <div class="loading-container">
+          <div class="loading-text"></div>
+        </div>
+      </div>
+
+      <!-- Content div -->
+      <!-- Content goes here -->
+      <div class="talent-container content-talent" id="content-talent">
         <p>Talent</p>
-        <div class="talent-con unselectable">
+        <div class="talent-con unselectable ">
           <div>
             <div class="talent-info">
               <div class="talent-header">
@@ -455,6 +466,7 @@
           </div>
         </div>
       </div>
+
 
       <div class="my-project">
         <p>My Project</p>
