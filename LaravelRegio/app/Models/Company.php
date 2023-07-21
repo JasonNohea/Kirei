@@ -11,7 +11,6 @@ use Illuminate\Support\Facades\Storage;
 class Company extends Model
 {
     use HasFactory;
-
     protected $fillable = [
         'user_id',
         'city_id',
@@ -36,6 +35,7 @@ class Company extends Model
         return $this->belongsTo(City::class);
     }
 
+    
  // Accessor to get the full URL of the profile photo
  public function getProfilePhotoUrlAttribute()
  {
@@ -48,7 +48,7 @@ class Company extends Model
  public function setProfilePhotoAttribute($value)
  {
      if ($value) {
-         $path = $value->store('profile_photos', 'public');
+         $path = $value->store('public/company_pfp'); // Update the path to 'public/company_pfp'
          $this->attributes['profile_photo'] = $path;
      }
  }

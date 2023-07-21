@@ -178,8 +178,8 @@
     
     <!-- Add the following code for the profile photo input -->
     <div>
-        <label for="profile_photo">Profile Photo:</label>
-        <input type="file" name="profile_photo" id="profile_photo">
+        <label for="profile_photo" class="form-label">Profile Photo:</label>
+        <input for="image" type="file" name="profile_photo" id="profile_photo">
         @error('profile_photo')
             <div class="text-red-500">{{ $message }}</div>
         @enderror

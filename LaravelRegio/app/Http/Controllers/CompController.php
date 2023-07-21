@@ -52,6 +52,8 @@ class CompController extends Controller
 
     public function store(Request $request)
     {
+        //ddd($request);
+
         $validatedData = $request->validate([
             'user_type' => 'required',
             'first_name' => 'required',
@@ -63,7 +65,7 @@ class CompController extends Controller
             'address' => 'required',
             'position' => 'required',
             'number_of_employee' => 'required',
-            'profile_photo' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048', // Add the image validation rule
+            'profile_photo' => 'nullable|image|mimes:jpeg,png,jpg,gif', // Add the image validation rule
             'city_id' => 'required|integer', // Add city_id validation
             'province_id' => 'required|integer', // Add province_id validation
         ]);
@@ -89,5 +91,7 @@ class CompController extends Controller
         'number_of_employee' => $validatedData['number_of_employee'],
         'profile_photo' => $request->file('profile_photo'), // This will call the mutator in the Company model
     ]);
-}
+    
+        return $request->file('profile_photo')->store('company_pfp');
+    }
 }
