@@ -19,7 +19,7 @@
 </head>
 
 <body>
-    <a><p class="cta-home">Back to Home</p></a>
+    <a href="/home_talent"><p class="cta-home">Back to Home</p></a>
     <div class="container">
 
         <!-- Floating Content -->
