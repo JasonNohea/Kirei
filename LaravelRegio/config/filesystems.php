@@ -41,14 +41,7 @@ return [
             'root' => storage_path('app/public'),
             'url' => env('APP_URL').'/storage',
             'visibility' => 'public',
-            //'driver' => 'local',
-            //'url' => env('APP_URL').'/storage',
-            //'throw' => false,
-            //'root' => public_path('storage'),
-            //'visibility' => 'public',
-            //'root' => storage_path('app/public'),
-            //'url' => env('APP_URL').'/storage',
-            //'visibility' => 'public',
+            'throw' => false,
         ],
 
         's3' => [
