@@ -3,7 +3,6 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
-use Illuminate\Support\Facades\Storage;
 
 return new class extends Migration
 {
@@ -24,7 +23,6 @@ return new class extends Migration
             $table->string('position');
             $table->string('number_of_employee');
             $table->string('profile_photo')->nullable();
-            $table->string('profile_photo_path')->nullable();
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');

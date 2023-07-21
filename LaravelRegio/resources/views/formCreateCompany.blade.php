@@ -1,5 +1,5 @@
 <!-- resources/views/users/create.blade.php -->
-<form action="{{ route('users.store') }}" method="POST">
+<form action="{{ route('users.store') }}" method="POST" enctype="multipart/form-data">
     @csrf
 
     <!-- User Information -->
@@ -166,9 +166,20 @@
         @enderror
     </div>
 
+    <!--
     <div>
         <label for="profile_photo">Profile Photo:</label>
         <input type="text" name="profile_photo" id="profile_photo" value="{{ old('profile_photo') }}">
+        @error('profile_photo')
+            <div class="text-red-500">{{ $message }}</div>
+        @enderror
+    </div>
+    -->
+    
+    <!-- Add the following code for the profile photo input -->
+    <div>
+        <label for="profile_photo" class="form-label">Profile Photo:</label>
+        <input for="image" type="file" name="profile_photo" id="profile_photo">
         @error('profile_photo')
             <div class="text-red-500">{{ $message }}</div>
         @enderror
