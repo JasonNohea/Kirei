@@ -85,14 +85,14 @@ class CompController extends Controller
         'password' => bcrypt($validatedData['password']),
         'phone_number' => $validatedData['phone_number'],
     ]);
-    dd($validatedData);
-    
+    //dd($validatedData);
+
     $profile_photo = null;
     if($request->file('profile_photo')){
        $profile_photo = $request->file('profile_photo')->store('company_pfp');
     }
 
-dd($profile_photo);
+//dd($profile_photo);
     // Create the company record
     $company = Company::create([
         'user_id' =>$user->id,
@@ -107,6 +107,6 @@ dd($profile_photo);
     //dd($validatedData);
     
     return redirect()->route('createCompany')->with('success', 'User and Company created successfully.');
-        //return $request->file('createCompany')->store('company_pfp');
+        
     }
 }
