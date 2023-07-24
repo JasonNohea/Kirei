@@ -122,7 +122,6 @@ main {
 
 .project-status {
     margin-left: auto;
-
     width: 35%;
     height: 20%;
     display: flex;
@@ -131,6 +130,10 @@ main {
     color: white;
     font-size: 1vw;
     border-radius: 0px 10px;
+}
+
+.project-status > p {
+    margin: auto;
 }
 
 .project-title {

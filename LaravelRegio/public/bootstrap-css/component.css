@@ -52,10 +52,6 @@ body {
     margin: auto;
 }
 
-.box-shadow {
-    margin-top: 5px;
-}
-
 .talent-con {
     background-color: white;
     max-width: fit-content;
@@ -68,9 +64,10 @@ body {
 
 .box-shadow {
     width: 46%;
-    height: 45%;
+    height: 49%;
     border-radius: 20px;
     transition: box-shadow 0.8s, background-color 0.8s;
+    margin-top: 5px;
 }
 
 .box-shadow:hover {

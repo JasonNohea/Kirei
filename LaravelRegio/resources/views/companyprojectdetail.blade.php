@@ -414,7 +414,10 @@
       <div id="loading" class="loading">
         <!-- Loading content here -->
         <div class="loading-container">
+          <p>Talent</p>
+          <img src="../assets/searching.png" alt="">
           <div class="loading-text"></div>
+          <p>deadline: <span>-</span></p>
         </div>
       </div>
 

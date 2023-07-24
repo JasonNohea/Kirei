@@ -125,15 +125,16 @@ footer {
     align-items: center;
 }
 
-.talent-container > p {
+.talent-container > p,
+.loading-container > p {
     font-size: 25px;
     font-weight: 700;
     text-align: center;
-    margin: 10px;
+    margin: 20px;
 }
 
 .talent-container > div {
-    margin: 15px;
+    margin: auto;
 }
 
 .my-project {
@@ -453,6 +454,28 @@ input[type="number"] {
     font-size: 24px;
     font-weight: bold;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.loading-container > img {
+    width: 18%;
+    height: auto;
+}
+
+.loading-container > div {
+    font-size: 1.5vw;
+    color: #0b0e73;
+    font-weight: 100;
+}
+
+.loading-container > p:nth-child(4) {
+    font-size: 1.2vw;
+    color: #727272;
+    font-weight: 100;
+    margin: 0;
+    margin-bottom: 10px;
 }
 
 .loading-text::after {
@@ -460,6 +483,12 @@ input[type="number"] {
     animation: loadingAnimation 1.5s infinite steps(4);
     display: inline-block;
     overflow: hidden;
+}
+
+.delete-button {
+    border: none;
+    background-color: #f2f2f2;
+    cursor: pointer;
 }
 
 @keyframes loadingAnimation {
