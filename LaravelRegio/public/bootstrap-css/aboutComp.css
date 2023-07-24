@@ -35,7 +35,7 @@ main {
     left: 0%;
 }
 
-h1 {
+.main-text {
     color: white !important;
     margin: auto auto 30px !important;
     inset: 0;
