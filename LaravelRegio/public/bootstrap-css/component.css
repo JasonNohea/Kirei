@@ -36,7 +36,7 @@ body {
     gap: 20px;
     row-gap: 40px;
     justify-content: center;
-    overflow: scroll;
+    overflow: auto;
     overflow-x: hidden;
     cursor: grab;
     padding: 10px;
@@ -139,7 +139,8 @@ body {
 .talent-status {
     margin-left: auto;
     margin-bottom: auto;
-    width: 40%;
+    width: fit-content;
+    padding: 5px 20px;
     display: flex;
     justify-content: center;
     background-color: #0f316a;
@@ -289,7 +290,7 @@ body {
 .project-first > p {
     width: fit-content;
     text-wrap: balance;
-    font-size: 15px;
+    font-size: 1vw;
     font-weight: 700;
     margin: 0 0 0 10px;
 }
@@ -297,10 +298,10 @@ body {
 .project-first > div {
     margin-left: auto;
     margin-bottom: auto;
-    width: fit-content;
-    min-width: 60px;
-    min-height: 20px;
-    height: 30%;
+    width: 6.9vw;
+    /* min-width: 5.5vw; */
+    /* min-height: 20px; */
+    height: 1.4vw;
     display: flex;
     justify-content: center;
     background-color: #00c700;
@@ -338,4 +339,69 @@ body {
 .my-project > a:hover {
     text-decoration: underline;
     font-weight: 700;
+}
+
+@media only screen and (max-width: 1650px) {
+    .project-first > div {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1280px) {
+    .main {
+        flex-direction: column;
+    }
+
+    .box-shadow {
+        width: 50vw;
+        height: 33vw;
+    }
+
+    .first-con {
+        flex-wrap: nowrap;
+        flex-direction: column;
+        align-items: center;
+        height: 1300vw;
+    }
+    .main {
+        height: 400vw;
+        align-items: center;
+    }
+
+    .talent-name,
+    .talent-skill,
+    .talent-desc,
+    .talent-request-logo,
+    .talent-request-text,
+    .talent-button > button,
+    .talent-status > p {
+        font-size: 2vw;
+    }
+
+    .my-project > p {
+        font-size: 3.5vw;
+    }
+    .project-first > p,
+    .my-project > a {
+        font-size: 2vw;
+    }
+
+    .project-second > p {
+        font-size: 1.6vw;
+    }
+
+    .second-con {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .my-project {
+        width: 50vw;
+    }
+
+    .my-project > a {
+        margin-top: auto;
+        margin-bottom: 10px;
+    }
 }

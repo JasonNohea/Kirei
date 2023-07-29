@@ -19,6 +19,10 @@ class CompController extends Controller
     {
         return view('hpcompany'); //buka file hometalent.php di resource/views
     }
+    public function hpCompanylog()
+    {
+        return view('hpLoggedIn'); //buka file hometalent.php di resource/views
+    }
     public function compProject()
     {
         return view('companyproject'); //buka file companyproject.php di resource/views
@@ -51,17 +55,17 @@ class CompController extends Controller
         $provinces = Province::select('id', 'province_name')->get();
         return view('formCreateCompany', compact('cities', 'provinces'));
     }
-    
+
 
     public function store(Request $request)
     {
         //dd($request);
-        
+
         //return $request;
         $validatedData = $request->validate([
             'user_type' => 'required',
-            'city_id'=>'required',
-            'province_id'=>'required',
+            'city_id' => 'required',
+            'province_id' => 'required',
             'first_name' => 'required',
             'last_name' => 'required',
             'email' => 'required|email|unique:users',
@@ -71,42 +75,41 @@ class CompController extends Controller
             'address' => 'required',
             'position' => 'required',
             'number_of_employee' => 'required',
-           
+
             'profile_photo' => 'nullable|image',
         ]);
         //dd($validatedData);
 
-    // Store the user data
-    $user = User::create([
-        'user_type' => $validatedData['user_type'],
-        'first_name' => $validatedData['first_name'],
-        'last_name' => $validatedData['last_name'],
-        'email' => $validatedData['email'],
-        'password' => bcrypt($validatedData['password']),
-        'phone_number' => $validatedData['phone_number'],
-    ]);
-    //dd($validatedData);
+        // Store the user data
+        $user = User::create([
+            'user_type' => $validatedData['user_type'],
+            'first_name' => $validatedData['first_name'],
+            'last_name' => $validatedData['last_name'],
+            'email' => $validatedData['email'],
+            'password' => bcrypt($validatedData['password']),
+            'phone_number' => $validatedData['phone_number'],
+        ]);
+        //dd($validatedData);
 
-    $profile_photo = null;
-    if($request->file('profile_photo')){
-       $profile_photo = $request->file('profile_photo')->store('company_pfp');
-    }
+        $profile_photo = null;
+        if ($request->file('profile_photo')) {
+            $profile_photo = $request->file('profile_photo')->store('company_pfp');
+        }
 
-//dd($profile_photo);
-    // Create the company record
-    $company = Company::create([
-        'user_id' =>$user->id,
-        'city_id' => $validatedData['city_id'], // Replace with the actual city ID
-        'province_id' => $validatedData['province_id'], // Replace with the actual province ID
-        'company_name' => $validatedData['company_name'],
-        'address' => $validatedData['address'],
-        'position' => $validatedData['position'],
-        'number_of_employee' => $validatedData['number_of_employee'],
-       'profile_photo' => $profile_photo,
-    ]);
-    //dd($validatedData);
-    
-    return redirect()->route('createCompany')->with('success', 'User and Company created successfully.');
-        
+        //dd($profile_photo);
+        // Create the company record
+        $company = Company::create([
+            'user_id' => $user->id,
+            'city_id' => $validatedData['city_id'], // Replace with the actual city ID
+            'province_id' => $validatedData['province_id'], // Replace with the actual province ID
+            'company_name' => $validatedData['company_name'],
+            'address' => $validatedData['address'],
+            'position' => $validatedData['position'],
+            'number_of_employee' => $validatedData['number_of_employee'],
+            'profile_photo' => $profile_photo,
+        ]);
+        //dd($validatedData);
+
+        return redirect()->route('createCompany')->with('success', 'User and Company created successfully.');
     }
 }
