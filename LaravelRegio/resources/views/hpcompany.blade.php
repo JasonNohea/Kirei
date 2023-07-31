@@ -41,6 +41,26 @@
       <button type="button" class="login-button" data-bs-toggle="modal" data-bs-target="#login">
         Login
       </button>
+      <button class="burger-menu" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+        <i class="fa-solid fa-bars fa-2xl" style="color: #2c5395"></i>
+      </button>
+
+      <div class="offcanvas offcanvas-end menu-navigation" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+          <button type="button" class="btn-close " data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          <img class="white-regio" src="../assets/white-regio.png" alt="White Regio">
+        </div>
+        <div class="offcanvas-body">
+          <div>
+            <a href="{{ route('hpCompany') }}#talentsearch">Talent</a>
+            <a href="/compProject">My Project</a>
+            <a href="/aboutComp">About</a>
+          </div>
+          <button type="button" class="login-button-canvas" data-bs-toggle="modal" data-bs-target="#login">
+            Login
+          </button>
+        </div>
+      </div>
     </div>
   </nav>
 

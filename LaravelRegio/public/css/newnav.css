@@ -96,6 +96,10 @@ select:focus {
     outline: none;
 }
 
+.burger-menu {
+    display: none;
+}
+
 .navi-button {
     font-size: 1.2vw;
     text-decoration: none;
@@ -155,5 +159,68 @@ select:focus {
 
     .navi-button {
         display: none;
+    }
+
+    select {
+        width: 4vw;
+        font-size: 1.8vw !important;
+    }
+
+    .login-button {
+        display: none;
+    }
+
+    .burger-menu {
+        display: block;
+        border: none;
+        background-color: white;
+    }
+
+    .menu-navigation {
+        background-color: #131783 !important;
+    }
+
+    .offcanvas-header {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .btn-close {
+        background-color: white !important;
+        width: 4vw !important;
+        height: 4vw !important;
+        border-radius: 50px !important;
+        margin-left: auto;
+    }
+
+    .offcanvas-body,
+    .offcanvas-body > div {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+
+    .offcanvas-body > div > a {
+        background-color: #131783;
+        border: none;
+        border-top: 1px solid white;
+        color: white;
+        font-size: 3vw;
+        text-decoration: none;
+    }
+
+    .offcanvas-body > div > a:nth-child(3) {
+        border-bottom: 1px solid white;
+    }
+
+    .login-button-canvas {
+        background-color: white;
+        width: 35%;
+        height: 10%;
+        color: #2c5395;
+        border-radius: 5px;
+        border: none;
+        font-size: 2.5vw;
+        margin: 20px auto;
     }
 }

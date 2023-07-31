@@ -75,7 +75,7 @@
 }
 @media only screen and (max-width: 1650px) {
     .main-content {
-        height: 80%;
+        height: 90%;
     }
 }
 
@@ -90,5 +90,14 @@
 
     .search-label {
         font-size: 1.8vw;
+    }
+
+    .globe {
+        width: 5% !important;
+    }
+
+    .white-regio {
+        width: 45%;
+        height: auto;
     }
 }

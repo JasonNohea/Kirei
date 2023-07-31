@@ -51,7 +51,7 @@
           </span>
         </button> -->
             <button type="button" class="position-relative notif-button">
-                <i class="fa-solid fa-bell"></i>
+                <i class="fa-solid fa-bell" style="color: #2c5395"></i>
             </button>
 
             <i class="fa-solid fa-globe" style="color: #2c5395"></i>
@@ -59,11 +59,43 @@
                 <option>EN</option>
                 <option>ID</option>
             </select>
-            <i class="fa-solid fa-user" style="color: #2c5395"></i>
+
+
+
             <div class="logged-in">
-                <p class="user-nav nav-acc">Jeremy</p>
+                <button class="collapse-acc dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa-solid fa-user" style="color: #2c5395"></i>
+                    <p class="user-nav nav-acc">Jeremy</p>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Profile</a></li>
+                    <li><a class="dropdown-item" href="#">Log out</a></li>
+                </ul>
+
                 <hr class="navline" />
                 <p class="company-nav nav-acc">Company</p>
+            </div>
+
+
+            <button class="burger-menu" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                <i class="fa-solid fa-bars fa-2xl" style="color: #2c5395"></i>
+            </button>
+
+            <div class="offcanvas offcanvas-end menu-navigation" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                <div class="offcanvas-header">
+                    <button type="button" class="btn-close " data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    <img class="white-regio" src="../assets/white-regio.png" alt="White Regio">
+                </div>
+                <div class="offcanvas-body">
+                    <div>
+                        <a href="{{ route('hpCompany') }}#talentsearch">Talent</a>
+                        <a href="/compProject">My Project</a>
+                        <a href="/aboutComp">About</a>
+                    </div>
+                    <button type="button" class="login-button-canvas">
+                        Logout
+                    </button>
+                </div>
             </div>
         </div>
     </nav>
