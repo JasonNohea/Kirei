@@ -7,8 +7,13 @@
 
 .img-landing {
     width: 100%;
-    height: auto;
-}
+    height: 40vw;
+    min-height: 550px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../assets/Landing.png");
+    background-position: center;
+}   
 
 .main-text {
     font-weight: bolder;
@@ -46,10 +51,11 @@
 .search-bar {
     display: flex;
     flex-direction: row;
-    width: 25vw;
+    max-width: 450px;
+    min-width: 400px;
     background-color: white;
-    margin-top: 3%;
-    align-items: center;
+    margin: -30px auto 0 auto;
+    /* align-items: center; */
 }
 
 .search-input {
@@ -68,6 +74,7 @@
 .search-button {
     height: 60%;
     width: 30px;
+    margin: auto 0px;
     margin-right: 10px;
     border: none;
     background-color: #31348d;

@@ -1,7 +1,7 @@
 html,
 body {
     width: 100%;
-    height: 100%;
+    height: fit-content;
     margin: 0;
 }
 
@@ -49,7 +49,7 @@ body {
 .second-con {
     width: 30%;
     height: 100%;
-    margin: auto;
+    
 }
 
 .talent-con {
@@ -269,11 +269,13 @@ body {
 
 .project-img {
     border-radius: 10px;
+    width: 50%;
 }
 
 .project-img > img {
     border-radius: 10px 0px 0px 10px;
     height: 100%;
+    width: 100%;
 }
 
 .project-detail {
@@ -350,6 +352,8 @@ body {
 @media only screen and (max-width: 1280px) {
     .main {
         flex-direction: column;
+        height: 350vw;
+        align-items: center;
     }
 
     .box-shadow {
@@ -361,11 +365,7 @@ body {
         flex-wrap: nowrap;
         flex-direction: column;
         align-items: center;
-        height: 1300vw;
-    }
-    .main {
-        height: 400vw;
-        align-items: center;
+        height: 1000vw;
     }
 
     .talent-name,
@@ -392,12 +392,14 @@ body {
 
     .second-con {
         width: 100%;
+        height: 50%;
         display: flex;
         justify-content: center;
     }
 
     .my-project {
         width: 50vw;
+        height: 50vw;
     }
 
     .my-project > a {

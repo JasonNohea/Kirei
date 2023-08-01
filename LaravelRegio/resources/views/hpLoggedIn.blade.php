@@ -37,9 +37,9 @@
     <nav>
         <div class="nav1">
             <img class="logo" src="../assets/logoCompany.png" alt="Logo Regio" />
-            <a class="navi-button" href="#talent">Talent</a>
-            <a class="navi-button" href="../company/companyproject.html">My Project</a>
-            <a class="navi-button" href="#">About</a>
+            <a class="navi-button" href="{{ route('hpCompany') }}#talentsearch">Talent</a>
+            <a class="navi-button" href="/compProject">My Project</a>
+            <a class="navi-button" href="/aboutComp">About</a>
         </div>
         <div class="nav2">
             <!-- <button type="button" class="position-relative notif-button">
@@ -69,7 +69,7 @@
                 </button>
                 <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="#">Profile</a></li>
-                    <li><a class="dropdown-item" href="#">Log out</a></li>
+                    <li><a class="dropdown-item" href="/hpCompany">Log out</a></li>
                 </ul>
 
                 <hr class="navline" />
@@ -92,9 +92,9 @@
                         <a href="/compProject">My Project</a>
                         <a href="/aboutComp">About</a>
                     </div>
-                    <button type="button" class="login-button-canvas">
+                    <a type="button" class="login-button-canvas" href="/hpCompany">
                         Logout
-                    </button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -125,7 +125,7 @@
                 <div class="modal-header">
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     <img src="../assets/logo.png" alt="Regio Logo" />
-                    <h1 class="login-heading">Reset Password Success!</h1>
+                    <h1 class="login-heading">Welcome Back!</h1>
                 </div>
                 <div class="modal-body">
                     <img class="welcome-img" src="../assets/greeting.png" alt="Welcome" />
@@ -141,474 +141,480 @@
     <!-- main content -->
     <div class="main-content">
         <div>
-            <img class="img-landing" src="../assets/Landing.png" alt="Landing" />
+            <!-- <img class="img-landing" src="../assets/Landing.png" alt="Landing" /> -->
+            <div class="img-landing"></div>
             <div class="landing-component">
                 <h1 class="main-text">
                     Find Your <span style="color: yellow">Perfect Talent</span> Here
                     Simple, Easy, & Fast
                 </h1>
-                <button class="to-post-job" type="button" onclick="window.location.href='jobposting.html'">
+                <button class="to-post-job" type="button" onclick="window.location.href='/jobpost'">
                     Posting Job
                 </button>
-                <div class="form-floating search-bar" id="talent">
-                    <input type="text" class="form-control search-input" id="search" placeholder="Search" />
 
-                    <label class="search-label" for="search">Search...</label>
-                    <button class="search-button" type="button">
-                        <i class="fa-solid fa-magnifying-glass" style="color: #ffffff"></i>
-                    </button>
-                </div>
             </div>
         </div>
     </div>
 
     <!-- Talent Section -->
-    <div class="main">
-        <div class="first-con grab-scroll">
-            <div class="box-shadow">
-                <div class="talent-con unselectable">
-                    <div>
-                        <div class="talent-info">
-                            <div class="talent-header">
-                                <div class="photo-profile"></div>
-                                <div class="talent-header-info">
-                                    <p class="talent-name">James Welton</p>
-                                    <p class="talent-skill">UI/UX Designer</p>
-                                </div>
-                                <div class="talent-status">
-                                    <p>Open Hiring</p>
-                                </div>
-                            </div>
-                            <div class="talent-main">
-                                <p class="talent-desc">
-                                    A career in Information System, specifically in the areas of
-                                    UI/UX Designer, that will optimally utilizeanalytical,
-                                    time...
-                                </p>
-                                <div class="talent-request">
-                                    <div class="talent-request-logo">
-                                        <div>
-                                            <i class="fa-solid fa-location-dot" style="color: rgb(126, 126, 126)"></i>
-                                        </div>
-                                        <div>
-                                            <i class="fa-solid fa-money-bill" style="color: rgb(126, 126, 126)"></i>
-                                        </div>
-                                        <div>
-                                            <i class="fa-solid fa-business-time" style="color: rgb(126, 126, 126)"></i>
-                                        </div>
-                                    </div>
-                                    <div class="talent-request-text">
-                                        <p>Wirosari, Indonesia</p>
-                                        <p>IDR 7,000,000 - 12,000,000</p>
-                                        <p>8.00 AM - 5.00 PM</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+    <div>
+        <div class="form-floating search-bar" id="talent">
+            <input type="text" class="form-control search-input" id="search" placeholder="Search" />
 
-                    <div class="talent-button">
-                        <button class="b-view-profile">View Profile</button>
-                        <button class="b-view-cv">View CV</button>
-                    </div>
-                </div>
-            </div>
-            <div class="box-shadow">
-                <div class="talent-con unselectable">
-                    <div>
-                        <div class="talent-info">
-                            <div class="talent-header">
-                                <div class="photo-profile"></div>
-                                <div class="talent-header-info">
-                                    <p class="talent-name">James Welton</p>
-                                    <p class="talent-skill">UI/UX Designer</p>
-                                </div>
-                                <div class="talent-status talent-status-red">
-                                    <p>Not Available</p>
-                                </div>
-                            </div>
-                            <div class="talent-main">
-                                <p class="talent-desc">
-                                    A career in Information System, specifically in the areas of
-                                    UI/UX Designer, that will optimally utilizeanalytical,
-                                    time...
-                                </p>
-                                <div class="talent-request">
-                                    <div class="talent-request-logo">
-                                        <div>
-                                            <i class="fa-solid fa-location-dot" style="color: rgb(126, 126, 126)"></i>
-                                        </div>
-                                        <div>
-                                            <i class="fa-solid fa-money-bill" style="color: rgb(126, 126, 126)"></i>
-                                        </div>
-                                        <div>
-                                            <i class="fa-solid fa-business-time" style="color: rgb(126, 126, 126)"></i>
-                                        </div>
-                                    </div>
-                                    <div class="talent-request-text">
-                                        <p>Wirosari, Indonesia</p>
-                                        <p>IDR 7,000,000 - 12,000,000</p>
-                                        <p>8.00 AM - 5.00 PM</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="talent-button">
-                        <button class="b-view-profile">View Profile</button>
-                        <button class="b-view-cv">View CV</button>
-                    </div>
-                </div>
-            </div>
-            <div class="box-shadow">
-                <div class="talent-con unselectable">
-                    <div>
-                        <div class="talent-info">
-                            <div class="talent-header">
-                                <div class="photo-profile"></div>
-                                <div class="talent-header-info">
-                                    <p class="talent-name">James Welton</p>
-                                    <p class="talent-skill">UI/UX Designer</p>
-                                </div>
-                                <div class="talent-status talent-status-red">
-                                    <p>Not Available</p>
-                                </div>
-                            </div>
-                            <div class="talent-main">
-                                <p class="talent-desc">
-                                    A career in Information System, specifically in the areas of
-                                    UI/UX Designer, that will optimally utilizeanalytical,
-                                    time...
-                                </p>
-                                <div class="talent-request">
-                                    <div class="talent-request-logo">
-                                        <div>
-                                            <i class="fa-solid fa-location-dot" style="color: rgb(126, 126, 126)"></i>
-                                        </div>
-                                        <div>
-                                            <i class="fa-solid fa-money-bill" style="color: rgb(126, 126, 126)"></i>
-                                        </div>
-                                        <div>
-                                            <i class="fa-solid fa-business-time" style="color: rgb(126, 126, 126)"></i>
-                                        </div>
-                                    </div>
-                                    <div class="talent-request-text">
-                                        <p>Wirosari, Indonesia</p>
-                                        <p>IDR 7,000,000 - 12,000,000</p>
-                                        <p>8.00 AM - 5.00 PM</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="talent-button">
-                        <button class="b-view-profile">View Profile</button>
-                        <button class="b-view-cv">View CV</button>
-                    </div>
-                </div>
-            </div>
-            <div class="box-shadow">
-                <div class="talent-con unselectable">
-                    <div>
-                        <div class="talent-info">
-                            <div class="talent-header">
-                                <div class="photo-profile"></div>
-                                <div class="talent-header-info">
-                                    <p class="talent-name">James Welton</p>
-                                    <p class="talent-skill">UI/UX Designer</p>
-                                </div>
-                                <div class="talent-status">
-                                    <p>Open Hiring</p>
-                                </div>
-                            </div>
-                            <div class="talent-main">
-                                <p class="talent-desc">
-                                    A career in Information System, specifically in the areas of
-                                    UI/UX Designer, that will optimally utilizeanalytical,
-                                    time...
-                                </p>
-                                <div class="talent-request">
-                                    <div class="talent-request-logo">
-                                        <div>
-                                            <i class="fa-solid fa-location-dot" style="color: rgb(126, 126, 126)"></i>
-                                        </div>
-                                        <div>
-                                            <i class="fa-solid fa-money-bill" style="color: rgb(126, 126, 126)"></i>
-                                        </div>
-                                        <div>
-                                            <i class="fa-solid fa-business-time" style="color: rgb(126, 126, 126)"></i>
-                                        </div>
-                                    </div>
-                                    <div class="talent-request-text">
-                                        <p>Wirosari, Indonesia</p>
-                                        <p>IDR 7,000,000 - 12,000,000</p>
-                                        <p>8.00 AM - 5.00 PM</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="talent-button">
-                        <button class="b-view-profile">View Profile</button>
-                        <button class="b-view-cv">View CV</button>
-                    </div>
-                </div>
-            </div>
-            <div class="box-shadow">
-                <div class="talent-con unselectable">
-                    <div>
-                        <div class="talent-info">
-                            <div class="talent-header">
-                                <div class="photo-profile"></div>
-                                <div class="talent-header-info">
-                                    <p class="talent-name">James Welton</p>
-                                    <p class="talent-skill">UI/UX Designer</p>
-                                </div>
-                                <div class="talent-status talent-status-red">
-                                    <p>Not Available</p>
-                                </div>
-                            </div>
-                            <div class="talent-main">
-                                <p class="talent-desc">
-                                    A career in Information System, specifically in the areas of
-                                    UI/UX Designer, that will optimally utilizeanalytical,
-                                    time...
-                                </p>
-                                <div class="talent-request">
-                                    <div class="talent-request-logo">
-                                        <div>
-                                            <i class="fa-solid fa-location-dot" style="color: rgb(126, 126, 126)"></i>
-                                        </div>
-                                        <div>
-                                            <i class="fa-solid fa-money-bill" style="color: rgb(126, 126, 126)"></i>
-                                        </div>
-                                        <div>
-                                            <i class="fa-solid fa-business-time" style="color: rgb(126, 126, 126)"></i>
-                                        </div>
-                                    </div>
-                                    <div class="talent-request-text">
-                                        <p>Wirosari, Indonesia</p>
-                                        <p>IDR 7,000,000 - 12,000,000</p>
-                                        <p>8.00 AM - 5.00 PM</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="talent-button">
-                        <button class="b-view-profile">View Profile</button>
-                        <button class="b-view-cv">View CV</button>
-                    </div>
-                </div>
-            </div>
-            <div class="box-shadow">
-                <div class="talent-con unselectable">
-                    <div>
-                        <div class="talent-info">
-                            <div class="talent-header">
-                                <div class="photo-profile"></div>
-                                <div class="talent-header-info">
-                                    <p class="talent-name">James Welton</p>
-                                    <p class="talent-skill">UI/UX Designer</p>
-                                </div>
-                                <div class="talent-status">
-                                    <p>Open Hiring</p>
-                                </div>
-                            </div>
-                            <div class="talent-main">
-                                <p class="talent-desc">
-                                    A career in Information System, specifically in the areas of
-                                    UI/UX Designer, that will optimally utilizeanalytical,
-                                    time...
-                                </p>
-                                <div class="talent-request">
-                                    <div class="talent-request-logo">
-                                        <div>
-                                            <i class="fa-solid fa-location-dot" style="color: rgb(126, 126, 126)"></i>
-                                        </div>
-                                        <div>
-                                            <i class="fa-solid fa-money-bill" style="color: rgb(126, 126, 126)"></i>
-                                        </div>
-                                        <div>
-                                            <i class="fa-solid fa-business-time" style="color: rgb(126, 126, 126)"></i>
-                                        </div>
-                                    </div>
-                                    <div class="talent-request-text">
-                                        <p>Wirosari, Indonesia</p>
-                                        <p>IDR 7,000,000 - 12,000,000</p>
-                                        <p>8.00 AM - 5.00 PM</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="talent-button">
-                        <button class="b-view-profile">View Profile</button>
-                        <button class="b-view-cv">View CV</button>
-                    </div>
-                </div>
-            </div>
-            <div class="box-shadow">
-                <div class="talent-con unselectable">
-                    <div>
-                        <div class="talent-info">
-                            <div class="talent-header">
-                                <div class="photo-profile"></div>
-                                <div class="talent-header-info">
-                                    <p class="talent-name">James Welton</p>
-                                    <p class="talent-skill">UI/UX Designer</p>
-                                </div>
-                                <div class="talent-status">
-                                    <p>Open Hiring</p>
-                                </div>
-                            </div>
-                            <div class="talent-main">
-                                <p class="talent-desc">
-                                    A career in Information System, specifically in the areas of
-                                    UI/UX Designer, that will optimally utilizeanalytical,
-                                    time...
-                                </p>
-                                <div class="talent-request">
-                                    <div class="talent-request-logo">
-                                        <div>
-                                            <i class="fa-solid fa-location-dot" style="color: rgb(126, 126, 126)"></i>
-                                        </div>
-                                        <div>
-                                            <i class="fa-solid fa-money-bill" style="color: rgb(126, 126, 126)"></i>
-                                        </div>
-                                        <div>
-                                            <i class="fa-solid fa-business-time" style="color: rgb(126, 126, 126)"></i>
-                                        </div>
-                                    </div>
-                                    <div class="talent-request-text">
-                                        <p>Wirosari, Indonesia</p>
-                                        <p>IDR 7,000,000 - 12,000,000</p>
-                                        <p>8.00 AM - 5.00 PM</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="talent-button">
-                        <button class="b-view-profile">View Profile</button>
-                        <button class="b-view-cv">View CV</button>
-                    </div>
-                </div>
-            </div>
-            <div class="box-shadow">
-                <div class="talent-con unselectable">
-                    <div>
-                        <div class="talent-info">
-                            <div class="talent-header">
-                                <div class="photo-profile"></div>
-                                <div class="talent-header-info">
-                                    <p class="talent-name">James Welton</p>
-                                    <p class="talent-skill">UI/UX Designer</p>
-                                </div>
-                                <div class="talent-status">
-                                    <p>Open Hiring</p>
-                                </div>
-                            </div>
-                            <div class="talent-main">
-                                <p class="talent-desc">
-                                    A career in Information System, specifically in the areas of
-                                    UI/UX Designer, that will optimally utilizeanalytical,
-                                    time...
-                                </p>
-                                <div class="talent-request">
-                                    <div class="talent-request-logo">
-                                        <div>
-                                            <i class="fa-solid fa-location-dot" style="color: rgb(126, 126, 126)"></i>
-                                        </div>
-                                        <div>
-                                            <i class="fa-solid fa-money-bill" style="color: rgb(126, 126, 126)"></i>
-                                        </div>
-                                        <div>
-                                            <i class="fa-solid fa-business-time" style="color: rgb(126, 126, 126)"></i>
-                                        </div>
-                                    </div>
-                                    <div class="talent-request-text">
-                                        <p>Wirosari, Indonesia</p>
-                                        <p>IDR 7,000,000 - 12,000,000</p>
-                                        <p>8.00 AM - 5.00 PM</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="talent-button">
-                        <button class="b-view-profile">View Profile</button>
-                        <button class="b-view-cv">View CV</button>
-                    </div>
-                </div>
-            </div>
+            <label class="search-label" for="search">Search...</label>
+            <button class="search-button" type="button">
+                <i class="fa-solid fa-magnifying-glass" style="color: #ffffff"></i>
+            </button>
         </div>
-        <div class="second-con">
-            <div class="my-project">
-                <p>My Project</p>
-                <div class="project-sum">
-                    <div class="project-img">
-                        <img src="../assets/Foto Project.png" alt="Project Image" />
-                    </div>
-                    <div class="project-detail">
-                        <div class="project-first">
-                            <p>Pemasangan Pipa Gas Alam</p>
-                            <div>
-                                <p>Done</p>
+
+        <div class="main">
+            <div class="first-con grab-scroll">
+                <div class="box-shadow">
+                    <div class="talent-con unselectable">
+                        <div>
+                            <div class="talent-info">
+                                <div class="talent-header">
+                                    <div class="photo-profile"></div>
+                                    <div class="talent-header-info">
+                                        <p class="talent-name">James Welton</p>
+                                        <p class="talent-skill">UI/UX Designer</p>
+                                    </div>
+                                    <div class="talent-status">
+                                        <p>Open Hiring</p>
+                                    </div>
+                                </div>
+                                <div class="talent-main">
+                                    <p class="talent-desc">
+                                        A career in Information System, specifically in the areas of
+                                        UI/UX Designer, that will optimally utilizeanalytical,
+                                        time...
+                                    </p>
+                                    <div class="talent-request">
+                                        <div class="talent-request-logo">
+                                            <div>
+                                                <i class="fa-solid fa-location-dot" style="color: rgb(126, 126, 126)"></i>
+                                            </div>
+                                            <div>
+                                                <i class="fa-solid fa-money-bill" style="color: rgb(126, 126, 126)"></i>
+                                            </div>
+                                            <div>
+                                                <i class="fa-solid fa-business-time" style="color: rgb(126, 126, 126)"></i>
+                                            </div>
+                                        </div>
+                                        <div class="talent-request-text">
+                                            <p>Wirosari, Indonesia</p>
+                                            <p>IDR 7,000,000 - 12,000,000</p>
+                                            <p>8.00 AM - 5.00 PM</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="project-second">
-                            <p>Jl. Evakuasi no.14, Cirebon, Indonesia.</p>
+
+                        <div class="talent-button">
+                            <button class="b-view-profile">View Profile</button>
+                            <button class="b-view-cv">View CV</button>
                         </div>
                     </div>
                 </div>
-                <div class="project-sum">
-                    <div class="project-img">
-                        <img src="../assets/Foto Project1.png" alt="Project Image" />
-                    </div>
-                    <div class="project-detail">
-                        <div class="project-first">
-                            <p>Pemasangan Listrik</p>
-                            <div class="project-wip">
-                                <p>In Progress</p>
+                <div class="box-shadow">
+                    <div class="talent-con unselectable">
+                        <div>
+                            <div class="talent-info">
+                                <div class="talent-header">
+                                    <div class="photo-profile"></div>
+                                    <div class="talent-header-info">
+                                        <p class="talent-name">James Welton</p>
+                                        <p class="talent-skill">UI/UX Designer</p>
+                                    </div>
+                                    <div class="talent-status talent-status-red">
+                                        <p>Not Available</p>
+                                    </div>
+                                </div>
+                                <div class="talent-main">
+                                    <p class="talent-desc">
+                                        A career in Information System, specifically in the areas of
+                                        UI/UX Designer, that will optimally utilizeanalytical,
+                                        time...
+                                    </p>
+                                    <div class="talent-request">
+                                        <div class="talent-request-logo">
+                                            <div>
+                                                <i class="fa-solid fa-location-dot" style="color: rgb(126, 126, 126)"></i>
+                                            </div>
+                                            <div>
+                                                <i class="fa-solid fa-money-bill" style="color: rgb(126, 126, 126)"></i>
+                                            </div>
+                                            <div>
+                                                <i class="fa-solid fa-business-time" style="color: rgb(126, 126, 126)"></i>
+                                            </div>
+                                        </div>
+                                        <div class="talent-request-text">
+                                            <p>Wirosari, Indonesia</p>
+                                            <p>IDR 7,000,000 - 12,000,000</p>
+                                            <p>8.00 AM - 5.00 PM</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="project-second">
-                            <p>
-                                Jl. Raden Saleh 3, Palangkaraya, Kalimantan Tengah, Indonesia.
-                            </p>
+
+                        <div class="talent-button">
+                            <button class="b-view-profile">View Profile</button>
+                            <button class="b-view-cv">View CV</button>
                         </div>
                     </div>
                 </div>
-                <div class="project-sum">
-                    <div class="project-img">
-                        <img src="../assets/Foto Project2.png" alt="Project Image" />
-                    </div>
-                    <div class="project-detail">
-                        <div class="project-first">
-                            <p>Pemasangan Plumbing</p>
-                            <div class="project-pending">
-                                <p>Pending</p>
+                <div class="box-shadow">
+                    <div class="talent-con unselectable">
+                        <div>
+                            <div class="talent-info">
+                                <div class="talent-header">
+                                    <div class="photo-profile"></div>
+                                    <div class="talent-header-info">
+                                        <p class="talent-name">James Welton</p>
+                                        <p class="talent-skill">UI/UX Designer</p>
+                                    </div>
+                                    <div class="talent-status talent-status-red">
+                                        <p>Not Available</p>
+                                    </div>
+                                </div>
+                                <div class="talent-main">
+                                    <p class="talent-desc">
+                                        A career in Information System, specifically in the areas of
+                                        UI/UX Designer, that will optimally utilizeanalytical,
+                                        time...
+                                    </p>
+                                    <div class="talent-request">
+                                        <div class="talent-request-logo">
+                                            <div>
+                                                <i class="fa-solid fa-location-dot" style="color: rgb(126, 126, 126)"></i>
+                                            </div>
+                                            <div>
+                                                <i class="fa-solid fa-money-bill" style="color: rgb(126, 126, 126)"></i>
+                                            </div>
+                                            <div>
+                                                <i class="fa-solid fa-business-time" style="color: rgb(126, 126, 126)"></i>
+                                            </div>
+                                        </div>
+                                        <div class="talent-request-text">
+                                            <p>Wirosari, Indonesia</p>
+                                            <p>IDR 7,000,000 - 12,000,000</p>
+                                            <p>8.00 AM - 5.00 PM</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="project-second">
-                            <p>
-                                Jl. Abdul Muthalib, Samarinda, Kalimantan Timur, Indonesia.
-                            </p>
+
+                        <div class="talent-button">
+                            <button class="b-view-profile">View Profile</button>
+                            <button class="b-view-cv">View CV</button>
                         </div>
                     </div>
                 </div>
-                <a href="#">See all project</a>
+                <div class="box-shadow">
+                    <div class="talent-con unselectable">
+                        <div>
+                            <div class="talent-info">
+                                <div class="talent-header">
+                                    <div class="photo-profile"></div>
+                                    <div class="talent-header-info">
+                                        <p class="talent-name">James Welton</p>
+                                        <p class="talent-skill">UI/UX Designer</p>
+                                    </div>
+                                    <div class="talent-status">
+                                        <p>Open Hiring</p>
+                                    </div>
+                                </div>
+                                <div class="talent-main">
+                                    <p class="talent-desc">
+                                        A career in Information System, specifically in the areas of
+                                        UI/UX Designer, that will optimally utilizeanalytical,
+                                        time...
+                                    </p>
+                                    <div class="talent-request">
+                                        <div class="talent-request-logo">
+                                            <div>
+                                                <i class="fa-solid fa-location-dot" style="color: rgb(126, 126, 126)"></i>
+                                            </div>
+                                            <div>
+                                                <i class="fa-solid fa-money-bill" style="color: rgb(126, 126, 126)"></i>
+                                            </div>
+                                            <div>
+                                                <i class="fa-solid fa-business-time" style="color: rgb(126, 126, 126)"></i>
+                                            </div>
+                                        </div>
+                                        <div class="talent-request-text">
+                                            <p>Wirosari, Indonesia</p>
+                                            <p>IDR 7,000,000 - 12,000,000</p>
+                                            <p>8.00 AM - 5.00 PM</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="talent-button">
+                            <button class="b-view-profile">View Profile</button>
+                            <button class="b-view-cv">View CV</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-shadow">
+                    <div class="talent-con unselectable">
+                        <div>
+                            <div class="talent-info">
+                                <div class="talent-header">
+                                    <div class="photo-profile"></div>
+                                    <div class="talent-header-info">
+                                        <p class="talent-name">James Welton</p>
+                                        <p class="talent-skill">UI/UX Designer</p>
+                                    </div>
+                                    <div class="talent-status talent-status-red">
+                                        <p>Not Available</p>
+                                    </div>
+                                </div>
+                                <div class="talent-main">
+                                    <p class="talent-desc">
+                                        A career in Information System, specifically in the areas of
+                                        UI/UX Designer, that will optimally utilizeanalytical,
+                                        time...
+                                    </p>
+                                    <div class="talent-request">
+                                        <div class="talent-request-logo">
+                                            <div>
+                                                <i class="fa-solid fa-location-dot" style="color: rgb(126, 126, 126)"></i>
+                                            </div>
+                                            <div>
+                                                <i class="fa-solid fa-money-bill" style="color: rgb(126, 126, 126)"></i>
+                                            </div>
+                                            <div>
+                                                <i class="fa-solid fa-business-time" style="color: rgb(126, 126, 126)"></i>
+                                            </div>
+                                        </div>
+                                        <div class="talent-request-text">
+                                            <p>Wirosari, Indonesia</p>
+                                            <p>IDR 7,000,000 - 12,000,000</p>
+                                            <p>8.00 AM - 5.00 PM</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="talent-button">
+                            <button class="b-view-profile">View Profile</button>
+                            <button class="b-view-cv">View CV</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-shadow">
+                    <div class="talent-con unselectable">
+                        <div>
+                            <div class="talent-info">
+                                <div class="talent-header">
+                                    <div class="photo-profile"></div>
+                                    <div class="talent-header-info">
+                                        <p class="talent-name">James Welton</p>
+                                        <p class="talent-skill">UI/UX Designer</p>
+                                    </div>
+                                    <div class="talent-status">
+                                        <p>Open Hiring</p>
+                                    </div>
+                                </div>
+                                <div class="talent-main">
+                                    <p class="talent-desc">
+                                        A career in Information System, specifically in the areas of
+                                        UI/UX Designer, that will optimally utilizeanalytical,
+                                        time...
+                                    </p>
+                                    <div class="talent-request">
+                                        <div class="talent-request-logo">
+                                            <div>
+                                                <i class="fa-solid fa-location-dot" style="color: rgb(126, 126, 126)"></i>
+                                            </div>
+                                            <div>
+                                                <i class="fa-solid fa-money-bill" style="color: rgb(126, 126, 126)"></i>
+                                            </div>
+                                            <div>
+                                                <i class="fa-solid fa-business-time" style="color: rgb(126, 126, 126)"></i>
+                                            </div>
+                                        </div>
+                                        <div class="talent-request-text">
+                                            <p>Wirosari, Indonesia</p>
+                                            <p>IDR 7,000,000 - 12,000,000</p>
+                                            <p>8.00 AM - 5.00 PM</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="talent-button">
+                            <button class="b-view-profile">View Profile</button>
+                            <button class="b-view-cv">View CV</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-shadow">
+                    <div class="talent-con unselectable">
+                        <div>
+                            <div class="talent-info">
+                                <div class="talent-header">
+                                    <div class="photo-profile"></div>
+                                    <div class="talent-header-info">
+                                        <p class="talent-name">James Welton</p>
+                                        <p class="talent-skill">UI/UX Designer</p>
+                                    </div>
+                                    <div class="talent-status">
+                                        <p>Open Hiring</p>
+                                    </div>
+                                </div>
+                                <div class="talent-main">
+                                    <p class="talent-desc">
+                                        A career in Information System, specifically in the areas of
+                                        UI/UX Designer, that will optimally utilizeanalytical,
+                                        time...
+                                    </p>
+                                    <div class="talent-request">
+                                        <div class="talent-request-logo">
+                                            <div>
+                                                <i class="fa-solid fa-location-dot" style="color: rgb(126, 126, 126)"></i>
+                                            </div>
+                                            <div>
+                                                <i class="fa-solid fa-money-bill" style="color: rgb(126, 126, 126)"></i>
+                                            </div>
+                                            <div>
+                                                <i class="fa-solid fa-business-time" style="color: rgb(126, 126, 126)"></i>
+                                            </div>
+                                        </div>
+                                        <div class="talent-request-text">
+                                            <p>Wirosari, Indonesia</p>
+                                            <p>IDR 7,000,000 - 12,000,000</p>
+                                            <p>8.00 AM - 5.00 PM</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="talent-button">
+                            <button class="b-view-profile">View Profile</button>
+                            <button class="b-view-cv">View CV</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-shadow">
+                    <div class="talent-con unselectable">
+                        <div>
+                            <div class="talent-info">
+                                <div class="talent-header">
+                                    <div class="photo-profile"></div>
+                                    <div class="talent-header-info">
+                                        <p class="talent-name">James Welton</p>
+                                        <p class="talent-skill">UI/UX Designer</p>
+                                    </div>
+                                    <div class="talent-status">
+                                        <p>Open Hiring</p>
+                                    </div>
+                                </div>
+                                <div class="talent-main">
+                                    <p class="talent-desc">
+                                        A career in Information System, specifically in the areas of
+                                        UI/UX Designer, that will optimally utilizeanalytical,
+                                        time...
+                                    </p>
+                                    <div class="talent-request">
+                                        <div class="talent-request-logo">
+                                            <div>
+                                                <i class="fa-solid fa-location-dot" style="color: rgb(126, 126, 126)"></i>
+                                            </div>
+                                            <div>
+                                                <i class="fa-solid fa-money-bill" style="color: rgb(126, 126, 126)"></i>
+                                            </div>
+                                            <div>
+                                                <i class="fa-solid fa-business-time" style="color: rgb(126, 126, 126)"></i>
+                                            </div>
+                                        </div>
+                                        <div class="talent-request-text">
+                                            <p>Wirosari, Indonesia</p>
+                                            <p>IDR 7,000,000 - 12,000,000</p>
+                                            <p>8.00 AM - 5.00 PM</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="talent-button">
+                            <button class="b-view-profile">View Profile</button>
+                            <button class="b-view-cv">View CV</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="second-con">
+                <div class="my-project">
+                    <p>My Project</p>
+                    <div class="project-sum">
+                        <div class="project-img">
+                            <img src="../assets/Foto Project.png" alt="Project Image" />
+                        </div>
+                        <div class="project-detail">
+                            <div class="project-first">
+                                <p>Pemasangan Pipa Gas Alam</p>
+                                <div>
+                                    <p>Done</p>
+                                </div>
+                            </div>
+                            <div class="project-second">
+                                <p>Jl. Evakuasi no.14, Cirebon, Indonesia.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-sum">
+                        <div class="project-img">
+                            <img src="../assets/Foto Project1.png" alt="Project Image" />
+                        </div>
+                        <div class="project-detail">
+                            <div class="project-first">
+                                <p>Pemasangan Listrik</p>
+                                <div class="project-wip">
+                                    <p>In Progress</p>
+                                </div>
+                            </div>
+                            <div class="project-second">
+                                <p>
+                                    Jl. Raden Saleh 3, Palangkaraya, Kalimantan Tengah, Indonesia.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-sum">
+                        <div class="project-img">
+                            <img src="../assets/Foto Project2.png" alt="Project Image" />
+                        </div>
+                        <div class="project-detail">
+                            <div class="project-first">
+                                <p>Pemasangan Plumbing</p>
+                                <div class="project-pending">
+                                    <p>Pending</p>
+                                </div>
+                            </div>
+                            <div class="project-second">
+                                <p>
+                                    Jl. Abdul Muthalib, Samarinda, Kalimantan Timur, Indonesia.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#">See all project</a>
+                </div>
             </div>
         </div>
     </div>
+
 
     <!-- footer -->
     <footer>

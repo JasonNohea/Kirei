@@ -37,8 +37,8 @@ Route::get('/aboutComp', [GeneralController::class, 'aboutComp'])->name('aboutCo
 //HomePage Company
 Route::get('/hpCompany', [CompController::class, 'hpCompany'])->name('hpCompany');
 
-//HomePage Company
-Route::get('/hpCompanylog', [CompController::class, 'hpCompanylog'])->name('hpCompanylog');
+//HomePage Company and login
+Route::post('/hpCompanylog', [CompController::class, 'hpCompanylog'])->name('hpCompanylog');
 
 //Company Project
 Route::get('/compProject', [CompController::class, 'compProject'])->name('compProject');
