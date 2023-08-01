@@ -33,8 +33,9 @@ main {
     flex-direction: column;
     width: 100%;
     align-items: center;
-    background-color: white;
+    background-color: #A0D9F6;
     border-radius: 12px 12px 0px 0px;
+    text-align: center;
 }
   
 /* .line-container {
@@ -66,9 +67,10 @@ main {
     padding: 20px;
 }
 
-/* .tab-project a:active{
-    border-bottom: 5px solid #31348D;
-} */
+.tab-project a:focus{
+    color: white;
+    background-color: #31348D;
+}
 
 .content {
     width: 100%;
@@ -90,14 +92,19 @@ main {
     display: none;
 }
 
-.detail-jobs-title {
+.detail-title {
     color: #31348D;
     margin-left: auto;
     text-align: center;
 }
  
-.detail-jobs-head {
+.detail-head {
     color: #31348D;
+}
+
+.detail-desc {
+    color: #6D6D6D;
+    font-size: 14px;
 }
 /* CSS Footer untuk Talent */
 
