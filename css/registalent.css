@@ -38,7 +38,7 @@ h1{
   padding-left: 80px;
   width: 70%;
   height: 100%;
-  max-height: 690px;
+  max-height: fit-content;
   left: 15%;
   top: 5%;
   border-radius: 15px;
@@ -103,8 +103,9 @@ input[type="submit"] {
   border: none;
   border-radius: 10px;
   padding: 15px;
-  margin-left: 10%;
+  margin-left: 5%;
   font-size: 14px;
+  width: 150px;
 }
 
 input[type="submit"]:hover {
@@ -163,6 +164,23 @@ img {
   margin-left: 45px;
   inset: 0;
   width: 70%;
+}
+
+.upload{
+  display: flex;
+  gap: 100px;
+}
+
+.image-upload > input
+{
+    display: none;
+}
+
+.image-upload img
+{
+    width: 60px;
+    cursor: pointer;
+    margin-bottom: 10px;
 }
 
 button{

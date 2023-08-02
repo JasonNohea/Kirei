@@ -1,47 +1,63 @@
 nav {
-  animation: none !important;
+    animation: none !important;
 }
 
 .modal-content {
-  height: 500px;
+    height: 500px;
 }
 
 .spinner {
-  margin: 80px auto;
-  inset: 0;
+    margin: 80px auto;
+    inset: 0;
 }
 
 .welcome-img {
-  margin: auto;
-  inset: 0;
-  width: 70%;
-  height: auto;
+    margin: auto;
+    inset: 0;
+    width: 70%;
+    height: auto;
 }
 
 .greeting-text {
-  font-size: 13px;
-  color: gray;
-  text-align: center;
+    font-size: 13px;
+    color: gray;
+    text-align: center;
 }
 
 .b-homepage {
-  margin: auto;
-  inset: 0;
-  border: none;
-  background-color: #2c5395;
-  color: white;
-  border-radius: 5px;
-  width: 50%;
+    margin: auto;
+    inset: 0;
+    border: none;
+    background-color: #2c5395;
+    color: white;
+    border-radius: 5px;
+    width: 50%;
 }
 
 .notif-button {
-  border: none;
-  background-color: white;
+    border: none;
+    background-color: white;
 }
 
 .notif {
-  width: 0.8em;
-  height: 0.8rem;
-  left: 22px;
-  top: 2px;
+    width: 0.8em;
+    height: 0.8rem;
+    left: 22px;
+    top: 2px;
+}
+
+.collapse-acc {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    border: none;
+    background-color: white;
+}
+
+@media only screen and (max-width: 1280px) {
+    .fa-solid,
+    .nav-acc {
+        font-size: 1.6vw !important;
+    }
 }

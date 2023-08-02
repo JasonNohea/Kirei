@@ -16,12 +16,12 @@ body {
 /* Scrolling mechanism */
 /* width */
 ::-webkit-scrollbar {
-    width: 8px;
+    width: 6px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: #e0eaf6;
 }
 
 /* Handle */
@@ -36,8 +36,8 @@ body {
 }
 
 nav {
-    width: 95%;
-    height: 11%;
+    width: 95vw;
+    height: 5vw;
     background-color: white;
     position: fixed;
     margin: 30px auto;
@@ -85,17 +85,23 @@ nav {
 }
 
 select {
-    width: 40px;
+    width: 3.5vw;
+    height: 3.5vw;
     border: none;
     border-radius: 5px;
+    font-size: 1.2vw !important;
 }
 
 select:focus {
     outline: none;
 }
 
+.burger-menu {
+    display: none;
+}
+
 .navi-button {
-    font-size: 17px;
+    font-size: 1.2vw;
     text-decoration: none;
     color: #3a3737;
 }
@@ -107,6 +113,7 @@ select:focus {
     color: #ffffff;
     border-radius: 5px;
     border: none;
+    font-size: 1.2vw;
 }
 
 .login-button:hover {
@@ -142,4 +149,84 @@ select:focus {
 
 .required {
     color: red;
+}
+
+.offcanvas{
+    display: none;
+}
+
+@media only screen and (max-width: 1280px) {
+    nav {
+        height: 8vw;
+        border-radius: 23px;
+    }
+
+    .navi-button {
+        display: none;
+    }
+
+    select {
+        width: 4vw;
+        font-size: 1.8vw !important;
+    }
+
+    .login-button {
+        display: none;
+    }
+
+    .burger-menu {
+        display: block;
+        border: none;
+        background-color: white;
+    }
+
+    .menu-navigation {
+        background-color: #131783 !important;
+    }
+
+    .offcanvas-header {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .btn-close {
+        background-color: white !important;
+        width: 4vw !important;
+        height: 4vw !important;
+        border-radius: 50px !important;
+        margin-left: auto;
+    }
+
+    .offcanvas-body,
+    .offcanvas-body > div {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+
+    .offcanvas-body > div > a {
+        background-color: #131783;
+        border: none;
+        border-top: 1px solid white;
+        color: white;
+        font-size: 3vw;
+        text-decoration: none;
+    }
+
+    .offcanvas-body > div > a:nth-child(3) {
+        border-bottom: 1px solid white;
+    }
+
+    .login-button-canvas {
+        background-color: white;
+        width: 35%;
+        height: 8%;
+        color: #2c5395;
+        border-radius: 5px;
+        border: none;
+        font-size: 2.5vw;
+        margin: 20px auto;
+        text-align: center;
+        text-decoration: none;
+    }
 }

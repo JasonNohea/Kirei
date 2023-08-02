@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../assets/logo.png" type="image/x-icon" />
     <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="../css/registalent.css" />
     <!-- <link
@@ -18,7 +19,7 @@
 </head>
 
 <body>
-    <a><p class="cta-home">Back to Home</p></a>
+    <a href="/home_talent"><p class="cta-home">Back to Home</p></a>
     <div class="container">
 
         <!-- Floating Content -->
@@ -64,15 +65,29 @@
                 <option> Kab. Bandung Selatan </option>
             </select>  
             <hr><hr>
-            
-        <!-- Upload Content -->
 
-        <div class="upload">    
-            <label class="cv"> Upload CV &nbsp;</label>
-            <input type="file" name="cv" id="cv">
-            <hr>
-            <label class="porto"> Upload Portofolio &nbsp;</label>
-            <input type="file" name="porto" id="porto">
+        <!-- Upload Content -->
+        
+        <div class="upload">
+            <div class="cv">    
+            <label class="cv"> Upload CV &nbsp;</label> <hr>
+            <div class="image-upload">
+                <label for="file-input">
+                    <img src="../assets/uploadicon.png">
+                </label>
+                <input id="file-input" type="file"/>
+            </div>
+            </div>
+
+            <div class="porto">
+            <label class="porto"> Upload Portofolio &nbsp;</label> <hr>
+            <div class="image-upload">
+                <label for="file-input">
+                    <img src="../assets/uploadicon.png">
+                </label>
+                <input id="file-input" type="file"/>
+            </div>
+            </div>
         </div>
         <hr>
             <input type= "submit" value="Register" class="register"></input>

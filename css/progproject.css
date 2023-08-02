@@ -5,19 +5,6 @@ height: 100%;
 margin: 0;
 }
 
-.name {
-    margin-left: 156px;
-    width: 15%;
-    display: flex;
-    flex-direction: row;
-    font-size: 20px;
-}
-
-.edit {
-    margin-left: auto;
-    color: #31348D;
-}
-
 main {
     margin-top: 5%;
     width: 100%;
@@ -52,17 +39,19 @@ main {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    width: 100%;
+    width: 1000px;
     font-size: 10px;
 }
   
 .tab-project a{
     font-size: 20px;
-    color: black;
+    text-align: center;
+    color: #31348D;
+    font-weight: 600;
+    background-color: #A0D9F6;;
     text-decoration: none;
     width: 100%;
     min-width: fit-content;
-    /* border-left-style: solid; */
     border-right-style: solid;
     padding: 20px;
 }
@@ -74,12 +63,13 @@ main {
 
 .content {
     width: 100%;
-    /* height: auto; */
-    /* min-height: fit-content; */
-    padding-bottom: 5%;
+    max-width: 2000px;
+    height: auto;
+    min-height: fit-content;
+    max-height: 1000px;
+    margin-bottom: 5%;
     padding-top: 3%;
     background-color: white;
-    border-radius: 10px;
 }
   
 .wrapper{
@@ -92,19 +82,105 @@ main {
     display: none;
 }
 
+.detail-wrapper {
+    border-radius: 0 0 10px 10px;
+    width: 100%;
+    max-width: 1000px;
+}
+
 .detail-title {
     color: #31348D;
     margin-left: auto;
     text-align: center;
-}
- 
-.detail-head {
-    color: #31348D;
+    font-size: 24px;
+    font-weight: 600;
 }
 
-.detail-desc {
-    color: #6D6D6D;
-    font-size: 14px;
+ .detail-jobs-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.detail-jobs-inst {
+    padding-left: 5%;
+}
+ 
+.detail-jobs-head {
+    color: #31348D;
+    padding-left: 5%;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.detail-jobs-dateline {
+    margin-left: auto;
+}
+
+.detail-jobs-desc {
+    color: gray;
+    padding-left: 5%;
+    font-size: 12px;
+}
+
+.detail-list {
+    color: gray;
+    font-size: 12px;
+    padding-left: 7%;
+}
+
+.photo-project {
+    padding-left: 5%;
+    width: 200px;
+    height: 120px;
+}
+
+.header {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+}
+
+.missing {
+    color: red;
+}
+
+.detail-photo{
+    padding-bottom: 5%;
+}
+
+.detail-border {
+    width: 85%;
+    border: solid 2px #31348D;
+    margin-left: 5%;
+    opacity: 1;
+}
+
+.detail-jobs-submit{
+    display: flex;
+    flex-direction: row;
+    margin: auto 50px;
+}
+
+input[type="submit"]{
+    width: 100px;
+    height: 100%;
+    padding: 10px;
+    margin: auto 40px;
+    color: white;
+    background-color: #31348D;
+    border: none;
+    border-radius: 10px;
+}
+
+input[type="submit"]{
+    width: 100px;
+    height: 100%;
+    padding: 10px;
+    margin: auto 40px;
+    color: white;
+    background-color: #31348D;
+    border: none;
+    border-radius: 10px;
 }
 /* CSS Footer untuk Talent */
 

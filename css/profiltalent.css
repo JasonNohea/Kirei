@@ -111,7 +111,7 @@ main {
     text-decoration: none;
 }
 
-.tab-project a:active{
+.tab-project a:focus-within{
     border-bottom: 5px solid #31348D;
 }
 .content {
@@ -144,6 +144,25 @@ main {
 
 .aside {
     float: left;
+}
+
+.image-upload > input
+{
+    display: none;
+}
+
+.image-upload img
+{
+    width: 110px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.b-upload {
+    width: 100%;
+    height: auto;
+    pointer-events: none;
+    border: none;
 }
 
 .jobs-week{
@@ -340,6 +359,17 @@ input[type="submit"] {
     color: blue;
 }
  
+.profile-social-links {
+    display: inline;
+    max-width: 200px;
+}
+
+.profile-social-links a{
+    color: #31348D;
+    font-size: 30px;
+    margin: 0 10px 10px 0;
+}
+  
 /* CSS Footer untuk Talent */
 
 .layar-dalam {

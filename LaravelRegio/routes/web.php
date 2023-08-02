@@ -37,6 +37,9 @@ Route::get('/aboutComp', [GeneralController::class, 'aboutComp'])->name('aboutCo
 //HomePage Company
 Route::get('/hpCompany', [CompController::class, 'hpCompany'])->name('hpCompany');
 
+//HomePage Company and login
+Route::post('/hpCompanylog', [CompController::class, 'hpCompanylog'])->name('hpCompanylog');
+
 //Company Project
 Route::get('/compProject', [CompController::class, 'compProject'])->name('compProject');
 
@@ -55,32 +58,7 @@ Route::get('/companyprofile', [CompController::class, 'companyProfile'])->name('
 //Company -> Talent Profile
 Route::get('/companytalentprofile', [CompController::class, 'companyTalentProfile'])->name('companyTalentProfile');
 
-//Testing Form Input Database
-Route::get('/tryform', [GeneralController::class, 'cthForm'])->name('cthForm');
-
+//Handle Register Company Form
+Route::get('/users/createComp', [CompController::class, 'createCompany'])->name('createCompany');
 //Register Company
-Route::get('/rgtcompany', [CompController::class, 'rgtComp'])->name('rgtComp');
-
-// Display the skill form
-Route::get('/skills/create', [SkillController::class, 'create'])->name('skills.create');
-
-// Handle the form submission
-Route::post('/skills', [SkillController::class, 'store'])->name('skills.store');
-
-// Display the province form
-Route::get('/provinces/create', [ProvinceController::class, 'create'])->name('provinces.create');
-
-// Handle the form submission
-Route::post('/provinces', [ProvinceController::class, 'store'])->name('provinces.store');
-
-// Display the city form
-Route::get('/cities/create', [CityController::class, 'create'])->name('city.create');
-
-// Handle the form submission
-Route::post('/cities', [CityController::class, 'store'])->name('city.store');
-
-use App\Http\Controllers\UserCompanyController;
-
-Route::get('/users/createComp', [UserCompanyController::class, 'createCompany'])->name('createCompany');
-
-Route::post('/users', [UserCompanyController::class, 'store'])->name('users.store');
+Route::post('/users', [CompController::class, 'store'])->name('users.store');
