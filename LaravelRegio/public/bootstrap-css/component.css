@@ -49,7 +49,6 @@ body {
 .second-con {
     width: 30%;
     height: 100%;
-    
 }
 
 .talent-con {
@@ -61,6 +60,7 @@ body {
     border-radius: 20px;
     transition: transform 0.5s ease-in-out;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+    text-decoration: none;
 }
 
 .box-shadow {
@@ -343,11 +343,11 @@ body {
     font-weight: 700;
 }
 
-@media only screen and (max-width: 1650px) {
+/* @media only screen and (max-width: 1650px) {
     .project-first > div {
         display: none;
     }
-}
+} */
 
 @media only screen and (max-width: 1280px) {
     .main {

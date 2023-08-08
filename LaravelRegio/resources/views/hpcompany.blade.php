@@ -114,7 +114,7 @@
             </button>
           </div>
           <p class="gray-text">
-            Don't have an account?&nbsp;<a href="/rgtcompany" class="regist">Register</a>
+            Don't have an account?&nbsp;<a href="/rgtcomp" class="regist">Register</a>
           </p>
         </div>
       </form>
@@ -317,7 +317,7 @@
 
       <div class="first-con grab-scroll">
         <div class="box-shadow">
-          <div class="talent-con unselectable">
+          <div class="talent-con unselectable" onclick="window.location.href='/companytalentprofile'">
             <div>
               <div class="talent-info">
                 <div class="talent-header">
@@ -365,7 +365,7 @@
           </div>
         </div>
         <div class="box-shadow">
-          <div class="talent-con unselectable">
+          <div class="talent-con unselectable" onclick="window.location.href='/companytalentprofile'">
             <div>
               <div class="talent-info">
                 <div class="talent-header">
@@ -413,7 +413,7 @@
           </div>
         </div>
         <div class="box-shadow">
-          <div class="talent-con unselectable">
+          <div class="talent-con unselectable" onclick="window.location.href='/companytalentprofile'">
             <div>
               <div class="talent-info">
                 <div class="talent-header">
@@ -461,7 +461,7 @@
           </div>
         </div>
         <div class="box-shadow">
-          <div class="talent-con unselectable">
+          <div class="talent-con unselectable" onclick="window.location.href='/companytalentprofile'">
             <div>
               <div class="talent-info">
                 <div class="talent-header">
@@ -509,7 +509,7 @@
           </div>
         </div>
         <div class="box-shadow">
-          <div class="talent-con unselectable">
+          <div class="talent-con unselectable" onclick="window.location.href='/companytalentprofile'">
             <div>
               <div class="talent-info">
                 <div class="talent-header">
@@ -557,7 +557,7 @@
           </div>
         </div>
         <div class="box-shadow">
-          <div class="talent-con unselectable">
+          <div class="talent-con unselectable" onclick="window.location.href='/companytalentprofile'">
             <div>
               <div class="talent-info">
                 <div class="talent-header">
@@ -605,7 +605,7 @@
           </div>
         </div>
         <div class="box-shadow">
-          <div class="talent-con unselectable">
+          <div class="talent-con unselectable" onclick="window.location.href='/companytalentprofile'">
             <div>
               <div class="talent-info">
                 <div class="talent-header">
@@ -653,7 +653,7 @@
           </div>
         </div>
         <div class="box-shadow">
-          <div class="talent-con unselectable">
+          <div class="talent-con unselectable" onclick="window.location.href='/companytalentprofile'">
             <div>
               <div class="talent-info">
                 <div class="talent-header">
@@ -738,7 +738,7 @@
               </div>
             </div>
           </div>
-          <div class="project-sum">
+          <div class="project-sum" onclick="window.location.href='/cpdetailproject'">
             <div class="project-img">
               <img src="../assets/Foto Project2.png" alt="Project Image" />
             </div>

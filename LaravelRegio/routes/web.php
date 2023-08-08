@@ -55,10 +55,14 @@ Route::get('/dtltalent', [TalentController::class, 'detailJob'])->name('detailJo
 //Company Profile
 Route::get('/companyprofile', [CompController::class, 'companyProfile'])->name('companyProfile');
 
+//Register Company
+Route::get('/rgtcomp', [CompController::class, 'rgtComp'])->name('registercompany');
+
 //Company -> Talent Profile
 Route::get('/companytalentprofile', [CompController::class, 'companyTalentProfile'])->name('companyTalentProfile');
 
 //Handle Register Company Form
 Route::get('/users/createComp', [CompController::class, 'createCompany'])->name('createCompany');
+
 //Register Company
 Route::post('/users', [CompController::class, 'store'])->name('users.store');

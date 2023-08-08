@@ -138,8 +138,17 @@ footer {
 }
 
 .my-project {
-    height: 100% !important;
+    height: 20% !important;
     box-shadow: none !important;
+    box-sizing: content-box !important;
+}
+
+.project-first > p {
+    font-size: 1.46vw !important;
+}
+
+.project-second > p {
+    font-size: 0.9vw !important;
 }
 
 .talent-con {
@@ -167,6 +176,7 @@ footer {
 
 .talent-request-text {
     font-size: 13px !important;
+    gap: 6px !important;
 }
 
 .talent-button > * {
@@ -253,6 +263,10 @@ footer {
     /* width: 60%; */
     border: none;
     background-color: white;
+}
+
+.project-sum {
+    height: 10% !important;
 }
 
 #fileInput {

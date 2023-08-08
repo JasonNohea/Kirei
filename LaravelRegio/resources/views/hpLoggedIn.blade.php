@@ -60,15 +60,13 @@
                 <option>ID</option>
             </select>
 
-
-
             <div class="logged-in">
                 <button class="collapse-acc dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                     <i class="fa-solid fa-user" style="color: #2c5395"></i>
                     <p class="user-nav nav-acc">Jeremy</p>
                 </button>
                 <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Profile</a></li>
+                    <li><a class="dropdown-item" href="/companyprofile">Profile</a></li>
                     <li><a class="dropdown-item" href="/hpCompany">Log out</a></li>
                 </ul>
 
@@ -170,7 +168,7 @@
         <div class="main">
             <div class="first-con grab-scroll">
                 <div class="box-shadow">
-                    <div class="talent-con unselectable">
+                    <div class="talent-con unselectable" onclick="window.location.href='/companytalentprofile'">
                         <div>
                             <div class="talent-info">
                                 <div class="talent-header">
@@ -218,7 +216,7 @@
                     </div>
                 </div>
                 <div class="box-shadow">
-                    <div class="talent-con unselectable">
+                    <div class="talent-con unselectable" onclick="window.location.href='/companytalentprofile'">
                         <div>
                             <div class="talent-info">
                                 <div class="talent-header">
@@ -266,7 +264,7 @@
                     </div>
                 </div>
                 <div class="box-shadow">
-                    <div class="talent-con unselectable">
+                    <div class="talent-con unselectable" onclick="window.location.href='/companytalentprofile'">
                         <div>
                             <div class="talent-info">
                                 <div class="talent-header">
@@ -314,7 +312,7 @@
                     </div>
                 </div>
                 <div class="box-shadow">
-                    <div class="talent-con unselectable">
+                    <div class="talent-con unselectable" onclick="window.location.href='/companytalentprofile'">
                         <div>
                             <div class="talent-info">
                                 <div class="talent-header">
@@ -362,7 +360,7 @@
                     </div>
                 </div>
                 <div class="box-shadow">
-                    <div class="talent-con unselectable">
+                    <div class="talent-con unselectable" onclick="window.location.href='/companytalentprofile'">
                         <div>
                             <div class="talent-info">
                                 <div class="talent-header">
@@ -410,7 +408,7 @@
                     </div>
                 </div>
                 <div class="box-shadow">
-                    <div class="talent-con unselectable">
+                    <div class="talent-con unselectable" onclick="window.location.href='/companytalentprofile'">
                         <div>
                             <div class="talent-info">
                                 <div class="talent-header">
@@ -458,7 +456,7 @@
                     </div>
                 </div>
                 <div class="box-shadow">
-                    <div class="talent-con unselectable">
+                    <div class="talent-con unselectable" onclick="window.location.href='/companytalentprofile'">
                         <div>
                             <div class="talent-info">
                                 <div class="talent-header">
@@ -506,7 +504,7 @@
                     </div>
                 </div>
                 <div class="box-shadow">
-                    <div class="talent-con unselectable">
+                    <div class="talent-con unselectable" onclick="window.location.href='/companytalentprofile'">
                         <div>
                             <div class="talent-info">
                                 <div class="talent-header">
@@ -591,7 +589,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="project-sum">
+                    <div class="project-sum" onclick="window.location.href='/cpdetailproject'">
                         <div class="project-img">
                             <img src="../assets/Foto Project2.png" alt="Project Image" />
                         </div>
