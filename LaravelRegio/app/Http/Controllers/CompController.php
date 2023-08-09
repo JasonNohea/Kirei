@@ -91,7 +91,7 @@ class CompController extends Controller
 
         // Store the user data
         $user = User::create([
-            'user_type' => $validatedData['user_type'],
+            'user_type' => 'company',
             'first_name' => $validatedData['first_name'],
             'last_name' => $validatedData['last_name'],
             'email' => $validatedData['email'],
