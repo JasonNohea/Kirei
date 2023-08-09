@@ -290,7 +290,7 @@
       Start finding your perfect talent for your project.
     </p>
 
-    <form class="register-form" action="{{ route('users.store') }}" method="POST" enctype="multipart/form-data">
+    <form class="register-form" action="{{ route('usersC.store') }}" method="POST" enctype="multipart/form-data">
       @csrf
       <div class="main-container">
         <div class="first-form">
