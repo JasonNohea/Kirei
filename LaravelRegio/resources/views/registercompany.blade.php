@@ -316,20 +316,20 @@
 
             <select class="form-select" aria-label="Default select example">
               <option disabled selected>Province</option>
-              <option value="1-20">1 to 20</option>
-              <option value="21-50">21 to 50</option>
+              <option value="province1">Jawa Barat</option>
+              <option value="province2">Wakanda</option>
             </select>
 
 
             <select class="form-select" aria-label="Default select example">
               <option disabled selected>City</option>
-              <option value="1-20">1 to 20</option>
-              <option value="21-50">21 to 50</option>
+              <option value="city1">Bandung</option>
+              <option value="city2">Planet Bekasi</option>
             </select>
 
           </div>
           <div class="form-floating">
-            <textarea type="text" class="form-control" onkeyup="post();" id="in-pdesc" placeholder="Description"></textarea>
+            <textarea type="text" class="form-control address-Tarea" onkeyup="post();" id="in-pdesc" placeholder="Description"></textarea>
             <label for="in-pdesc">Address</label>
           </div>
         </div>
