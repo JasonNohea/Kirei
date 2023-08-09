@@ -70,7 +70,6 @@ Route::get('/companytalentprofile', [CompController::class, 'companyTalentProfil
 //CompanyLog -> Talent Profile
 Route::get('/companylogtalentprofile', [CompController::class, 'companylogTalentProfile'])->name('companylogTalentProfile');
 
-
 //Handle Register Company Form
 Route::get('/users/createComp', [CompController::class, 'createCompany'])->name('createCompany');
 

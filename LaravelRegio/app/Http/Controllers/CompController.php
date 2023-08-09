@@ -53,7 +53,9 @@ class CompController extends Controller
     }
     public function rgtComp()
     {
-        return view('registercompany'); //buka file registercompany.php di resource/views
+        $cities = City::select('id', 'city_name')->get();
+        $provinces = Province::select('id', 'province_name')->get();
+        return view('registercompany', compact('cities', 'provinces')); //buka file registercompany.php di resource/views
     }
 
 
@@ -72,7 +74,6 @@ class CompController extends Controller
 
         //return $request;
         $validatedData = $request->validate([
-            'user_type' => 'required',
             'city_id' => 'required',
             'province_id' => 'required',
             'first_name' => 'required',
@@ -119,6 +120,6 @@ class CompController extends Controller
         ]);
         //dd($validatedData);
 
-        return redirect()->route('createCompany')->with('success', 'User and Company created successfully.');
+        return redirect()->route('hpCompany')->with('success', 'User and Company created successfully.');
     }
 }

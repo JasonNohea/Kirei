@@ -290,18 +290,19 @@
       Start finding your perfect talent for your project.
     </p>
 
-    <form class="register-form" action="">
+    <form class="register-form" action="{{ route('users.store') }}" method="POST" enctype="multipart/form-data">
+      @csrf
       <div class="main-container">
         <div class="first-form">
           <div class="form-floating">
-            <input type="email" class="form-control" id="email-company" placeholder="name@example.com" onkeyup="success();" />
+            <input type="email" class="form-control" name="email" id="email" value="{{ old('email') }}" placeholder="name@example.com" onkeyup="success();" />
             <label for="email-company">Email Company<span class="required">*</span></label>
           </div>
           <div class="form-floating">
-            <input type="text" class="form-control" id="company-name" placeholder="name@example.com" onkeyup="success();" />
+            <input type="text" class="form-control" name="company_name" id="company_name" value="{{ old('company_name') }}" placeholder="name@example.com" onkeyup="success();" />
             <label for="company-name">Company Name<span class="required">*</span></label>
           </div>
-          <select class="form-select" aria-label="Default select example">
+          <select class="form-select" aria-label="Default select example" name="number_of_employee" id="number_of_employee">
             <option disabled selected>Number of Employee</option>
             <option value="1-20">1 to 20</option>
             <option value="21-50">21 to 50</option>
@@ -309,54 +310,75 @@
             <option value="101-200">101 to 200</option>
             <option value="201-500">201 to 500</option>
             <option value="501-1000">501 to 1000</option>
-            <option value=">1000">more than 1000</option>
+            <option value=">1000">More than 1000</option>
           </select>
+          @error('number_of_employee')
+          <div class="text-red-500">{{ $message }}</div>
+      @enderror
 
           <div class="project-location">
 
-            <select class="form-select" aria-label="Default select example">
-              <option disabled selected>Province</option>
-              <option value="1-20">1 to 20</option>
-              <option value="21-50">21 to 50</option>
+            <select name="province_id" id="province_id"class="form-select" aria-label="Default select example">
+              <option selected disabled hidden>Province</option>
+                @foreach ($provinces as $province)
+                    <option value="{{ $province->id }}" {{ old('province') == $province->id }}>
+                        {{ $province->province_name }}
+                    </option>
+                @endforeach
             </select>
+            @error('province_id')
+            <div class="text-red-500">{{ $message }}</div>
+        @enderror
 
 
-            <select class="form-select" aria-label="Default select example">
-              <option disabled selected>City</option>
-              <option value="1-20">1 to 20</option>
-              <option value="21-50">21 to 50</option>
+            <select name="city_id" id="city_id" class="form-select" >
+              <option selected disabled hidden>City</option>
+                @foreach ($cities as $city)
+                    <option value="{{ $city->id }}" {{ old('city') == $city->id }}>
+                        {{ $city->city_name }}
+                    </option>
+                @endforeach
             </select>
+            @error('city_id')
+            <div class="text-red-500">{{ $message }}</div>
+        @enderror
 
           </div>
           <div class="form-floating">
-            <textarea type="text" class="form-control" onkeyup="post();" id="in-pdesc" placeholder="Description"></textarea>
+            <textarea name="address" id="address" type="text" class="form-control" onkeyup="post();" placeholder="Description">{{ old('address') }}</textarea>
             <label for="in-pdesc">Address</label>
+            @error('address')
+              <div class="text-red-500">{{ $message }}</div>
+            @enderror
           </div>
         </div>
         <div class="second-form">
           <div class="form-floating">
-            <input type="text" class="form-control" id="first-name" placeholder="name" onkeyup="success();" />
+            <input type="text" class="form-control" name="first_name" id="first_name" value="{{ old('first_name') }}" placeholder="name" onkeyup="success();" />
             <label for="first-name">First Name<span class="required">*</span></label>
           </div>
           <div class="form-floating">
-            <input type="text" class="form-control" id="last-name" placeholder="name" onkeyup="success();" />
+            <input type="text" class="form-control" name="last_name" id="last_name" value="{{ old('last_name') }}" placeholder="name" onkeyup="success();" />
             <label for="last-name">Last Name<span class="required">*</span></label>
           </div>
           <div class="form-floating">
-            <input type="text" class="form-control" id="position" placeholder="position" />
+            <input type="text" class="form-control" name="position" id="position" value="{{ old('position') }}" placeholder="position" />
             <label for="position">Position</label>
+            @error('position')
+            <div class="text-red-500">{{ $message }}</div>
+        @enderror
           </div>
           <div class="form-floating">
-            <input type="number" class="form-control" id="contact-number" placeholder="1234567890" />
+            <input type="text" class="form-control" name="phone_number" id="phone_number" value="{{ old('phone_number') }}" placeholder="1234567890" />
             <label for="position">Contact Number</label>
           </div>
           <div class="form-floating">
-            <input type="password" class="form-control" id="password-register" placeholder="password" onkeyup="success();" />
+            <input type="password" class="form-control" name="password" id="password" placeholder="password" onkeyup="success();" />
             <label for="password-register">Password<span class="required">*</span></label>
           </div>
         </div>
       </div>
-      <button class="register-button" id="register-button" type="submit" disabled>
+      <button class="register-button" id="register-button" type="submit" >
         Register
       </button>
     </form>
