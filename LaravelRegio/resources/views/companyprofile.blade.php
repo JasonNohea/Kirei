@@ -25,9 +25,9 @@
     <nav>
         <div class="nav1">
             <img class="logo" src="../assets/logoCompany.png" alt="Logo Regio" />
-            <a class="navi-button" href="{{ route('hpCompany') }}#talentsearch">Talent</a>
+            <a class="navi-button" href="{{ route('hpComplog') }}#talentsearch">Talent</a>
             <a class="navi-button" href="/compProject">My Project</a>
-            <a class="navi-button" href="/aboutComp">About</a>
+            <a class="navi-button" href="/aboutCompLog">About</a>
         </div>
         <div class="nav2">
             <!-- <button type="button" class="position-relative notif-button">
@@ -74,9 +74,9 @@
                 </div>
                 <div class="offcanvas-body">
                     <div>
-                        <a href="{{ route('hpCompany') }}#talentsearch">Talent</a>
+                        <a href="{{ route('hpComplog') }}#talentsearch">Talent</a>
                         <a href="/compProject">My Project</a>
-                        <a href="/aboutComp">About</a>
+                        <a href="/aboutCompLog">About</a>
                     </div>
                     <a type="button" class="login-button-canvas" href="/hpCompany">
                         Logout

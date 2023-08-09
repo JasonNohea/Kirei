@@ -34,8 +34,14 @@ Route::get('/aboutTalent', [GeneralController::class, 'aboutTalent'])->name('abo
 //About Company Page
 Route::get('/aboutComp', [GeneralController::class, 'aboutComp'])->name('aboutComp');
 
+//About Company Page
+Route::get('/aboutCompLog', [GeneralController::class, 'aboutCompLog'])->name('aboutCompLog');
+
 //HomePage Company
 Route::get('/hpCompany', [CompController::class, 'hpCompany'])->name('hpCompany');
+
+//HomePage Company without modal
+Route::get('/hpComplog', [CompController::class, 'hpcomp'])->name('hpComplog');
 
 //HomePage Company and login
 Route::post('/hpCompanylog', [CompController::class, 'hpCompanylog'])->name('hpCompanylog');
@@ -60,6 +66,10 @@ Route::get('/rgtcomp', [CompController::class, 'rgtComp'])->name('registercompan
 
 //Company -> Talent Profile
 Route::get('/companytalentprofile', [CompController::class, 'companyTalentProfile'])->name('companyTalentProfile');
+
+//CompanyLog -> Talent Profile
+Route::get('/companylogtalentprofile', [CompController::class, 'companylogTalentProfile'])->name('companylogTalentProfile');
+
 
 //Handle Register Company Form
 Route::get('/users/createComp', [CompController::class, 'createCompany'])->name('createCompany');

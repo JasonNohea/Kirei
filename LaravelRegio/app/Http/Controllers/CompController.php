@@ -19,6 +19,10 @@ class CompController extends Controller
     {
         return view('hpcompany'); //buka file hometalent.php di resource/views
     }
+    public function hpcomp()
+    {
+        return view('hpcompanylog'); //buka file hometalent.php di resource/views
+    }
     public function hpCompanylog()
     {
         return view('hpLoggedIn'); //buka file hometalent.php di resource/views
@@ -43,10 +47,15 @@ class CompController extends Controller
     {
         return view('company-talentprofile'); //buka file companytalentprofile.php di resource/views
     }
+    public function companylogTalentProfile()
+    {
+        return view('company-talentprofil-loggedin'); //buka file companytalentprofile.php di resource/views
+    }
     public function rgtComp()
     {
-        return view('registercompany'); //buka file about.php di resource/views
+        return view('registercompany'); //buka file registercompany.php di resource/views
     }
+
 
     //Register Company Form
     public function createCompany()

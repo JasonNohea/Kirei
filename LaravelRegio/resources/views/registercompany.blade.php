@@ -17,7 +17,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-  <script src="../js/mainpage.js"></script>
+  <script src="../js/mainpage.js" defer></script>
   <script src="../js/register.js"></script>
   <title>Regio</title>
 </head>
@@ -30,7 +30,7 @@
         <img class="logo" src="../assets/logoCompany.png" alt="Logo Regio" />
       </a>
       <a class="navi-button" href="{{ route('hpCompany') }}#talentsearch">Talent</a>
-      <a class="navi-button" href="/compProject">My Project</a>
+      <a class="navi-button" data-bs-toggle="modal" data-bs-target="#login">My Project</a>
       <a class="navi-button" href="/aboutComp">About</a>
     </div>
     <div class="nav2">
@@ -48,7 +48,8 @@
   <!-- Modal Login -->
   <div class="modal fade" id="login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
-      <form class="modal-content needs-validation" action="../php/loginjson.php" method="post" name="login" novalidate>
+      <form class="modal-content needs-validation" action="/hpCompanylog" method="post" name="login" novalidate>
+        @csrf
         <div class="modal-header">
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           <img src="../assets/logo.png" alt="Regio Logo" />
@@ -56,7 +57,7 @@
         </div>
         <div class="modal-body">
           <div>
-            <div class="form-floating">
+            <div class="form-floating mb-3">
               <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" required />
               <label for="email">Email<span class="required">*</span></label>
             </div>
@@ -113,7 +114,7 @@
         </div>
         <div class="modal-body">
           <div>
-            <div class="form-floating">
+            <div class="form-floating mb-3">
               <input type="email" class="form-control" id="email-reset" placeholder="name@example.com" required />
               <label for="email-reset">Email<span class="required">*</span></label>
             </div>
@@ -132,7 +133,7 @@
             <hr class="hr-decor" />
           </div>
           <p class="gray-text">
-            Don't have an account?&nbsp;<a href="../company/registercompany.html" class="regist">Register</a>
+            Don't have an account?&nbsp;<a href="#" class="regist">Register</a>
           </p>
         </div>
       </form>
@@ -153,10 +154,10 @@
         </div>
         <div class="modal-body">
           <div class="digit-group" data-group-name="digits" data-autosubmit="false" autocomplete="off">
-            <input type="number" class="otp-digit form-control" id="digit-1" name="digit-1" data-next="digit-2" max="1" required />
-            <input type="number" class="otp-digit form-control" id="digit-2" name="digit-2" data-next="digit-3" max="1" required data-previous="digit-1" />
-            <input type="number" class="otp-digit form-control" id="digit-3" name="digit-3" data-next="digit-4" max="1" required data-previous="digit-2" />
-            <input type="number" class="otp-digit form-control" id="digit-4" name="digit-4" data-previous="digit-3" max="1" required />
+            <input type="number" class="otp-digit form-control" id="digit-1" name="digit-1" data-next="digit-2" maxlength="1" oninput="otpchecker(this, 2, 0)" required />
+            <input type="number" class="otp-digit form-control" id="digit-2" name="digit-2" data-next="digit-3" maxlength="1" oninput="otpchecker(this, 3, 1)" required data-previous="digit-1" />
+            <input type="number" class="otp-digit form-control" id="digit-3" name="digit-3" data-next="digit-4" maxlength="1" oninput="otpchecker(this, 4, 2)" required data-previous="digit-2" />
+            <input type="number" class="otp-digit form-control" id="digit-4" name="digit-4" data-previous="digit-3" maxlength="1" oninput="otpchecker(this, 0, 3)" required />
           </div>
           <p class="gray-text otp-resend">
             Resent code in&nbsp;<a href="#" id="countdown">00:20</a>
@@ -176,7 +177,7 @@
             <hr class="hr-decor" />
           </div>
           <p class="gray-text">
-            Don't have an account?&nbsp;<a href="../company/registercompany.html" class="regist">Register</a>
+            Don't have an account?&nbsp;<a href="#" class="regist">Register</a>
           </p>
         </div>
       </form>
@@ -197,7 +198,7 @@
         </div>
         <div class="modal-body">
           <div>
-            <div class="form-floating">
+            <div class="form-floating mb-3">
               <input type="password" class="form-control" id="reset-password" name="reset-password" placeholder="Password" required />
               <label for="email">Password<span class="required">*</span></label>
               <p class="gray-text">Must be at least 8 characters.</p>
@@ -222,7 +223,7 @@
             <hr class="hr-decor" />
           </div>
           <p class="gray-text">
-            Don't have an account?&nbsp;<a href="../company/registercompany.html" class="regist">Register</a>
+            Don't have an account?&nbsp;<a href="#" class="regist">Register</a>
           </p>
         </div>
       </form>
@@ -310,9 +311,25 @@
             <option value="501-1000">501 to 1000</option>
             <option value=">1000">more than 1000</option>
           </select>
-          <div class="form-floating">
+          <!-- <div class="form-floating">
             <textarea type="text" class="form-control" onkeyup="post();" id="in-pdesc" placeholder="Description"></textarea>
             <label for="in-pdesc">Project Location</label>
+          </div> -->
+          <div class="project-location">
+
+            <select class="form-select" aria-label="Default select example">
+              <option disabled selected>Province</option>
+              <option value="1-20">1 to 20</option>
+              <option value="21-50">21 to 50</option>
+            </select>
+
+
+            <select class="form-select" aria-label="Default select example">
+              <option disabled selected>City</option>
+              <option value="1-20">1 to 20</option>
+              <option value="21-50">21 to 50</option>
+            </select>
+
           </div>
         </div>
         <div class="second-form">

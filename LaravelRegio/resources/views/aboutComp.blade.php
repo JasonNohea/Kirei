@@ -25,6 +25,8 @@
   </script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
   <script src="{{ url('js/mainpage.js')}}"></script>
+  <script src="../js/mainpage.js" defer></script>
+  <!-- <script src="{{ asset('js/scroll.js') }}"></script> -->
   <title> Regio - Job Portal di Indonesia </title>
 </head>
 
@@ -33,28 +35,51 @@
 
   <nav>
     <div class="nav1">
-      <img class="logo" src="{{ url('assets/logoCompany.png')}}" alt="Logo Regio" />
+      <img class="logo" src="../assets/logoCompany.png" alt="Logo Regio" />
       <a class="navi-button" href="{{ route('hpCompany') }}#talentsearch">Talent</a>
-      <!-- <a class="navi-button" href="#">My Projects</a> -->
+      <a class="navi-button" data-bs-toggle="modal" data-bs-target="#login">My Project</a>
       <a class="navi-button" href="/aboutComp">About</a>
     </div>
     <div class="nav2">
-      <img class="globe" src="{{ url('assets/global.png')}}" />
+      <img class="globe" src="../assets/global.png" />
       <select>
         <option>EN</option>
         <option>ID</option>
       </select>
-      <button type="button" class="login-button" data-bs-toggle="modal" data-bs-target="#login"> Login </button>
+      <button type="button" class="login-button" data-bs-toggle="modal" data-bs-target="#login">
+        Login
+      </button>
+      <button class="burger-menu" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+        <i class="fa-solid fa-bars fa-2xl" style="color: #2c5395"></i>
+      </button>
+
+      <div class="offcanvas offcanvas-end menu-navigation" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+          <button type="button" class="btn-close " data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          <img class="white-regio" src="../assets/white-regio.png" alt="White Regio">
+        </div>
+        <div class="offcanvas-body">
+          <div>
+            <a href="{{ route('hpCompany') }}#talentsearch">Talent</a>
+            <a href="/compProject">My Project</a>
+            <a href="/aboutComp">About</a>
+          </div>
+          <button type="button" class="login-button-canvas" data-bs-toggle="modal" data-bs-target="#login">
+            Login
+          </button>
+        </div>
+      </div>
     </div>
   </nav>
 
   <!-- Modal Login -->
   <div class="modal fade" id="login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
-      <form class="modal-content needs-validation" action="../php/loginjson.php" method="post" name="login" novalidate>
+      <form class="modal-content needs-validation" action="/hpCompanylog" method="post" name="login" novalidate>
+        @csrf
         <div class="modal-header">
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          <img src="{{ url('assets/logo.png')}}" alt="Regio Logo" />
+          <img src="../assets/logo.png" alt="Regio Logo" />
           <h1 class="login-heading">Welcome to Regio!</h1>
         </div>
         <div class="modal-body">
@@ -110,7 +135,7 @@
       <form class="modal-content needs-validation" action="" method="post" name="forgot-pass" novalidate>
         <div class="modal-header">
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" required></button>
-          <img src="{{ url('assets/logo.png')}}" alt="Regio Logo" />
+          <img src="../assets/logo.png" alt="Regio Logo" />
           <h1 class="login-heading">Forgot Password?</h1>
           <span class="reset-inst">no worries, we'll send you reset instructions.</span>
         </div>
@@ -156,10 +181,10 @@
         </div>
         <div class="modal-body">
           <div class="digit-group" data-group-name="digits" data-autosubmit="false" autocomplete="off">
-            <input type="number" class="otp-digit form-control" id="digit-1" name="digit-1" data-next="digit-2" max="1" required />
-            <input type="number" class="otp-digit form-control" id="digit-2" name="digit-2" data-next="digit-3" max="1" required data-previous="digit-1" />
-            <input type="number" class="otp-digit form-control" id="digit-3" name="digit-3" data-next="digit-4" max="1" required data-previous="digit-2" />
-            <input type="number" class="otp-digit form-control" id="digit-4" name="digit-4" data-previous="digit-3" max="1" required />
+            <input type="number" class="otp-digit form-control" id="digit-1" name="digit-1" data-next="digit-2" maxlength="1" oninput="otpchecker(this, 2, 0)" required />
+            <input type="number" class="otp-digit form-control" id="digit-2" name="digit-2" data-next="digit-3" maxlength="1" oninput="otpchecker(this, 3, 1)" required data-previous="digit-1" />
+            <input type="number" class="otp-digit form-control" id="digit-3" name="digit-3" data-next="digit-4" maxlength="1" oninput="otpchecker(this, 4, 2)" required data-previous="digit-2" />
+            <input type="number" class="otp-digit form-control" id="digit-4" name="digit-4" data-previous="digit-3" maxlength="1" oninput="otpchecker(this, 0, 3)" required />
           </div>
           <p class="gray-text otp-resend">
             Resent code in&nbsp;<a href="#" id="countdown">00:20</a>
