@@ -125,25 +125,35 @@ footer {
     align-items: center;
 }
 
-.talent-container > p {
+.talent-container > p,
+.loading-container > p {
     font-size: 25px;
     font-weight: 700;
     text-align: center;
-    margin: 10px;
+    margin: 20px;
 }
 
 .talent-container > div {
-    margin: 15px;
+    margin: auto;
 }
 
 .my-project {
-    height: 100% !important;
+    height: 20% !important;
     box-shadow: none !important;
+    box-sizing: content-box !important;
+}
+
+.project-first > p {
+    font-size: 1.46vw !important;
+}
+
+.project-second > p {
+    font-size: 0.9vw !important;
 }
 
 .talent-con {
     width: 90% !important;
-    height: 90% !important;
+    height: fit-content !important;
 }
 
 .talent-header-info > * {
@@ -166,6 +176,7 @@ footer {
 
 .talent-request-text {
     font-size: 13px !important;
+    gap: 6px !important;
 }
 
 .talent-button > * {
@@ -252,6 +263,10 @@ footer {
     /* width: 60%; */
     border: none;
     background-color: white;
+}
+
+.project-sum {
+    height: 10% !important;
 }
 
 #fileInput {
@@ -447,4 +462,68 @@ input[type="number"] {
     width: 80%;
     margin: auto;
     inset: 0;
+}
+
+.loading-container {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.loading-container > img {
+    width: 18%;
+    height: auto;
+}
+
+.loading-container > div {
+    font-size: 1.5vw;
+    color: #0b0e73;
+    font-weight: 100;
+}
+
+.loading-container > p:nth-child(4) {
+    font-size: 1.2vw;
+    color: #727272;
+    font-weight: 100;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.loading-text::after {
+    content: "Loading";
+    animation: loadingAnimation 1.5s infinite steps(4);
+    display: inline-block;
+    overflow: hidden;
+}
+
+.delete-button {
+    border: none;
+    background-color: #f2f2f2;
+    cursor: pointer;
+}
+
+@keyframes loadingAnimation {
+    0% {
+        content: "Searching";
+    }
+    25% {
+        content: "Searching.";
+    }
+    50% {
+        content: "Searching..";
+    }
+    75% {
+        content: "Searching...";
+    }
+    100% {
+        content: "Searching";
+    }
+}
+
+/* Hide the content div initially */
+.content-talent {
+    display: none;
 }

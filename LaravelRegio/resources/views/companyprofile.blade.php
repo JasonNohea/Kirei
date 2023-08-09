@@ -24,11 +24,10 @@
 <body>
     <nav>
         <div class="nav1">
-            <a href="homepage.html"><img class="logo" src="../assets/logoCompany.png" alt="Logo Regio" /></a>
-
+            <img class="logo" src="../assets/logoCompany.png" alt="Logo Regio" />
             <a class="navi-button" href="{{ route('hpCompany') }}#talentsearch">Talent</a>
-            <a class="navi-button" href="#">My Project</a>
-            <a class="navi-button" href="#">About</a>
+            <a class="navi-button" href="/compProject">My Project</a>
+            <a class="navi-button" href="/aboutComp">About</a>
         </div>
         <div class="nav2">
             <!-- <button type="button" class="position-relative notif-button">
@@ -48,11 +47,41 @@
                 <option>EN</option>
                 <option>ID</option>
             </select>
-            <i class="fa-solid fa-user" style="color: #2c5395"></i>
+
             <div class="logged-in">
-                <p class="user-nav nav-acc">Jeremy</p>
+                <button class="collapse-acc dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa-solid fa-user" style="color: #2c5395"></i>
+                    <p class="user-nav nav-acc">Jeremy</p>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="/companyprofile">Profile</a></li>
+                    <li><a class="dropdown-item" href="/hpCompany">Log out</a></li>
+                </ul>
+
                 <hr class="navline" />
                 <p class="company-nav nav-acc">Company</p>
+            </div>
+
+
+            <button class="burger-menu" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                <i class="fa-solid fa-bars fa-2xl" style="color: #2c5395"></i>
+            </button>
+
+            <div class="offcanvas offcanvas-end menu-navigation" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                <div class="offcanvas-header">
+                    <button type="button" class="btn-close " data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    <img class="white-regio" src="../assets/white-regio.png" alt="White Regio">
+                </div>
+                <div class="offcanvas-body">
+                    <div>
+                        <a href="{{ route('hpCompany') }}#talentsearch">Talent</a>
+                        <a href="/compProject">My Project</a>
+                        <a href="/aboutComp">About</a>
+                    </div>
+                    <a type="button" class="login-button-canvas" href="/hpCompany">
+                        Logout
+                    </a>
+                </div>
             </div>
         </div>
     </nav>
@@ -245,7 +274,7 @@
                         <label for="floatingPassword">Confirm New Password</label>
                     </div>
                 </div>
-                <button class="change-pass">Change Password</button>
+                <button class="change-pass" onclick="window.location.href='/hpCompany'">Change Password</button>
             </div>
             <div class="content help-centre" id="content4">
                 <p class="info-title">Help Centre</p>

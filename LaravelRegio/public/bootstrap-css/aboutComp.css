@@ -35,7 +35,7 @@ main {
     left: 0%;
 }
 
-h1 {
+.main-text {
     color: white !important;
     margin: auto auto 30px !important;
     inset: 0;
@@ -234,7 +234,7 @@ textarea {
 
 .send-button {
     border: none;
-    background-color: #515163;
+    background-color: #2020a1;
     color: white;
     margin-left: 20px !important;
     border-radius: 10px;
@@ -243,4 +243,40 @@ textarea {
 
 .send-button:hover {
     background-color: #0b0e73;
+}
+
+.contact-con > div {
+    background-color: white;
+    width: 12vw;
+    height: 12vw;
+    box-shadow: 0px 0px 10px rgb(10, 10, 10, 0.4);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+.email {
+    transform: translate(-65px, -30px);
+}
+
+.whatsapp {
+    transform: translate(-65px, -20px);
+}
+
+.whatsapp > p:nth-child(3) {
+    color: #646464;
+}
+
+.contact-logo {
+    width: 45%;
+    height: auto;
+}
+
+.contact-title {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    margin: 0;
 }

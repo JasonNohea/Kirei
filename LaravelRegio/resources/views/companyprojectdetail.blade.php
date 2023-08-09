@@ -20,26 +20,27 @@
   <script src="../js/navigationswitch.js"></script>
   <script src="../js/EditProject.js"></script>
   <script src="../js/editfield.js"></script>
+  <script src="../js/loadingtalent.js"></script>
   <title>Project Detail</title>
 </head>
 
 <body>
   <nav>
     <div class="nav1">
-      <a href="homepage.html"><img class="logo" src="../assets/logoCompany.png" alt="Logo Regio" /></a>
+      <img class="logo" src="../assets/logoCompany.png" alt="Logo Regio" />
       <a class="navi-button" href="{{ route('hpCompany') }}#talentsearch">Talent</a>
-      <a class="navi-button" href="../company/companyproject.html">My Project</a>
+      <a class="navi-button" href="/compProject">My Project</a>
       <a class="navi-button" href="/aboutComp">About</a>
     </div>
     <div class="nav2">
       <!-- <button type="button" class="position-relative notif-button">
-            <i class="fa-solid fa-bell" style="color: #2c5395"></i>
-            <span
-              class="position-absolute translate-middle p-1 bg-danger border border-light rounded-circle notif"
-            >
-              <span class="visually-hidden">New alerts</span>
-            </span>
-          </button> -->
+          <i class="fa-solid fa-bell" style="color: #2c5395"></i>
+          <span
+            class="position-absolute translate-middle p-1 bg-danger border border-light rounded-circle notif"
+          >
+            <span class="visually-hidden">New alerts</span>
+          </span>
+        </button> -->
       <button type="button" class="position-relative notif-button">
         <i class="fa-solid fa-bell" style="color: #2c5395"></i>
       </button>
@@ -49,11 +50,41 @@
         <option>EN</option>
         <option>ID</option>
       </select>
-      <i class="fa-solid fa-user" style="color: #2c5395"></i>
+
       <div class="logged-in">
-        <p class="user-nav nav-acc">Jeremy</p>
+        <button class="collapse-acc dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <i class="fa-solid fa-user" style="color: #2c5395"></i>
+          <p class="user-nav nav-acc">Jeremy</p>
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="/companyprofile">Profile</a></li>
+          <li><a class="dropdown-item" href="/hpCompany">Log out</a></li>
+        </ul>
+
         <hr class="navline" />
         <p class="company-nav nav-acc">Company</p>
+      </div>
+
+
+      <button class="burger-menu" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+        <i class="fa-solid fa-bars fa-2xl" style="color: #2c5395"></i>
+      </button>
+
+      <div class="offcanvas offcanvas-end menu-navigation" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+          <button type="button" class="btn-close " data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          <img class="white-regio" src="../assets/white-regio.png" alt="White Regio">
+        </div>
+        <div class="offcanvas-body">
+          <div>
+            <a href="{{ route('hpCompany') }}#talentsearch">Talent</a>
+            <a href="/compProject">My Project</a>
+            <a href="/aboutComp">About</a>
+          </div>
+          <a type="button" class="login-button-canvas" href="/hpCompany">
+            Logout
+          </a>
+        </div>
       </div>
     </div>
   </nav>
@@ -409,9 +440,23 @@
 
     </div>
     <div class="second-container">
-      <div class="talent-container">
+      <!-- Loading div -->
+      <div id="loading" class="loading">
+        <!-- Loading content here -->
+        <div class="loading-container">
+          <p>Talent</p>
+          <img src="../assets/searching.png" alt="">
+          <div class="loading-text"></div>
+          <p>deadline: <span>-</span></p>
+        </div>
+      </div>
+
+      <!-- Content div -->
+      <!-- Content goes here -->
+      <div class="talent-container content-talent" id="content-talent">
         <p>Talent</p>
-        <div class="talent-con unselectable">
+        <a href="/companytalentprofile"></a>
+        <div class="talent-con unselectable " onclick="window.location.href='/companytalentprofile'">
           <div>
             <div class="talent-info">
               <div class="talent-header">
@@ -456,6 +501,7 @@
         </div>
       </div>
 
+
       <div class="my-project">
         <p>My Project</p>
         <div class="project-sum">
@@ -492,7 +538,7 @@
             </div>
           </div>
         </div>
-        <div class="project-sum" style="cursor: pointer" onclick="window.location.href='ProjectDetail.html'">
+        <div class="project-sum" style="cursor: pointer" onclick="window.location.href='/cpdetailproject'">
           <div class="project-img">
             <img src="../assets/Foto Project2.png" alt="Project Image" />
           </div>

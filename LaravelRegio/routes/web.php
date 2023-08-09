@@ -37,6 +37,9 @@ Route::get('/aboutComp', [GeneralController::class, 'aboutComp'])->name('aboutCo
 //HomePage Company
 Route::get('/hpCompany', [CompController::class, 'hpCompany'])->name('hpCompany');
 
+//HomePage Company and login
+Route::post('/hpCompanylog', [CompController::class, 'hpCompanylog'])->name('hpCompanylog');
+
 //Company Project
 Route::get('/compProject', [CompController::class, 'compProject'])->name('compProject');
 
@@ -51,6 +54,9 @@ Route::get('/dtltalent', [TalentController::class, 'detailJob'])->name('detailJo
 
 //Company Profile
 Route::get('/companyprofile', [CompController::class, 'companyProfile'])->name('companyProfile');
+
+//Register Company
+Route::get('/rgtcomp', [CompController::class, 'rgtComp'])->name('registercompany');
 
 //Company -> Talent Profile
 Route::get('/companytalentprofile', [CompController::class, 'companyTalentProfile'])->name('companyTalentProfile');

@@ -97,7 +97,7 @@
             </button>
           </div>
           <p class="gray-text">
-            Don't have an account?&nbsp;<a href="/rgtcompany" class="regist">Register</a>
+            Don't have an account?&nbsp;<a href="/rgtcomp" class="regist">Register</a>
           </p>
         </div>
       </form>
@@ -436,8 +436,16 @@
         <p class="section-title">Contact Us</p>
         <div class="contact-us">
           <div class="contact-con">
-            <div></div>
-            <div></div>
+            <div class="email">
+              <img class="contact-logo" src="../assets/mail.png" alt="">
+              <p class="contact-title">Email</p>
+              <a href="#">hi@Regio.co.id</a>
+            </div>
+            <div class="whatsapp">
+              <img class="contact-logo" src="../assets/whatsapp.png" alt="">
+              <p class="contact-title">WhatsApp</p>
+              <p>0823-2131-329</p>
+            </div>
           </div>
           <div class="qna-con">
             <p>Question N Answer</p>
