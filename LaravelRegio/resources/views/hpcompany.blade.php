@@ -29,7 +29,7 @@
     <div class="nav1">
       <img class="logo" src="../assets/logoCompany.png" alt="Logo Regio" />
       <a class="navi-button" href="{{ route('hpCompany') }}#talentsearch">Talent</a>
-      <a class="navi-button" href="/compProject">My Project</a>
+      <a class="navi-button" data-bs-toggle="modal" data-bs-target="#login">My Project</a>
       <a class="navi-button" href="/aboutComp">About</a>
     </div>
     <div class="nav2">
@@ -294,7 +294,7 @@
           Find Your <span style="color: yellow">Perfect Talent</span> Here
           Simple, Easy, & Fast
         </h1>
-        <button class="to-post-job" type="button" onclick="window.location.href='/jobpost'">
+        <button class="to-post-job" type="button" data-bs-toggle="modal" data-bs-target="#login">
           Posting Job
         </button>
 
@@ -704,59 +704,10 @@
       <div class="second-con">
         <div class="my-project">
           <p>My Project</p>
-          <div class="project-sum">
-            <div class="project-img">
-              <img src="../assets/Foto Project.png" alt="Project Image" />
-            </div>
-            <div class="project-detail">
-              <div class="project-first">
-                <p>Pemasangan Pipa Gas Alam</p>
-                <div>
-                  <p>Done</p>
-                </div>
-              </div>
-              <div class="project-second">
-                <p>Jl. Evakuasi no.14, Cirebon, Indonesia.</p>
-              </div>
-            </div>
+          <div class="project-sum project-empty">
+            <p>No Project Available</p>
           </div>
-          <div class="project-sum">
-            <div class="project-img">
-              <img src="../assets/Foto Project1.png" alt="Project Image" />
-            </div>
-            <div class="project-detail">
-              <div class="project-first">
-                <p>Pemasangan Listrik</p>
-                <div class="project-wip">
-                  <p>In Progress</p>
-                </div>
-              </div>
-              <div class="project-second">
-                <p>
-                  Jl. Raden Saleh 3, Palangkaraya, Kalimantan Tengah, Indonesia.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="project-sum" onclick="window.location.href='/cpdetailproject'">
-            <div class="project-img">
-              <img src="../assets/Foto Project2.png" alt="Project Image" />
-            </div>
-            <div class="project-detail">
-              <div class="project-first">
-                <p>Pemasangan Plumbing</p>
-                <div class="project-pending">
-                  <p>Pending</p>
-                </div>
-              </div>
-              <div class="project-second">
-                <p>
-                  Jl. Abdul Muthalib, Samarinda, Kalimantan Timur, Indonesia.
-                </p>
-              </div>
-            </div>
-          </div>
-          <a href="#">See all project</a>
+          <a href="#" data-bs-toggle="modal" data-bs-target="#login">See all project</a>
         </div>
       </div>
     </div>

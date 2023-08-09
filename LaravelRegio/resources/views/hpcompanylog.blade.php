@@ -18,7 +18,7 @@
     <script src="https://kit.fontawesome.com/5109247c85.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="../js/mainpage.js"></script>
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
         $(document).ready(function() {
             $("#loading").modal("show");
 
@@ -29,7 +29,7 @@
                 $("#welcome").modal("show");
             }, duration);
         });
-    </script>
+    </script> -->
     <title>Homepage</title>
 </head>
 
@@ -86,7 +86,7 @@
                 </div>
                 <div class="offcanvas-body">
                     <div>
-                        <a href="{{ route('hpComplog') }}#talentsearch">Talent</a>
+                        <a href="{{ route('hpCompanylog') }}#talentsearch">Talent</a>
                         <a href="/compProject">My Project</a>
                         <a href="/aboutCompLog">About</a>
                     </div>

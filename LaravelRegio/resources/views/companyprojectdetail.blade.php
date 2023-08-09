@@ -28,9 +28,9 @@
   <nav>
     <div class="nav1">
       <img class="logo" src="../assets/logoCompany.png" alt="Logo Regio" />
-      <a class="navi-button" href="{{ route('hpCompany') }}#talentsearch">Talent</a>
+      <a class="navi-button" href="{{ route('hpComplog') }}#talentsearch">Talent</a>
       <a class="navi-button" href="/compProject">My Project</a>
-      <a class="navi-button" href="/aboutComp">About</a>
+      <a class="navi-button" href="/aboutCompLog">About</a>
     </div>
     <div class="nav2">
       <!-- <button type="button" class="position-relative notif-button">
@@ -58,7 +58,7 @@
         </button>
         <ul class="dropdown-menu">
           <li><a class="dropdown-item" href="/companyprofile">Profile</a></li>
-          <li><a class="dropdown-item" href="/hpCompany">Log out</a></li>
+          <li><a class="dropdown-item" href="/aboutCompLog">Log out</a></li>
         </ul>
 
         <hr class="navline" />
@@ -77,7 +77,7 @@
         </div>
         <div class="offcanvas-body">
           <div>
-            <a href="{{ route('hpCompany') }}#talentsearch">Talent</a>
+            <a href="{{ route('hpComplog') }}#talentsearch">Talent</a>
             <a href="/compProject">My Project</a>
             <a href="/aboutComp">About</a>
           </div>
@@ -456,7 +456,7 @@
       <div class="talent-container content-talent" id="content-talent">
         <p>Talent</p>
         <a href="/companytalentprofile"></a>
-        <div class="talent-con unselectable " onclick="window.location.href='/companytalentprofile'">
+        <div class="talent-con unselectable " onclick="window.location.href='/companylogtalentprofile'">
           <div>
             <div class="talent-info">
               <div class="talent-header">
