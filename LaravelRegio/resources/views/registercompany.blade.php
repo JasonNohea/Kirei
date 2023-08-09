@@ -311,10 +311,7 @@
             <option value="501-1000">501 to 1000</option>
             <option value=">1000">more than 1000</option>
           </select>
-          <!-- <div class="form-floating">
-            <textarea type="text" class="form-control" onkeyup="post();" id="in-pdesc" placeholder="Description"></textarea>
-            <label for="in-pdesc">Project Location</label>
-          </div> -->
+
           <div class="project-location">
 
             <select class="form-select" aria-label="Default select example">
@@ -330,6 +327,10 @@
               <option value="21-50">21 to 50</option>
             </select>
 
+          </div>
+          <div class="form-floating">
+            <textarea type="text" class="form-control" onkeyup="post();" id="in-pdesc" placeholder="Description"></textarea>
+            <label for="in-pdesc">Address</label>
           </div>
         </div>
         <div class="second-form">
