@@ -9,7 +9,7 @@
 
     <link rel="stylesheet" href="{{ url('css/main.css')}}"/>
     <link rel="stylesheet" href="{{ url('css/newnav.css')}}" />
-    <link rel="stylesheet" href="{{ url('css/hometalent.css')}}" />
+    <link rel="stylesheet" href="{{ url('css/hometalent.css')}}"/>
 
     <!-- Font & Link Ajax + Bootstrap -->
 

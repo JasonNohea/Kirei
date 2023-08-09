@@ -57,5 +57,6 @@ Route::get('/companytalentprofile', [CompController::class, 'companyTalentProfil
 
 //Handle Register Company Form
 Route::get('/users/createComp', [CompController::class, 'createCompany'])->name('createCompany');
+
 //Register Company
 Route::post('/users', [CompController::class, 'store'])->name('users.store');
