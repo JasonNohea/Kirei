@@ -331,13 +331,10 @@
         @enderror
 
 
-            <select name="city_id" id="city_id" class="form-select" >
-              <option selected disabled hidden>City</option>
-                @foreach ($cities as $city)
-                    <option value="{{ $city->id }}" {{ old('city') == $city->id }}>
-                        {{ $city->city_name }}
-                    </option>
-                @endforeach
+            <select class="form-select" aria-label="Default select example">
+              <option disabled selected>City</option>
+              <option value="1-20">1 to 20</option>
+              <option value="21-50">21 to 50</option>
             </select>
             @error('city_id')
             <div class="text-red-500">{{ $message }}</div>
@@ -345,7 +342,7 @@
 
           </div>
           <div class="form-floating">
-            <textarea name="address" id="address" type="text" class="form-control" onkeyup="post();" placeholder="Description">{{ old('address') }}</textarea>
+            <textarea type="text" class="form-control" onkeyup="post();" id="in-pdesc" placeholder="Description"></textarea>
             <label for="in-pdesc">Address</label>
             @error('address')
               <div class="text-red-500">{{ $message }}</div>

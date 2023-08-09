@@ -160,3 +160,7 @@ textarea {
     width: 29.8vw;
     gap: 10px;
 }
+
+.address-Tarea {
+    min-height: 5.7vw !important;
+}
