@@ -316,7 +316,7 @@
 
           <div class="project-location">
 
-            <select name="province_id" id="province_id" class="form-select" aria-label="Default select example">
+            <select name="province_id" id="province_id" class="form-select">
               <option selected disabled hidden>Province</option>
               @foreach ($provinces as $province)
               <option value="{{ $province->id }}" {{ old('province') == $province->id }}>
@@ -329,16 +329,19 @@
             @enderror
 
 
-            <select class="form-select" aria-label="Default select example">
-              <option disabled selected>City</option>
-              <option value="1-20">1 to 20</option>
-              <option value="21-50">21 to 50</option>
-            </select>
-            @error('city_id')
-            <div class="text-red-500">{{ $message }}</div>
-            @enderror
-
+            <select name="city_id" id="city_id" class="form-select">
+              <option selected disabled hidden>City</option>
+              @foreach ($cities as $city)
+              <option value="{{ $city->id }}" {{ old('city') == $city->id }}>
+                  {{ $city->city_name }}
+              </option>
+            @endforeach
+          </select>
+          @error('city_id')
+          <div class="text-red-500">{{ $message }}</div>
+          @enderror
           </div>
+
           <div class="form-floating">
             <textarea type="text" class="form-control" onkeyup="post();" id="in-pdesc" placeholder="Description"></textarea>
             <label for="in-pdesc">Address</label>
