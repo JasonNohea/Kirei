@@ -273,7 +273,7 @@
         <div class="modal-header">
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           <img src="../assets/logo.png" alt="Regio Logo" />
-          <h1 class="login-heading">Welcome Back!</h1>
+          <h1 class="login-heading">Reset Password Success</h1>
         </div>
         <div class="modal-body reset-modal-content">
           <img class="reset-img" src="../assets/pass-reset.png" alt="Welcome" />
@@ -297,13 +297,11 @@
         <button class="to-post-job" type="button" data-bs-toggle="modal" data-bs-target="#login">
           Posting Job
         </button>
-
       </div>
     </div>
   </div>
 
   <!-- Talent Section -->
-
   <div>
     <div class="form-floating search-bar">
       <input type="text" class="form-control search-input" id="talentsearch" placeholder="Search" />
@@ -312,9 +310,7 @@
         <i class="fa-solid fa-magnifying-glass" style="color: #ffffff"></i>
       </button>
     </div>
-
     <div class="main">
-
       <div class="first-con grab-scroll">
         <div class="box-shadow">
           <div class="talent-con unselectable" onclick="window.location.href='/companytalentprofile'">
