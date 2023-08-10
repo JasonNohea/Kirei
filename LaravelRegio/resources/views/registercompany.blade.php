@@ -11,10 +11,8 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" />
-
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
   <script src="https://kit.fontawesome.com/5109247c85.js" crossorigin="anonymous"></script>
-
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
   <script src="../js/mainpage.js" defer></script>
@@ -314,21 +312,21 @@
           </select>
           @error('number_of_employee')
           <div class="text-red-500">{{ $message }}</div>
-      @enderror
+          @enderror
 
           <div class="project-location">
 
-            <select name="province_id" id="province_id"class="form-select" aria-label="Default select example">
+            <select name="province_id" id="province_id" class="form-select" aria-label="Default select example">
               <option selected disabled hidden>Province</option>
-                @foreach ($provinces as $province)
-                    <option value="{{ $province->id }}" {{ old('province') == $province->id }}>
-                        {{ $province->province_name }}
-                    </option>
-                @endforeach
+              @foreach ($provinces as $province)
+              <option value="{{ $province->id }}" {{ old('province') == $province->id }}>
+                {{ $province->province_name }}
+              </option>
+              @endforeach
             </select>
             @error('province_id')
             <div class="text-red-500">{{ $message }}</div>
-        @enderror
+            @enderror
 
 
             <select class="form-select" aria-label="Default select example">
@@ -338,14 +336,14 @@
             </select>
             @error('city_id')
             <div class="text-red-500">{{ $message }}</div>
-        @enderror
+            @enderror
 
           </div>
           <div class="form-floating">
             <textarea type="text" class="form-control" onkeyup="post();" id="in-pdesc" placeholder="Description"></textarea>
             <label for="in-pdesc">Address</label>
             @error('address')
-              <div class="text-red-500">{{ $message }}</div>
+            <div class="text-red-500">{{ $message }}</div>
             @enderror
           </div>
         </div>
@@ -363,7 +361,7 @@
             <label for="position">Position</label>
             @error('position')
             <div class="text-red-500">{{ $message }}</div>
-        @enderror
+            @enderror
           </div>
           <div class="form-floating">
             <input type="text" class="form-control" name="phone_number" id="phone_number" value="{{ old('phone_number') }}" placeholder="1234567890" />
@@ -375,7 +373,7 @@
           </div>
         </div>
       </div>
-      <button class="register-button" id="register-button" type="submit" >
+      <button class="register-button" id="register-button" type="submit">
         Register
       </button>
     </form>

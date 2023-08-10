@@ -66,7 +66,6 @@ $(".digit-group")
 function otpchecker(e, num, before) {
 
   if (e.value.length > e.maxLength) {
-
     e.value = e.value.slice(0, e.maxLength)
     if (num) {
       $(".digit-group")
@@ -75,13 +74,13 @@ function otpchecker(e, num, before) {
     }
   }
 
-  if (key == 8 && e.value.length == 0) {
-    if (before) {
-      $(".digit-group")
-        .find("#digit-" + before)
-        .focus();
-    }
-  }
+  // if (key == 8 && e.value.length == 0) {
+  //   if (before) {
+  //     $(".digit-group")
+  //       .find("#digit-" + before)
+  //       .focus();
+  //   }
+  // }
 }
 
 // OTP timer
