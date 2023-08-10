@@ -343,7 +343,7 @@
           </div>
 
           <div class="form-floating">
-            <textarea type="text" class="form-control" onkeyup="post();" id="in-pdesc" placeholder="Description"></textarea>
+            <textarea name="address" type="text" class="form-control" onkeyup="post();" id="in-pdesc" placeholder="Description">{{ old('address') }}</textarea>
             <label for="in-pdesc">Address</label>
             @error('address')
             <div class="text-red-500">{{ $message }}</div>
