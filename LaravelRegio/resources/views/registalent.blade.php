@@ -53,7 +53,8 @@
             <hr>
             <select class="provinsi" name="province_id" id="province_id">
                     @foreach ($provinces as $province)
-                        <option value="{{ $province->id }}" {{ old('province') == $province->id || $loop->first ? 'selected' : '' }}>
+                        <option value="{{ $province->id }}" 
+                            {{ old('province') == $province->id || $loop->first ? 'selected' : '' }}>
                             {{ $province->province_name }}
                         </option>
                     @endforeach
@@ -83,7 +84,7 @@
                 <label for="file-input">
                     <img src="{{ url('assets/uploadicon.png')}}">
                 </label>
-                <input id="file-input" type="file"/>
+                <input id="file-input" type="file" name="cv"/>
             </div>
             </div>
 

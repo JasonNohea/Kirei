@@ -70,9 +70,6 @@ class CompController extends Controller
 
     public function store(Request $request)
     {
-        //dd($request);
-
-        //return $request;
         $validatedData = $request->validate([
             'city_id' => 'required',
             'province_id' => 'required',
@@ -88,7 +85,6 @@ class CompController extends Controller
 
             'profile_photo' => 'nullable|image',
         ]);
-        //dd($validatedData);
 
         // Store the user data
         $user = User::create([
@@ -99,14 +95,12 @@ class CompController extends Controller
             'password' => bcrypt($validatedData['password']),
             'phone_number' => $validatedData['phone_number'],
         ]);
-        //dd($validatedData);
 
         $profile_photo = null;
         if ($request->file('profile_photo')) {
             $profile_photo = $request->file('profile_photo')->store('company_pfp');
         }
 
-        //dd($profile_photo);
         // Create the company record
         $company = Company::create([
             'user_id' => $user->id,
@@ -118,7 +112,6 @@ class CompController extends Controller
             'number_of_employee' => $validatedData['number_of_employee'],
             'profile_photo' => $profile_photo,
         ]);
-        //dd($validatedData);
 
         return redirect()->route('hpCompany')->with('success', 'User and Company created successfully.');
     }
