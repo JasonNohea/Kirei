@@ -9,9 +9,12 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Talent extends Model
 {
+    public $table='talents';
     use HasFactory;
     protected $fillable = [
         'user_id',
+        'city_id',
+        'province_id',
         'birth_date',
         'gender',
         'cv',

@@ -64,15 +64,20 @@ Route::get('/companyprofile', [CompController::class, 'companyProfile'])->name('
 //Register Company
 Route::get('/rgtcomp', [CompController::class, 'rgtComp'])->name('registercompany');
 
+//Register Talent
+Route::get('/rgttalent', [TalentController::class, 'createTalent'])->name('createTalent');
+
+//Register Company
+Route::post('/usersT', [TalentController::class, 'store'])->name('usersT.store');
+
 //Company -> Talent Profile
 Route::get('/companytalentprofile', [CompController::class, 'companyTalentProfile'])->name('companyTalentProfile');
 
 //CompanyLog -> Talent Profile
 Route::get('/companylogtalentprofile', [CompController::class, 'companylogTalentProfile'])->name('companylogTalentProfile');
 
-
 //Handle Register Company Form
-Route::get('/users/createComp', [CompController::class, 'createCompany'])->name('createCompany');
+//Route::get('/users/createComp', [CompController::class, 'createCompany'])->name('createCompany');
 
 //Register Company
-Route::post('/users', [CompController::class, 'store'])->name('users.store');
+Route::post('/usersC', [CompController::class, 'store'])->name('usersC.store');
