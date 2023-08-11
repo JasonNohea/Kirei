@@ -1,9 +1,10 @@
 function success() {
+
   if (
-    document.getElementById("email-company").value !== "" &&
-    document.getElementById("company-name").value !== "" &&
-    document.getElementById("first-name").value !== "" &&
-    document.getElementById("last-name").value !== "" &&
+    document.getElementById("email").value !== "" &&
+    document.getElementById("company_name").value !== "" &&
+    document.getElementById("first_name").value !== "" &&
+    document.getElementById("last_name").value !== "" &&
     document.getElementById("password-register").value !== ""
   ) {
     document.getElementById("register-button").disabled = false;
