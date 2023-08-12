@@ -8,7 +8,7 @@
         </ul>
     </div>
 @endif
-<form action="{{ route('users.store') }}" method="POST" enctype="multipart/form-data">
+<form action="{{ route('usersC.store') }}" method="POST" enctype="multipart/form-data">
     @csrf
 
     <!-- User Information -->

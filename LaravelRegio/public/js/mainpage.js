@@ -24,37 +24,37 @@
 })();
 
 // OTP field
-// $(".digit-group")
-//   .find("input")
-//   .each(function () {
-//     $(this).attr("maxlength", 1);
-//     $(this).on("keyup", function (e) {
-//       var parent = $($(this).parent());
+$(".digit-group")
+  .find("input")
+  .each(function () {
+    $(this).attr("maxlength", 1);
+    $(this).on("keyup", function (e) {
+      var parent = $($(this).parent());
 
-//       if (e.keyCode === 8 || e.keyCode === 37) {
-//         var prev = parent.find("input#" + $(this).data("previous"));
+      if (e.keyCode === 8 || e.keyCode === 37) {
+        var prev = parent.find("input#" + $(this).data("previous"));
 
-//         if (prev.length) {
-//           $(prev).select();
-//         }
-//       } else if (
-//         (e.keyCode >= 48 && e.keyCode <= 57) ||
-//         (e.keyCode >= 65 && e.keyCode <= 90) ||
-//         (e.keyCode >= 96 && e.keyCode <= 105) ||
-//         e.keyCode === 39
-//       ) {
-//         var next = parent.find("input#" + $(this).data("next"));
+        if (prev.length) {
+          $(prev).select();
+        }
+      } else if (
+        (e.keyCode >= 48 && e.keyCode <= 57) ||
+        (e.keyCode >= 65 && e.keyCode <= 90) ||
+        (e.keyCode >= 96 && e.keyCode <= 105) ||
+        e.keyCode === 39
+      ) {
+        var next = parent.find("input#" + $(this).data("next"));
 
-//         if (next.length) {
-//           $(next).select();
-//         } else {
-//           if (parent.data("autosubmit")) {
-//             parent.submit();
-//           }
-//         }
-//       }
-//     });
-//   });
+        if (next.length) {
+          $(next).select();
+        } else {
+          if (parent.data("autosubmit")) {
+            parent.submit();
+          }
+        }
+      }
+    });
+  });
 
 var key = 0;
 $(".digit-group")
@@ -66,7 +66,6 @@ $(".digit-group")
 function otpchecker(e, num, before) {
 
   if (e.value.length > e.maxLength) {
-
     e.value = e.value.slice(0, e.maxLength)
     if (num) {
       $(".digit-group")
@@ -75,13 +74,13 @@ function otpchecker(e, num, before) {
     }
   }
 
-  if (key == 8 && e.value.length == 0) {
-    if (before) {
-      $(".digit-group")
-        .find("#digit-" + before)
-        .focus();
-    }
-  }
+  // if (key == 8 && e.value.length == 0) {
+  //   if (before) {
+  //     $(".digit-group")
+  //       .find("#digit-" + before)
+  //       .focus();
+  //   }
+  // }
 }
 
 // OTP timer

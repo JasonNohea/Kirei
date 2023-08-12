@@ -34,8 +34,14 @@ Route::get('/aboutTalent', [GeneralController::class, 'aboutTalent'])->name('abo
 //About Company Page
 Route::get('/aboutComp', [GeneralController::class, 'aboutComp'])->name('aboutComp');
 
+//About Company Page
+Route::get('/aboutCompLog', [GeneralController::class, 'aboutCompLog'])->name('aboutCompLog');
+
 //HomePage Company
 Route::get('/hpCompany', [CompController::class, 'hpCompany'])->name('hpCompany');
+
+//HomePage Company without modal
+Route::get('/hpComplog', [CompController::class, 'hpcomp'])->name('hpComplog');
 
 //HomePage Company and login
 Route::post('/hpCompanylog', [CompController::class, 'hpCompanylog'])->name('hpCompanylog');
@@ -55,10 +61,23 @@ Route::get('/dtltalent', [TalentController::class, 'detailJob'])->name('detailJo
 //Company Profile
 Route::get('/companyprofile', [CompController::class, 'companyProfile'])->name('companyProfile');
 
+//Register Company
+Route::get('/rgtcomp', [CompController::class, 'rgtComp'])->name('registercompany');
+
+//Register Talent
+Route::get('/rgttalent', [TalentController::class, 'createTalent'])->name('createTalent');
+
+//Register Company
+Route::post('/usersT', [TalentController::class, 'store'])->name('usersT.store');
+
 //Company -> Talent Profile
 Route::get('/companytalentprofile', [CompController::class, 'companyTalentProfile'])->name('companyTalentProfile');
 
+//CompanyLog -> Talent Profile
+Route::get('/companylogtalentprofile', [CompController::class, 'companylogTalentProfile'])->name('companylogTalentProfile');
+
 //Handle Register Company Form
-Route::get('/users/createComp', [CompController::class, 'createCompany'])->name('createCompany');
+//Route::get('/users/createComp', [CompController::class, 'createCompany'])->name('createCompany');
+
 //Register Company
-Route::post('/users', [CompController::class, 'store'])->name('users.store');
+Route::post('/usersC', [CompController::class, 'store'])->name('usersC.store');

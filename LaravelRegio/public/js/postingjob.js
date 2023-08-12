@@ -230,18 +230,23 @@ function saveSkill() {
 }
 
 function post() {
+  var mdateInput = document.getElementById("in-mdate");
+  var sdateInput = document.getElementById("in-mdate");
+  var edateInput = document.getElementById("in-mdate");
+
   if (
     document.getElementById("in-pname").value !== "" &&
-    document.getElementById("in-sdate").value !== "" &&
-    document.getElementById("in-edate").value !== "" &&
+    edateInput.value !== "" &&
+    sdateInput.value !== "" &&
     document.getElementById("in-rposition").value !== "" &&
     document.getElementById("in-pdesc").value !== "" &&
     document.getElementById("in-ploc").value !== "" &&
     document.getElementById("in-treq").value !== "" &&
-    document.getElementById("in-mdate").value !== ""
+    mdateInput.value !== ""
   ) {
     document.getElementById("post-project").disabled = false;
   } else {
+    console.log("asd");
     document.getElementById("post-project").disabled = true;
   }
 }

@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../assets/logo.png" type="image/x-icon" />
+    <link rel="icon" href="{{ url('assets/logo.png')}}" type="image/x-icon" />
 
     <!-- File CSS-->
 
     <link rel="stylesheet" href="{{ url('css/main.css')}}"/>
     <link rel="stylesheet" href="{{ url('css/newnav.css')}}" />
-    <link rel="stylesheet" href="{{ url('css/hometalent.css')}}" />
+    <link rel="stylesheet" href="{{ url('css/hometalent.css')}}"/>
 
     <!-- Font & Link Ajax + Bootstrap -->
 
@@ -134,7 +134,7 @@
               </button>
             </div>
             <p class="gray-text">
-              Don't have an account?&nbsp;<a href="#" class="regist"
+              Don't have an account?&nbsp;<a href="/rgttalent" class="regist"
                 >Register</a
               >
             </p>

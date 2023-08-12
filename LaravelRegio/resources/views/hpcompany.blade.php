@@ -29,7 +29,7 @@
     <div class="nav1">
       <img class="logo" src="../assets/logoCompany.png" alt="Logo Regio" />
       <a class="navi-button" href="{{ route('hpCompany') }}#talentsearch">Talent</a>
-      <a class="navi-button" href="/compProject">My Project</a>
+      <a class="navi-button" data-bs-toggle="modal" data-bs-target="#login">My Project</a>
       <a class="navi-button" href="/aboutComp">About</a>
     </div>
     <div class="nav2">
@@ -114,7 +114,7 @@
             </button>
           </div>
           <p class="gray-text">
-            Don't have an account?&nbsp;<a href="/rgtcompany" class="regist">Register</a>
+            Don't have an account?&nbsp;<a href="/rgtcomp" class="regist">Register</a>
           </p>
         </div>
       </form>
@@ -273,7 +273,7 @@
         <div class="modal-header">
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           <img src="../assets/logo.png" alt="Regio Logo" />
-          <h1 class="login-heading">Welcome Back!</h1>
+          <h1 class="login-heading">Reset Password Success</h1>
         </div>
         <div class="modal-body reset-modal-content">
           <img class="reset-img" src="../assets/pass-reset.png" alt="Welcome" />
@@ -294,16 +294,14 @@
           Find Your <span style="color: yellow">Perfect Talent</span> Here
           Simple, Easy, & Fast
         </h1>
-        <button class="to-post-job" type="button" onclick="window.location.href='/jobpost'">
+        <button class="to-post-job" type="button" data-bs-toggle="modal" data-bs-target="#login">
           Posting Job
         </button>
-
       </div>
     </div>
   </div>
 
   <!-- Talent Section -->
-
   <div>
     <div class="form-floating search-bar">
       <input type="text" class="form-control search-input" id="talentsearch" placeholder="Search" />
@@ -312,12 +310,10 @@
         <i class="fa-solid fa-magnifying-glass" style="color: #ffffff"></i>
       </button>
     </div>
-
     <div class="main">
-
       <div class="first-con grab-scroll">
         <div class="box-shadow">
-          <div class="talent-con unselectable">
+          <div class="talent-con unselectable" onclick="window.location.href='/companytalentprofile'">
             <div>
               <div class="talent-info">
                 <div class="talent-header">
@@ -365,7 +361,7 @@
           </div>
         </div>
         <div class="box-shadow">
-          <div class="talent-con unselectable">
+          <div class="talent-con unselectable" onclick="window.location.href='/companytalentprofile'">
             <div>
               <div class="talent-info">
                 <div class="talent-header">
@@ -413,7 +409,7 @@
           </div>
         </div>
         <div class="box-shadow">
-          <div class="talent-con unselectable">
+          <div class="talent-con unselectable" onclick="window.location.href='/companytalentprofile'">
             <div>
               <div class="talent-info">
                 <div class="talent-header">
@@ -461,7 +457,7 @@
           </div>
         </div>
         <div class="box-shadow">
-          <div class="talent-con unselectable">
+          <div class="talent-con unselectable" onclick="window.location.href='/companytalentprofile'">
             <div>
               <div class="talent-info">
                 <div class="talent-header">
@@ -509,7 +505,7 @@
           </div>
         </div>
         <div class="box-shadow">
-          <div class="talent-con unselectable">
+          <div class="talent-con unselectable" onclick="window.location.href='/companytalentprofile'">
             <div>
               <div class="talent-info">
                 <div class="talent-header">
@@ -557,7 +553,7 @@
           </div>
         </div>
         <div class="box-shadow">
-          <div class="talent-con unselectable">
+          <div class="talent-con unselectable" onclick="window.location.href='/companytalentprofile'">
             <div>
               <div class="talent-info">
                 <div class="talent-header">
@@ -605,7 +601,7 @@
           </div>
         </div>
         <div class="box-shadow">
-          <div class="talent-con unselectable">
+          <div class="talent-con unselectable" onclick="window.location.href='/companytalentprofile'">
             <div>
               <div class="talent-info">
                 <div class="talent-header">
@@ -653,7 +649,7 @@
           </div>
         </div>
         <div class="box-shadow">
-          <div class="talent-con unselectable">
+          <div class="talent-con unselectable" onclick="window.location.href='/companytalentprofile'">
             <div>
               <div class="talent-info">
                 <div class="talent-header">
@@ -704,59 +700,10 @@
       <div class="second-con">
         <div class="my-project">
           <p>My Project</p>
-          <div class="project-sum">
-            <div class="project-img">
-              <img src="../assets/Foto Project.png" alt="Project Image" />
-            </div>
-            <div class="project-detail">
-              <div class="project-first">
-                <p>Pemasangan Pipa Gas Alam</p>
-                <div>
-                  <p>Done</p>
-                </div>
-              </div>
-              <div class="project-second">
-                <p>Jl. Evakuasi no.14, Cirebon, Indonesia.</p>
-              </div>
-            </div>
+          <div class="project-sum project-empty">
+            <p>No Project Available</p>
           </div>
-          <div class="project-sum">
-            <div class="project-img">
-              <img src="../assets/Foto Project1.png" alt="Project Image" />
-            </div>
-            <div class="project-detail">
-              <div class="project-first">
-                <p>Pemasangan Listrik</p>
-                <div class="project-wip">
-                  <p>In Progress</p>
-                </div>
-              </div>
-              <div class="project-second">
-                <p>
-                  Jl. Raden Saleh 3, Palangkaraya, Kalimantan Tengah, Indonesia.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="project-sum">
-            <div class="project-img">
-              <img src="../assets/Foto Project2.png" alt="Project Image" />
-            </div>
-            <div class="project-detail">
-              <div class="project-first">
-                <p>Pemasangan Plumbing</p>
-                <div class="project-pending">
-                  <p>Pending</p>
-                </div>
-              </div>
-              <div class="project-second">
-                <p>
-                  Jl. Abdul Muthalib, Samarinda, Kalimantan Timur, Indonesia.
-                </p>
-              </div>
-            </div>
-          </div>
-          <a href="#">See all project</a>
+          <a href="#" data-bs-toggle="modal" data-bs-target="#login">See all project</a>
         </div>
       </div>
     </div>

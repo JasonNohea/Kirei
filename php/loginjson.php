@@ -25,6 +25,6 @@ if ($success == TRUE) {
     exit();
 } else {
     echo "Username/Password Salah";
-    header("location: ../company/modaltest.html", true, 301);
+    header("location: ../company/homepage.html", true, 301);
     exit();
 }

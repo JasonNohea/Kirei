@@ -19,6 +19,10 @@ class CompController extends Controller
     {
         return view('hpcompany'); //buka file hometalent.php di resource/views
     }
+    public function hpcomp()
+    {
+        return view('hpcompanylog'); //buka file hometalent.php di resource/views
+    }
     public function hpCompanylog()
     {
         return view('hpLoggedIn'); //buka file hometalent.php di resource/views
@@ -43,10 +47,17 @@ class CompController extends Controller
     {
         return view('company-talentprofile'); //buka file companytalentprofile.php di resource/views
     }
+    public function companylogTalentProfile()
+    {
+        return view('company-talentprofil-loggedin'); //buka file companytalentprofile.php di resource/views
+    }
     public function rgtComp()
     {
-        return view('registercompany'); //buka file about.php di resource/views
+        $cities = City::select('id', 'city_name')->get();
+        $provinces = Province::select('id', 'province_name')->get();
+        return view('registercompany', compact('cities', 'provinces')); //buka file registercompany.php di resource/views
     }
+
 
     //Register Company Form
     public function createCompany()
@@ -59,11 +70,7 @@ class CompController extends Controller
 
     public function store(Request $request)
     {
-        //dd($request);
-
-        //return $request;
         $validatedData = $request->validate([
-            'user_type' => 'required',
             'city_id' => 'required',
             'province_id' => 'required',
             'first_name' => 'required',
@@ -78,25 +85,22 @@ class CompController extends Controller
 
             'profile_photo' => 'nullable|image',
         ]);
-        //dd($validatedData);
 
         // Store the user data
         $user = User::create([
-            'user_type' => $validatedData['user_type'],
+            'user_type' => 'company',
             'first_name' => $validatedData['first_name'],
             'last_name' => $validatedData['last_name'],
             'email' => $validatedData['email'],
             'password' => bcrypt($validatedData['password']),
             'phone_number' => $validatedData['phone_number'],
         ]);
-        //dd($validatedData);
 
         $profile_photo = null;
         if ($request->file('profile_photo')) {
             $profile_photo = $request->file('profile_photo')->store('company_pfp');
         }
 
-        //dd($profile_photo);
         // Create the company record
         $company = Company::create([
             'user_id' => $user->id,
@@ -108,8 +112,7 @@ class CompController extends Controller
             'number_of_employee' => $validatedData['number_of_employee'],
             'profile_photo' => $profile_photo,
         ]);
-        //dd($validatedData);
 
-        return redirect()->route('createCompany')->with('success', 'User and Company created successfully.');
+        return redirect()->route('hpCompany')->with('success', 'User and Company created successfully.');
     }
 }
