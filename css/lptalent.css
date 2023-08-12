@@ -2,7 +2,7 @@ html,
 body {
   background :url(../assets/talentbg.png);
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   backdrop-filter: blur(100px);
   /* background: linear-gradient(180deg, #E0EAF6 2.64%, rgba(217, 217, 217, 0.68305) 6.83%, rgba(217, 217, 217, 0) 10%); */
   /* opacity: 0.8; */

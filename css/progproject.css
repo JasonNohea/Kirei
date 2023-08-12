@@ -24,16 +24,6 @@ main {
     border-radius: 12px 12px 0px 0px;
     text-align: center;
 }
-  
-/* .line-container {
-    width: 100%;
-} */
-
-/* .underline {
-    background-color: #000;
-    transition: transform 0.3s ease-out;
-    transform: translateX(0);
-} */
 
 .tab-project {
     display: flex;
