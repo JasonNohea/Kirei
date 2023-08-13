@@ -142,6 +142,19 @@ main {
     max-width: 240px;
 }
 
+.jobs-skill{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 350px;
+}
+
+.list-jobs-skill{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
 .aside {
     float: left;
 }

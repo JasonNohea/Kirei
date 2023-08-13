@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../assets/logo.png" type="image/x-icon" />
+
+    <!-- File CSS-->
+
+    <link rel="stylesheet" href="../bootstrap-css/main.css" />
+    <link rel="stylesheet" href="../css/newnav.css" />
+    <link rel="stylesheet" href="../bootstrap-css/navloggedin.css" />
+    <link rel="stylesheet" href="../css/profiltalent.css" />
+
+    <!-- Font & Script & Bootstrap -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous">
+    </script>
+    <script src="https://kit.fontawesome.com/5109247c85.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="../js/mainpage.js"></script>
+    <script src="../js/navigationswitch.js"></script>
+    <!-- <script type="text/javascript">
+      $(document).ready(function () {
+        $("#loading").modal("show");
+
+        var duration = 2000; // 2 seconds
+        setTimeout(function () {
+          // Close the modal
+          $("#loading").modal("hide");
+          $("#welcome").modal("show");
+        }, duration);
+      });
+    </script> -->
+    <script type="text/javascript">
+      // Get the element with id="defaultOpen" and click on it
+      document.getElementById("defaultOpen").click();
+    </script>
+    <title> RegiO - Job Portal di Indonesia </title>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="nav1">
+      <img class="logo" src="../assets/logoCompany.png" alt="Logo Regio" />
+      <a class="navi-button" href="hometalent-loggedin.html">Jobs</a>
+      <a class="navi-button" href="#tab2"
+        >My Project</a
+      >
+      <a class="navi-button" href="about-loggedin.html">About</a>
+    </div>
+    <div class="nav2">
+      <!-- <button type="button" class="position-relative notif-button">
+        <i class="fa-solid fa-bell" style="color: #2c5395"></i>
+        <span
+          class="position-absolute translate-middle p-1 bg-danger border border-light rounded-circle notif"
+        >
+          <span class="visually-hidden">New alerts</span>
+        </span>
+      </button> -->
+      <button type="button" class="position-relative notif-button">
+        <i class="fa-solid fa-bell"></i>
+      </button>
+
+      <i class="fa-solid fa-globe" style="color: #2c5395"></i>
+      <select>
+        <option>EN</option>
+        <option>ID</option>
+      </select>
+      <i class="fa-solid fa-user" style="color: #2c5395"></i>
+      <div class="logged-in">
+        <p class="user-nav nav-acc">Tony</p>
+        <hr class="navline" />
+        <p class="company-nav nav-acc">Talent</p>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Modal loading -->
+  <div
+    class="modal fade"
+    id="loading"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <img src="../assets/logo.png" alt="Regio Logo" />
+          <h1 class="login-heading">Loading</h1>
+          <span class="reset-inst">We'll be right with you.</span>
+        </div>
+        <div class="modal-body">
+          <div
+            class="spinner-border justify-content-center spinner"
+            style="width: 5rem; height: 5rem"
+            role="status"
+          >
+            <span class="visually-hidden">Loading...</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal logged-in -->
+  <div
+    class="modal fade"
+    id="welcome"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+          <img src="../assets/logo.png" alt="Regio Logo" />
+          <h1 class="login-heading">Success!</h1>
+        </div>
+        <div class="modal-body">
+          <img
+            class="welcome-img"
+            src="../assets/greeting.png"
+            alt="Welcome"
+          />
+          <span class="greeting-text"
+            >Hello. Glad to see you again!!</span
+          >
+          <button type="button" class="b-homepage" data-bs-dismiss="modal">
+            Back to Homepage
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+    
+  <!-- Profil Info -->
+  <div class="profile-con">
+    <div class="profile-info">
+      <div class="name">
+        <p class="user-name">Tony Saja</p>
+        <div class="edit">
+          <p> <i class="bi-pencil-fill"></i> Edit </p>
+        </div>
+      </div>
+      <div class="profile-header">
+        <div class="photo-profile">
+          <img src="../assets/fototalent.png">
+        </div>
+        <div class="profile-header-info">
+          <p class="profile-name"> Email </p>
+          <p class="profile-skill"> tonysaja@gmail.com </p>
+        
+          <p class="profile-name"> Location </p>
+          <p class="profile-skill"> Kalimantan Timur, Samarinda</p>
+        </div>
+        <div class="profile-header-info">
+          <p class="profile-name"> Specialty </p>
+          <p class="profile-skill"> Plumbing Installation Expert </p>
+
+          <p class="profile-name"> Phone </p>
+          <p class="profile-skill"> 0837462864382 </p>
+        </div>
+        <div class="profile-header-info">
+          <p class="profile-name"> Status </p>
+          <p class="profile-skill"> Available </p>
+        
+          <p class="profile-name"> Birth Date </p>
+          <p class="profile-skill"> 09 October 1999 </p>
+        </div>
+        <div class="profile-header-info">
+          <p class="profile-name"> Available Working Hours </p>
+          <p class="profile-skill"> 08.00 - 17.00 </p>
+
+          <p class="profile-name"> </p>
+          <p class="profile-skill"> </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <div class="navigation-tab">
+      <div class="tab-project">
+        <a
+          class="tab"
+          id="tab1"
+          onclick="showContent('content1', 'tab1', event);"
+          href="#"
+          > Profile Info </a>
+          <!-- <div class="line-container">
+            <div class="underline"></div>
+          </div> -->
+        <a
+          class="tab"
+          id="tab2"
+          onclick="showContent('content2', 'tab2', event);"
+          href="#"
+          > Projects </a
+        >
+        <a
+          class="tab"
+          id="tab3"
+          onclick="showContent('content3', 'tab3', event);"
+          href="#"
+          > Bookmark </a
+        >
+      </div>
+    </div>
+
+  <!-- Isi Content -->
+
+    <!-- Tab/Konten Profile Info -->
+    <div class="content" id="content1">
+      <!-- Content for Tab 1 / Profile Info -->
+      <div class="wrapper">
+        <div class="jobs-title-header">
+          <p class="jobs-title"> About Talent </p>
+          <div class="edit">
+            <p> <i class="bi-pencil-fill"></i> Edit </p>
+          </div>
+        </div>
+        <p class="jobs-desc" style="width: 80%; text-align: justify;">A talented Plumbing Installation Expert possesses a unique combination of technical knowledge, problem-solving abilities, and attention to detail. Have an in-depth understanding of plumbing systems, regulations, and best practices, allowing them to excel in installing and connecting pipes, fixtures, and appliances accurately. With a keen eye for detail, and ensure that all installations meet industry standards and comply with local codes.</p>
+        
+        <div class="jobs-title-header">
+          <p class="jobs-title"> Resume </p>
+          <div class="edit">
+            <p> <i class="bi-pencil-fill"></i> Edit </p>
+          </div>
+        </div>  
+        <div class="image-upload">
+          <label for="file-input">
+              <img src="../assets/uploadcv.png">
+          </label>
+          <input id="file-input" type="file"/>
+        </div>
+
+        <div class="jobs-title-header">
+          <p class="jobs-title"> Job Experiences </p>
+          <div class="edit">
+            <p> <i class="bi-pencil-fill"></i> Edit </p>
+          </div>
+        </div>
+
+        <div class="jobs-title-header">
+          <p class="jobs-company-name"> PT XQC </p>
+          <div class="edit">
+            <p> <i class="bi-pencil-fill"></i> Edit </p>
+          </div>
+        </div>
+        <p class="jobs-info">Plumbing Installation, Part Time</p>
+        <p class="jobs-dateline">January 2021 - October 2021</p>
+
+        <div class="jobs-title-header">
+          <p class="jobs-company-name"> PT CBT </p>
+          <div class="edit">
+            <p> <i class="bi-pencil-fill"></i> Edit </p>
+          </div>
+        </div>
+        <p class="jobs-info">Plumbing Installation, Full Time</p>
+        <p class="jobs-dateline">May 2020 - July 2020</p>
+
+        <div class="jobs-title-header">
+          <p class="jobs-title"> Skills </p>
+          <div class="edit">
+            <p> <i class="bi-pencil-fill"></i> Edit </p>
+          </div>
+        </div>
+        <div class="jobs-skill">
+          <ul class="list-jobs-skill">
+            <li>Teamwork</li>
+            <li>Honesty</li>
+            <li>Plumbing tools</li>
+            <li>Accurate Measuring</li>
+          </ul>
+        </div>
+
+        <div class="jobs-title-header">
+          <p class="jobs-title">Preferences</p>
+          <div class="edit">
+            <p> <i class="bi-pencil-fill"></i> Edit </p>
+          </div>
+        </div>
+        <p class="jobs-desc">Interest        --> Plumbing Installation </p>
+        <p class="jobs-desc">Job Type        --> Full Time </p>
+
+        <div class="jobs-title-header">
+          <p class="jobs-title"> Portfolio </p>
+          <div class="edit">
+            <p> <i class="bi-pencil-fill"></i> Edit </p>
+          </div>
+        </div>
+        <div class="image-upload">
+          <label for="file-input">
+              <img src="../assets/uploadporto.png">
+          </label>
+          <input id="file-input" type="file"/>
+        </div>
+
+        <div class="jobs-title-header">
+          <p class="jobs-title"> Certificate </p>
+          <div class="edit">
+            <p> <i class="bi-pencil-fill"></i> Edit </p>
+          </div>
+        </div>
+        <div class="image-upload">
+          <label for="file-input">
+              <img src="../assets/uploadcertif.png">
+          </label>
+          <input id="file-input" type="file"/>
+        </div>
+
+        <div class="jobs-title-header">
+          <p class="jobs-title"> Social Media </p>
+          <div class="edit">
+            <p> <i class="bi-pencil-fill"></i> Edit </p>
+          </div>
+        </div>
+        <div class="profile-social-links">
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+        </div><br>
+
+        <div class="submit-edit-button">
+          <input type="submit" value="Save Edit" class="savedit"> 
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab/Konten Projects -->
+    <div class="content" id="content2">
+
+      <!-- Jobs Content (Side)-->
+      <aside>
+        <div class="jobs-week">
+          <p class="jobs-title"> This Week Work </p>
+          <p class="jobs-info"> Starting Modem Configuration </p>
+          <p class="jobs-dateline"> Due 5 July 2023 23.59 </p>
+        
+          <p class="jobs-title"> Missing </p>
+          <p class="jobs-info"> Starting CPI & C/N Level Check </p>
+          <p class="jobs-dateline"> Due 5 July 2023 23.59 </p>
+        </div>
+      </aside>
+
+      <div class="jobs-com">
+        <div class="jobs-photo"></div>
+          <div class="jobs-progress-info">
+            <p class="jobs-title"> Network Model Implementation </p>
+            <p class="jobs-deadline"> 29 Mei 2023 - 30 Juli 2023 </p>
+          </div>
+          <div class="side-border"></div>
+          <div class="side-texts">
+            <p> <span class="jobs-progress"> In Progress </span></p>
+          </div>
+      </div>
+
+      <div class="jobs-com">
+        <div class="jobs-photo"></div>
+          <div class="jobs-progress-info">
+            <p class="jobs-title"> Website Development For PT XYZ </p>
+            <p class="jobs-deadline"> 2 February 2023 - 6 April 2023 </p>
+          </div>
+          <div class="side-border"></div>
+          <div class="side-texts">
+            <p <span class="jobs-done"> Completed  </span></p>
+          </div>
+      </div>
+
+      <div class="jobs-com">
+        <div class="jobs-photo"></div>
+          <div class="jobs-progress-info">
+            <p class="jobs-title"> Implementing Firewall </p>
+            <p class="jobs-deadline"> 28 October 2022 - 28 November 2022 </p>
+          </div>
+          <div class="side-border"></div>
+          <div class="side-texts">
+            <p><span class="jobs-done"> Completed  </span></p>
+          </div>
+      </div>
+
+    </div>
+
+    <!-- Tab/Konten Bookmarks -->
+    <div class="content" id="content3">
+      <!-- Content for Tab 3 / Bookmark -->
+      <div class="first-con"> 
+        <div class="talent-con">
+          <div class="talent-info">
+            <div class="talent-header">
+              <div class="photo-profiles"></div>
+              <div class="talent-header-info">
+                <p class="talent-name">Web Developer</p>
+                <p class="talent-skill">PT. Kreasi Rekayasa Indonesia</p>
+              </div>
+              <div class="bookmarks">
+                <i class="bi-bookmark-fill" style="font-size: 25px;"></i>
+              </div>
+            </div>
+            <p class="talent-desc">
+              A career in Information System, specifically in the areas of UI/UX
+              Designer, that will optimally utilizeanalytical, time...
+            </p>
+            <p><i class="bi-geo-alt-fill"></i> &nbsp; Wirosari, Indonesia</p>
+            <p><i class="bi-cash"></i> &nbsp; IDR 7,000,000 - 12,000,000</p>
+            <p><i class="bi-briefcase-fill"></i> &nbsp; 8.00 AM - 5.00 PM</p>
+          </div>
+          <div class="talent-button">
+            <hr>
+            <p> <i class="bi-clock"></i> 7 Jan 2023 </p>
+          </div>
+        </div>
+        <div class="talent-con">
+          <div class="talent-info">
+            <div class="talent-header">
+              <div class="photo-profiles"></div>
+              <div class="talent-header-info">
+                <p class="talent-name">Web Developer</p>
+                <p class="talent-skill">PT. Kreasi Rekayasa Indonesia</p>
+              </div>
+              <div class="bookmarks">
+                <i class="bi-bookmark-fill" style="font-size: 25px;"></i>
+              </div>
+            </div>
+            <p class="talent-desc">
+              A career in Information System, specifically in the areas of UI/UX
+              Designer, that will optimally utilizeanalytical, time...
+            </p>
+            <p><i class="bi-geo-alt-fill"></i> &nbsp; Wirosari, Indonesia</p>
+            <p><i class="bi-cash"></i> &nbsp; IDR 7,000,000 - 12,000,000</p>
+            <p><i class="bi-briefcase-fill"></i> &nbsp; 8.00 AM - 5.00 PM</p>
+          </div>
+          <div class="talent-button">
+            <hr>
+            <p> <i class="bi-clock"></i> 7 Jan 2023 </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer">
+      <div class="layar-dalam">
+        <div class="kiri">
+            <h5> Contact Us </h5>
+            <br>
+            <p>Email address : <span class="colorlink"> hi@regio.co.id </span><br>
+            Whatsapp Contact : 0823-2131-329 <br>
+            Qna : <span class="colorlink"> Feedback </span><br>
+          </p>
+          
+        </div>
+        <div class="kanan">
+          <h5>Follow Us</h5>
+          <br> 
+            <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+      </div>
+      <div class="layar-dalam">
+        <div class="copyright">
+            Copyright &copy; 2023 Regio.</div>
+        </div>  
+    </div>
+  </footer> 
+  
+</body>
+</html>
