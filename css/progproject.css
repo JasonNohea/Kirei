@@ -14,6 +14,16 @@ main {
     align-items: center;
 }
 
+.navi-button:hover{
+    color: #31348D;
+    font-weight: bold;
+}
+  
+  
+.logged-in > a {
+    text-decoration: none;
+}
+
 .navigation-tab {
     margin-top: 10%;
     display: flex;
@@ -84,6 +94,16 @@ main {
     text-align: center;
     font-size: 24px;
     font-weight: 600;
+}
+
+.detail-jobs-title{
+    color: #31348D;
+    font-family: Cabin;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-align: center;
 }
 
  .detail-jobs-info {
@@ -171,6 +191,10 @@ input[type="submit"]{
     background-color: #31348D;
     border: none;
     border-radius: 10px;
+}
+
+input[type="file"]{
+    padding-bottom: 20px;
 }
 /* CSS Footer untuk Talent */
 

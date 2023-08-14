@@ -39,6 +39,16 @@ body {
   background: #555;
 }
 
+.navi-button:hover{
+  color: #31348D;
+  font-weight: bold;
+}
+
+
+.logged-in > a {
+  text-decoration: none;
+}
+
 .building {
   float: right;
   padding-top: 10%;
@@ -117,6 +127,7 @@ footer .layar-dalam h5{
 	text-align: center;
 	line-height: 40px;
 	border-radius: 50%;
+  color: black;
 }
 
 .kanan .social-links a:hover{

@@ -5,6 +5,16 @@ height: 100%;
 margin: 0;
 }
 
+.navi-button:hover{
+    color: #31348D;
+    font-weight: bold;
+}
+  
+  
+  .logged-in > a {
+    text-decoration: none;
+}
+
 .name {
     margin-left: 156px;
     width: 15%;
@@ -155,8 +165,13 @@ main {
     flex-wrap: wrap;
     justify-content: space-between;
 }
-.aside {
+
+/* .aside {
     float: left;
+} */
+
+.jobs-week > a {
+    text-decoration: none;
 }
 
 .image-upload > input
@@ -197,6 +212,10 @@ main {
     display: flex;
     flex-direction: column;
     padding-top: 11px;
+}
+
+.jobs-progress-info > a {
+    text-decoration: none;
 }
 
 .jobs-title{
@@ -250,7 +269,7 @@ input[type="submit"] {
 }
 
 .jobs-photo {
-    background-color: aqua;
+    background-color: #E0EAF6;
     margin: auto 20px;
     border-radius: 50%;
     width: 60px;
@@ -323,7 +342,7 @@ input[type="submit"] {
 }
   
 .photo-profiles {
-    background-color: gray;
+    background-color: #D9D9D9;
     border-radius: 50%;
     width: 50px;
     height: 50px;
